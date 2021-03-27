@@ -24,9 +24,6 @@ jobs:
           environment-file: ./.github/workflows/environment.yml
           python-version: 3.8
           miniconda-version: "latest"
-      - name: Install anaconda
-        run: |
-          conda install -y anaconda
       - name: generate PNG
         run: python ./covid_create_graphs_summary.py
         working-directory: ./Auswertung/
