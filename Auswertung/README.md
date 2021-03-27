@@ -1,10 +1,7 @@
 ## Zusammenfassung Lage
 
-:-------------------------------------------------:|
-![](Auswertung/Covid_summary.png)             |
+<img src="https://raw.githubusercontent.com/HrRodan/RKI_COVID19_DATA/master/Auswertung/Covid_summary.png" width="400">
 
 ## Herdenimmunität
 
-
-:--------------------------------------------------:|
-![](Auswertung/Herdenimmunitaet.png)        |
+<img src="https://raw.githubusercontent.com/HrRodan/RKI_COVID19_DATA/master/Auswertung/Herdenimmunitaet.png" width="400">
