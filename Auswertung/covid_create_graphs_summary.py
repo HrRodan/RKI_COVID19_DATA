@@ -15,7 +15,6 @@ yesterday=today-timedelta(days=1)
 file_path=os.path.dirname(__file__)
 parent_directory=os.path.normpath(os.path.join(file_path, '..',''))
 covid_path_latest=find_latest_file(os.path.join(parent_directory))
-print(covid_path_latest)
 
 #%% Read Covid
 
