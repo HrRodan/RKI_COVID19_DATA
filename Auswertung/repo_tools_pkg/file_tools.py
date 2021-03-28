@@ -8,17 +8,13 @@ def find_latest_file(searchpath, file_pattern=None):
     file_list=os.listdir(path)
     date_max=date(1900,1,1)
     file_max=None
-    search_filename=False
-    if file_pattern:
-        search_filename=True
+    re_filename=True
     for file in file_list:
         file_path_full=os.path.join(path,file)
         if not os.path.isdir(file_path_full):
             filename=os.path.basename(file)
-            if search_filename:
+            if file_pattern:
                 re_filename=re.search(file_pattern,filename)
-            else:
-                re_filename=True
             re_search=re.search(iso_date_re, filename)
             if re_search and re_filename:
                 test_date=date(int(re_search.group(1)), int(re_search.group(3)), int(re_search.group(4)))

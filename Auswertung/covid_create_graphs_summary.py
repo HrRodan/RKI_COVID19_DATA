@@ -11,6 +11,8 @@ from repo_tools_pkg.file_tools import find_latest_file
 
 today=datetime.now().date()
 yesterday=today-timedelta(days=1)
+today_str=today.strftime('%Y-%m-%d')
+
 #%% Find latest files Covid
 file_path=os.path.dirname(__file__)
 parent_directory=os.path.normpath(os.path.join(file_path, '..',''))
@@ -23,12 +25,12 @@ covid_df["Meldedatum"]=pd.to_datetime(covid_df["Meldedatum"]).dt.date
 
 #%% Sum Data
 
-covid_df_sum=covid_df.groupby("Meldedatum").agg({"AnzahlFall":"sum","AnzahlTodesfall":"sum"}).sort_values("Meldedatum",ascending=True)
+covid_df_sum=covid_df[(covid_df["NeuerFall"].isin([0,1])) | (covid_df["NeuerTodesfall"].isin([0,1]))].groupby("Meldedatum").agg({"AnzahlFall":"sum","AnzahlTodesfall":"sum"}).sort_values("Meldedatum",ascending=True)
 covid_df_sum.index=pd.to_datetime(covid_df_sum.index)
 #Ein Datensatz pro Tag mit 0 aufüllen
 covid_df_sum=covid_df_sum.resample("1D").asfreq().fillna(0)
 covid_df_sum["AnzahlFall_7d_mean"]=covid_df_sum["AnzahlFall"].rolling(7).mean()
-covid_df_sum["AnzahlTodesfallfall_7d_mean"]=covid_df_sum["AnzahlTodesfall"].rolling(7).mean()
+covid_df_sum["AnzahlTodesfall_7d_mean"]=covid_df_sum["AnzahlTodesfall"].rolling(7).mean()
 covid_df_sum.index=pd.to_datetime(covid_df_sum.index)
 covid_df_sum=covid_df_sum.sort_index(ascending=True)
 covid_df_sum["Cum_sum"]=covid_df_sum["AnzahlFall"].cumsum()
@@ -62,16 +64,22 @@ ir_df=ir_df.resample("1D").backfill()
 #%% Plot
 
 fig, ax = plt.subplots(4, figsize=(10,20))
-ax[0].plot(covid_df_sum.index,covid_df_sum["AnzahlFall_7d_mean"])
+ax[0].plot(covid_df_sum.index,covid_df_sum["AnzahlFall_7d_mean"], color='blue')
 ax[0].set_title("Covid Fälle pro Tag im 7 Tage Mittel")
-ax[1].plot(covid_df_sum.index,covid_df_sum["AnzahlTodesfallfall_7d_mean"])
+ax[0].text(0.2, 0.9, f'Stichtag: {today_str}', color='black',weight='bold',fontsize=16, horizontalalignment='center', verticalalignment='center', transform=ax[0].transAxes)
+ax[1].plot(covid_df_sum.index,covid_df_sum["AnzahlTodesfall_7d_mean"], color='red')
 ax[1].set_title("Covid Todesfälle pro Tag im 7 Tage Mittel")
-ax[2].plot(testzahl_df.index,testzahl_df["Testungen_7d_mean"])
+ax[2].plot(testzahl_df.index,testzahl_df["Testungen_7d_mean"], color='green')
 ax[2].set_title("Testungen pro Tag im 7 Tage Mittel")
-ax[3].plot(ir_df.index,ir_df["Aktuelle_COVID_Faelle_Erwachsene_ITS"])
-ax[3].set_title("Anzahl belgter Intensivbetten mit Covd-Patienten")
-fig.tight_layout()
-plt.savefig("Covid_summary.png")
+ax[2].set_ylim([0, None])
+ax[3].plot(ir_df.index,ir_df["Aktuelle_COVID_Faelle_Erwachsene_ITS"], color='orange')
+ax[3].set_title("Anzahl belegter Intensivbetten mit Covd-Patienten")
+for axs in ax.flat:
+    axs.set_title(label=axs.get_title(), weight='bold')
+    axs.set_ylabel('Anzahl')
+    axs.set_xlim([date(2020,2,20), covid_df_sum.index.max()+timedelta(days=5)])
+fig.tight_layout(h_pad=2)
+plt.savefig("Covid_summary.png", bbox_inches = 'tight')
 plt.show()
 
 #%% Read impfmonitoring
@@ -83,7 +91,7 @@ im_df['Cum_sum_1']=im_df["Erstimpfung"].cumsum()
 im_df['Cum_sum_2']=im_df["Zweitimpfung"].cumsum()
 im_df['Cum_sum_gesamt']=im_df["Gesamtzahl verabreichter Impfstoffdosen"].cumsum()
 
-#%% Plot impfmonitoring + Covic
+#%% Plot impfmonitoring + Covid
 
 min_date=pd.to_datetime(im_df["Datum"].min())
 covid_df_sum_im=covid_df_sum[covid_df_sum.index>=min_date]
@@ -92,12 +100,16 @@ ticks_y = ticker.FuncFormatter(lambda x, pos: '{0:g}'.format(x/scale_y))
 
 fig2, ax2 = plt.subplots()
 ax2.plot(im_df["Datum"], im_df["Cum_sum_1"], label="Erstimpfung kumuliert")
+ax2.plot(im_df["Datum"], im_df["Cum_sum_2"], label="Zweitimpfung kumuliert")
 ax2.plot(covid_df_sum_im.index,covid_df_sum_im["Cum_sum"], label="Erkrankte")
 ax2.axhline(y=83020000*0.7, color='r', linestyle='-', label="Herdenimmunität (70%)")
 ax2.legend()
 ax2.yaxis.set_major_formatter(ticks_y)
 ax2.set_ylabel('Anzahl Personen in Millionen')
+ax2.text(0.2, 0.9, f'Stichtag: {today_str}', color='black',weight='bold',horizontalalignment='center', verticalalignment='center', transform=ax2.transAxes)
 plt.xticks(rotation=45)
 fig2.tight_layout()
-fig2.savefig('Herdenimmunitaet.png')
+fig2.savefig('Herdenimmunitaet.png', bbox_inches = 'tight')
 fig2.show()
+
+print(covid_df_sum.index.max())
