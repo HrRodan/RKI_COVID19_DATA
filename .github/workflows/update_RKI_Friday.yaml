@@ -6,7 +6,7 @@ on:
 #      - master
   workflow_dispatch:
   schedule:
-    - cron: "0 19 * * FRI"
+    - cron: "30 17 * * FRI"
 
 jobs:
   update_page:
