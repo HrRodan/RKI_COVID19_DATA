@@ -8,6 +8,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from repo_tools_pkg.file_tools import find_latest_file
+from matplotlib.ticker import (MultipleLocator, FormatStrFormatter, AutoMinorLocator)
+import matplotlib as mpl
 
 
 # %% Set parameters
@@ -74,6 +76,14 @@ covid_df["Meldedatum"]=pd.to_datetime(covid_df["Meldedatum"]).dt.date
 testzahl_path=find_latest_file(os.path.join(parent_directory,"Testzahlen","raw_data"))[0]
 testzahl_df=pd.read_excel(testzahl_path,sheet_name='1_Testzahlerfassung', skipfooter=1)
 testzahl_df=testzahl_df.drop(0)
+datum=[]
+for key, value in testzahl_df.iterrows():
+    kalender=value['Kalenderwoche'].split('/')
+    datum.append(date.fromisocalendar(int(kalender[1]), int(kalender[0]),7))
+testzahl_df.index=pd.to_datetime(datum)
+testzahl_df=testzahl_df.resample("1D").backfill()
+testzahl_df.sort_index(ascending=True)
+testzahl_df["Testungen_7d_mean"]=testzahl_df["Anzahl Testungen"]/7
 
 #%% Read Intensivregister
 ir_path=find_latest_file(os.path.join(parent_directory,"Intensivregister","raw_data"),'bundesland')[0]
@@ -98,6 +108,7 @@ def covid_df_sum_bl_lk(id,landkreis=False):
     #Ein Datensatz pro Tag mit 0 aufüllen
     covid_df_sum=covid_df_sum.resample("1D").asfreq().fillna(0)
     covid_df_sum["AnzahlFall_7d_mean"]=covid_df_sum["AnzahlFall"].rolling(7).mean()
+    covid_df_sum["Inzidenz_7d"] = covid_df_sum["AnzahlFall"].rolling(7).sum()/(number_population[id]/100000)
     covid_df_sum["AnzahlTodesfall_7d_mean"]=covid_df_sum["AnzahlTodesfall"].rolling(7).mean()
     covid_df_sum.index=pd.to_datetime(covid_df_sum.index)
     covid_df_sum=covid_df_sum.sort_index(ascending=True)
@@ -128,31 +139,44 @@ def plot_covid_bl(id):
     covid_df_sum=covid_df_sum_bl_lk(id)
     ir_df=ir_df_sum_bl(id)
     iqm_df=iqm_df_sum_bl(id)
+    mpl.rcParams['lines.linewidth'] = 3
+    mpl.rcParams['axes.linewidth'] = 1.2
+    max_y_covid=int(covid_df_sum["Inzidenz_7d"].max())*1.2
+    covid_major_yticks=np.arange(0,max_y_covid,50)
+    covid_minor_yticks = np.arange(25, max_y_covid, 25)
     fig, ax = plt.subplots(number_plots, figsize=(10, 20))
     fig.suptitle(f"Covid Situation in {number_states[id]} - Stichtag: {today_str}", fontsize = 20, weight='bold')
-    ax[0].plot(covid_df_sum.index, covid_df_sum["AnzahlFall_7d_mean"], color='blue')
-    ax[0].set_title(f"{number_states[id]} - Covid Fälle pro Tag im 7 Tage Mittel")
+    ax[0].plot(covid_df_sum.index, covid_df_sum["Inzidenz_7d"], color='blue')
+    ax[0].set_title(f"{number_states[id]} - 7-Tage Inzidenz")
+    ax[0].set_yticks(covid_major_yticks)
+    ax[0].set_yticks(covid_minor_yticks , minor=True)
+    ax[0].yaxis.grid()
+    ax[0].yaxis.grid(which='minor', linestyle=':')
     ax[1].plot(covid_df_sum.index, covid_df_sum["AnzahlTodesfall_7d_mean"], color='red')
     ax[1].set_title(f"{number_states[id]} - Covid Todesfälle pro Tag im 7 Tage Mittel")
     ax[2].plot(ir_df.index, ir_df["Aktuelle_COVID_Faelle_Erwachsene_ITS"], color='orange', label="Covid Patienten ITS")
     ax[2].plot(ir_df.index, ir_df["Freie_IV_Kapazitaeten_Davon_COVID"], color='blue', label="Freie IV Kapazität für Covid")
     ax[2].plot(ir_df.index, ir_df["Freie_IV_Kapazitaeten_Gesamt"], color='lightblue', label="Freie IV Kapazität Gesamt")
     ax[2].set_title(f"{number_states[id]} - Anzahl belegter Intensivbetten mit Covd-Patienten")
-    ax[2].legend()
+    ax[2].legend(prop={'size': 16})
     ax[3].plot(iqm_df["ISODate"],iqm_df["Impfungenkumulativ"]/number_population[id]*100, label="Erstimpfungen kumuliert", color='darkviolet')
     ax[3].plot(iqm_df["ISODate"], iqm_df["ZweiteImpfungkumulativ"] / number_population[id]*100, label="Zweitimpfung kumuliert")
     ax[3].set_title(f"{number_states[id]} - Impfquote")
-    ax[3].legend()
+    ax[3].legend(prop={'size': 16})
     ax[3].set_ylim(-2,70)
+    ax[3].yaxis.set_minor_locator(AutoMinorLocator(2))
+    ax[3].yaxis.grid(which='minor', linestyle=':')
     ax[3].yaxis.grid()
     if id==0:
         ax[4].set_title(f"{number_states[id]} - Testzahlen")
         ax[4].plot(testzahl_df.index, testzahl_df["Testungen_7d_mean"], color='green')
-        ax[4].set_title("Testungen pro Tag im 7 Tage Mittel")
+        ax[4].set_title(f"{number_states[id]} - Testungen pro Tag im 7 Tage Mittel")
     for axs in ax.flat:
         axs.set_title(label=axs.get_title(), weight='bold')
         axs.set_ylabel('Anzahl')
         axs.set_xlim([date(2020, 2, 20), covid_df_sum.index.max() + timedelta(days=5)])
+        for item in ([axs.title,axs.xaxis.label, axs.yaxis.label] + axs.get_xticklabels() + axs.get_yticklabels()):
+            item.set_fontsize(16)
     ax[3].set_ylabel('Bevölkerungsanteil [%]')
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
     plt.savefig(f"covid_bl_{id}.png", bbox_inches='tight')
