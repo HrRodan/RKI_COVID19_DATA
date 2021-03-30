@@ -168,19 +168,22 @@ def plot_covid_bl(id):
     ax[3].yaxis.grid(which='minor', linestyle=':')
     ax[3].yaxis.grid()
     if id==0:
-        ax[4].set_title(f"{number_states[id]} - Testzahlen")
+        ax[4].set_title(f"{number_states[id]} - Testzahlen", fontsize=16)
         ax[4].plot(testzahl_df.index, testzahl_df["Testungen_7d_mean"], color='green')
         ax[4].set_title(f"{number_states[id]} - Testungen pro Tag im 7 Tage Mittel")
     for axs in ax.flat:
         axs.set_title(label=axs.get_title(), weight='bold')
-        axs.set_ylabel('Anzahl')
+        axs.set_ylabel('Anzahl', fontsize=16)
         axs.set_xlim([date(2020, 2, 20), covid_df_sum.index.max() + timedelta(days=5)])
+        axs.yaxis.tick_right()
         for item in ([axs.title,axs.xaxis.label, axs.yaxis.label] + axs.get_xticklabels() + axs.get_yticklabels()):
             item.set_fontsize(16)
-    ax[3].set_ylabel('Bevölkerungsanteil [%]')
+    ax[3].set_ylabel('Bevölkerungsanteil [%]',fontsize=16)
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
     plt.savefig(f"covid_bl_{id}.png", bbox_inches='tight')
     plt.show()
+
+plot_covid_bl(9)
 
 #%% Plot All
 for key in number_states:
