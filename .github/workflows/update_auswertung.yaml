@@ -6,7 +6,7 @@ on:
 #      - master
   workflow_dispatch:
   schedule:
-    - cron: "0 18 * * *"
+    - cron: "30 18 * * *"
 
 jobs:
   update_page:
@@ -30,7 +30,7 @@ jobs:
       - name: Update Conda via mamba
         run: mamba install -y anaconda
       - name: generate PNG
-        run: python ./covid_create_graphs_summary.py
+        run: python ./create_graphs.py
         working-directory: ./Auswertung/
       - name: Commit files
         run: |
