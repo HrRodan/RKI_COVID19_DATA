@@ -183,8 +183,6 @@ def plot_covid_bl(id):
     plt.savefig(f"covid_bl_{id}.png", bbox_inches='tight')
     plt.show()
 
-plot_covid_bl(9)
-
 #%% Plot All
 for key in number_states:
     plot_covid_bl(key)
