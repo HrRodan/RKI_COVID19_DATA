@@ -8,11 +8,11 @@ day_of_week=today.isoweekday()
 de_holidays = holidays.CountryHoliday('DE')
 
 #%% each day
-# try:
-#     print("Downloading daily RKI Covid Data...")
-#     download_RKI_COVID19()
-# except Exception as e:
-#     print(e)
+try:
+    print("Downloading daily RKI Covid Data...")
+    download_RKI_COVID19()
+except Exception as e:
+    print(e)
 
 try:
     print("Downloading daily RKI Nowcasting...")
