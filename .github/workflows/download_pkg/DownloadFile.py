@@ -2,6 +2,9 @@ import requests, os, lzma
 from datetime import datetime
 from shutil import copyfile
 
+def get_root_directory():
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..',)
+
 class DownloadFile():
     def __init__(self,url,filename,download_path,compress=True,add_date=True,add_latest=False):
         self.url=url

@@ -1,0 +1,65 @@
+name: Download and Update all
+
+on:
+#  push:
+#    branches:
+#      - master
+  workflow_dispatch:
+#  schedule:
+#    - cron: "0 17 * * *"
+
+jobs:
+  update_page:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    steps:
+      - uses: actions/checkout@master
+      - name: update apt
+        run: sudo apt-get update
+      - name: Install gnuplot
+        run: sudo apt-get install gnuplot
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-activate-base: false
+          activate-environment: covid
+          python-version: 3.8
+          miniconda-version: "latest"
+          mamba-version: "*"
+          channels: conda-forge,defaults
+      - name: Update Conda via mamba
+        run: mamba install -y anaconda holidays
+      - name: Run Download scheduler
+        run: python ./schedule.py
+        working-directory: ./.github/workflows
+        continue-on-error: true
+      - name: process RKI Impfquotenmonitoring
+        run: python ./process_RKI_Impfquotenmonitoring.py
+        working-directory: ./.github/workflows
+        continue-on-error: true
+        timeout-minutes: 60
+      - name: run gnuplot
+        run: chmod +x ./generate_plots.sh && ./generate_plots.sh
+        working-directory: ./Impfquotenmonitoring/gnuplot
+        continue-on-error: true
+        timeout-minutes: 20
+      - name: generate PNG
+        run: python ./create_graphs.py
+        working-directory: ./Auswertung/
+      - name: Commit files
+        run: |
+          git config --local user.name  ${{ github.actor }}
+          git add ':/*.gz'
+          git add ':/*.xz'
+          git add ':/*.xlsx'
+          git add ':/*.csv'
+          git add ':/*.png'
+          git status -s
+          git commit -m "daily update and processing"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
