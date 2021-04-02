@@ -10,6 +10,7 @@ day_of_week=today.isoweekday()
 de_holidays = holidays.CountryHoliday('DE')
 t_14=time(hour=14)
 t_22=time(hour=22)
+print(f"Starting at {t_now}")
 
 #%% each day
 try:
