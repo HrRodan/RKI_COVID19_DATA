@@ -1,11 +1,14 @@
 from download_pkg import *
 import os
-from datetime import datetime, date
+from datetime import datetime, date, time
 import holidays
 
+t_now=datetime.now().time()
 today=date.today()
 day_of_week=today.isoweekday()
 de_holidays = holidays.CountryHoliday('DE')
+t_14=time(hour=14)
+t_22=time(hour=22)
 
 #%% each day
 try:
@@ -14,26 +17,28 @@ try:
 except Exception as e:
     print(e)
 
-try:
-    print("Downloading daily RKI Nowcasting...")
-    download_RKI_Nowcasting()
-except Exception as e:
-    print(e)
+if t_now>=t_22:
+    try:
+        print("Downloading daily RKI Nowcasting...")
+        download_RKI_Nowcasting()
+    except Exception as e:
+        print(e)
 
-try:
-    print("Downloading daily Intensivregister...")
-    download_Intensivregister()
-except Exception as e:
-    print(e)
+if t_now>=t_14:
+    try:
+        print("Downloading daily Intensivregister...")
+        download_Intensivregister()
+    except Exception as e:
+        print(e)
 
-try:
-    print("Downloading daily Impfquotenmonitoring...")
-    download_RKI_Impfquotenmonitoring()
-except Exception as e:
-    print(e)
+    try:
+        print("Downloading daily Impfquotenmonitoring...")
+        download_RKI_Impfquotenmonitoring()
+    except Exception as e:
+        print(e)
 
 #%% each working day
-if day_of_week in range(1,6) and today not in de_holidays:
+if day_of_week in range(1,6) and today not in de_holidays and t_now>=t_14:
     try:
         print("Downloading daily RKI Fallzahlen..")
         download_RKI_Fallzahlen()
@@ -41,7 +46,7 @@ if day_of_week in range(1,6) and today not in de_holidays:
         print(e)
 
 #%% each Tuesday
-if day_of_week==2:
+if day_of_week==2 and t_now>=t_14:
     print("Tuesday Download starting...")
     try:
         print("Downloading RKI Altersverteilung..")
@@ -62,7 +67,7 @@ if day_of_week==2:
         print(e)
 
 #%% each Wednesday
-if day_of_week==3:
+if day_of_week==3 and t_now>=t_14:
     print("Wednesday Download starting...")
     try:
         print("Downloading RKI Testzahlen..")
@@ -71,7 +76,7 @@ if day_of_week==3:
         print(e)
 
 #%% each Friday
-if day_of_week==5:
+if day_of_week==5 and t_now>=t_14:
     print("Friday Download starting...")
     try:
         print("Downloading RKI Todesfaelle..")
