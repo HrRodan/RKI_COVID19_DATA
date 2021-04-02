@@ -1,6 +1,7 @@
 import requests, os, lzma
 from datetime import datetime
 from shutil import copyfile
+import pytz
 
 def get_root_directory():
     os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..',)
@@ -19,7 +20,7 @@ class DownloadFile():
     def full_path(self):
         path = os.path.join(self.download_path,self._file_name_root)
         if self.add_date:
-            DATE_STR = datetime.now().date().strftime('%Y-%m-%d')
+            DATE_STR = datetime.now(pytz.timezone('Europe/Berlin')).date().strftime('%Y-%m-%d')
             path=path+"_"+DATE_STR
         path = path+self._file_extension
         if self.compress:

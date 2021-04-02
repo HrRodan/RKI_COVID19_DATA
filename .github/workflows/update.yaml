@@ -40,11 +40,11 @@ jobs:
         working-directory: ./.github/workflows
         continue-on-error: true
         timeout-minutes: 60
-      - name: run gnuplot
-        run: chmod +x ./generate_plots.sh && ./generate_plots.sh
-        working-directory: ./Impfquotenmonitoring/gnuplot
-        continue-on-error: true
-        timeout-minutes: 20
+#      - name: run gnuplot
+#        run: chmod +x ./generate_plots.sh && ./generate_plots.sh
+#        working-directory: ./Impfquotenmonitoring/gnuplot
+#        continue-on-error: true
+#        timeout-minutes: 20
       - name: generate PNG
         run: python ./create_graphs.py
         working-directory: ./.github/workflows
