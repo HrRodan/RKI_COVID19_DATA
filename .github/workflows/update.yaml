@@ -47,7 +47,7 @@ jobs:
         timeout-minutes: 20
       - name: generate PNG
         run: python ./create_graphs.py
-        working-directory: ./Auswertung/
+        working-directory: ./.github/workflows
       - name: Commit files
         run: |
           git config --local user.name  ${{ github.actor }}

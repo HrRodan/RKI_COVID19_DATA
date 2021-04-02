@@ -17,7 +17,7 @@ today = datetime.now().date()
 yesterday = today - timedelta(days=1)
 today_str = today.strftime('%Y-%m-%d')
 file_path=os.path.dirname(__file__)
-parent_directory=os.path.normpath(os.path.join(file_path, '..',''))
+parent_directory=os.path.normpath(os.path.join(file_path, '..','..',''))
 states_number = {
     "Deutschland": 0,
     "Schleswig-Holstein": 1,
@@ -180,10 +180,9 @@ def plot_covid_bl(id):
             item.set_fontsize(16)
     ax[3].set_ylabel('Bevölkerungsanteil [%]',fontsize=16)
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
-    plt.savefig(f"covid_bl_{id}.png", bbox_inches='tight')
+    plt.savefig(os.path.join(parent_directory,'Auswertung',f"covid_bl_{id}.png"), bbox_inches='tight')
     plt.show()
 
 #%% Plot All
 for key in number_states:
     plot_covid_bl(key)
-
