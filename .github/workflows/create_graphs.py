@@ -180,9 +180,10 @@ def plot_covid_bl(id):
             item.set_fontsize(16)
     ax[3].set_ylabel('Bevölkerungsanteil [%]',fontsize=16)
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
-    plt.savefig(os.path.join(parent_directory,'Auswertung',f"covid_bl_{id}.png"), bbox_inches='tight')
+    plt.savefig(os.path.join(parent_directory,'Auswertung',f"covid_bl_{id}.png"), bbox_inches='tight', dpi=60)
     plt.show()
 
 #%% Plot All
 for key in number_states:
     plot_covid_bl(key)
+#plot_covid_bl(9)
