@@ -1,0 +1,23 @@
+name: show current time
+
+on:
+#  push:
+#    branches:
+#      - master
+  workflow_dispatch:
+#  schedule:
+#    - cron: "0 19 * * *"
+
+jobs:
+  update_page:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    steps:
+      - uses: actions/checkout@master
+      - name: update apt
+        run: sudo apt-get update
+      - name: show time
+        run: date && timedatectl | grep “Time zone”
