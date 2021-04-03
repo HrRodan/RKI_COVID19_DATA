@@ -154,6 +154,10 @@ def plot_covid_bl(id):
     ax[0].yaxis.grid(which='minor', linestyle=':')
     ax[1].plot(covid_df_sum.index, covid_df_sum["AnzahlTodesfall_7d_mean"], color='black')
     ax[1].set_title(f"{number_states[id]} - Covid (Todes)-Fälle pro Tag im 7 Tage Mittel")
+    ax[1].annotate('', xy=(date(2020,10,15), ax[1].get_ylim()[1]/2), xytext=(date(2020,7,1), ax[1].get_ylim()[1]/2),
+                 arrowprops=dict(arrowstyle="<-", color='red', linewidth=2 ))
+    ax[1].annotate('', xy=(date(2021,1,20), ax[1].get_ylim()[1]*0.7), xytext=(date(2021,3,15), ax[1].get_ylim()[1]*0.7),
+                 arrowprops=dict(arrowstyle="<-", color='black', linewidth=2 ))
     ax1_2 = ax[1].twinx()
     ax1_2.plot(covid_df_sum.index, covid_df_sum["AnzahlFall_7d_mean"], color='red')
     ax1_2.set_ylabel('Anzahl Erkrankte 7d Mittel', fontsize = 16, color='red')
