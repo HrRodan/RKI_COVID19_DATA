@@ -10,6 +10,7 @@ import matplotlib.ticker as ticker
 from repo_tools_pkg.file_tools import find_latest_file
 from matplotlib.ticker import (MultipleLocator, FormatStrFormatter, AutoMinorLocator)
 import matplotlib as mpl
+import itertools
 
 
 # %% Set parameters
@@ -150,10 +151,16 @@ def plot_covid_bl(id):
     ax[0].set_title(f"{number_states[id]} - 7-Tage Inzidenz")
     ax[0].set_yticks(covid_major_yticks)
     ax[0].set_yticks(covid_minor_yticks , minor=True)
-    ax[0].yaxis.grid()
     ax[0].yaxis.grid(which='minor', linestyle=':')
     ax[1].plot(covid_df_sum.index, covid_df_sum["AnzahlTodesfall_7d_mean"], color='red')
-    ax[1].set_title(f"{number_states[id]} - Covid Todesfälle pro Tag im 7 Tage Mittel")
+    ax[1].set_title(f"{number_states[id]} - Covid (Todes)-Fälle pro Tag im 7 Tage Mittel")
+    ax1_2 = ax[1].twinx()
+    ax1_2.plot(covid_df_sum.index, covid_df_sum["AnzahlFall_7d_mean"])
+    ax1_2.set_ylabel('Anzahl Erkrankte 7d Mittel', fontsize = 16)
+    ax1_2.yaxis.tick_left()
+    ax1_2.yaxis.set_label_position("left")
+    for item in ([ax1_2.title, ax1_2.xaxis.label, ax1_2.yaxis.label] + ax1_2.get_xticklabels() + ax1_2.get_yticklabels()):
+        item.set_fontsize(16)
     ax[2].plot(ir_df.index, ir_df["Aktuelle_COVID_Faelle_Erwachsene_ITS"], color='orange', label="Covid Patienten ITS")
     ax[2].plot(ir_df.index, ir_df["Freie_IV_Kapazitaeten_Davon_COVID"], color='blue', label="Freie IV Kapazität für Covid")
     ax[2].plot(ir_df.index, ir_df["Freie_IV_Kapazitaeten_Gesamt"], color='lightblue', label="Freie IV Kapazität Gesamt")
@@ -176,14 +183,18 @@ def plot_covid_bl(id):
         axs.set_ylabel('Anzahl', fontsize=16)
         axs.set_xlim([date(2020, 2, 20), covid_df_sum.index.max() + timedelta(days=5)])
         axs.yaxis.tick_right()
+        axs.yaxis.set_label_position("right")
+        axs.xaxis.grid()
+        axs.yaxis.grid()
         for item in ([axs.title,axs.xaxis.label, axs.yaxis.label] + axs.get_xticklabels() + axs.get_yticklabels()):
             item.set_fontsize(16)
     ax[3].set_ylabel('Bevölkerungsanteil [%]',fontsize=16)
+    ax[1].set_ylabel('Anzahl Todesfälle 7d Mittel', fontsize=16)
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
     plt.savefig(os.path.join(parent_directory,'Auswertung',f"covid_bl_{id}.png"), bbox_inches='tight', dpi=60)
     plt.show()
 
 #%% Plot All
-for key in number_states:
-    plot_covid_bl(key)
-#plot_covid_bl(9)
+#for key in number_states:
+#    plot_covid_bl(key)
+plot_covid_bl(9)
