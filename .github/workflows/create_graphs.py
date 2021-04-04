@@ -218,6 +218,7 @@ def plot_covid_bl(id):
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
     plt.savefig(os.path.join(parent_directory,'Auswertung',f"covid_bl_{id}.png"), bbox_inches='tight', dpi=60)
     plt.show()
+    plt.close(fig)
 
 #%% Plot Landkreis
 def plot_covid_lk(id):
@@ -279,6 +280,7 @@ def plot_covid_lk(id):
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
     plt.savefig(os.path.join(parent_directory,'Auswertung','Landkreise',f"covid_lk_{id}.png"), bbox_inches='tight', dpi=60)
     plt.show()
+    plt.close(fig)
 
 
 #%% Plot All BL
