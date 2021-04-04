@@ -6,9 +6,8 @@
 
 ## Bundesländer
 
-_|_|
-:---:|:---:|
 <img src="https://raw.githubusercontent.com/HrRodan/RKI_COVID19_DATA/master/Auswertung/covid_bl_9.png" width="400">|<img src="https://raw.githubusercontent.com/HrRodan/RKI_COVID19_DATA/master/Auswertung/covid_bl_2.png" width="400">|
+:---:|:---:|
 <img src="https://raw.githubusercontent.com/HrRodan/RKI_COVID19_DATA/master/Auswertung/covid_bl_3.png" width="400">|<img src="https://raw.githubusercontent.com/HrRodan/RKI_COVID19_DATA/master/Auswertung/covid_bl_4.png" width="400">|
 <img src="https://raw.githubusercontent.com/HrRodan/RKI_COVID19_DATA/master/Auswertung/covid_bl_5.png" width="400">|<img src="https://raw.githubusercontent.com/HrRodan/RKI_COVID19_DATA/master/Auswertung/covid_bl_6.png" width="400">|
 <img src="https://raw.githubusercontent.com/HrRodan/RKI_COVID19_DATA/master/Auswertung/covid_bl_7.png" width="400">|<img src="https://raw.githubusercontent.com/HrRodan/RKI_COVID19_DATA/master/Auswertung/covid_bl_8.png" width="400">|
