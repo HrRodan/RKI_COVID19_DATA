@@ -112,7 +112,7 @@ def covid_df_sum_bl_lk(id,landkreis=False):
         bundesland_id=[id]
 
     if landkreis:
-        population=landkreis_df[landkreis_df['IdLandkreis'] == 9572].iloc[0]['Bevoelkerung']
+        population=landkreis_df[landkreis_df['IdLandkreis'] == id].iloc[0]['Bevoelkerung']
     else:
         population=number_population[id]
 
@@ -221,20 +221,20 @@ def plot_covid_bl(id):
 
 #%% Plot Landkreis
 def plot_covid_lk(id):
-    name_lk=landkreis_df[landkreis_df['IdLandkreis'] == 9572].iloc[0]['Landkreis']
+    name_lk=landkreis_df[landkreis_df['IdLandkreis'] == id].iloc[0]['Landkreis']
     covid_df_sum=covid_df_sum_bl_lk(id,landkreis=True)
     mpl.rcParams['lines.linewidth'] = 3
     mpl.rcParams['axes.linewidth'] = 1.2
     max_y_covid=int(covid_df_sum["Inzidenz_7d"].max())*1.2
-    covid_major_yticks=np.arange(0,max_y_covid,50)
-    covid_minor_yticks = np.arange(25, max_y_covid, 25)
-
+    #covid_major_yticks=np.arange(0,max_y_covid,50)
+    #covid_minor_yticks = np.arange(25, max_y_covid, 25)
     fig, ax = plt.subplots(3, figsize=(10, 15))
     fig.suptitle(f"Covid Situation in {name_lk} \nStichtag: {today_str}", fontsize = 20, weight='bold')
     ax[0].plot(covid_df_sum.index, covid_df_sum["Inzidenz_7d"], color='blue')
     ax[0].set_title(f"{name_lk} \n7-Tage Inzidenz")
-    ax[0].set_yticks(covid_major_yticks)
-    ax[0].set_yticks(covid_minor_yticks , minor=True)
+    #ax[0].set_yticks(covid_major_yticks)
+    #ax[0].set_yticks(covid_minor_yticks , minor=True)
+    ax[0].yaxis.set_minor_locator(AutoMinorLocator(2))
     ax[0].yaxis.grid(which='minor', linestyle=':')
     ax[1].plot(covid_df_sum.index, covid_df_sum["AnzahlTodesfall_7d_mean"], color='black')
     ax[1].set_title(f"{name_lk} \nCovid (Todes)-Fälle pro Tag im 7 Tage Mittel")
