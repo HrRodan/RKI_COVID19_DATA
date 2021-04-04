@@ -99,7 +99,7 @@ iqm_df["ISODate"]=pd.to_datetime(iqm_df["ISODate"]).dt.date
 
 #%% Read Landkreise
 landkreis_path=os.path.join(parent_directory,"Misc",'Landkreise.csv')
-landkreis_df=pd.read_csv(landkreis_path, skiprows=6, skipfooter=4, engine='python', sep=';', encoding='mbcs',
+landkreis_df=pd.read_csv(landkreis_path, skiprows=6, skipfooter=4, engine='python', sep=';', encoding='utf_8',
                          names=['IdLandkreis','Landkreis','Bevoelkerung'], na_values='-')
 
 

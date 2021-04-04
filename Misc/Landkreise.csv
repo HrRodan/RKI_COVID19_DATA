@@ -1,20 +1,20 @@
 GENESIS-Tabelle: 12411-0015
-Bevölkerung: Kreise, Stichtag;;
-Fortschreibung des Bevölkerungsstandes;;
-Bevölkerungsstand (Anzahl);;
+BevÃ¶lkerung: Kreise, Stichtag;;
+Fortschreibung des BevÃ¶lkerungsstandes;;
+BevÃ¶lkerungsstand (Anzahl);;
 ;;Stichtag
 ;;31.12.2019
 01001;Flensburg, kreisfreie Stadt;90164
 01002;Kiel, kreisfreie Stadt;246794
-01003;Lübeck, kreisfreie Stadt;216530
-01004;Neumünster, kreisfreie Stadt;80196
+01003;LÃ¼beck, kreisfreie Stadt;216530
+01004;NeumÃ¼nster, kreisfreie Stadt;80196
 01051;Dithmarschen, Landkreis;133193
 01053;Herzogtum Lauenburg, Landkreis;198019
 01054;Nordfriesland, Landkreis;165951
 01055;Ostholstein, Landkreis;200539
 01056;Pinneberg, Landkreis;316103
-01057;Plön, Landkreis;128686
-01058;Rendsburg-Eckernförde, Landkreis;274098
+01057;PlÃ¶n, Landkreis;128686
+01058;Rendsburg-EckernfÃ¶rde, Landkreis;274098
 01059;Schleswig-Flensburg, Landkreis;201156
 01060;Segeberg, Landkreis;277175
 01061;Steinburg, Landkreis;131013
@@ -24,14 +24,14 @@ Bevölkerungsstand (Anzahl);;
 03102;Salzgitter, kreisfreie Stadt;104291
 03103;Wolfsburg, kreisfreie Stadt;124371
 03151;Gifhorn, Landkreis;176523
-03152;Göttingen, Landkreis (bis 31.10.2016);-
+03152;GÃ¶ttingen, Landkreis (bis 31.10.2016);-
 03153;Goslar, Landkreis;136292
 03154;Helmstedt, Landkreis;91297
 03155;Northeim, Landkreis;132285
 03156;Osterode am Harz, Landkreis (bis 31.10.2016);-
 03157;Peine, Landkreis;134801
-03158;Wolfenbüttel, Landkreis;119622
-03159;Göttingen, Landkreis;326041
+03158;WolfenbÃ¼ttel, Landkreis;119622
+03159;GÃ¶ttingen, Landkreis;326041
 03201;Hannover, kreisfreie Stadt (bis 31.10.2001);-
 03241;Region Hannover, Landkreis;1157115
 03251;Diepholz, Landkreis;217089
@@ -44,10 +44,10 @@ Bevölkerungsstand (Anzahl);;
 03351;Celle, Landkreis;179011
 03352;Cuxhaven, Landkreis;198038
 03353;Harburg, Landkreis;254431
-03354;Lüchow-Dannenberg, Landkreis;48412
-03355;Lüneburg, Landkreis;184139
+03354;LÃ¼chow-Dannenberg, Landkreis;48412
+03355;LÃ¼neburg, Landkreis;184139
 03356;Osterholz, Landkreis;113928
-03357;Rotenburg (Wümme), Landkreis;163782
+03357;Rotenburg (WÃ¼mme), Landkreis;163782
 03358;Heidekreis;140673
 03359;Stade, Landkreis;204512
 03360;Uelzen, Landkreis;92389
@@ -55,7 +55,7 @@ Bevölkerungsstand (Anzahl);;
 03401;Delmenhorst, kreisfreie Stadt;77559
 03402;Emden, kreisfreie Stadt;49913
 03403;Oldenburg (Oldenburg), kreisfreie Stadt;169077
-03404;Osnabrück, kreisfreie Stadt;165251
+03404;OsnabrÃ¼ck, kreisfreie Stadt;165251
 03405;Wilhelmshaven, kreisfreie Stadt;76089
 03451;Ammerland, Landkreis;124859
 03452;Aurich, Landkreis;189694
@@ -65,18 +65,18 @@ Bevölkerungsstand (Anzahl);;
 03456;Grafschaft Bentheim, Landkreis;137162
 03457;Leer, Landkreis;170756
 03458;Oldenburg, Landkreis;130890
-03459;Osnabrück, Landkreis;358080
+03459;OsnabrÃ¼ck, Landkreis;358080
 03460;Vechta, Landkreis;142814
 03461;Wesermarsch, Landkreis;88583
 03462;Wittmund, Landkreis;56926
 04011;Bremen, kreisfreie Stadt;567559
 04012;Bremerhaven, kreisfreie Stadt;113643
-05111;Düsseldorf, kreisfreie Stadt;621877
+05111;DÃ¼sseldorf, kreisfreie Stadt;621877
 05112;Duisburg, kreisfreie Stadt;498686
 05113;Essen, kreisfreie Stadt;582760
 05114;Krefeld, kreisfreie Stadt;227417
-05116;Mönchengladbach, kreisfreie Stadt;261034
-05117;Mülheim an der Ruhr, kreisfreie Stadt;170632
+05116;MÃ¶nchengladbach, kreisfreie Stadt;261034
+05117;MÃ¼lheim an der Ruhr, kreisfreie Stadt;170632
 05119;Oberhausen, kreisfreie Stadt;210764
 05120;Remscheid, kreisfreie Stadt;111338
 05122;Solingen, kreisfreie Stadt;159245
@@ -88,11 +88,11 @@ Bevölkerungsstand (Anzahl);;
 05170;Wesel, Landkreis;459976
 05313;Aachen, kreisfreie Stadt (bis 20.10.2009);-
 05314;Bonn, kreisfreie Stadt;329673
-05315;Köln, kreisfreie Stadt;1087863
+05315;KÃ¶ln, kreisfreie Stadt;1087863
 05316;Leverkusen, kreisfreie Stadt;163729
-05334;Städteregion Aachen, Landkreis;557026
+05334;StÃ¤dteregion Aachen, Landkreis;557026
 05354;Aachen, Landkreis (bis 20.10.2009);-
-05358;Düren, Landkreis;264638
+05358;DÃ¼ren, Landkreis;264638
 05362;Rhein-Erft-Kreis;470615
 05366;Euskirchen, Landkreis;193656
 05370;Heinsberg, Landkreis;255555
@@ -101,18 +101,18 @@ Bevölkerungsstand (Anzahl);;
 05382;Rhein-Sieg-Kreis;600764
 05512;Bottrop, kreisfreie Stadt;117565
 05513;Gelsenkirchen, kreisfreie Stadt;259645
-05515;Münster, kreisfreie Stadt;315293
+05515;MÃ¼nster, kreisfreie Stadt;315293
 05554;Borken, Landkreis;371339
 05558;Coesfeld, Landkreis;220586
 05562;Recklinghausen, Landkreis;614137
 05566;Steinfurt, Landkreis;448220
 05570;Warendorf, Landkreis;277840
 05711;Bielefeld, kreisfreie Stadt;334195
-05754;Gütersloh, Landkreis;364938
+05754;GÃ¼tersloh, Landkreis;364938
 05758;Herford, Landkreis;250578
-05762;Höxter, Landkreis;140251
+05762;HÃ¶xter, Landkreis;140251
 05766;Lippe, Landkreis;347514
-05770;Minden-Lübbecke, Landkreis;310409
+05770;Minden-LÃ¼bbecke, Landkreis;310409
 05774;Paderborn, Landkreis;307839
 05911;Bochum, kreisfreie Stadt;365587
 05913;Dortmund, kreisfreie Stadt;588250
@@ -121,7 +121,7 @@ Bevölkerungsstand (Anzahl);;
 05916;Herne, kreisfreie Stadt;156449
 05954;Ennepe-Ruhr-Kreis;324106
 05958;Hochsauerlandkreis;259777
-05962;Märkischer Kreis;410222
+05962;MÃ¤rkischer Kreis;410222
 05966;Olpe, Landkreis;133955
 05970;Siegen-Wittgenstein, Landkreis;276944
 05974;Soest, Landkreis;301785
@@ -130,9 +130,9 @@ Bevölkerungsstand (Anzahl);;
 06412;Frankfurt am Main, kreisfreie Stadt;763380
 06413;Offenbach am Main, kreisfreie Stadt;130280
 06414;Wiesbaden, kreisfreie Stadt;278474
-06431;Bergstraße, Landkreis;270340
+06431;BergstraÃŸe, Landkreis;270340
 06432;Darmstadt-Dieburg, Landkreis;297844
-06433;Groß-Gerau, Landkreis;275726
+06433;GroÃŸ-Gerau, Landkreis;275726
 06434;Hochtaunuskreis;236914
 06435;Main-Kinzig-Kreis;420552
 06436;Main-Taunus-Kreis;238558
@@ -140,7 +140,7 @@ Bevölkerungsstand (Anzahl);;
 06438;Offenbach, Landkreis;355813
 06439;Rheingau-Taunus-Kreis;187160
 06440;Wetteraukreis;308339
-06531;Gießen, Landkreis;270688
+06531;GieÃŸen, Landkreis;270688
 06532;Lahn-Dill-Kreis;253319
 06533;Limburg-Weilburg, Landkreis;171912
 06534;Marburg-Biedenkopf, Landkreis;247084
@@ -151,7 +151,7 @@ Bevölkerungsstand (Anzahl);;
 06633;Kassel, Landkreis;236764
 06634;Schwalm-Eder-Kreis;179673
 06635;Waldeck-Frankenberg, Landkreis;156406
-06636;Werra-Meißner-Kreis;100629
+06636;Werra-MeiÃŸner-Kreis;100629
 07111;Koblenz, kreisfreie Stadt;114052
 07131;Ahrweiler, Landkreis;130086
 07132;Altenkirchen (Westerwald), Landkreis;128805
@@ -160,12 +160,12 @@ Bevölkerungsstand (Anzahl);;
 07135;Cochem-Zell, Landkreis;61375
 07137;Mayen-Koblenz, Landkreis;214434
 07138;Neuwied, Landkreis;182811
-07140;Rhein-Hunsrück-Kreis;103163
+07140;Rhein-HunsrÃ¼ck-Kreis;103163
 07141;Rhein-Lahn-Kreis;122297
 07143;Westerwaldkreis;201904
 07211;Trier, kreisfreie Stadt;111528
 07231;Bernkastel-Wittlich, Landkreis;112483
-07232;Eifelkreis Bitburg-Prüm;99058
+07232;Eifelkreis Bitburg-PrÃ¼m;99058
 07233;Vulkaneifel, Landkreis;60646
 07235;Trier-Saarburg, Landkreis;149398
 07311;Frankenthal (Pfalz), kreisfreie Stadt;48762
@@ -173,31 +173,31 @@ Bevölkerungsstand (Anzahl);;
 07313;Landau in der Pfalz, kreisfreie Stadt;46881
 07314;Ludwigshafen am Rhein, kreisfreie Stadt;172253
 07315;Mainz, kreisfreie Stadt;218578
-07316;Neustadt an der Weinstraße, kreisfreie Stadt;53264
+07316;Neustadt an der WeinstraÃŸe, kreisfreie Stadt;53264
 07317;Pirmasens, kreisfreie Stadt;40231
 07318;Speyer, kreisfreie Stadt;50561
 07319;Worms, kreisfreie Stadt;83542
-07320;Zweibrücken, kreisfreie Stadt;34193
+07320;ZweibrÃ¼cken, kreisfreie Stadt;34193
 07331;Alzey-Worms, Landkreis;129687
-07332;Bad Dürkheim, Landkreis;132671
+07332;Bad DÃ¼rkheim, Landkreis;132671
 07333;Donnersbergkreis;75325
 07334;Germersheim, Landkreis;129013
 07335;Kaiserslautern, Landkreis;105979
 07336;Kusel, Landkreis;70219
-07337;Südliche Weinstraße, Landkreis;110521
+07337;SÃ¼dliche WeinstraÃŸe, Landkreis;110521
 07338;Rhein-Pfalz-Kreis;154609
 07339;Mainz-Bingen, Landkreis;211417
-07340;Südwestpfalz, Landkreis;94831
+07340;SÃ¼dwestpfalz, Landkreis;94831
 08111;Stuttgart, kreisfreie Stadt;635911
-08115;Böblingen, Landkreis;392807
+08115;BÃ¶blingen, Landkreis;392807
 08116;Esslingen, Landkreis;535024
-08117;Göppingen, Landkreis;258145
+08117;GÃ¶ppingen, Landkreis;258145
 08118;Ludwigsburg, Landkreis;545423
 08119;Rems-Murr-Kreis;427248
 08121;Heilbronn, kreisfreie Stadt;126592
 08125;Heilbronn, Landkreis;344456
 08126;Hohenlohekreis;112655
-08127;Schwäbisch Hall, Landkreis;196761
+08127;SchwÃ¤bisch Hall, Landkreis;196761
 08128;Main-Tauber-Kreis;132399
 08135;Heidenheim, Landkreis;132777
 08136;Ostalbkreis;314025
@@ -221,10 +221,10 @@ Bevölkerungsstand (Anzahl);;
 08326;Schwarzwald-Baar-Kreis;212506
 08327;Tuttlingen, Landkreis;140766
 08335;Konstanz, Landkreis;286305
-08336;Lörrach, Landkreis;228736
+08336;LÃ¶rrach, Landkreis;228736
 08337;Waldshut, Landkreis;171003
 08415;Reutlingen, Landkreis;287034
-08416;Tübingen, Landkreis;228678
+08416;TÃ¼bingen, Landkreis;228678
 08417;Zollernalbkreis;189363
 08421;Ulm, kreisfreie Stadt;126790
 08425;Alb-Donau-Kreis;197076
@@ -233,22 +233,22 @@ Bevölkerungsstand (Anzahl);;
 08436;Ravensburg, Landkreis;285424
 08437;Sigmaringen, Landkreis;130849
 09161;Ingolstadt, kreisfreie Stadt;137392
-09162;München, kreisfreie Stadt;1484226
+09162;MÃ¼nchen, kreisfreie Stadt;1484226
 09163;Rosenheim, kreisfreie Stadt;63551
-09171;Altötting, Landkreis;111516
+09171;AltÃ¶tting, Landkreis;111516
 09172;Berchtesgadener Land, Landkreis;105929
-09173;Bad Tölz-Wolfratshausen, Landkreis;127917
+09173;Bad TÃ¶lz-Wolfratshausen, Landkreis;127917
 09174;Dachau, Landkreis;154899
 09175;Ebersberg, Landkreis;143649
-09176;Eichstätt, Landkreis;132881
+09176;EichstÃ¤tt, Landkreis;132881
 09177;Erding, Landkreis;138182
 09178;Freising, Landkreis;180007
-09179;Fürstenfeldbruck, Landkreis;219311
+09179;FÃ¼rstenfeldbruck, Landkreis;219311
 09180;Garmisch-Partenkirchen, Landkreis;88424
 09181;Landsberg am Lech, Landkreis;120302
 09182;Miesbach, Landkreis;100010
-09183;Mühldorf am Inn, Landkreis;115872
-09184;München, Landkreis;350473
+09183;MÃ¼hldorf am Inn, Landkreis;115872
+09184;MÃ¼nchen, Landkreis;350473
 09185;Neuburg-Schrobenhausen, Landkreis;97303
 09186;Pfaffenhofen an der Ilm, Landkreis;128227
 09187;Rosenheim, Landkreis;261330
@@ -292,43 +292,43 @@ Bevölkerungsstand (Anzahl);;
 09479;Wunsiedel im Fichtelgebirge, Landkreis;72655
 09561;Ansbach, kreisfreie Stadt;41798
 09562;Erlangen, kreisfreie Stadt;112528
-09563;Fürth, kreisfreie Stadt;128497
-09564;Nürnberg, kreisfreie Stadt;518370
+09563;FÃ¼rth, kreisfreie Stadt;128497
+09564;NÃ¼rnberg, kreisfreie Stadt;518370
 09565;Schwabach, kreisfreie Stadt;40981
 09571;Ansbach, Landkreis;184591
-09572;Erlangen-Höchstadt, Landkreis;137262
-09573;Fürth, Landkreis;117853
-09574;Nürnberger Land, Landkreis;170792
+09572;Erlangen-HÃ¶chstadt, Landkreis;137262
+09573;FÃ¼rth, Landkreis;117853
+09574;NÃ¼rnberger Land, Landkreis;170792
 09575;Neustadt an der Aisch-Bad Windsheim, Landkreis;101014
 09576;Roth, Landkreis;126749
-09577;Weißenburg-Gunzenhausen, Landkreis;94734
+09577;WeiÃŸenburg-Gunzenhausen, Landkreis;94734
 09661;Aschaffenburg, kreisfreie Stadt;71002
 09662;Schweinfurt, kreisfreie Stadt;53426
-09663;Würzburg, kreisfreie Stadt;127934
+09663;WÃ¼rzburg, kreisfreie Stadt;127934
 09671;Aschaffenburg, Landkreis;174200
 09672;Bad Kissingen, Landkreis;103235
-09673;Rhön-Grabfeld, Landkreis;79635
-09674;Haßberge, Landkreis;84384
+09673;RhÃ¶n-Grabfeld, Landkreis;79635
+09674;HaÃŸberge, Landkreis;84384
 09675;Kitzingen, Landkreis;91155
 09676;Miltenberg, Landkreis;128743
 09677;Main-Spessart, Landkreis;126158
 09678;Schweinfurt, Landkreis;115445
-09679;Würzburg, Landkreis;162302
+09679;WÃ¼rzburg, Landkreis;162302
 09761;Augsburg, kreisfreie Stadt;296582
 09762;Kaufbeuren, kreisfreie Stadt;44398
-09763;Kempten (Allgäu), kreisfreie Stadt;69151
+09763;Kempten (AllgÃ¤u), kreisfreie Stadt;69151
 09764;Memmingen, kreisfreie Stadt;44100
 09771;Aichach-Friedberg, Landkreis;134655
 09772;Augsburg, Landkreis;253468
 09773;Dillingen an der Donau, Landkreis;96562
-09774;Günzburg, Landkreis;127027
+09774;GÃ¼nzburg, Landkreis;127027
 09775;Neu-Ulm, Landkreis;175204
 09776;Lindau (Bodensee), Landkreis;81981
-09777;Ostallgäu, Landkreis;141182
-09778;Unterallgäu, Landkreis;145341
+09777;OstallgÃ¤u, Landkreis;141182
+09778;UnterallgÃ¤u, Landkreis;145341
 09779;Donau-Ries, Landkreis;133783
-09780;Oberallgäu, Landkreis;156008
-10041;Regionalverband Saarbrücken, Landkreis;328714
+09780;OberallgÃ¤u, Landkreis;156008
+10041;Regionalverband SaarbrÃ¼cken, Landkreis;328714
 10042;Merzig-Wadern, Landkreis;103243
 10043;Neunkirchen, Landkreis;131408
 10044;Saarlouis, Landkreis;194319
@@ -343,15 +343,15 @@ Bevölkerungsstand (Anzahl);;
 12061;Dahme-Spreewald, Landkreis;170791
 12062;Elbe-Elster, Landkreis;101827
 12063;Havelland, Landkreis;162996
-12064;Märkisch-Oderland, Landkreis;195751
+12064;MÃ¤rkisch-Oderland, Landkreis;195751
 12065;Oberhavel, Landkreis;212914
 12066;Oberspreewald-Lausitz, Landkreis;109371
 12067;Oder-Spree, Landkreis;178803
 12068;Ostprignitz-Ruppin, Landkreis;98861
 12069;Potsdam-Mittelmark, Landkreis;216566
 12070;Prignitz, Landkreis;76158
-12071;Spree-Neiße, Landkreis;113720
-12072;Teltow-Fläming, Landkreis;169997
+12071;Spree-NeiÃŸe, Landkreis;113720
+12072;Teltow-FlÃ¤ming, Landkreis;169997
 12073;Uckermark, Landkreis;118947
 13001;Greifswald, kreisfreie Stadt (bis 03.09.2011);-
 13002;Neubrandenburg, kreisfreie Stadt (bis 03.09.2011);-
@@ -361,19 +361,19 @@ Bevölkerungsstand (Anzahl);;
 13006;Wismar, kreisfreie Stadt (bis 03.09.2011);-
 13051;Bad Doberan, Landkreis (bis 03.09.2011);-
 13052;Demmin, Landkreis (bis 03.09.2011);-
-13053;Güstrow, Landkreis (bis 03.09.2011);-
+13053;GÃ¼strow, Landkreis (bis 03.09.2011);-
 13054;Ludwigslust, Landkreis (bis 03.09.2011);-
 13055;Mecklenburg-Strelitz, Landkreis (bis 03.09.2011);-
-13056;Müritz, Landkreis (bis 03.09.2011);-
+13056;MÃ¼ritz, Landkreis (bis 03.09.2011);-
 13057;Nordvorpommern, Landkreis (bis 03.09.2011);-
 13058;Nordwestmecklenburg, Landkreis (bis 03.09.2011);-
 13059;Ostvorpommern, Landkreis (bis 03.09.2011);-
 13060;Parchim, Landkreis (bis 03.09.2011);-
-13061;Rügen, Landkreis (bis 03.09.2011);-
+13061;RÃ¼gen, Landkreis (bis 03.09.2011);-
 13062;Uecker-Randow, Landkreis (bis 03.09.2011);-
 13071;Mecklenburgische Seenplatte, Landkreis;258074
 13072;Rostock, Landkreis;215794
-13073;Vorpommern-Rügen, Landkreis;224702
+13073;Vorpommern-RÃ¼gen, Landkreis;224702
 13074;Nordwestmecklenburg, Landkreis;157322
 13075;Vorpommern-Greifswald, Landkreis;235623
 13076;Ludwigslust-Parchim, Landkreis;211779
@@ -390,19 +390,19 @@ Bevölkerungsstand (Anzahl);;
 14191;Aue-Schwarzenberg, Landkreis (bis 31.07.2008);-
 14193;Zwickauer Land, Landkreis (bis 31.07.2008);-
 14262;Dresden, kreisfreie Stadt (bis 31.07.2008);-
-14263;Görlitz, kreisfreie Stadt (bis 31.07.2008);-
+14263;GÃ¶rlitz, kreisfreie Stadt (bis 31.07.2008);-
 14264;Hoyerswerda, kreisfreie Stadt (bis 31.07.2008);-
 14272;Bautzen, Landkreis (bis 31.07.2008);-
-14280;Meißen, Landkreis (bis 31.07.2008);-
+14280;MeiÃŸen, Landkreis (bis 31.07.2008);-
 14284;Niederschlesischer Oberlausitzkreis (b.31.07.2008);-
-14285;Riesa-Großenhain, Landkreis (bis 31.07.2008);-
-14286;Löbau-Zittau, Landkreis (bis 31.07.2008);-
-14287;Sächsische Schweiz, Landkreis (bis 31.07.2008);-
-14290;Weißeritzkreis (bis 31.07.2008);-
+14285;Riesa-GroÃŸenhain, Landkreis (bis 31.07.2008);-
+14286;LÃ¶bau-Zittau, Landkreis (bis 31.07.2008);-
+14287;SÃ¤chsische Schweiz, Landkreis (bis 31.07.2008);-
+14290;WeiÃŸeritzkreis (bis 31.07.2008);-
 14292;Kamenz, Landkreis (bis 31.07.2008);-
 14365;Leipzig, kreisfreie Stadt (bis 31.07.2008);-
 14374;Delitzsch, Landkreis (bis 31.07.2008);-
-14375;Döbeln, Landkreis (bis 31.07.2008);-
+14375;DÃ¶beln, Landkreis (bis 31.07.2008);-
 14379;Leipziger Land, Landkreis (bis 31.07.2008);-
 14383;Muldentalkreis (bis 31.07.2008);-
 14389;Torgau-Oschatz, Landkreis (bis 31.07.2008);-
@@ -413,22 +413,22 @@ Bevölkerungsstand (Anzahl);;
 14524;Zwickau, Landkreis;315002
 14612;Dresden, kreisfreie Stadt;556780
 14625;Bautzen, Landkreis;299758
-14626;Görlitz, Landkreis;252725
-14627;Meißen, Landkreis;241717
-14628;Sächsische Schweiz-Osterzgebirge, Landkreis;245586
+14626;GÃ¶rlitz, Landkreis;252725
+14627;MeiÃŸen, Landkreis;241717
+14628;SÃ¤chsische Schweiz-Osterzgebirge, Landkreis;245586
 14713;Leipzig, kreisfreie Stadt;593145
 14729;Leipzig, Landkreis;258139
 14730;Nordsachsen, Landkreis;197741
-15001;Dessau-Roßlau, kreisfreie Stadt;80103
+15001;Dessau-RoÃŸlau, kreisfreie Stadt;80103
 15002;Halle (Saale), kreisfreie Stadt;238762
 15003;Magdeburg, kreisfreie Stadt;237565
 15081;Altmarkkreis Salzwedel;83173
 15082;Anhalt-Bitterfeld, Landkreis;158486
-15083;Börde, Landkreis;170923
+15083;BÃ¶rde, Landkreis;170923
 15084;Burgenlandkreis;178846
 15085;Harz, Landkreis;213310
 15086;Jerichower Land, Landkreis;89589
-15087;Mansfeld-Südharz, Landkreis;134942
+15087;Mansfeld-SÃ¼dharz, Landkreis;134942
 15088;Saalekreis;183815
 15089;Salzlandkreis;189125
 15090;Stendal, Landkreis;111190
@@ -437,7 +437,7 @@ Bevölkerungsstand (Anzahl);;
 15151;Anhalt-Zerbst, Landkreis (bis 30.06.2007);-
 15153;Bernburg, Landkreis (bis 30.06.2007);-
 15154;Bitterfeld, Landkreis (bis 30.06.2007);-
-15159;Köthen, Landkreis (bis 30.06.2007);-
+15159;KÃ¶then, Landkreis (bis 30.06.2007);-
 15171;Wittenberg, Landkreis (bis 30.06.2007);-
 15202;Halle (Saale), kreisfreie Stadt (bis 30.06.2007);-
 15256;Burgenlandkreis (bis 30.06.2007);-
@@ -445,16 +445,16 @@ Bevölkerungsstand (Anzahl);;
 15261;Merseburg-Querfurt, Landkreis (bis 30.06.2007);-
 15265;Saalkreis (bis 30.06.2007);-
 15266;Sangerhausen, Landkreis (bis 30.06.2007);-
-15268;Weißenfels, Landkreis (bis 30.06.2007);-
+15268;WeiÃŸenfels, Landkreis (bis 30.06.2007);-
 15303;Magdeburg, kreisfreie Stadt (bis 30.06.2007);-
-15352;Aschersleben-Staßfurt, Landkreis (bis 30.06.2007);-
-15355;Bördekreis (bis 30.06.2007);-
+15352;Aschersleben-StaÃŸfurt, Landkreis (bis 30.06.2007);-
+15355;BÃ¶rdekreis (bis 30.06.2007);-
 15357;Halberstadt, Landkreis (bis 30.06.2007);-
 15358;Jerichower Land, Landkreis (bis 30.06.2007);-
 15362;Ohrekreis (bis 30.06.2007);-
 15363;Stendal, Landkreis (bis 30.06.2007);-
 15364;Quedlinburg, Landkreis (bis 30.06.2007);-
-15367;Schönebeck, Landkreis (bis 30.06.2007);-
+15367;SchÃ¶nebeck, Landkreis (bis 30.06.2007);-
 15369;Wernigerode, Landkreis (bis 30.06.2007);-
 15370;Altmarkkreis Salzwedel (bis 30.06.2007);-
 16051;Erfurt, kreisfreie Stadt;213981
@@ -467,10 +467,10 @@ Bevölkerungsstand (Anzahl);;
 16062;Nordhausen, Landkreis;83416
 16063;Wartburgkreis;118974
 16064;Unstrut-Hainich-Kreis;102232
-16065;Kyffhäuserkreis;74212
+16065;KyffhÃ¤userkreis;74212
 16066;Schmalkalden-Meiningen, Landkreis;124916
 16067;Gotha, Landkreis;134908
-16068;Sömmerda, Landkreis;69427
+16068;SÃ¶mmerda, Landkreis;69427
 16069;Hildburghausen, Landkreis;63197
 16070;Ilm-Kreis;106249
 16071;Weimarer Land, Landkreis;82156
@@ -482,5 +482,5 @@ Bevölkerungsstand (Anzahl);;
 16077;Altenburger Land, Landkreis;89393
 __________
 Ab 2011: Ergebnisse auf Grundlage des Zensus 2011.
-© Statistisches Bundesamt (Destatis), 2021
+Â© Statistisches Bundesamt (Destatis), 2021
 Stand: 03.04.2021 / 23:11:57
