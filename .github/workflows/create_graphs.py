@@ -216,7 +216,7 @@ def plot_covid_bl(id):
     ax[3].set_ylabel('Bevölkerungsanteil [%]',fontsize=16)
     ax[1].set_ylabel('Anzahl Todesfälle 7d Mittel', fontsize=16)
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
-    plt.savefig(os.path.join(parent_directory,'Auswertung',f"covid_bl_{id}.png"), bbox_inches='tight', dpi=50)
+    plt.savefig(os.path.join(parent_directory,'Auswertung',f"covid_bl_{id}.png"), bbox_inches='tight', dpi=60)
     plt.show()
     plt.close(fig)
 
@@ -278,7 +278,7 @@ def plot_covid_lk(id):
     ax[1].set_ylabel('Anzahl Todesfälle 7d Mittel', fontsize=16)
     ax[2].set_ylabel('Kumulierte Anzahl Todesfälle', fontsize=16)
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
-    plt.savefig(os.path.join(parent_directory,'Auswertung','Landkreise',f"covid_lk_{id}.png"), bbox_inches='tight', dpi=50)
+    plt.savefig(os.path.join(parent_directory,'Auswertung','Landkreise',f"covid_lk_{id}.png"), bbox_inches='tight', dpi=60)
     plt.show()
     plt.close(fig)
 
