@@ -33,19 +33,20 @@ if t_now>=t_14:
     except Exception as e:
         print(e)
 
+#%% each working day (including saturday)
+if day_of_week in range(1,7) and today not in de_holidays and t_now>=t_14:
+    try:
+        print("Downloading daily RKI Fallzahlen..")
+        download_RKI_Fallzahlen()
+    except Exception as e:
+        print(e)
+
     try:
         print("Downloading daily Impfquotenmonitoring...")
         download_RKI_Impfquotenmonitoring()
     except Exception as e:
         print(e)
 
-#%% each working day
-if day_of_week in range(1,6) and today not in de_holidays and t_now>=t_14:
-    try:
-        print("Downloading daily RKI Fallzahlen..")
-        download_RKI_Fallzahlen()
-    except Exception as e:
-        print(e)
 
 #%% each Tuesday
 if day_of_week==2 and t_now>=t_14:
