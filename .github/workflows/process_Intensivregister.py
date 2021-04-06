@@ -22,7 +22,7 @@ for file in file_list:
         if re_search and re_filename:
             report_date=date(int(re_search.group(1)), int(re_search.group(3)), int(re_search.group(4)))
             df=pd.read_csv(file_path_full)
-            df['report_date']=date(int(re_search.group(1)), int(re_search.group(3)), int(re_search.group(4)))
+            df['report_date']=report_date
             df.rename(columns={'kreis':'IdLandkreis','gemeindeschluessel':'IdLandkreis','bundesland':'IdBundesland','faelle_covid_aktuell_beatmet':'faelle_covid_aktuell_invasiv_beatmet'},inplace=True)
             dfs.append(df)
 #%%
