@@ -86,6 +86,7 @@ testzahl_df.index=pd.to_datetime(datum)
 testzahl_df=testzahl_df.resample("1D").backfill()
 testzahl_df.sort_index(ascending=True)
 testzahl_df["Testungen_7d_mean"]=testzahl_df["Anzahl Testungen"]/7
+testzahl_df["Positiv_7d_mean"]=testzahl_df['Positiv getestet']/7
 
 #%% Read Intensivregister
 ir_path=find_latest_file(os.path.join(parent_directory,"Intensivregister","raw_data"),'bundesland')[0]
@@ -217,8 +218,10 @@ def plot_covid_bl(id):
     ax[3].yaxis.grid()
     if id==0:
         ax[4].set_title(f"{number_states[id]} - Testzahlen", fontsize=16)
-        ax[4].plot(testzahl_df.index, testzahl_df["Testungen_7d_mean"], color='green')
+        ax[4].plot(testzahl_df.index, testzahl_df["Testungen_7d_mean"], color='green', label='Gesamt')
+        ax[4].plot(testzahl_df.index, testzahl_df["Positiv_7d_mean"], color='blue', label='Positiv')
         ax[4].set_title(f"{number_states[id]} - Testungen pro Tag im 7 Tage Mittel")
+        ax[4].legend(prop={'size': 16})
     for axs in ax.flat:
         axs.set_title(label=axs.get_title(), weight='bold')
         axs.set_ylabel('Anzahl', fontsize=16)
