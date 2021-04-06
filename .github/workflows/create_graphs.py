@@ -94,7 +94,7 @@ ir_df["Datum"]=pd.to_datetime(ir_df["Datum"], utc=True).dt.date
 
 #%% Read Intensivregister Landkreise
 ir_lk_path=os.path.join(parent_directory,"Intensivregister","DIVI_Intensivregister_Auszug_pro_Landkreis.csv")
-ir_lk_df=pd.read_csv(ir_lk_path, encoding='utf-8',lineterminator='n')
+ir_lk_df=pd.read_csv(ir_lk_path, encoding='utf-8',lineterminator='\n')
 ir_lk_df["report_date"]=pd.to_datetime(ir_lk_df["report_date"]).dt.date
 ir_lk_df["daten_stand"]=pd.to_datetime(ir_lk_df["daten_stand"])
 
