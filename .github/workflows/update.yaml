@@ -53,6 +53,7 @@ jobs:
       - name: generate PNG
         run: python ./create_graphs.py
         working-directory: ./.github/workflows
+        continue-on-error: true
       - name: Commit files
         run: |
           git config --local user.name  ${{ github.actor }}

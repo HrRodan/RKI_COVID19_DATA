@@ -11,6 +11,7 @@ from repo_tools_pkg.file_tools import find_latest_file
 from matplotlib.ticker import (MultipleLocator, FormatStrFormatter, AutoMinorLocator)
 import matplotlib as mpl
 import itertools
+import re
 
 
 # %% Set parameters
@@ -81,7 +82,10 @@ testzahl_df=testzahl_df.drop(0)
 datum=[]
 for key, value in testzahl_df.iterrows():
     kalender=value['Kalenderwoche'].split('/')
-    datum.append(date.fromisocalendar(int(kalender[1]), int(kalender[0]),7))
+    kalender_clean=[]
+    for k in kalender:
+        kalender_clean.append(int(re.sub('\D', '', k)))
+    datum.append(date.fromisocalendar(kalender_clean[1], kalender_clean[0],7))
 testzahl_df.index=pd.to_datetime(datum)
 testzahl_df=testzahl_df.resample("1D").backfill()
 testzahl_df.sort_index(ascending=True)

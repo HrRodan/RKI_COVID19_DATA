@@ -49,7 +49,7 @@ if day_of_week in range(1,7) and today not in de_holidays and t_now>=t_14:
 
 
 #%% each Tuesday
-if day_of_week==2 and t_now>=t_14:
+if day_of_week==2 and t_now>=t_22:
     print("Tuesday Download starting...")
     try:
         print("Downloading RKI Altersverteilung..")
@@ -70,7 +70,7 @@ if day_of_week==2 and t_now>=t_14:
         print(e)
 
 #%% each Wednesday
-if day_of_week==3 and t_now>=t_14:
+if day_of_week==3 and t_now>=t_22:
     print("Wednesday Download starting...")
     try:
         print("Downloading RKI Testzahlen..")
@@ -79,7 +79,7 @@ if day_of_week==3 and t_now>=t_14:
         print(e)
 
 #%% each Friday
-if day_of_week==5 and t_now>=t_14:
+if day_of_week==5 and t_now>=t_22:
     print("Friday Download starting...")
     try:
         print("Downloading RKI Todesfaelle..")
