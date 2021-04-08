@@ -1,17 +1,16 @@
 # %%
-import pandas as pd
-from datetime import datetime
-from datetime import date
-from datetime import timedelta
-import os
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
-from repo_tools_pkg.file_tools import find_latest_file
-from matplotlib.ticker import (MultipleLocator, FormatStrFormatter, AutoMinorLocator)
-import matplotlib as mpl
 import itertools
+import os
 import re
+from datetime import date
+from datetime import datetime
+from datetime import timedelta
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from matplotlib.ticker import (AutoMinorLocator)
+from repo_tools_pkg.file_tools import find_latest_file
 
 # %% Set parameters
 today = datetime.now().date()
@@ -115,25 +114,25 @@ landkreis_df = pd.read_csv(landkreis_path, skiprows=6, skipfooter=4, engine='pyt
 
 # %% Eval covid_df per Bundesland
 
-def covid_df_sum_bl_lk(id_, landkreis=False):
-    if id_ == 0:
+def covid_df_sum_bl_lk(id_bl_lk, landkreis=False):
+    if id_bl_lk == 0:
         bundesland_id = number_states.keys()
     else:
-        bundesland_id = [id_]
+        bundesland_id = [id_bl_lk]
 
     if landkreis:
-        population = landkreis_df[landkreis_df['IdLandkreis'] == id_].iloc[0]['Bevoelkerung']
+        population = landkreis_df[landkreis_df['IdLandkreis'] == id_bl_lk].iloc[0]['Bevoelkerung']
     else:
-        population = number_population[id_]
+        population = number_population[id_bl_lk]
 
-    if not landkreis:
+    if landkreis:
+        covid_df_sum = covid_df[((covid_df["NeuerFall"].isin([0, 1])) | (covid_df["NeuerTodesfall"].isin([0, 1]))) & (
+                covid_df["IdLandkreis"] == id_bl_lk)].groupby("Meldedatum").agg(
+            {"AnzahlFall": "sum", "AnzahlTodesfall": "sum"}).sort_values("Meldedatum", ascending=True)
+    else:
         covid_df_sum = covid_df[
             ((covid_df["NeuerFall"].isin([0, 1])) | (covid_df["NeuerTodesfall"].isin([0, 1]))) & covid_df[
                 "IdBundesland"].isin(bundesland_id)].groupby("Meldedatum").agg(
-            {"AnzahlFall": "sum", "AnzahlTodesfall": "sum"}).sort_values("Meldedatum", ascending=True)
-    elif landkreis:
-        covid_df_sum = covid_df[((covid_df["NeuerFall"].isin([0, 1])) | (covid_df["NeuerTodesfall"].isin([0, 1]))) & (
-                covid_df["IdLandkreis"] == id_)].groupby("Meldedatum").agg(
             {"AnzahlFall": "sum", "AnzahlTodesfall": "sum"}).sort_values("Meldedatum", ascending=True)
 
     covid_df_sum.index = pd.to_datetime(covid_df_sum.index)
@@ -151,47 +150,47 @@ def covid_df_sum_bl_lk(id_, landkreis=False):
 
 # %% Read Intensivregister per BL
 
-def ir_df_sum_bl(id_):
+def ir_df_sum_bl(id_bl):
     ir_df_bl = ir_df.copy()
-    ir_df_bl = ir_df_bl[ir_df_bl["Bundesland"] == states_number_ir[id_]].groupby("Datum").last()
+    ir_df_bl = ir_df_bl[ir_df_bl["Bundesland"] == states_number_ir[id_bl]].groupby("Datum").last()
     ir_df_bl.index = pd.to_datetime(ir_df_bl.index)
     ir_df_bl = ir_df_bl.resample("1D").backfill()
     return ir_df_bl
 
 
 # %% Eval Impfquotenmonitoring per Bundesland
-def iqm_df_sum_bl(id_):
+def iqm_df_sum_bl(id_bl):
     iqm_df_bl = iqm_df.copy()
-    iqm_df_bl = iqm_df_bl[iqm_df_bl["IdBundesland"] == id_]
+    iqm_df_bl = iqm_df_bl[iqm_df_bl["IdBundesland"] == id_bl]
     return iqm_df_bl
 
 
 # %% Eval Intensivregister per Landkreis
-def ir_df_sum_lk(id_):
+def ir_df_sum_lk(id_lk):
     ir_lk_df_temp = ir_lk_df.copy()
-    ir_lk_df_temp = ir_lk_df_temp[ir_lk_df_temp["IdLandkreis"] == id_]
+    ir_lk_df_temp = ir_lk_df_temp[ir_lk_df_temp["IdLandkreis"] == id_lk]
     return ir_lk_df_temp
 
 
 # %% Plot Bundesland
 
-def plot_covid_bl(id_):
+def plot_covid_bl(id_bl):
     number_plots = 4
-    if id_ == 0:
+    if id_bl == 0:
         number_plots = 5
-    covid_df_sum = covid_df_sum_bl_lk(id_).sort_index()
+    covid_df_sum = covid_df_sum_bl_lk(id_bl).sort_index()
     inzidenz = covid_df_sum["Inzidenz_7d"].iloc[-1]
-    ir_df = ir_df_sum_bl(id_)
-    iqm_df = iqm_df_sum_bl(id_)
+    ir_df_plot = ir_df_sum_bl(id_bl)
+    iqm_df_plot = iqm_df_sum_bl(id_bl)
     mpl.rcParams['lines.linewidth'] = 3
     mpl.rcParams['axes.linewidth'] = 1.2
     max_y_covid = int(covid_df_sum["Inzidenz_7d"].max()) * 1.2
     covid_major_yticks = np.arange(0, max_y_covid, 50)
     covid_minor_yticks = np.arange(25, max_y_covid, 25)
     fig, ax = plt.subplots(number_plots, figsize=(10, 20))
-    fig.suptitle(f"Covid Situation in {number_states[id_]} \nStichtag: {today_str}", fontsize=20, weight='bold')
+    fig.suptitle(f"Covid Situation in {number_states[id_bl]} \nStichtag: {today_str}", fontsize=20, weight='bold')
     ax[0].plot(covid_df_sum.index, covid_df_sum["Inzidenz_7d"], color='blue')
-    ax[0].set_title(f"{number_states[id_]} - 7-Tage Inzidenz")
+    ax[0].set_title(f"{number_states[id_bl]} - 7-Tage Inzidenz")
     ax[0].set_yticks(covid_major_yticks)
     ax[0].set_yticks(covid_minor_yticks, minor=True)
     ax[0].yaxis.grid(which='minor', linestyle=':')
@@ -199,7 +198,7 @@ def plot_covid_bl(id_):
                verticalalignment='bottom', fontsize=16, color='red', weight='bold')
     ax[0].plot(covid_df_sum.index[-1], inzidenz, marker='x', color='red', markersize=7, markeredgewidth=3)
     ax[1].plot(covid_df_sum.index, covid_df_sum["AnzahlTodesfall_7d_mean"], color='black')
-    ax[1].set_title(f"{number_states[id_]} - Covid (Todes)-Fälle pro Tag im 7 Tage Mittel")
+    ax[1].set_title(f"{number_states[id_bl]} - Covid (Todes)-Fälle pro Tag im 7 Tage Mittel")
     ax[1].annotate('', xy=(date(2020, 10, 15), ax[1].get_ylim()[1] / 2),
                    xytext=(date(2020, 7, 1), ax[1].get_ylim()[1] / 2),
                    arrowprops=dict(arrowstyle="<-", color='red', linewidth=2))
@@ -215,27 +214,29 @@ def plot_covid_bl(id_):
     for item in (
             [ax1_2.title, ax1_2.xaxis.label, ax1_2.yaxis.label] + ax1_2.get_xticklabels() + ax1_2.get_yticklabels()):
         item.set_fontsize(16)
-    ax[2].plot(ir_df.index, ir_df["Aktuelle_COVID_Faelle_Erwachsene_ITS"], color='orange', label="Covid Patienten ITS")
-    ax[2].plot(ir_df.index, ir_df["Freie_IV_Kapazitaeten_Davon_COVID"], color='blue',
+    ax[2].plot(ir_df_plot.index, ir_df_plot["Aktuelle_COVID_Faelle_Erwachsene_ITS"], color='orange',
+               label="Covid Patienten ITS")
+    ax[2].plot(ir_df_plot.index, ir_df_plot["Freie_IV_Kapazitaeten_Davon_COVID"], color='blue',
                label="Freie IV Kapazität für Covid")
-    ax[2].plot(ir_df.index, ir_df["Freie_IV_Kapazitaeten_Gesamt"], color='lightblue', label="Freie IV Kapazität Gesamt")
-    ax[2].set_title(f"{number_states[id_]} - Intensivbetten")
+    ax[2].plot(ir_df_plot.index, ir_df_plot["Freie_IV_Kapazitaeten_Gesamt"], color='lightblue',
+               label="Freie IV Kapazität Gesamt")
+    ax[2].set_title(f"{number_states[id_bl]} - Intensivbetten")
     ax[2].legend(prop={'size': 16})
-    ax[3].plot(iqm_df["ISODate"], iqm_df["Impfungenkumulativ"] / number_population[id_] * 100,
+    ax[3].plot(iqm_df_plot["ISODate"], iqm_df_plot["Impfungenkumulativ"] / number_population[id_bl] * 100,
                label="Erstimpfungen kumuliert", color='darkviolet')
-    ax[3].plot(iqm_df["ISODate"], iqm_df["ZweiteImpfungkumulativ"] / number_population[id_] * 100,
+    ax[3].plot(iqm_df_plot["ISODate"], iqm_df_plot["ZweiteImpfungkumulativ"] / number_population[id_bl] * 100,
                label="Zweitimpfung kumuliert")
-    ax[3].set_title(f"{number_states[id_]} - Impfquote")
+    ax[3].set_title(f"{number_states[id_bl]} - Impfquote")
     ax[3].legend(prop={'size': 16})
     ax[3].set_ylim(-2, 70)
     ax[3].yaxis.set_minor_locator(AutoMinorLocator(2))
     ax[3].yaxis.grid(which='minor', linestyle=':')
     ax[3].yaxis.grid()
-    if id_ == 0:
-        ax[4].set_title(f"{number_states[id_]} - Testzahlen", fontsize=16)
+    if id_bl == 0:
+        ax[4].set_title(f"{number_states[id_bl]} - Testzahlen", fontsize=16)
         ax[4].plot(testzahl_df.index, testzahl_df["Testungen_7d_mean"], color='green', label='Gesamt')
         ax[4].plot(testzahl_df.index, testzahl_df["Positiv_7d_mean"], color='blue', label='Positiv')
-        ax[4].set_title(f"{number_states[id_]} - Testungen pro Tag im 7 Tage Mittel")
+        ax[4].set_title(f"{number_states[id_bl]} - Testungen pro Tag im 7 Tage Mittel")
         ax[4].legend(prop={'size': 16})
     for axs in ax.flat:
         axs.set_title(label=axs.get_title(), weight='bold')
@@ -250,17 +251,17 @@ def plot_covid_bl(id_):
     ax[3].set_ylabel('Bevölkerungsanteil [%]', fontsize=16)
     ax[1].set_ylabel('Anzahl Todesfälle 7d Mittel', fontsize=16)
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
-    plt.savefig(os.path.join(parent_directory, 'Auswertung', f"covid_bl_{id_}.png"), bbox_inches='tight', dpi=60)
+    plt.savefig(os.path.join(parent_directory, 'Auswertung', f"covid_bl_{id_bl}.png"), bbox_inches='tight', dpi=60)
     plt.show()
     plt.close(fig)
 
 
 # %% Plot Landkreis
-def plot_covid_lk(id_):
-    name_lk = landkreis_df[landkreis_df['IdLandkreis'] == id_].iloc[0]['Landkreis']
-    covid_df_sum = covid_df_sum_bl_lk(id_, landkreis=True).sort_index()
+def plot_covid_lk(id_lk):
+    name_lk = landkreis_df[landkreis_df['IdLandkreis'] == id_lk].iloc[0]['Landkreis']
+    covid_df_sum = covid_df_sum_bl_lk(id_lk, landkreis=True).sort_index()
     inzidenz = covid_df_sum["Inzidenz_7d"].iloc[-1]
-    ir_df_lk_plot = ir_df_sum_lk(id_)
+    ir_df_lk_plot = ir_df_sum_lk(id_lk)
     mpl.rcParams['lines.linewidth'] = 3
     mpl.rcParams['axes.linewidth'] = 1.2
     max_y_covid = int(covid_df_sum["Inzidenz_7d"].max()) * 1.2
@@ -312,7 +313,8 @@ def plot_covid_lk(id_):
 
     ax[3].plot(ir_df_lk_plot['report_date'], ir_df_lk_plot["faelle_covid_aktuell_invasiv_beatmet"], color='orange',
                label="Covid Patienten ITS")
-    ax[3].plot(ir_df_lk_plot['report_date'], ir_df_lk_plot["betten_frei"], color='lightblue', label="Freie IV Kapazität Gesamt")
+    ax[3].plot(ir_df_lk_plot['report_date'], ir_df_lk_plot["betten_frei"], color='lightblue',
+               label="Freie IV Kapazität Gesamt")
     ax[3].set_title(f"{name_lk} \nIntensivbetten")
     ax[3].legend(prop={'size': 16})
 
@@ -329,8 +331,8 @@ def plot_covid_lk(id_):
     ax[1].set_ylabel('Anzahl Todesfälle 7d Mittel', fontsize=16)
     ax[2].set_ylabel('Kumulierte Anzahl Todesfälle', fontsize=16)
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
-    plt.savefig(os.path.join(parent_directory, 'Auswertung', 'Landkreise', f"covid_lk_{id_}.png"), bbox_inches='tight',
-                dpi=60)
+    plt.savefig(os.path.join(parent_directory, 'Auswertung', 'Landkreise', f"covid_lk_{id_lk}.png"),
+                bbox_inches='tight', dpi=60)
     plt.show()
     plt.close(fig)
 
