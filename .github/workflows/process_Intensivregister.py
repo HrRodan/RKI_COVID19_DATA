@@ -36,4 +36,8 @@ divi_df['daten_stand']=pd.to_datetime(divi_df['daten_stand'])
 divi_df['report_date']=pd.to_datetime(divi_df['report_date']).dt.date
 divi_df['daten_stand'].fillna(pd.to_datetime(divi_df['report_date']) + time_report, inplace=True)
 divi_df.sort_values(['report_date','IdLandkreis'], inplace=True)
-divi_df.to_csv(path_csv,index=False,header=True, line_terminator='\n', encoding='utf-8')
+
+#%% write file
+# use newline='' to avoid \r\n line break on windows
+with open(path_csv, 'w', newline='') as csvfile:
+    divi_df.to_csv(csvfile,index=False,header=True, line_terminator='\n', encoding='utf-8')
