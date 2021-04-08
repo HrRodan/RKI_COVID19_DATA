@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from matplotlib.ticker import (AutoMinorLocator)
-from mock.mock import inplace
 
 from repo_tools_pkg.file_tools import find_latest_file
 
