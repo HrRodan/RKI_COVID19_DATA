@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from matplotlib.ticker import (AutoMinorLocator)
+from mock.mock import inplace
+
 from repo_tools_pkg.file_tools import find_latest_file
 
 # %% Set parameters
@@ -86,7 +88,7 @@ for key, value in testzahl_df.iterrows():
     datum.append(date.fromisocalendar(kalender_clean[1], kalender_clean[0], 7))
 testzahl_df.index = pd.to_datetime(datum)
 testzahl_df = testzahl_df.resample("1D").backfill()
-testzahl_df.sort_index(ascending=True)
+testzahl_df.sort_index(ascending=True, inplace=True)
 testzahl_df["Testungen_7d_mean"] = testzahl_df["Anzahl Testungen"] / 7
 testzahl_df["Positiv_7d_mean"] = testzahl_df['Positiv getestet'] / 7
 
@@ -142,7 +144,7 @@ def covid_df_sum_bl_lk(id_bl_lk, landkreis=False):
     covid_df_sum["Inzidenz_7d"] = covid_df_sum["AnzahlFall"].rolling(7).sum() / (population / 100000)
     covid_df_sum["AnzahlTodesfall_7d_mean"] = covid_df_sum["AnzahlTodesfall"].rolling(7).mean()
     covid_df_sum.index = pd.to_datetime(covid_df_sum.index)
-    covid_df_sum = covid_df_sum.sort_index(ascending=True)
+    covid_df_sum.sort_index(ascending=True, inplace=True)
     covid_df_sum["Cum_sum"] = covid_df_sum["AnzahlFall"].cumsum()
     covid_df_sum["Cum_sum_Todesfall"] = covid_df_sum["AnzahlTodesfall"].cumsum()
     return covid_df_sum
@@ -151,8 +153,7 @@ def covid_df_sum_bl_lk(id_bl_lk, landkreis=False):
 # %% Read Intensivregister per BL
 
 def ir_df_sum_bl(id_bl):
-    ir_df_bl = ir_df.copy()
-    ir_df_bl = ir_df_bl[ir_df_bl["Bundesland"] == states_number_ir[id_bl]].groupby("Datum").last()
+    ir_df_bl = ir_df[ir_df["Bundesland"] == states_number_ir[id_bl]].groupby("Datum").last()
     ir_df_bl.index = pd.to_datetime(ir_df_bl.index)
     ir_df_bl = ir_df_bl.resample("1D").backfill()
     return ir_df_bl
@@ -160,15 +161,13 @@ def ir_df_sum_bl(id_bl):
 
 # %% Eval Impfquotenmonitoring per Bundesland
 def iqm_df_sum_bl(id_bl):
-    iqm_df_bl = iqm_df.copy()
-    iqm_df_bl = iqm_df_bl[iqm_df_bl["IdBundesland"] == id_bl]
+    iqm_df_bl = iqm_df[iqm_df["IdBundesland"] == id_bl]
     return iqm_df_bl
 
 
 # %% Eval Intensivregister per Landkreis
 def ir_df_sum_lk(id_lk):
-    ir_lk_df_temp = ir_lk_df.copy()
-    ir_lk_df_temp = ir_lk_df_temp[ir_lk_df_temp["IdLandkreis"] == id_lk]
+    ir_lk_df_temp = ir_lk_df[ir_lk_df["IdLandkreis"] == id_lk]
     return ir_lk_df_temp
 
 
