@@ -39,5 +39,5 @@ divi_df.sort_values(['report_date','IdLandkreis'], inplace=True)
 
 #%% write file
 # use newline='' to avoid \r\n line break on windows
-with open(path_csv, 'w', newline='') as csvfile:
+with open(path_csv, 'w', newline='', encoding='utf-8') as csvfile:
     divi_df.to_csv(csvfile,index=False,header=True, line_terminator='\n', encoding='utf-8')
