@@ -21,9 +21,10 @@ for file in file_list:
         re_search=re.search(iso_date_re, filename)
         if re_search and re_filename:
             report_date=date(int(re_search.group(1)), int(re_search.group(3)), int(re_search.group(4)))
-            df=pd.read_csv(file_path_full)
+            df=pd.read_csv(file_path_full, engine='python')
             df['report_date']=report_date
             df.rename(columns={'kreis':'IdLandkreis','gemeindeschluessel':'IdLandkreis','bundesland':'IdBundesland','faelle_covid_aktuell_beatmet':'faelle_covid_aktuell_invasiv_beatmet'},inplace=True)
+            df.replace({'\r': ''}, inplace=True)
             dfs.append(df)
 #%%
 time_report=timedelta(hours=9,minutes=15)
