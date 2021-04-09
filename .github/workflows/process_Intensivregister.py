@@ -24,7 +24,8 @@ for file in file_list:
             df=pd.read_csv(file_path_full, engine='python')
             df['report_date']=report_date
             df.rename(columns={'kreis':'IdLandkreis','gemeindeschluessel':'IdLandkreis','bundesland':'IdBundesland','faelle_covid_aktuell_beatmet':'faelle_covid_aktuell_invasiv_beatmet'},inplace=True)
-            df.replace({'\r': ''}, inplace=True)
+            df.replace({'\r': '','\\r':''}, inplace=True)
+            df.replace(r'\\n', '', regex=True, inplace=True)
             dfs.append(df)
 #%%
 time_report=timedelta(hours=9,minutes=15)
@@ -40,5 +41,5 @@ divi_df.sort_values(['report_date','IdLandkreis'], inplace=True)
 
 #%% write file
 # use newline='' to avoid \r\n line break on windows
-with open(path_csv, 'w', newline='', encoding='utf-8') as csvfile:
+with open(path_csv, 'wb') as csvfile:
     divi_df.to_csv(csvfile,index=False,header=True, line_terminator='\n', encoding='utf-8')
