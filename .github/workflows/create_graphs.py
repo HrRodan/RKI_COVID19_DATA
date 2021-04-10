@@ -163,6 +163,19 @@ def iqm_df_sum_bl(id_bl):
     iqm_df_bl = iqm_df[iqm_df["IdBundesland"] == id_bl]
     return iqm_df_bl
 
+# %% Eval Impfquoten project
+def iqm_project(id_bl, mean_days=14):
+    iqm_df_project = iqm_df[iqm_df["IdBundesland"] == id_bl].sort_values('ISODate')
+    iqm_df_project=iqm_df_project.iloc[-mean_days-1:]
+    mean_1st=iqm_df_project['Impfungenkumulativ'].diff().mean()
+    kum_1st = iqm_df_project['Impfungenkumulativ'].iloc[-1]
+    days_75 = (number_population[id_bl]*0.75-kum_1st)/mean_1st
+    project_vaccine = {
+        'mean_1st' : mean_1st,
+        'mean_1st_quote' : mean_1st/number_population[id_bl]*100,
+        'days_75' : np.round(days_75,0)
+    }
+    return project_vaccine
 
 # %% Eval Intensivregister per Landkreis
 def ir_df_sum_lk(id_lk):
@@ -180,6 +193,8 @@ def plot_covid_bl(id_bl):
     inzidenz = covid_df_sum["Inzidenz_7d"].iloc[-1]
     ir_df_plot = ir_df_sum_bl(id_bl)
     iqm_df_plot = iqm_df_sum_bl(id_bl)
+    mean_days_plot=14
+    iqm_project_plot=iqm_project(id_bl, mean_days=mean_days_plot)
     mpl.rcParams['lines.linewidth'] = 3
     mpl.rcParams['axes.linewidth'] = 1.2
     max_y_covid = int(covid_df_sum["Inzidenz_7d"].max()) * 1.2
@@ -230,6 +245,24 @@ def plot_covid_bl(id_bl):
     ax[3].yaxis.set_minor_locator(AutoMinorLocator(2))
     ax[3].yaxis.grid(which='minor', linestyle=':')
     ax[3].yaxis.grid()
+    props = dict(facecolor='lightgrey', alpha=1, edgecolor='none')
+    ax[3].text(0.3 ,0.55,
+               f'{mean_days_plot}-Tage Tendenz\n'
+               f'Erstimpfung'
+               , horizontalalignment='right',transform=ax[3].transAxes,
+               verticalalignment='bottom', fontsize=15, color='black', ma='left', weight='bold')
+    ax[3].text(0.2 ,0.5,
+               f'Impfungen: \n'
+               f'Impfquote: \n'
+               f'75% in:'
+               , horizontalalignment='right',bbox=props,transform=ax[3].transAxes,
+               verticalalignment='top', fontsize=14, color='black', ma='left')
+    ax[3].text(0.2 ,0.5,
+               f'{iqm_project_plot["mean_1st"]:.0f} pro Tag\n'
+               f'{iqm_project_plot["mean_1st_quote"]:.2f}% pro Tag\n'
+               f'{iqm_project_plot["days_75"]:.0f} Tagen ({(today+timedelta(days=iqm_project_plot["days_75"])).strftime("%Y-%m")})'
+               , horizontalalignment='left',bbox=props,transform=ax[3].transAxes,
+               verticalalignment='top', fontsize=14, color='black', ma='left')
     if id_bl == 0:
         ax[4].set_title(f"{number_states[id_bl]} - Testzahlen", fontsize=16)
         ax[4].plot(testzahl_df.index, testzahl_df["Testungen_7d_mean"], color='green', label='Gesamt')
@@ -252,7 +285,7 @@ def plot_covid_bl(id_bl):
     plt.savefig(os.path.join(parent_directory, 'Auswertung', f"covid_bl_{id_bl}.png"), bbox_inches='tight', dpi=60)
     plt.show()
     plt.close(fig)
-
+plot_covid_bl(0)
 
 # %% Plot Landkreis
 def plot_covid_lk(id_lk):
