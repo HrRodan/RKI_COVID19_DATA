@@ -285,7 +285,6 @@ def plot_covid_bl(id_bl):
     plt.savefig(os.path.join(parent_directory, 'Auswertung', f"covid_bl_{id_bl}.png"), bbox_inches='tight', dpi=60)
     plt.show()
     plt.close(fig)
-plot_covid_bl(0)
 
 # %% Plot Landkreis
 def plot_covid_lk(id_lk):
