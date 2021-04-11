@@ -10,11 +10,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from matplotlib.ticker import (AutoMinorLocator)
-
+import pytz
 from repo_tools_pkg.file_tools import find_latest_file
 
 # %% Set parameters
-today = datetime.now().date()
+today = datetime.now(pytz.timezone('Europe/Berlin')).date()
 yesterday = today - timedelta(days=1)
 today_str = today.strftime('%Y-%m-%d')
 file_path = os.path.dirname(__file__)
