@@ -197,7 +197,7 @@ def plot_covid_bl(id_bl):
     inzidenz = covid_df_sum["Inzidenz_7d"].iloc[-1]
     ir_df_plot = ir_df_sum_bl(id_bl)
     iqm_df_plot = iqm_df_sum_bl(id_bl)
-    mean_days_plot=14
+    mean_days_plot=7
     iqm_project_plot=iqm_project(id_bl, mean_days=mean_days_plot)
     mpl.rcParams['lines.linewidth'] = 3
     mpl.rcParams['axes.linewidth'] = 1.2
