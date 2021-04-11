@@ -271,7 +271,7 @@ def plot_covid_bl(id_bl):
         ax[4].set_title(f"{number_states[id_bl]} - Testungen pro Tag im 7 Tage Mittel")
         ax[4].legend(prop={'size': 16})
         ax[5].plot(covid_df_sum.index, covid_df_sum["CFR_7d_mean"]*100, color='black')
-        ax[5].set_title(f"{number_states[id_bl]} - CFR im 7 Tage Mittel")
+        ax[5].set_title(f"{number_states[id_bl]}\nCFR (case fatality rate) im 7 Tage Mittel")
     for axs in ax.flat:
         axs.set_title(label=axs.get_title(), weight='bold')
         axs.set_ylabel('Anzahl', fontsize=16)
@@ -283,7 +283,8 @@ def plot_covid_bl(id_bl):
         for item in ([axs.title, axs.xaxis.label, axs.yaxis.label] + axs.get_xticklabels() + axs.get_yticklabels()):
             item.set_fontsize(16)
     ax[3].set_ylabel('Bevölkerungsanteil [%]', fontsize=16)
-    ax[5].set_ylabel('CFR [%]', fontsize=16)
+    if id_bl==0:
+        ax[5].set_ylabel('CFR [%]', fontsize=16)
     ax[1].set_ylabel('Anzahl Todesfälle 7d Mittel', fontsize=16)
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
     plt.savefig(os.path.join(parent_directory, 'Auswertung', f"covid_bl_{id_bl}.png"), bbox_inches='tight', dpi=60)
