@@ -189,8 +189,10 @@ def ir_df_sum_lk(id_lk):
 
 def plot_covid_bl(id_bl):
     number_plots = 4
+    fig_size=(10,20)
     if id_bl == 0:
         number_plots = 6
+        fig_size = (10, 30)
     covid_df_sum = covid_df_sum_bl_lk(id_bl).sort_index()
     inzidenz = covid_df_sum["Inzidenz_7d"].iloc[-1]
     ir_df_plot = ir_df_sum_bl(id_bl)
@@ -202,7 +204,8 @@ def plot_covid_bl(id_bl):
     max_y_covid = int(covid_df_sum["Inzidenz_7d"].max()) * 1.2
     covid_major_yticks = np.arange(0, max_y_covid, 50)
     covid_minor_yticks = np.arange(25, max_y_covid, 25)
-    fig, ax = plt.subplots(number_plots, figsize=(10, 20))
+    #start Plot
+    fig, ax = plt.subplots(number_plots, figsize=fig_size)
     fig.suptitle(f"Covid Situation in {number_states[id_bl]} \nStichtag: {today_str}", fontsize=20, weight='bold')
     ax[0].plot(covid_df_sum.index, covid_df_sum["Inzidenz_7d"], color='blue')
     ax[0].set_title(f"{number_states[id_bl]} - 7-Tage Inzidenz")
