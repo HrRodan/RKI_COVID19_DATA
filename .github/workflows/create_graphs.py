@@ -116,6 +116,7 @@ landkreis_df = pd.read_csv(landkreis_path, skiprows=6, skipfooter=4, engine='pyt
 nc_path = find_latest_file(os.path.join(parent_directory, "Nowcasting", "raw_data"))[0]
 nc_df = pd.read_csv(nc_path, engine='python', skipfooter=18, sep=';', na_values='.', decimal=',')
 nc_df["Datum"] = pd.to_datetime(nc_df["Datum"], format='%d.%m.%Y').dt.date
+nc_df=nc_df[nc_df['Datum']>=pd.to_datetime('2020-04-01')]
 nc_df.sort_values('Datum', inplace=True)
 
 # %% Eval covid_df per Bundesland
@@ -218,8 +219,8 @@ def plot_covid_bl(id_bl):
     ax[0].set_yticks(covid_major_yticks)
     ax[0].set_yticks(covid_minor_yticks, minor=True)
     ax[0].yaxis.grid(which='minor', linestyle=':')
-    ax[0].text(covid_df_sum.index[-1], 0.75 * max_y_covid, f'{inzidenz:.1f}', horizontalalignment='right',
-               verticalalignment='bottom', fontsize=16, color='red', weight='bold')
+    ax[0].text(0.95, 0.90, f'{inzidenz:.1f}', horizontalalignment='right',
+               verticalalignment='bottom', fontsize=16, color='red', weight='bold', transform=ax[0].transAxes)
     ax[0].plot(covid_df_sum.index[-1], inzidenz, marker='x', color='red', markersize=7, markeredgewidth=3)
     ax[0].set_ylabel('Anzahl', fontsize=16)
     #Absolute Zahlen
@@ -290,20 +291,30 @@ def plot_covid_bl(id_bl):
         ax[4].set_ylabel('Anzahl', fontsize=16)
         #CFR
         ax[5].plot(covid_df_sum.index, covid_df_sum["CFR_7d_mean"]*100, color='black')
-        ax[5].set_title(f"{number_states[id_bl]}\nCFR (case fatality rate) im 7 Tage Mittel")
+        ax[5].set_title(f"{number_states[id_bl]} - CFR (case fatality rate) im 7 Tage Mittel")
         ax[5].set_ylabel('CFR [%]', fontsize=16)
         #R-Wert
         ax[6].plot(nc_df['Datum'], nc_df['Schätzer_7_Tage_R_Wert'], color='black')
-        ax[6].set_title(f"{number_states[id_bl]}\nSchätzer 7-Tage R-Wert")
+        ax[6].set_title(f"{number_states[id_bl]} - Schätzer 7-Tage R-Wert")
         ax[6].set_ylabel('7-Tage R-Wert', fontsize=16)
         ax[6].axhline(1, color='red', ls='--')
+        ax[6].fill_between(nc_df['Datum'], nc_df['OG_PI_7_Tage_R_Wert'],nc_df['UG_PI_7_Tage_R_Wert'],
+                           color='lightgrey', alpha=0.8)
+        ax[6].text(0.95, 0.95, f'{nc_df["Schätzer_7_Tage_R_Wert"].iloc[-2]:.2f} '
+                             f'({nc_df["UG_PI_7_Tage_R_Wert"].iloc[-2]:.2f} .. '
+                             f'{nc_df["OG_PI_7_Tage_R_Wert"].iloc[-2]:.2f})',
+                   horizontalalignment='right',
+                   verticalalignment='top', fontsize=16, color='red', weight='bold',transform=ax[6].transAxes)
+        ax[6].plot(nc_df['Datum'].iloc[-2], nc_df["Schätzer_7_Tage_R_Wert"].iloc[-2], marker='x', color='red',
+                   markersize=7, markeredgewidth=3)
     for axs in ax.flat:
         axs.set_title(label=axs.get_title(), weight='bold')
-        axs.set_xlim([date(2020, 2, 20), covid_df_sum.index.max() + timedelta(days=5)])
+        axs.set_xlim([date(2020, 2, 20), covid_df_sum.index.max() + timedelta(days=7)])
         axs.yaxis.tick_right()
         axs.yaxis.set_label_position("right")
         axs.xaxis.grid()
         axs.yaxis.grid()
+        axs.axvline(today, ls='-', color='gold', linewidth=1)
         for item in ([axs.title, axs.xaxis.label, axs.yaxis.label] + axs.get_xticklabels() + axs.get_yticklabels()):
             item.set_fontsize(16)
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
@@ -330,8 +341,8 @@ def plot_covid_lk(id_lk):
     # ax[0].set_yticks(covid_minor_yticks , minor=True)
     ax[0].yaxis.set_minor_locator(AutoMinorLocator(2))
     ax[0].yaxis.grid(which='minor', linestyle=':')
-    ax[0].text(covid_df_sum.index[-1], 0.75 * max_y_covid, f'{inzidenz:.1f}', horizontalalignment='right',
-               verticalalignment='bottom', fontsize=16, color='red', weight='bold')
+    ax[0].text(0.95, 0.90, f'{inzidenz:.1f}', horizontalalignment='right',
+               verticalalignment='bottom', fontsize=16, color='red', weight='bold', transform=ax[0].transAxes)
     ax[0].plot(covid_df_sum.index[-1], inzidenz, marker='x', color='red', markersize=7, markeredgewidth=3)
     ax[1].plot(covid_df_sum.index, covid_df_sum["AnzahlTodesfall_7d_mean"], color='black')
     ax[1].set_title(f"{name_lk} \nCovid (Todes)-Fälle pro Tag im 7 Tage Mittel")
@@ -376,11 +387,12 @@ def plot_covid_lk(id_lk):
     for axs in itertools.chain(ax.flat):
         axs.set_title(label=axs.get_title(), weight='bold')
         axs.set_ylabel('Anzahl', fontsize=16)
-        axs.set_xlim([date(2020, 2, 20), covid_df_sum.index.max() + timedelta(days=5)])
+        axs.set_xlim([date(2020, 2, 20), covid_df_sum.index.max() + timedelta(days=7)])
         axs.yaxis.tick_right()
         axs.yaxis.set_label_position("right")
         axs.xaxis.grid()
         axs.yaxis.grid()
+        axs.axvline(today, ls='-', color='gold', linewidth=1)
         for item in ([axs.title, axs.xaxis.label, axs.yaxis.label] + axs.get_xticklabels() + axs.get_yticklabels()):
             item.set_fontsize(16)
     ax[1].set_ylabel('Anzahl Todesfälle 7d Mittel', fontsize=16)
