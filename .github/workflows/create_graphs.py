@@ -241,6 +241,21 @@ def plot_covid_bl(id_bl):
     for item in (
             [ax1_2.title, ax1_2.xaxis.label, ax1_2.yaxis.label] + ax1_2.get_xticklabels() + ax1_2.get_yticklabels()):
         item.set_fontsize(16)
+    props = dict(facecolor='lightgrey', alpha=1, edgecolor='none')
+    ax[1].text(0.05 ,0.9,
+               f'Differenz zum Vortag'
+               , horizontalalignment='left',transform=ax[1].transAxes,
+               verticalalignment='bottom', fontsize=15, color='black', ma='left', weight='bold')
+    ax[1].text(0.25 ,0.85,
+               f'Erkrankungen:\n'
+               f'Todesfälle:'
+               , horizontalalignment='right',bbox=props,transform=ax[1].transAxes,
+               verticalalignment='top', fontsize=14, color='black', ma='left')
+    ax[1].text(0.25 ,0.85,
+               f'{covid_df_sum["AnzahlFall"].iloc[-1]:.0f}\n'
+               f'{covid_df_sum["AnzahlTodesfall"].iloc[-1]:.0f}'
+               , horizontalalignment='left',bbox=props,transform=ax[1].transAxes,
+               verticalalignment='top', fontsize=14, color='black', ma='left')
     #Intensivregister
     ax[2].plot(ir_df_plot.index, ir_df_plot["Aktuelle_COVID_Faelle_Erwachsene_ITS"], color='orange',
                label="Covid Patienten ITS")
@@ -262,7 +277,6 @@ def plot_covid_bl(id_bl):
     ax[3].yaxis.set_minor_locator(AutoMinorLocator(2))
     ax[3].yaxis.grid(which='minor', linestyle=':')
     ax[3].yaxis.grid()
-    props = dict(facecolor='lightgrey', alpha=1, edgecolor='none')
     ax[3].text(0.3 ,0.55,
                f'{mean_days_plot}-Tage Tendenz\n'
                f'Erstimpfung'
@@ -357,6 +371,21 @@ def plot_covid_lk(id_lk):
     ax1_2.yaxis.tick_left()
     ax1_2.yaxis.set_label_position("left")
     ax1_2.tick_params(axis='y', labelcolor='red')
+    props = dict(facecolor='lightgrey', alpha=1, edgecolor='none')
+    ax[1].text(0.05 ,0.9,
+               f'Differenz zum Vortag'
+               , horizontalalignment='left',transform=ax[1].transAxes,
+               verticalalignment='bottom', fontsize=15, color='black', ma='left', weight='bold')
+    ax[1].text(0.25 ,0.85,
+               f'Erkrankungen:\n'
+               f'Todesfälle:'
+               , horizontalalignment='right',bbox=props,transform=ax[1].transAxes,
+               verticalalignment='top', fontsize=14, color='black', ma='left')
+    ax[1].text(0.25 ,0.85,
+               f'{covid_df_sum["AnzahlFall"].iloc[-1]:.0f}\n'
+               f'{covid_df_sum["AnzahlTodesfall"].iloc[-1]:.0f}'
+               , horizontalalignment='left',bbox=props,transform=ax[1].transAxes,
+               verticalalignment='top', fontsize=14, color='black', ma='left')
     ax[2].plot(covid_df_sum.index, covid_df_sum["Cum_sum_Todesfall"], color='black')
     ax[2].set_title(f"{name_lk} \nKumulierte Covid (Todes) - Fälle")
     ax[2].annotate('', xy=(date(2020, 10, 15), ax[2].get_ylim()[1] / 2),
