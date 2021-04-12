@@ -105,7 +105,7 @@ ir_lk_df["daten_stand"] = pd.to_datetime(ir_lk_df["daten_stand"])
 # %% Read Impfquotenmonitoring
 iqm_path = os.path.join(parent_directory, "Impfquotenmonitoring", 'RKI_COVID19_Impfquotenmonitoring.csv')
 iqm_df = pd.read_csv(iqm_path)
-iqm_df["ISODate"] = pd.to_datetime(iqm_df["ISODate"]).dt.date
+iqm_df["ISODate"] = pd.to_datetime(iqm_df["ISODate"])
 
 # %% Read Landkreise
 landkreis_path = os.path.join(parent_directory, "Misc", 'Landkreise.csv')
@@ -167,23 +167,23 @@ def ir_df_sum_bl(id_bl):
 
 
 # %% Eval Impfquotenmonitoring per Bundesland
-def iqm_df_sum_bl(id_bl):
+def iqm_df_sum_bl(id_bl, mean_days=14):
     iqm_df_bl = iqm_df[iqm_df["IdBundesland"] == id_bl]
-    return iqm_df_bl
-
-# %% Eval Impfquoten project
-def iqm_project(id_bl, mean_days=14):
-    iqm_df_project = iqm_df[iqm_df["IdBundesland"] == id_bl].sort_values('ISODate')
-    iqm_df_project=iqm_df_project.iloc[-mean_days-1:]
-    mean_1st=iqm_df_project['Impfungenkumulativ'].diff().mean()
-    kum_1st = iqm_df_project['Impfungenkumulativ'].iloc[-1]
-    days_75 = (number_population[id_bl]*0.75-kum_1st)/mean_1st
+    iqm_df_bl.set_index('ISODate', inplace=True)
+    iqm_df_bl=iqm_df_bl.resample("1D").ffill()
+    iqm_df_bl.sort_index(inplace=True)
+    #eval projected
+    iqm_df_project = iqm_df_bl.iloc[-mean_days - 1:]
+    mean_1st = iqm_df_project['Impfungenkumulativ'].diff().mean()
+    kum_1st = iqm_df_project['Impfungenkumulativ'].max()
+    days_75 = (number_population[id_bl] * 0.75 - kum_1st) / mean_1st
     project_vaccine = {
-        'mean_1st' : mean_1st,
-        'mean_1st_quote' : mean_1st/number_population[id_bl]*100,
-        'days_75' : np.round(days_75,0)
+        'mean_1st': mean_1st,
+        'mean_1st_quote': mean_1st / number_population[id_bl] * 100,
+        'days_75': np.round(days_75, 0)
     }
-    return project_vaccine
+    return (iqm_df_bl,project_vaccine)
+
 
 # %% Eval Intensivregister per Landkreis
 def ir_df_sum_lk(id_lk):
@@ -202,9 +202,8 @@ def plot_covid_bl(id_bl):
     covid_df_sum = covid_df_sum_bl_lk(id_bl).sort_index()
     inzidenz = covid_df_sum["Inzidenz_7d"].iloc[-1]
     ir_df_plot = ir_df_sum_bl(id_bl)
-    iqm_df_plot = iqm_df_sum_bl(id_bl)
-    mean_days_plot=7
-    iqm_project_plot=iqm_project(id_bl, mean_days=mean_days_plot)
+    mean_days_plot=14
+    iqm_df_plot, iqm_project_plot = iqm_df_sum_bl(id_bl, mean_days=mean_days_plot)
     mpl.rcParams['lines.linewidth'] = 3
     mpl.rcParams['axes.linewidth'] = 1.2
     max_y_covid = int(covid_df_sum["Inzidenz_7d"].max()) * 1.2
@@ -253,9 +252,9 @@ def plot_covid_bl(id_bl):
     ax[2].legend(prop={'size': 16})
     ax[2].set_ylabel('Anzahl', fontsize=16)
     #Impfungen
-    ax[3].plot(iqm_df_plot["ISODate"], iqm_df_plot["Impfungenkumulativ"] / number_population[id_bl] * 100,
+    ax[3].plot(iqm_df_plot.index, iqm_df_plot["Impfungenkumulativ"] / number_population[id_bl] * 100,
                label="Erstimpfungen kumuliert", color='darkviolet')
-    ax[3].plot(iqm_df_plot["ISODate"], iqm_df_plot["ZweiteImpfungkumulativ"] / number_population[id_bl] * 100,
+    ax[3].plot(iqm_df_plot.index, iqm_df_plot["ZweiteImpfungkumulativ"] / number_population[id_bl] * 100,
                label="Zweitimpfung kumuliert")
     ax[3].set_title(f"{number_states[id_bl]} - Impfquote")
     ax[3].legend(prop={'size': 16})
