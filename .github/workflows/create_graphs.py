@@ -15,6 +15,12 @@ from matplotlib.ticker import (AutoMinorLocator)
 
 from repo_tools_pkg.file_tools import find_latest_file
 
+# %% Set Plot parameters
+mpl.rcParams['lines.linewidth'] = 3
+mpl.rcParams['axes.linewidth'] = 1.2
+mpl.rcParams['font.family'] = 'serif'
+mpl.rcParams['font.size']=16
+
 # %% Set parameters
 today = datetime.now(pytz.timezone('Europe/Berlin')).date()
 yesterday = today - timedelta(days=1)
@@ -234,8 +240,6 @@ def plot_covid_bl(id_bl):
     mean_days_plot = 14
     iqm_df_plot, iqm_project_plot = iqm_df_sum_bl(id_bl, mean_days=mean_days_plot)
     faelle_neu_plot, todesfaelle_neu_plot = covid_faelle_neu(id_bl, False)
-    mpl.rcParams['lines.linewidth'] = 3
-    mpl.rcParams['axes.linewidth'] = 1.2
     max_y_covid = int(covid_df_sum["Inzidenz_7d"].max()) * 1.2
     covid_major_yticks = np.arange(0, max_y_covid, 50)
     covid_minor_yticks = np.arange(25, max_y_covid, 25)
@@ -347,6 +351,7 @@ def plot_covid_bl(id_bl):
         ax[4].plot(testzahl_df.index, testzahl_df["Testungen_7d_mean"], color='green', label='Gesamt')
         ax[4].plot(testzahl_df.index, testzahl_df["Positiv_7d_mean"], color='blue', label='Positiv')
         ax[4].set_title(f"{number_states[id_bl]} - Testungen pro Tag im 7 Tage Mittel")
+        ax[4].ticklabel_format(axis='y', style='sci', scilimits=(-3, 3))
         ax[4].legend(prop={'size': 16})
         ax[4].set_ylabel('Anzahl', fontsize=16)
         # CFR
@@ -377,6 +382,7 @@ def plot_covid_bl(id_bl):
         axs.axvline(today, ls='-', color='gold', linewidth=1)
         for item in ([axs.title, axs.xaxis.label, axs.yaxis.label] + axs.get_xticklabels() + axs.get_yticklabels()):
             item.set_fontsize(16)
+    fig.align_ylabels()
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
     plt.savefig(os.path.join(parent_directory, 'Auswertung', f"covid_bl_{id_bl}.png"), bbox_inches='tight', dpi=60)
     plt.show()
@@ -390,8 +396,6 @@ def plot_covid_lk(id_lk):
     inzidenz = covid_df_sum["Inzidenz_7d"].iloc[-1]
     ir_df_lk_plot = ir_df_sum_lk(id_lk)
     faelle_neu_plot, todesfaelle_neu_plot = covid_faelle_neu(id_lk, True)
-    mpl.rcParams['lines.linewidth'] = 3
-    mpl.rcParams['axes.linewidth'] = 1.2
     max_y_covid = int(covid_df_sum["Inzidenz_7d"].max()) * 1.2
     # covid_major_yticks=np.arange(0,max_y_covid,50)
     # covid_minor_yticks = np.arange(25, max_y_covid, 25)
@@ -475,6 +479,7 @@ def plot_covid_lk(id_lk):
             item.set_fontsize(16)
     ax[1].set_ylabel('Anzahl Todesfälle 7d Mittel', fontsize=16)
     ax[2].set_ylabel('Kumulierte Anzahl Todesfälle', fontsize=16)
+    fig.align_ylabels()
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
     plt.savefig(os.path.join(parent_directory, 'Auswertung', 'Landkreise', f"covid_lk_{id_lk}.png"),
                 bbox_inches='tight', dpi=60)
