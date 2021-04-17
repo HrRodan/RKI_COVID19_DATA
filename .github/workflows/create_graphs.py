@@ -199,10 +199,17 @@ def iqm_df_sum_bl(id_bl, mean_days=14):
     mean_1st = iqm_df_project['Impfungenkumulativ'].diff().mean()
     kum_1st = iqm_df_project['Impfungenkumulativ'].max()
     days_75 = (number_population[id_bl] * 0.75 - kum_1st) / mean_1st
+    mean_2nd = iqm_df_project['ZweiteImpfungkumulativ'].diff().mean()
+    kum_2nd = iqm_df_project['ZweiteImpfungkumulativ'].max()
+    days_75_2nd = (number_population[id_bl] * 0.75 - kum_2nd) / mean_2nd
     project_vaccine = {
         'mean_1st': mean_1st,
         'mean_1st_quote': mean_1st / number_population[id_bl] * 100,
-        'days_75': np.round(days_75, 0)
+        'days_75': np.round(days_75, 0),
+        'mean_2nd' : mean_2nd,
+        'kum_2nd' : kum_2nd,
+        'days_75_2nd' : days_75_2nd,
+        'mean_2nd_quote': mean_2nd / number_population[id_bl] * 100,
     }
     return (iqm_df_bl, project_vaccine)
 
@@ -301,21 +308,37 @@ def plot_covid_bl(id_bl):
     ax[3].yaxis.set_minor_locator(AutoMinorLocator(2))
     ax[3].yaxis.grid(which='minor', linestyle=':')
     ax[3].yaxis.grid()
-    ax[3].text(0.3, 0.55,
+    ax[3].text(0.07, 0.8,
                f'{mean_days_plot}-Tage Tendenz\n'
                f'Erstimpfung'
-               , horizontalalignment='right', transform=ax[3].transAxes,
+               , horizontalalignment='left', transform=ax[3].transAxes,
                verticalalignment='bottom', fontsize=15, color='black', ma='left', weight='bold')
-    ax[3].text(0.2, 0.5,
+    ax[3].text(0.2, 0.75,
                f'Impfungen: \n'
                f'Impfquote: \n'
                f'75% in:'
                , horizontalalignment='right', bbox=props, transform=ax[3].transAxes,
                verticalalignment='top', fontsize=14, color='black', ma='left')
-    ax[3].text(0.2, 0.5,
+    ax[3].text(0.2, 0.75,
                f'{iqm_project_plot["mean_1st"]:.0f} pro Tag\n'
                f'{iqm_project_plot["mean_1st_quote"]:.2f}% pro Tag\n'
                f'{iqm_project_plot["days_75"]:.0f} Tagen ({(today + timedelta(days=iqm_project_plot["days_75"])).strftime("%Y-%m")})'
+               , horizontalalignment='left', bbox=props, transform=ax[3].transAxes,
+               verticalalignment='top', fontsize=14, color='black', ma='left')
+    ax[3].text(0.07, 0.35,
+               f'Zweitimpfung'
+               , horizontalalignment='left', transform=ax[3].transAxes,
+               verticalalignment='bottom', fontsize=15, color='black', ma='left', weight='bold')
+    ax[3].text(0.2, 0.3,
+               f'Impfungen: \n'
+               f'Impfquote: \n'
+               f'75% in:'
+               , horizontalalignment='right', bbox=props, transform=ax[3].transAxes,
+               verticalalignment='top', fontsize=14, color='black', ma='left')
+    ax[3].text(0.2, 0.3,
+               f'{iqm_project_plot["mean_2nd"]:.0f} pro Tag\n'
+               f'{iqm_project_plot["mean_2nd_quote"]:.2f}% pro Tag\n'
+               f'{iqm_project_plot["days_75_2nd"]:.0f} Tagen ({(today + timedelta(days=iqm_project_plot["days_75"])).strftime("%Y-%m")})'
                , horizontalalignment='left', bbox=props, transform=ax[3].transAxes,
                verticalalignment='top', fontsize=14, color='black', ma='left')
     ax[3].set_ylabel('Bevölkerungsanteil [%]', fontsize=16)
