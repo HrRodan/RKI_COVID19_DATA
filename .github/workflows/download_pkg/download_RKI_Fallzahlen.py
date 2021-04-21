@@ -15,6 +15,6 @@ def download_RKI_Fallzahlen():
     a = DownloadFile(url=url_kum, filename=filename_kum, download_path=data_path, compress=False,add_date=True,add_latest=False)
     a.write_file()
 
-    #download archiv
-    b = DownloadFile(url=url_archiv, filename=filename_archiv, download_path=data_path, compress=False,add_date=True,add_latest=False)
-    b.write_file()
+    # #download archiv
+    # b = DownloadFile(url=url_archiv, filename=filename_archiv, download_path=data_path, compress=False,add_date=True,add_latest=False)
+    # b.write_file()
