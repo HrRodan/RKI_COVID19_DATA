@@ -41,7 +41,7 @@ covid_df = covid_df.groupby(key_list, as_index=False).sum()
 covid_df['report_date'] = date_latest
 
 # %% concat and dedup
-fallzahlen_new = pd.concat([covid_df, fallzahlen_df])
+fallzahlen_new = pd.concat([fallzahlen_df, covid_df])
 fallzahlen_new.drop_duplicates(subset=key_list, keep='last', inplace=True)
 fallzahlen_new.sort_values(by=key_list, inplace=True)
 
@@ -51,6 +51,8 @@ with open(path_fallzahlen, 'wb') as csvfile:
 
 
 # %% clean file
-# fallzahlen_df_dedup=fallzahlen_df.drop_duplicates(subset=key_list,keep='first')
+# fallzahlen_df_update=fallzahlen_df.copy()
+# fallzahlen_df_update['Datenstand']=np.where(fallzahlen_df['Datenstand']==pd.to_datetime('2020-02-04'),pd.to_datetime('2020-04-02'),fallzahlen_df['Datenstand'])
+# fallzahlen_df_update.sort_values(by=key_list, inplace=True)
 # with open(path_fallzahlen, 'wb') as csvfile:
-#      fallzahlen_df_dedup.to_csv(csvfile, index=True, header=True, line_terminator='\n', encoding='utf-8', date_format='%Y-%m-%d')
+#       fallzahlen_df_update.to_csv(csvfile, index=True, header=True, line_terminator='\n', encoding='utf-8', date_format='%Y-%m-%d')
