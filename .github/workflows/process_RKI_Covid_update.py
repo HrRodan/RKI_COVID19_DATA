@@ -52,7 +52,7 @@ with open(path_fallzahlen, 'wb') as csvfile:
 
 # %% clean file
 # fallzahlen_df_update=fallzahlen_df.copy()
-# fallzahlen_df_update['Datenstand']=np.where(fallzahlen_df['Datenstand']==pd.to_datetime('2020-02-04'),pd.to_datetime('2020-04-02'),fallzahlen_df['Datenstand'])
+# fallzahlen_df_update['Datenstand']=np.where(fallzahlen_df['Datenstand']==pd.to_datetime('2020-11-04'),pd.to_datetime('2020-04-11'),fallzahlen_df['Datenstand'])
 # fallzahlen_df_update.sort_values(by=key_list, inplace=True)
 # with open(path_fallzahlen, 'wb') as csvfile:
-#       fallzahlen_df_update.to_csv(csvfile, index=True, header=True, line_terminator='\n', encoding='utf-8', date_format='%Y-%m-%d')
+#       fallzahlen_df_update.to_csv(csvfile, index=False, header=True, line_terminator='\n', encoding='utf-8', date_format='%Y-%m-%d')
