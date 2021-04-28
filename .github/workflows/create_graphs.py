@@ -169,7 +169,6 @@ def fallzahlen_df_bl_lk(id_bl_lk, landkreis=False):
         fallzahlen_df_sum["AnzahlTodesfall_neu_7d_mean"] / fallzahlen_df_sum["AnzahlFall_neu_7d_mean"],0)
     return fallzahlen_df_sum
 
-a=fallzahlen_df_bl_lk(9572,landkreis=True)
 # %% Eval covid_df per Bundesland
 
 def covid_df_sum_bl_lk(id_bl_lk, landkreis=False):
