@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import pytz
-from anaconda_project.internal.keyring import fallback_data
 from matplotlib.ticker import (AutoMinorLocator)
 
 from repo_tools_pkg.file_tools import find_latest_file
@@ -137,6 +136,17 @@ dtypes_fallzahlen= {'Datenstand': 'object', 'IdBundesland': 'float64', 'IdLandkr
 fallzahlen_df=pd.read_csv(path_fallzahlen, engine='python', dtype=dtypes_fallzahlen, usecols=dtypes_fallzahlen.keys())
 fallzahlen_df['Datenstand']=pd.to_datetime(fallzahlen_df['Datenstand']).dt.date
 fallzahlen_df['report_date']=pd.to_datetime(fallzahlen_df['report_date']).dt.date
+
+# %% Read Inzidenzen
+path_inzidenz = find_latest_file(os.path.join(parent_directory, "Fallzahlen", "raw_data"),'Kum_Tab')[0]
+inzidenz_lk_df = pd.read_excel(path_inzidenz, sheet_name='LK_7-Tage-Inzidenz', skiprows=4, usecols='C:ZZ')
+inzidenz_lk_df=inzidenz_lk_df.melt(id_vars=['LKNR']).rename(columns={'LKNR':'IdLandkreis','variable':'report_date','value':'Inzidenz'})
+inzidenz_lk_df['report_date']=pd.to_datetime(inzidenz_lk_df['report_date']).dt.date
+inzidenz_bl_df = pd.read_excel(path_inzidenz, sheet_name='BL_7-Tage-Inzidenz', skiprows=2, usecols='A,C:ZZ')
+inzidenz_bl_df['IdBundesland']=inzidenz_bl_df[inzidenz_bl_df.columns[0]].map({**states_number,**{'Gesamt':0}})
+inzidenz_bl_df=inzidenz_bl_df.dropna(axis='columns').drop(labels=inzidenz_bl_df.columns[0], axis=1)
+inzidenz_bl_df=inzidenz_bl_df.melt(id_vars=['IdBundesland']).rename(columns={'variable':'report_date','value':'Inzidenz'})
+inzidenz_bl_df['report_date']=pd.to_datetime(inzidenz_bl_df['report_date']).dt.date
 
 # %% Neue Fälle in der Publikation
 def fallzahlen_df_bl_lk(id_bl_lk, landkreis=False):
