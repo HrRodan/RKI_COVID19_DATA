@@ -395,7 +395,7 @@ def plot_covid_bl(id_bl):
     ax[3].text(0.2, 0.3,
                f'{iqm_project_plot["mean_2nd"]:.0f} pro Tag\n'
                f'{iqm_project_plot["mean_2nd_quote"]:.2f}% pro Tag\n'
-               f'{iqm_project_plot["days_75_2nd"]:.0f} Tagen ({(today + timedelta(days=iqm_project_plot["days_75"])).strftime("%Y-%m")})'
+               f'{iqm_project_plot["days_75_2nd"]:.0f} Tagen ({(today + timedelta(days=iqm_project_plot["days_75_2nd"])).strftime("%Y-%m")})'
                , horizontalalignment='left', bbox=props, transform=ax[3].transAxes,
                verticalalignment='top', fontsize=14, color='black', ma='left')
     ax[3].set_ylabel('Bevölkerungsanteil [%]', fontsize=16)
