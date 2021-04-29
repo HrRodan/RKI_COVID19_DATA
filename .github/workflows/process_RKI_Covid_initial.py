@@ -36,21 +36,28 @@ for file in file_list:
         if re_search and re_filename:
             report_date = date(int(re_search.group(1)), int(re_search.group(3)), int(re_search.group(4)))
             # if report_date>date(2020,3,23):
-            if report_date >= date(2020, 4, 1):
+            if report_date >= date(2020, 3, 24):
                 count += 1
                 print(report_date)
-                try:
-                    df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new)
-                except UnicodeDecodeError:
+                if report_date==date(2020,3,25):
+                    #Sonderfall, falscher Datentyp in Zeile
+                    df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new, skiprows=[10572])
+                elif report_date==date(2020,3,26):
+                    #Sonderfall, falscher Datentyp in Zeile
+                    df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new, skiprows=[1001])
+                else:
                     try:
-                        df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new,  encoding='cp1252')
+                        df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new)
+                    except UnicodeDecodeError:
+                        try:
+                            df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new,  encoding='cp1252')
+                        except ValueError:
+                            df = pd.read_csv(file_path_full, usecols=dtypes_new_2.keys(), dtype=dtypes_new_2, encoding='cp1252')
                     except ValueError:
-                        df = pd.read_csv(file_path_full, usecols=dtypes_new_2.keys(), dtype=dtypes_new_2, encoding='cp1252')
-                except ValueError:
-                    df = pd.read_csv(file_path_full, usecols=dtypes_old.keys(), dtype=dtypes_old)
+                        df = pd.read_csv(file_path_full, usecols=dtypes_old.keys(), dtype=dtypes_old)
 
-                df.rename(columns={'Neuer Fall': 'NeuerFall', 'Neuer Todesfall': 'NeuerTodesfall',
-                             'Landkreis ID': 'IdLandkreis','Meldedatum2':'Meldedatum'}, inplace=True)
+                    df.rename(columns={'Neuer Fall': 'NeuerFall', 'Neuer Todesfall': 'NeuerTodesfall',
+                                 'Landkreis ID': 'IdLandkreis','Meldedatum2':'Meldedatum'}, inplace=True)
                 try:
                     df['Meldedatum']=pd.to_datetime(df['Meldedatum']).dt.date
                 except:
@@ -65,13 +72,14 @@ for file in file_list:
                     datenstand = pd.to_datetime(df['Datenstand'].iloc[0])
                 except:
                     datenstand = pd.to_datetime(df['Datenstand'].iloc[0], format='%d.%m.%Y, %H:%M Uhr')
+                #Datenkorrektur
                 df.drop(['NeuerFall', 'NeuerTodesfall','Meldedatum'], inplace=True, axis=1)
                 df = df.groupby(['IdLandkreis','IdBundesland'], as_index=False).sum()
                 df['report_date'] = report_date
                 df['meldedatum_max'] = meldedatum_max
                 df['Datenstand'] = datenstand
                 dfs.append(df)
-                #if count>10: break
+                if count>10: break
 
 # %%
 covid_df = pd.concat(dfs)
