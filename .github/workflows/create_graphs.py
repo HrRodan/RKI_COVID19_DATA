@@ -19,7 +19,7 @@ from repo_tools_pkg.file_tools import find_latest_file
 mpl.rcParams['lines.linewidth'] = 3
 mpl.rcParams['axes.linewidth'] = 1.2
 mpl.rcParams['font.family'] = 'serif'
-mpl.rcParams['font.size']=16
+mpl.rcParams['font.size'] = 16
 
 # %% Set parameters
 today = datetime.now(pytz.timezone('Europe/Berlin')).date()
@@ -129,13 +129,15 @@ nc_df.sort_values('Datum', inplace=True)
 
 # %% Read Fallzahlen
 path_fallzahlen = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'Fallzahlen',
-                        'RKI_COVID19_Fallzahlen.csv')
-dtypes_fallzahlen= {'Datenstand': 'object', 'IdBundesland': 'float64', 'IdLandkreis': 'float64',
-              'AnzahlFall': 'float64', 'AnzahlTodesfall': 'float64','AnzahlFall_neu': 'float64',
-              'AnzahlTodesfall_neu': 'float64', 'report_date':'object'}
-fallzahlen_df=pd.read_csv(path_fallzahlen, engine='python', dtype=dtypes_fallzahlen, usecols=dtypes_fallzahlen.keys())
-fallzahlen_df['Datenstand']=pd.to_datetime(fallzahlen_df['Datenstand']).dt.date
-fallzahlen_df['report_date']=pd.to_datetime(fallzahlen_df['report_date']).dt.date
+                               'RKI_COVID19_Fallzahlen.csv')
+dtypes_fallzahlen = {'Datenstand': 'object', 'IdBundesland': 'Int32', 'IdLandkreis': 'Int32',
+                     'AnzahlFall': 'Int32', 'AnzahlTodesfall': 'Int32', 'AnzahlFall_neu': 'Int32',
+                     'AnzahlTodesfall_neu': 'Int32', 'AnzahlFall_7d': 'Int32', 'report_date': 'object',
+                     'meldedatum_max': 'object'}
+fallzahlen_df = pd.read_csv(path_fallzahlen, engine='python', dtype=dtypes_fallzahlen, usecols=dtypes_fallzahlen.keys())
+fallzahlen_df['Datenstand'] = pd.to_datetime(fallzahlen_df['Datenstand']).dt.date
+fallzahlen_df['report_date'] = pd.to_datetime(fallzahlen_df['report_date']).dt.date
+
 
 # %% Read Inzidenzen
 # path_inzidenz = find_latest_file(os.path.join(parent_directory, "Fallzahlen", "raw_data"),'Kum_Tab')[0]
@@ -150,6 +152,10 @@ fallzahlen_df['report_date']=pd.to_datetime(fallzahlen_df['report_date']).dt.dat
 
 # %% Neue Fälle in der Publikation
 def fallzahlen_df_bl_lk(id_bl_lk, landkreis=False):
+    if landkreis:
+        population = landkreis_df[landkreis_df['IdLandkreis'] == id_bl_lk].iloc[0]['Bevoelkerung']
+    else:
+        population = number_population[id_bl_lk]
     if id_bl_lk == 0:
         bundesland_id = number_states.keys()
     else:
@@ -160,24 +166,32 @@ def fallzahlen_df_bl_lk(id_bl_lk, landkreis=False):
     else:
         fallzahlen_df_sum = fallzahlen_df[fallzahlen_df["IdBundesland"].isin(bundesland_id)].groupby("Datenstand").sum()
     fallzahlen_df_sum.drop(['IdBundesland', 'IdLandkreis'], axis=1, inplace=True)
-    fallzahlen_df_sum.index=pd.to_datetime(fallzahlen_df_sum.index)
+    fallzahlen_df_sum.index = pd.to_datetime(fallzahlen_df_sum.index)
     fallzahlen_df_sum = fallzahlen_df_sum.resample("1D").asfreq()
     fallzahlen_df_sum.sort_index(inplace=True)
-    fallzahlen_df_sum['AnzahlFall']=np.where(fallzahlen_df_sum['AnzahlFall'].isna(),
-                    fallzahlen_df_sum['AnzahlFall'].shift(-1)-fallzahlen_df_sum['AnzahlFall_neu'].shift(-1),
-                                             fallzahlen_df_sum['AnzahlFall'])
-    fallzahlen_df_sum['AnzahlTodesfall']=np.where(fallzahlen_df_sum['AnzahlTodesfall'].isna(),
-                    fallzahlen_df_sum['AnzahlTodesfall'].shift(-1)-fallzahlen_df_sum['AnzahlTodesfall_neu'].shift(-1),
-                                             fallzahlen_df_sum['AnzahlTodesfall'])
-    fallzahlen_df_sum['AnzahlFall_neu']=np.where(fallzahlen_df_sum['AnzahlFall_neu'].isna(),
-                                                 fallzahlen_df_sum['AnzahlFall'].diff(),fallzahlen_df_sum['AnzahlFall_neu'])
-    fallzahlen_df_sum['AnzahlTodesfall_neu']=np.where(fallzahlen_df_sum['AnzahlTodesfall_neu'].isna(),
-                                                 fallzahlen_df_sum['AnzahlTodesfall'].diff(),fallzahlen_df_sum['AnzahlTodesfall_neu'])
+    fallzahlen_df_sum['AnzahlFall'] = np.where(fallzahlen_df_sum['AnzahlFall'].isna(),
+                                               fallzahlen_df_sum['AnzahlFall'].shift(-1) - fallzahlen_df_sum[
+                                                   'AnzahlFall_neu'].shift(-1),
+                                               fallzahlen_df_sum['AnzahlFall'])
+    fallzahlen_df_sum['AnzahlTodesfall'] = np.where(fallzahlen_df_sum['AnzahlTodesfall'].isna(),
+                                                    fallzahlen_df_sum['AnzahlTodesfall'].shift(-1) - fallzahlen_df_sum[
+                                                        'AnzahlTodesfall_neu'].shift(-1),
+                                                    fallzahlen_df_sum['AnzahlTodesfall'])
+    fallzahlen_df_sum['AnzahlFall_neu'] = np.where(fallzahlen_df_sum['AnzahlFall_neu'].isna(),
+                                                   fallzahlen_df_sum['AnzahlFall'].diff(),
+                                                   fallzahlen_df_sum['AnzahlFall_neu'])
+    fallzahlen_df_sum['AnzahlTodesfall_neu'] = np.where(fallzahlen_df_sum['AnzahlTodesfall_neu'].isna(),
+                                                        fallzahlen_df_sum['AnzahlTodesfall'].diff(),
+                                                        fallzahlen_df_sum['AnzahlTodesfall_neu'])
     fallzahlen_df_sum["AnzahlTodesfall_neu_7d_mean"] = fallzahlen_df_sum["AnzahlTodesfall_neu"].rolling(7).mean()
     fallzahlen_df_sum["AnzahlFall_neu_7d_mean"] = fallzahlen_df_sum["AnzahlFall_neu"].rolling(7).mean()
-    fallzahlen_df_sum["CFR_7d_mean"] = np.where(fallzahlen_df_sum["AnzahlFall_neu_7d_mean"]!=0,
-        fallzahlen_df_sum["AnzahlTodesfall_neu_7d_mean"] / fallzahlen_df_sum["AnzahlFall_neu_7d_mean"],0)
+    fallzahlen_df_sum["CFR_7d_mean"] = np.where(fallzahlen_df_sum["AnzahlFall_neu_7d_mean"] != 0,
+                                                fallzahlen_df_sum["AnzahlTodesfall_neu_7d_mean"] / fallzahlen_df_sum[
+                                                    "AnzahlFall_neu_7d_mean"], 0)
+    fallzahlen_df_sum["Inzidenz"] = np.array(fallzahlen_df_sum["AnzahlFall_7d"]) / (population / 100000)
+    # fallzahlen_df_sum["Inzidenz"] = fallzahlen_df_sum["Inzidenz"].interpolate(method='pad')
     return fallzahlen_df_sum
+
 
 # %% Eval covid_df per Bundesland
 
@@ -263,9 +277,9 @@ def iqm_df_sum_bl(id_bl, mean_days=14):
         'mean_1st': mean_1st,
         'mean_1st_quote': mean_1st / number_population[id_bl] * 100,
         'days_75': np.round(days_75, 0),
-        'mean_2nd' : mean_2nd,
-        'kum_2nd' : kum_2nd,
-        'days_75_2nd' : days_75_2nd,
+        'mean_2nd': mean_2nd,
+        'kum_2nd': kum_2nd,
+        'days_75_2nd': days_75_2nd,
         'mean_2nd_quote': mean_2nd / number_population[id_bl] * 100,
     }
     return (iqm_df_bl, project_vaccine)
@@ -288,7 +302,7 @@ def plot_covid_bl(id_bl):
     covid_df_sum = covid_df_sum_bl_lk(id_bl).sort_index()
     inzidenz = covid_df_sum["Inzidenz_7d"].iloc[-1]
     ir_df_plot = ir_df_sum_bl(id_bl)
-    fallzahlen_plot=fallzahlen_df_bl_lk(id_bl)
+    fallzahlen_plot = fallzahlen_df_bl_lk(id_bl)
     mean_days_plot = 14
     iqm_df_plot, iqm_project_plot = iqm_df_sum_bl(id_bl, mean_days=mean_days_plot)
     faelle_neu_plot, todesfaelle_neu_plot = covid_faelle_neu(id_bl, False)
@@ -299,10 +313,13 @@ def plot_covid_bl(id_bl):
     fig, ax = plt.subplots(number_plots, figsize=fig_size)
     fig.suptitle(f"Covid Situation in {number_states[id_bl]} \nStichtag: {today_str}", fontsize=20, weight='bold')
     # Inzidenz
-    ax[0].plot(covid_df_sum.index, covid_df_sum["Inzidenz_7d"], color='blue')
+    ax[0].plot(covid_df_sum.index, covid_df_sum["Inzidenz_7d"], color='black')
+    ax[0].plot(fallzahlen_plot.index, fallzahlen_plot['Inzidenz'], color='red', alpha=0.6, linewidth=1)
+    ax[0].axhline(150, color='darkred', ls='--', linewidth=1.2, alpha=0.7)
+    ax[0].axhline(100, color='darkgoldenrod', ls='--', linewidth=1.2, alpha=0.7)
+    ax[0].axhline(50, color='darkgreen', ls='--', linewidth=1.2, alpha=0.7)
     ax[0].set_title(f"{number_states[id_bl]} - 7-Tage Inzidenz")
-    ax[0].set_yticks(covid_major_yticks)
-    ax[0].set_yticks(covid_minor_yticks, minor=True)
+    ax[0].yaxis.set_minor_locator(AutoMinorLocator(2))
     ax[0].yaxis.grid(which='minor', linestyle=':')
     ax[0].text(0.95, 0.90, f'{inzidenz:.1f}', horizontalalignment='right',
                verticalalignment='bottom', fontsize=16, color='red', weight='bold', transform=ax[0].transAxes)
@@ -311,7 +328,8 @@ def plot_covid_bl(id_bl):
     # Absolute Zahlen
     ax[1].plot(covid_df_sum.index, covid_df_sum["AnzahlTodesfall_7d_mean"], color='black', label='nach Meldedatum')
     ax[1].set_title(f"{number_states[id_bl]} \nCovid Todesfälle pro Tag im 7 Tage Mittel")
-    ax[1].plot(fallzahlen_plot.index, fallzahlen_plot["AnzahlTodesfall_neu_7d_mean"], color='red', label='nach Reportdatum',
+    ax[1].plot(fallzahlen_plot.index, fallzahlen_plot["AnzahlTodesfall_neu_7d_mean"], color='red',
+               label='nach Reportdatum',
                alpha=0.7)
     ax[1].legend(prop={'size': 16})
     props = dict(facecolor='lightgrey', alpha=1, edgecolor='none')
@@ -427,7 +445,7 @@ def plot_covid_bl(id_bl):
                    markersize=7, markeredgewidth=3)
     for axs in ax.flat:
         axs.set_title(label=axs.get_title(), weight='bold')
-        axs.set_xlim([date(2020, 2, 20), covid_df_sum.index.max() + timedelta(days=7)])
+        axs.set_xlim([date(2020, 3, 1), covid_df_sum.index.max() + timedelta(days=7)])
         axs.yaxis.tick_right()
         axs.yaxis.set_label_position("right")
         axs.xaxis.grid()
@@ -448,7 +466,7 @@ def plot_covid_lk(id_lk):
     covid_df_sum = covid_df_sum_bl_lk(id_lk, landkreis=True).sort_index()
     inzidenz = covid_df_sum["Inzidenz_7d"].iloc[-1]
     ir_df_lk_plot = ir_df_sum_lk(id_lk)
-    fallzahlen_plot=fallzahlen_df_bl_lk(id_lk, landkreis=True)
+    fallzahlen_plot = fallzahlen_df_bl_lk(id_lk, landkreis=True)
     faelle_neu_plot, todesfaelle_neu_plot = covid_faelle_neu(id_lk, True)
     max_y_covid = int(covid_df_sum["Inzidenz_7d"].max()) * 1.2
     # covid_major_yticks=np.arange(0,max_y_covid,50)
@@ -457,8 +475,11 @@ def plot_covid_lk(id_lk):
     fig.suptitle(f"Covid Situation in {name_lk} \nStichtag: {today_str}", fontsize=20, weight='bold')
     ax[0].plot(covid_df_sum.index, covid_df_sum["Inzidenz_7d"], color='blue')
     ax[0].set_title(f"{name_lk} \n7-Tage Inzidenz")
-    # ax[0].set_yticks(covid_major_yticks)
-    # ax[0].set_yticks(covid_minor_yticks , minor=True)
+    ax[0].plot(covid_df_sum.index, covid_df_sum["Inzidenz_7d"], color='black')
+    ax[0].plot(fallzahlen_plot.index, fallzahlen_plot['Inzidenz'], color='red', alpha=0.6, linewidth=1)
+    ax[0].axhline(150, color='darkred', ls='--', linewidth=1.2, alpha=0.7)
+    ax[0].axhline(100, color='darkgoldenrod', ls='--', linewidth=1.2, alpha=0.7)
+    ax[0].axhline(50, color='darkgreen', ls='--', linewidth=1.2, alpha=0.7)
     ax[0].yaxis.set_minor_locator(AutoMinorLocator(2))
     ax[0].yaxis.grid(which='minor', linestyle=':')
     ax[0].text(0.95, 0.90, f'{inzidenz:.1f}', horizontalalignment='right',
@@ -466,7 +487,8 @@ def plot_covid_lk(id_lk):
     ax[0].plot(covid_df_sum.index[-1], inzidenz, marker='x', color='red', markersize=7, markeredgewidth=3)
     ax[1].plot(covid_df_sum.index, covid_df_sum["AnzahlTodesfall_7d_mean"], color='black', label='nach Meldedatum')
     ax[1].set_title(f"{name_lk} \nCovid Todesfälle pro Tag im 7 Tage Mittel")
-    ax[1].plot(fallzahlen_plot.index, fallzahlen_plot["AnzahlTodesfall_neu_7d_mean"], color='red', label='nach Reportdatum',
+    ax[1].plot(fallzahlen_plot.index, fallzahlen_plot["AnzahlTodesfall_neu_7d_mean"], color='red',
+               label='nach Reportdatum',
                alpha=0.7)
     ax[1].legend(prop={'size': 16})
     props = dict(facecolor='lightgrey', alpha=1, edgecolor='none')
@@ -527,7 +549,7 @@ def plot_covid_lk(id_lk):
     for axs in itertools.chain(ax.flat):
         axs.set_title(label=axs.get_title(), weight='bold')
         axs.set_ylabel('Anzahl', fontsize=16)
-        axs.set_xlim([date(2020, 2, 20), covid_df_sum.index.max() + timedelta(days=7)])
+        axs.set_xlim([date(2020, 3, 1), covid_df_sum.index.max() + timedelta(days=7)])
         axs.yaxis.tick_right()
         axs.yaxis.set_label_position("right")
         axs.xaxis.grid()
