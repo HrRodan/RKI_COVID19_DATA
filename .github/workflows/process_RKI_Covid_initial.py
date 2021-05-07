@@ -15,7 +15,7 @@ file_list = os.listdir(path)
 file_list.sort(reverse=False)
 pattern = 'RKI_COVID19'
 dfs = []
-key_list = ['Datenstand', 'IdBundesland', 'IdLandkreis']
+key_list = ['IdBundesland', 'IdLandkreis']
 dtypes_new = {'IdBundesland': 'Int32', 'IdLandkreis': 'Int32', 'NeuerFall': 'Int8',
               'NeuerTodesfall': 'Int8', 'AnzahlFall': 'Int32', 'AnzahlTodesfall': 'Int32', 'Meldedatum': 'object',
               'Datenstand': 'object'}
@@ -74,8 +74,15 @@ for file in file_list:
                     datenstand = pd.to_datetime(df['Datenstand'].iloc[0])
                 except:
                     datenstand = pd.to_datetime(df['Datenstand'].iloc[0], format='%d.%m.%Y, %H:%M Uhr')
-                df.drop(['NeuerFall', 'NeuerTodesfall', 'Meldedatum'], inplace=True, axis=1)
-                df = df.groupby(['IdLandkreis', 'IdBundesland'], as_index=False).sum()
+                df.drop(['NeuerFall', 'NeuerTodesfall','Datenstand'], inplace=True, axis=1)
+                agg_key = {}
+                for c in df.columns:
+                    if c not in key_list:
+                        if c in ['Meldedatum']:
+                            agg_key[c] = 'max'
+                        else:
+                            agg_key[c] = 'sum'
+                df = df.groupby(key_list, as_index=False).agg(agg_key)
                 df['report_date'] = report_date
                 df['meldedatum_max'] = meldedatum_max
                 df['Datenstand'] = datenstand

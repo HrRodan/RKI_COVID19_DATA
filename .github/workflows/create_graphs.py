@@ -5,6 +5,7 @@ import re
 from datetime import date
 from datetime import datetime
 from datetime import timedelta
+from unittest.mock import inplace
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -81,6 +82,8 @@ number_population = {
 covid_path_latest = find_latest_file(os.path.join(parent_directory))
 covid_df = pd.read_csv(covid_path_latest[0])
 covid_df["Meldedatum"] = pd.to_datetime(covid_df["Meldedatum"]).dt.date
+meldedatum_min=covid_df["Meldedatum"].min()
+t_range=np.arange(meldedatum_min,today,timedelta(days=1))
 
 # %% Read Testzahl
 testzahl_path = find_latest_file(os.path.join(parent_directory, "Testzahlen", "raw_data"))[0]
@@ -218,7 +221,8 @@ def covid_df_sum_bl_lk(id_bl_lk, landkreis=False):
 
     covid_df_sum.index = pd.to_datetime(covid_df_sum.index)
     # Ein Datensatz pro Tag mit 0 aufüllen
-    covid_df_sum = covid_df_sum.resample("1D").asfreq().fillna(0)
+    #covid_df_sum = covid_df_sum.resample("1D").asfreq().fillna(0)
+    covid_df_sum=covid_df_sum.reindex(t_range).fillna(0)
     covid_df_sum["AnzahlFall_7d_mean"] = covid_df_sum["AnzahlFall"].rolling(7).mean()
     covid_df_sum["Inzidenz_7d"] = covid_df_sum["AnzahlFall"].rolling(7).sum() / (population / 100000)
     covid_df_sum["AnzahlTodesfall_7d_mean"] = covid_df_sum["AnzahlTodesfall"].rolling(7).mean()

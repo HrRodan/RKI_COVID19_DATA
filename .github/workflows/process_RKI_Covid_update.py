@@ -21,6 +21,7 @@ dtypes_covid = {'Datenstand': 'object', 'IdBundesland': 'Int32', 'IdLandkreis': 
                 'NeuerTodesfall': 'Int8', 'AnzahlFall': 'Int32', 'AnzahlTodesfall': 'Int32', 'Meldedatum': 'object'}
 key_list = ['Datenstand', 'IdBundesland', 'IdLandkreis']
 
+
 # %% read covid latest
 covid_path_latest, date_latest = find_latest_file(os.path.join(path), file_pattern=pattern)
 covid_df = pd.read_csv(covid_path_latest, usecols=dtypes_covid.keys(), dtype=dtypes_covid)
@@ -43,9 +44,16 @@ covid_df['AnzahlTodesfall_neu'] = np.where(covid_df['NeuerTodesfall'].isin([-1, 
 covid_df['AnzahlTodesfall'] = np.where(covid_df['NeuerTodesfall'].isin([0, 1]), covid_df['AnzahlTodesfall'], 0)
 datenstand = pd.to_datetime(covid_df['Datenstand'].iloc[0], format='%d.%m.%Y, %H:%M Uhr')
 covid_df['Datenstand'] = datenstand.date()
-covid_df.drop(['NeuerFall', 'NeuerTodesfall', 'Meldedatum'], inplace=True, axis=1)
-covid_df = covid_df.groupby(key_list, as_index=False).sum()
-covid_df['meldedatum_max'] = meldedatum_max
+covid_df.drop(['NeuerFall', 'NeuerTodesfall'], inplace=True, axis=1)
+agg_key={}
+for c in covid_df.columns:
+    if c not in key_list:
+        if c in ['Meldedatum','Datenstand']:
+            agg_key[c]='max'
+        else:
+            agg_key[c]='sum'
+covid_df = covid_df.groupby(key_list, as_index=False).agg(agg_key)
+covid_df.rename(columns={'Meldedatum':'meldedatum_max'}, inplace=True)
 covid_df['report_date'] = date_latest
 
 # %% concat and dedup
