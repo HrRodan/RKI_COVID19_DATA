@@ -25,6 +25,10 @@ dtypes_new_2 = {'IdBundesland': 'Int32', 'IdLandkreis': 'Int32', 'NeuerFall': 'I
 dtypes_old = {'IdBundesland': 'Int32', 'Landkreis ID': 'Int32', 'Neuer Fall': 'Int8',
               'Neuer Todesfall': 'Int8', 'AnzahlFall': 'Int32', 'AnzahlTodesfall': 'Int32', 'Meldedatum': 'object',
               'Datenstand': 'object'}
+dtypes_fallzahlen = {'Datenstand': 'object', 'IdBundesland': 'Int32', 'IdLandkreis': 'Int32',
+                     'AnzahlFall': 'Int32', 'AnzahlTodesfall': 'Int32', 'AnzahlFall_neu': 'Int32',
+                     'AnzahlTodesfall_neu': 'Int32','AnzahlFall_7d': 'Int32', 'report_date': 'object',
+                     'meldedatum_max': 'object'}
 # %%
 count = 0
 for file in file_list:
@@ -63,17 +67,16 @@ for file in file_list:
                     df['Meldedatum'] = pd.to_datetime(df['Meldedatum']).dt.date
                 except:
                     df['Meldedatum'] = pd.to_datetime(df['Meldedatum'], unit='ms').dt.date
-                meldedatum_max = df['Meldedatum'].max()
-                df['AnzahlFall_neu'] = np.where(df['NeuerFall'].isin([-1, 1]), df['AnzahlFall'], 0)
-                df['AnzahlFall'] = np.where(df['NeuerFall'].isin([0, 1]), df['AnzahlFall'], 0)
-                df['AnzahlFall_7d'] = np.where(df['Meldedatum'] > (meldedatum_max - timedelta(days=7)),
-                                               df['AnzahlFall'], 0)
-                df['AnzahlTodesfall_neu'] = np.where(df['NeuerTodesfall'].isin([-1, 1]), df['AnzahlTodesfall'], 0)
-                df['AnzahlTodesfall'] = np.where(df['NeuerTodesfall'].isin([0, 1]), df['AnzahlTodesfall'], 0)
                 try:
                     datenstand = pd.to_datetime(df['Datenstand'].iloc[0])
                 except:
                     datenstand = pd.to_datetime(df['Datenstand'].iloc[0], format='%d.%m.%Y, %H:%M Uhr')
+                df['AnzahlFall_neu'] = np.where(df['NeuerFall'].isin([-1, 1]), df['AnzahlFall'], 0)
+                df['AnzahlFall'] = np.where(df['NeuerFall'].isin([0, 1]), df['AnzahlFall'], 0)
+                df['AnzahlFall_7d'] = np.where(df['Meldedatum'] > (datenstand - timedelta(days=8)),
+                                               df['AnzahlFall'], 0)
+                df['AnzahlTodesfall_neu'] = np.where(df['NeuerTodesfall'].isin([-1, 1]), df['AnzahlTodesfall'], 0)
+                df['AnzahlTodesfall'] = np.where(df['NeuerTodesfall'].isin([0, 1]), df['AnzahlTodesfall'], 0)
                 df.drop(['NeuerFall', 'NeuerTodesfall','Datenstand'], inplace=True, axis=1)
                 agg_key = {}
                 for c in df.columns:
@@ -84,10 +87,10 @@ for file in file_list:
                             agg_key[c] = 'sum'
                 df = df.groupby(key_list, as_index=False).agg(agg_key)
                 df['report_date'] = report_date
-                df['meldedatum_max'] = meldedatum_max
+                df.rename(columns={'Meldedatum':'meldedatum_max'}, inplace=True)
                 df['Datenstand'] = datenstand
                 dfs.append(df)
-                # if count>10: break
+                if count>10: break
 
 # %%
 covid_df = pd.concat(dfs)
@@ -97,4 +100,5 @@ covid_df.sort_values(by=['report_date', 'IdLandkreis'], inplace=True)
 covid_df_clean = covid_df.copy()
 # covid_df.drop_duplicates(subset=['IdLandkreis','meldedatum_max'], keep='last',inplace=True)
 with open(path_csv, 'wb') as csvfile:
-    covid_df.to_csv(csvfile, index=False, header=True, line_terminator='\n', encoding='utf-8', date_format='%Y-%m-%d')
+    covid_df.to_csv(csvfile, index=False, header=True, line_terminator='\n', encoding='utf-8', date_format='%Y-%m-%d',
+                    columns=dtypes_fallzahlen.keys())
