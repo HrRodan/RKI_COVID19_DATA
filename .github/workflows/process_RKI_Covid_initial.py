@@ -27,10 +27,10 @@ dtypes_old = {'IdBundesland': 'Int32', 'Landkreis ID': 'Int32', 'Neuer Fall': 'I
               'Datenstand': 'object'}
 dtypes_fallzahlen = {'Datenstand': 'object', 'IdBundesland': 'Int32', 'IdLandkreis': 'Int32',
                      'AnzahlFall': 'Int32', 'AnzahlTodesfall': 'Int32', 'AnzahlFall_neu': 'Int32',
-                     'AnzahlTodesfall_neu': 'Int32','AnzahlFall_7d': 'Int32', 'report_date': 'object',
+                     'AnzahlTodesfall_neu': 'Int32', 'AnzahlFall_7d': 'Int32', 'report_date': 'object',
                      'meldedatum_max': 'object'}
 # %%
-count = 0
+all_files = []
 for file in file_list:
     file_path_full = os.path.join(path, file)
     if not os.path.isdir(file_path_full):
@@ -39,58 +39,62 @@ for file in file_list:
         re_search = re.search(iso_date_re, filename)
         if re_search and re_filename:
             report_date = date(int(re_search.group(1)), int(re_search.group(3)), int(re_search.group(4)))
-            if report_date >= date(2020, 3, 24):
-                count += 1
-                print(report_date)
-                if report_date == date(2020, 3, 25):
-                    # Sonderfall, falscher Datentyp in Zeile
-                    df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new, skiprows=[10572])
-                elif report_date == date(2020, 3, 26):
-                    # Sonderfall, falscher Datentyp in Zeile
-                    df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new, skiprows=[1001])
-                else:
-                    try:
-                        df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new)
-                    except UnicodeDecodeError:
-                        try:
-                            df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new,
-                                             encoding='cp1252')
-                        except ValueError:
-                            df = pd.read_csv(file_path_full, usecols=dtypes_new_2.keys(), dtype=dtypes_new_2,
-                                             encoding='cp1252')
-                    except ValueError:
-                        df = pd.read_csv(file_path_full, usecols=dtypes_old.keys(), dtype=dtypes_old)
+            all_files.append((file_path_full, report_date))
 
-                    df.rename(columns={'Neuer Fall': 'NeuerFall', 'Neuer Todesfall': 'NeuerTodesfall',
-                                       'Landkreis ID': 'IdLandkreis', 'Meldedatum2': 'Meldedatum'}, inplace=True)
+count = 0
+for file_path_full, report_date in all_files:
+    if report_date >= date(2020, 3, 24):
+        count += 1
+        print(report_date)
+        if report_date == date(2020, 3, 25):
+            # Sonderfall, falscher Datentyp in Zeile
+            df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new, skiprows=[10572])
+        elif report_date == date(2020, 3, 26):
+            # Sonderfall, falscher Datentyp in Zeile
+            df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new, skiprows=[1001])
+        else:
+            try:
+                df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new)
+            except UnicodeDecodeError:
                 try:
-                    df['Meldedatum'] = pd.to_datetime(df['Meldedatum']).dt.date
-                except:
-                    df['Meldedatum'] = pd.to_datetime(df['Meldedatum'], unit='ms').dt.date
-                try:
-                    datenstand = pd.to_datetime(df['Datenstand'].iloc[0])
-                except:
-                    datenstand = pd.to_datetime(df['Datenstand'].iloc[0], format='%d.%m.%Y, %H:%M Uhr')
-                df['AnzahlFall_neu'] = np.where(df['NeuerFall'].isin([-1, 1]), df['AnzahlFall'], 0)
-                df['AnzahlFall'] = np.where(df['NeuerFall'].isin([0, 1]), df['AnzahlFall'], 0)
-                df['AnzahlFall_7d'] = np.where(df['Meldedatum'] > (datenstand - timedelta(days=8)),
-                                               df['AnzahlFall'], 0)
-                df['AnzahlTodesfall_neu'] = np.where(df['NeuerTodesfall'].isin([-1, 1]), df['AnzahlTodesfall'], 0)
-                df['AnzahlTodesfall'] = np.where(df['NeuerTodesfall'].isin([0, 1]), df['AnzahlTodesfall'], 0)
-                df.drop(['NeuerFall', 'NeuerTodesfall','Datenstand'], inplace=True, axis=1)
-                agg_key = {}
-                for c in df.columns:
-                    if c not in key_list:
-                        if c in ['Meldedatum']:
-                            agg_key[c] = 'max'
-                        else:
-                            agg_key[c] = 'sum'
-                df = df.groupby(key_list, as_index=False).agg(agg_key)
-                df['report_date'] = report_date
-                df.rename(columns={'Meldedatum':'meldedatum_max'}, inplace=True)
-                df['Datenstand'] = datenstand
-                dfs.append(df)
-                if count>10: break
+                    df = pd.read_csv(file_path_full, usecols=dtypes_new.keys(), dtype=dtypes_new,
+                                     encoding='cp1252')
+                except ValueError:
+                    df = pd.read_csv(file_path_full, usecols=dtypes_new_2.keys(), dtype=dtypes_new_2,
+                                     encoding='cp1252')
+            except ValueError:
+                df = pd.read_csv(file_path_full, usecols=dtypes_old.keys(), dtype=dtypes_old)
+
+            df.rename(columns={'Neuer Fall': 'NeuerFall', 'Neuer Todesfall': 'NeuerTodesfall',
+                               'Landkreis ID': 'IdLandkreis', 'Meldedatum2': 'Meldedatum'}, inplace=True)
+        try:
+            df['Meldedatum'] = pd.to_datetime(df['Meldedatum']).dt.date
+        except:
+            df['Meldedatum'] = pd.to_datetime(df['Meldedatum'], unit='ms').dt.date
+        try:
+            datenstand = pd.to_datetime(df['Datenstand'].iloc[0])
+        except:
+            datenstand = pd.to_datetime(df['Datenstand'].iloc[0], format='%d.%m.%Y, %H:%M Uhr')
+        df['AnzahlFall_neu'] = np.where(df['NeuerFall'].isin([-1, 1]), df['AnzahlFall'], 0)
+        df['AnzahlFall'] = np.where(df['NeuerFall'].isin([0, 1]), df['AnzahlFall'], 0)
+        df['AnzahlFall_7d'] = np.where(df['Meldedatum'] > (datenstand - timedelta(days=8)),
+                                       df['AnzahlFall'], 0)
+        df['AnzahlTodesfall_neu'] = np.where(df['NeuerTodesfall'].isin([-1, 1]), df['AnzahlTodesfall'], 0)
+        df['AnzahlTodesfall'] = np.where(df['NeuerTodesfall'].isin([0, 1]), df['AnzahlTodesfall'], 0)
+        df.drop(['NeuerFall', 'NeuerTodesfall', 'Datenstand'], inplace=True, axis=1)
+        agg_key = {}
+        for c in df.columns:
+            if c not in key_list:
+                if c in ['Meldedatum']:
+                    agg_key[c] = 'max'
+                else:
+                    agg_key[c] = 'sum'
+        df = df.groupby(key_list, as_index=False).agg(agg_key)
+        df['report_date'] = report_date
+        df.rename(columns={'Meldedatum': 'meldedatum_max'}, inplace=True)
+        df['Datenstand'] = datenstand
+        dfs.append(df)
+        if count>30: break
 
 # %%
 covid_df = pd.concat(dfs)
