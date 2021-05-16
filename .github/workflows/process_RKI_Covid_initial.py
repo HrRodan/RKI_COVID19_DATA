@@ -94,7 +94,7 @@ for file_path_full, report_date in all_files:
         df.rename(columns={'Meldedatum': 'meldedatum_max'}, inplace=True)
         df['Datenstand'] = datenstand
         dfs.append(df)
-        if count>30: break
+        # if count>30: break
 
 # %%
 covid_df = pd.concat(dfs)
