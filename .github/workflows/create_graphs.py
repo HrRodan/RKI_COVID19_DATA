@@ -124,7 +124,10 @@ landkreis_df = pd.read_csv(landkreis_path, skiprows=6, skipfooter=4, engine='pyt
 
 # %% Read Nowcasting
 nc_path = find_latest_file(os.path.join(parent_directory, "Nowcasting", "raw_data"))[0]
-nc_df = pd.read_csv(nc_path, engine='python', skipfooter=18, sep=';', na_values='.', decimal=',')
+try:
+    nc_df = pd.read_csv(nc_path, engine='python', skipfooter=18, sep=';', na_values='.', decimal=',')
+except UnicodeDecodeError:
+    nc_df = pd.read_csv(nc_path, engine='python', skipfooter=18, sep=';', na_values='.', decimal=',', encoding='cp1252')
 nc_df["Datum"] = pd.to_datetime(nc_df["Datum"], format='%d.%m.%Y').dt.date
 nc_df = nc_df[nc_df['Datum'] >= pd.to_datetime('2020-04-01')]
 nc_df.sort_values('Datum', inplace=True)
