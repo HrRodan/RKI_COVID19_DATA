@@ -12,4 +12,4 @@ t_14 = time(hour=14)
 t_22 = time(hour=22)
 print(f"Starting at {t_now}")
 
-download_RKI_Klinische_Aspekte()
+download_Intensivregister()

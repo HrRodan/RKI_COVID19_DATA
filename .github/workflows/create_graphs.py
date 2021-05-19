@@ -102,15 +102,18 @@ testzahl_df["Testungen_7d_mean"] = testzahl_df["Anzahl Testungen"] / 7
 testzahl_df["Positiv_7d_mean"] = testzahl_df['Positiv getestet'] / 7
 
 # %% Read Intensivregister
-ir_path = find_latest_file(os.path.join(parent_directory, "Intensivregister", "raw_data"), 'bundesland')[0]
+ir_path = os.path.join(parent_directory, "Intensivregister", "raw_data", 'bundesland-zeitreihe.csv')
 ir_df = pd.read_csv(ir_path)
 ir_df["Datum"] = pd.to_datetime(ir_df["Datum"], utc=True).dt.date
 
 # %% Read Intensivregister Landkreise
-ir_lk_path = os.path.join(parent_directory, "Intensivregister", "DIVI_Intensivregister_Auszug_pro_Landkreis.csv")
+#ir_lk_path = os.path.join(parent_directory, "Intensivregister", "DIVI_Intensivregister_Auszug_pro_Landkreis.csv")
+ir_lk_path = os.path.join(parent_directory, "Intensivregister", "raw_data","zeitreihe-tagesdaten.csv")
 ir_lk_df = pd.read_csv(ir_lk_path, encoding='utf-8', engine='python')
+ir_lk_df.rename(columns={'kreis': 'IdLandkreis', 'gemeindeschluessel': 'IdLandkreis', 'bundesland': 'IdBundesland',
+             'faelle_covid_aktuell_beatmet': 'faelle_covid_aktuell_invasiv_beatmet', 'date':'report_date'}, inplace=True)
 ir_lk_df["report_date"] = pd.to_datetime(ir_lk_df["report_date"]).dt.date
-ir_lk_df["daten_stand"] = pd.to_datetime(ir_lk_df["daten_stand"])
+#ir_lk_df["daten_stand"] = pd.to_datetime(ir_lk_df["daten_stand"])
 
 # %% Read Impfquotenmonitoring
 iqm_path = os.path.join(parent_directory, "Impfquotenmonitoring", 'RKI_COVID19_Impfquotenmonitoring.csv')
