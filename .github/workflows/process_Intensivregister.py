@@ -42,6 +42,9 @@ divi_df['daten_stand'].fillna(pd.to_datetime(divi_df['report_date']) + time_repo
 divi_df.sort_values(['report_date', 'IdLandkreis'], inplace=True)
 
 # %% write file
+columns=['IdBundesland','IdLandkreis','anzahl_meldebereiche','faelle_covid_aktuell','faelle_covid_aktuell_invasiv_beatmet',
+         'anzahl_standorte','betten_frei','betten_belegt','daten_stand','report_date',
+         'betten_belegt_nur_erwachsen','betten_frei_nur_erwachsen']
 # use newline='' to avoid \r\n line break on windows
 with open(path_csv, 'wb') as csvfile:
-    divi_df.to_csv(csvfile, index=False, header=True, line_terminator='\n', encoding='utf-8')
+    divi_df.to_csv(csvfile, index=False, header=True, line_terminator='\n', encoding='utf-8', columns=columns)
