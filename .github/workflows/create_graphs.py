@@ -128,10 +128,10 @@ landkreis_df = pd.read_csv(landkreis_path, skiprows=6, skipfooter=4, engine='pyt
 # %% Read Nowcasting
 nc_path = find_latest_file(os.path.join(parent_directory, "Nowcasting", "raw_data"))[0]
 try:
-    nc_df = pd.read_csv(nc_path, engine='python', skipfooter=18, sep=';', na_values='.', decimal=',')
+    nc_df = pd.read_csv(nc_path, engine='python', sep=',')
 except UnicodeDecodeError:
-    nc_df = pd.read_csv(nc_path, engine='python', skipfooter=18, sep=';', na_values='.', decimal=',', encoding='cp1252')
-nc_df["Datum"] = pd.to_datetime(nc_df["Datum"], format='%d.%m.%Y').dt.date
+    nc_df = pd.read_csv(nc_path, engine='python', encoding='cp1252')
+nc_df["Datum"] = pd.to_datetime(nc_df["Datum"]).dt.date
 nc_df = nc_df[nc_df['Datum'] >= pd.to_datetime('2020-04-01')]
 nc_df.sort_values('Datum', inplace=True)
 
@@ -439,18 +439,18 @@ def plot_covid_bl(id_bl):
         ax[5].set_title(f"{number_states[id_bl]}\nCFR (case fatality rate) im 7 Tage Mittel nach Reportdatum")
         ax[5].set_ylabel('CFR [%]', fontsize=16)
         # R-Wert
-        ax[6].plot(nc_df['Datum'], nc_df['Schätzer_7_Tage_R_Wert'], color='black')
+        ax[6].plot(nc_df['Datum'], nc_df['PS_7_Tage_R_Wert'], color='black')
         ax[6].set_title(f"{number_states[id_bl]} - Schätzer 7-Tage R-Wert")
         ax[6].set_ylabel('7-Tage R-Wert', fontsize=16)
         ax[6].axhline(1, color='red', ls='--')
         ax[6].fill_between(nc_df['Datum'], nc_df['OG_PI_7_Tage_R_Wert'], nc_df['UG_PI_7_Tage_R_Wert'],
                            color='lightgrey', alpha=0.8)
-        ax[6].text(0.95, 0.95, f'{nc_df["Schätzer_7_Tage_R_Wert"].iloc[-2]:.2f} '
+        ax[6].text(0.95, 0.95, f'{nc_df["PS_7_Tage_R_Wert"].iloc[-2]:.2f} '
                                f'({nc_df["UG_PI_7_Tage_R_Wert"].iloc[-2]:.2f} .. '
                                f'{nc_df["OG_PI_7_Tage_R_Wert"].iloc[-2]:.2f})',
                    horizontalalignment='right',
                    verticalalignment='top', fontsize=16, color='red', weight='bold', transform=ax[6].transAxes)
-        ax[6].plot(nc_df['Datum'].iloc[-2], nc_df["Schätzer_7_Tage_R_Wert"].iloc[-2], marker='x', color='red',
+        ax[6].plot(nc_df['Datum'].iloc[-2], nc_df["PS_7_Tage_R_Wert"].iloc[-2], marker='x', color='red',
                    markersize=7, markeredgewidth=3)
     for axs in ax.flat:
         axs.set_title(label=axs.get_title(), weight='bold')
