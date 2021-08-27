@@ -304,10 +304,10 @@ def ir_df_sum_lk(id_lk):
 
 def plot_covid_bl(id_bl):
     number_plots = 4
-    fig_size = (10, 20)
+    fig_size = (11, 25)
     if id_bl == 0:
         number_plots = 7
-        fig_size = (10, 32)
+        fig_size = (11, 37)
     covid_df_sum = covid_df_sum_bl_lk(id_bl).sort_index()
     inzidenz = covid_df_sum["Inzidenz_7d"].iloc[-1]
     ir_df_plot = ir_df_sum_bl(id_bl)
@@ -462,6 +462,9 @@ def plot_covid_bl(id_bl):
         axs.axvline(today, ls='-', color='gold', linewidth=1)
         for item in ([axs.title, axs.xaxis.label, axs.yaxis.label] + axs.get_xticklabels() + axs.get_yticklabels()):
             item.set_fontsize(16)
+        for label in axs.get_xticklabels():
+            label.set_rotation(45)
+            label.set_ha('right')
     fig.align_ylabels()
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
     plt.savefig(os.path.join(parent_directory, 'Auswertung', f"covid_bl_{id_bl}.png"), bbox_inches='tight', dpi=60)
@@ -480,7 +483,7 @@ def plot_covid_lk(id_lk):
     max_y_covid = int(covid_df_sum["Inzidenz_7d"].max()) * 1.2
     # covid_major_yticks=np.arange(0,max_y_covid,50)
     # covid_minor_yticks = np.arange(25, max_y_covid, 25)
-    fig, ax = plt.subplots(4, figsize=(10, 20))
+    fig, ax = plt.subplots(4, figsize=(11, 25))
     fig.suptitle(f"Covid Situation in {name_lk} \nStichtag: {today_str}", fontsize=20, weight='bold')
     ax[0].plot(covid_df_sum.index, covid_df_sum["Inzidenz_7d"], color='blue')
     ax[0].set_title(f"{name_lk} \n7-Tage Inzidenz")
@@ -566,6 +569,9 @@ def plot_covid_lk(id_lk):
         axs.axvline(today, ls='-', color='gold', linewidth=1)
         for item in ([axs.title, axs.xaxis.label, axs.yaxis.label] + axs.get_xticklabels() + axs.get_yticklabels()):
             item.set_fontsize(16)
+        for label in axs.get_xticklabels():
+            label.set_rotation(45)
+            label.set_ha('right')
     ax[1].set_ylabel('Anzahl Todesfälle 7d Mittel', fontsize=16)
     ax[2].set_ylabel('Kumulierte Anzahl Todesfälle', fontsize=16)
     fig.align_ylabels()
