@@ -68,8 +68,8 @@ if day_of_week == 2 and t_now >= t_22:
     except Exception as e:
         print(e)
 
-# %% each Wednesday
-if day_of_week == 3 and t_now >= t_22:
+# %% each Thursday
+if day_of_week == 4 and t_now >= t_22:
     print("Wednesday Download starting...")
     try:
         print("Downloading RKI Testzahlen..")
