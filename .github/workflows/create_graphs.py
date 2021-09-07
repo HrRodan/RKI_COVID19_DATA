@@ -388,7 +388,7 @@ def plot_covid_bl(id_bl):
                label="Zweitimpfung kumuliert")
     ax[3].set_title(f"{number_states[id_bl]} - Impfquote")
     ax[3].legend(prop={'size': 16}, loc='upper right')
-    ax[3].set_ylim(-2, 70)
+    ax[3].set_ylim(-2, 100)
     ax[3].yaxis.set_minor_locator(AutoMinorLocator(2))
     ax[3].yaxis.grid(which='minor', linestyle=':')
     ax[3].yaxis.grid()
