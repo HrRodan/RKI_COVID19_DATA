@@ -537,7 +537,10 @@ def plot_covid(id_in, landkreis=False):
             label.set_ha('right')
     fig.align_ylabels()
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
-    plt.savefig(os.path.join(parent_directory, 'Auswertung', f"covid_bl_{id_in}.png"), bbox_inches='tight', dpi=60)
+    if landkreis:
+        plt.savefig(os.path.join(parent_directory, 'Auswertung','Landkreise', f"covid_lk_{id_in}.png"), bbox_inches='tight', dpi=60)
+    else:
+        plt.savefig(os.path.join(parent_directory, 'Auswertung', f"covid_bl_{id_in}.png"), bbox_inches='tight', dpi=60)
     plt.show()
     plt.close(fig)
 
