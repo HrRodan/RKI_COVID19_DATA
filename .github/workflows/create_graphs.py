@@ -1,5 +1,4 @@
 # %%
-import itertools
 import os
 import re
 from datetime import date
@@ -107,13 +106,14 @@ ir_df = pd.read_csv(ir_path)
 ir_df["Datum"] = pd.to_datetime(ir_df["Datum"], utc=True).dt.date
 
 # %% Read Intensivregister Landkreise
-#ir_lk_path = os.path.join(parent_directory, "Intensivregister", "DIVI_Intensivregister_Auszug_pro_Landkreis.csv")
-ir_lk_path = os.path.join(parent_directory, "Intensivregister", "raw_data","zeitreihe-tagesdaten.csv")
+# ir_lk_path = os.path.join(parent_directory, "Intensivregister", "DIVI_Intensivregister_Auszug_pro_Landkreis.csv")
+ir_lk_path = os.path.join(parent_directory, "Intensivregister", "raw_data", "zeitreihe-tagesdaten.csv")
 ir_lk_df = pd.read_csv(ir_lk_path, encoding='utf-8', engine='python')
 ir_lk_df.rename(columns={'kreis': 'IdLandkreis', 'gemeindeschluessel': 'IdLandkreis', 'bundesland': 'IdBundesland',
-             'faelle_covid_aktuell_beatmet': 'faelle_covid_aktuell_invasiv_beatmet', 'date':'report_date'}, inplace=True)
+                         'faelle_covid_aktuell_beatmet': 'faelle_covid_aktuell_invasiv_beatmet', 'date': 'report_date'},
+                inplace=True)
 ir_lk_df["report_date"] = pd.to_datetime(ir_lk_df["report_date"]).dt.date
-#ir_lk_df["daten_stand"] = pd.to_datetime(ir_lk_df["daten_stand"])
+# ir_lk_df["daten_stand"] = pd.to_datetime(ir_lk_df["daten_stand"])
 
 # %% Read Impfquotenmonitoring
 # iqm_path = os.path.join(parent_directory, "Impfquotenmonitoring", 'RKI_COVID19_Impfquotenmonitoring.csv')
@@ -121,13 +121,14 @@ ir_lk_df["report_date"] = pd.to_datetime(ir_lk_df["report_date"]).dt.date
 # iqm_df["ISODate"] = pd.to_datetime(iqm_df["ISODate"])
 
 # %% Read Impfquotenmonitoring Github BL
-iqm_bl_git_path = os.path.join(parent_directory, "Impfquotenmonitoring", "raw_data", 'Aktuell_Deutschland_Bundeslaender_COVID-19-Impfungen.csv')
+iqm_bl_git_path = os.path.join(parent_directory, "Impfquotenmonitoring", "raw_data",
+                               'Aktuell_Deutschland_Bundeslaender_COVID-19-Impfungen.csv')
 iqm_bl_git_df = pd.read_csv(iqm_bl_git_path)
 
 # %% Read Impfquotenmonitoring Github LK
-iqm_lk_git_path = os.path.join(parent_directory, "Impfquotenmonitoring","raw_data", 'Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv')
+iqm_lk_git_path = os.path.join(parent_directory, "Impfquotenmonitoring", "raw_data",
+                               'Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv')
 iqm_lk_git_df = pd.read_csv(iqm_lk_git_path)
-
 
 # %% Read Landkreise
 landkreis_path = os.path.join(parent_directory, "Misc", 'Landkreise.csv')
@@ -157,6 +158,15 @@ fallzahlen_df['report_date'] = pd.to_datetime(fallzahlen_df['report_date']).dt.d
 
 
 # %% Read Inzidenzen
+def find_population(id_in, landkreis=False):
+    if landkreis:
+        population_ = landkreis_df[landkreis_df['IdLandkreis'] == id_in].iloc[0]['Bevoelkerung']
+    else:
+        population_ = number_population[id_in]
+    return population_
+
+
+# %% Read Inzidenzen
 # path_inzidenz = find_latest_file(os.path.join(parent_directory, "Fallzahlen", "raw_data"),'Kum_Tab')[0]
 # inzidenz_lk_df = pd.read_excel(path_inzidenz, sheet_name='LK_7-Tage-Inzidenz', skiprows=4, usecols='C:ZZ')
 # inzidenz_lk_df=inzidenz_lk_df.melt(id_vars=['LKNR']).rename(columns={'LKNR':'IdLandkreis','variable':'report_date','value':'Inzidenz'})
@@ -169,10 +179,7 @@ fallzahlen_df['report_date'] = pd.to_datetime(fallzahlen_df['report_date']).dt.d
 
 # %% Neue Fälle in der Publikation
 def fallzahlen_df_bl_lk(id_bl_lk, landkreis=False):
-    if landkreis:
-        population = landkreis_df[landkreis_df['IdLandkreis'] == id_bl_lk].iloc[0]['Bevoelkerung']
-    else:
-        population = number_population[id_bl_lk]
+    population = find_population(id_bl_lk, landkreis=landkreis)
     if id_bl_lk == 0:
         bundesland_id = number_states.keys()
     else:
@@ -218,10 +225,7 @@ def covid_df_sum_bl_lk(id_bl_lk, landkreis=False):
     else:
         bundesland_id = [id_bl_lk]
 
-    if landkreis:
-        population = landkreis_df[landkreis_df['IdLandkreis'] == id_bl_lk].iloc[0]['Bevoelkerung']
-    else:
-        population = number_population[id_bl_lk]
+    population = find_population(id_bl_lk, landkreis=landkreis)
 
     if landkreis:
         covid_df_sum = covid_df[((covid_df["NeuerFall"].isin([0, 1])) | (covid_df["NeuerTodesfall"].isin([0, 1]))) & (
@@ -265,7 +269,7 @@ def covid_faelle_neu(id_bl_lk, landkreis=False):
 
     faelle_neu = covid_df_neu['AnzahlFall'].sum()
     todesfaelle_neu = covid_df_neu['AnzahlTodesfall'].sum()
-    return (faelle_neu, todesfaelle_neu)
+    return faelle_neu, todesfaelle_neu
 
 
 # %% Read Intensivregister per BL
@@ -310,32 +314,32 @@ def iqm_df_sum_bl(id_in, mean_days=14, landkreis=False):
         id_iqm = [id_in]
 
     if landkreis:
-        iqm_df=iqm_lk_git_df
+        iqm_df = iqm_lk_git_df
     else:
-        iqm_df=iqm_bl_git_df
-    iqm_df=iqm_df.rename(columns={'Impfschutz':'Impfserie','LandkreisId_Impfort':'Id','BundeslandId_Impfort':'Id'})
+        iqm_df = iqm_bl_git_df
+    iqm_df = iqm_df.rename(
+        columns={'Impfschutz': 'Impfserie', 'LandkreisId_Impfort': 'Id', 'BundeslandId_Impfort': 'Id'})
 
     iqm_df = iqm_df[iqm_df["Id"].isin(id_iqm)]
-    iqm_df=iqm_df.drop(["BundeslandId_Impfort","Impfstoff","Altersgruppe","Id",],axis=1,errors='ignore')
-    iqm_df=iqm_df.groupby(['Impfdatum','Impfserie'],as_index=False).sum()
-    iqm_df=pd.pivot_table(iqm_df,columns=['Impfserie'],values='Anzahl',index=['Impfdatum'],
-                             aggfunc=np.sum,fill_value=0)
+    iqm_df = iqm_df.drop(["BundeslandId_Impfort", "Impfstoff", "Altersgruppe", "Id", ], axis=1, errors='ignore')
+    iqm_df = iqm_df.groupby(['Impfdatum', 'Impfserie'], as_index=False).sum()
+    iqm_df = pd.pivot_table(iqm_df, columns=['Impfserie'], values='Anzahl', index=['Impfdatum'],
+                            aggfunc=np.sum, fill_value=0)
     iqm_df.index = pd.to_datetime(iqm_df.index)
     iqm_df = iqm_df.resample("1D").asfreq().fillna(0)
     iqm_df.sort_index(inplace=True)
-    iqm_df['cumsum_1']=iqm_df[1].cumsum()
+    iqm_df['cumsum_1'] = iqm_df[1].cumsum()
     iqm_df['cumsum_2'] = iqm_df[2].cumsum()
     iqm_df['cumsum_3'] = iqm_df[3].cumsum()
     # eval projected
-    if landkreis:
-        population = landkreis_df[landkreis_df['IdLandkreis'] == id_in].iloc[0]['Bevoelkerung']
-    else:
-        population = number_population[id_in]
+    population = find_population(id_in, landkreis=landkreis)
     iqm_df_project = iqm_df.iloc[-mean_days - 1:]
-    mean_1st = iqm_df_project[1].mean()
+    # to avoid division by 0: max
+    mean_1st = max(iqm_df_project[1].mean(), 1)
     kum_1st = iqm_df[1].sum()
     days_75 = (population * 0.75 - kum_1st) / mean_1st
-    mean_2nd = iqm_df_project[2].mean()
+    # to avoid division by 0: max
+    mean_2nd = max(iqm_df_project[2].mean(), 1)
     kum_2nd = iqm_df[2].sum()
     days_75_2nd = (population * 0.75 - kum_2nd) / mean_2nd
     project_vaccine = {
@@ -347,7 +351,8 @@ def iqm_df_sum_bl(id_in, mean_days=14, landkreis=False):
         'days_75_2nd': days_75_2nd,
         'mean_2nd_quote': mean_2nd / population * 100,
     }
-    return (iqm_df, project_vaccine)
+    return iqm_df, project_vaccine
+
 
 # %% Eval Intensivregister per Landkreis
 def ir_df_sum_lk(id_lk):
@@ -360,28 +365,24 @@ def ir_df_sum_lk(id_lk):
 def plot_covid(id_in, landkreis=False):
     mean_days_plot = 14
     if landkreis:
-        id_lk=id_in
+        id_lk = id_in
         name = landkreis_df[landkreis_df['IdLandkreis'] == id_lk].iloc[0]['Landkreis']
         ir_df_plot = ir_df_sum_lk(id_lk)
-        population = landkreis_df[landkreis_df['IdLandkreis'] == id_lk].iloc[0]['Bevoelkerung']
     else:
-        name=number_states[id_in]
+        name = number_states[id_in]
         ir_df_plot = ir_df_sum_bl(id_in)
-        population = number_population[id_in]
+    population = find_population(id_in, landkreis=landkreis)
     covid_df_sum = covid_df_sum_bl_lk(id_in, landkreis=landkreis).sort_index()
     inzidenz = covid_df_sum["Inzidenz_7d"].iloc[-1]
     fallzahlen_plot = fallzahlen_df_bl_lk(id_in, landkreis=landkreis)
     faelle_neu_plot, todesfaelle_neu_plot = covid_faelle_neu(id_in, landkreis=landkreis)
     iqm_df_plot, iqm_project_plot = iqm_df_sum_bl(id_in, mean_days=mean_days_plot, landkreis=landkreis)
-    #plot figure
+    # plot figure
     number_plots = 4
     fig_size = (11, 25)
     if id_in == 0:
         number_plots = 7
         fig_size = (11, 37)
-    max_y_covid = int(covid_df_sum["Inzidenz_7d"].max()) * 1.2
-    covid_major_yticks = np.arange(0, max_y_covid, 50)
-    covid_minor_yticks = np.arange(25, max_y_covid, 25)
     # start Plot
     fig, ax = plt.subplots(number_plots, figsize=fig_size)
     fig.suptitle(f"Covid Situation in {name} \nStichtag: {today_str}", fontsize=20, weight='bold')
@@ -476,7 +477,7 @@ def plot_covid(id_in, landkreis=False):
     ax[3].text(0.2, 0.75,
                f'{iqm_project_plot["mean_1st"]:.0f} pro Tag\n'
                f'{iqm_project_plot["mean_1st_quote"]:.2f}% pro Tag\n'
-               f'{iqm_project_plot["days_75"]:.0f} Tagen ({(today + timedelta(days=iqm_project_plot["days_75"])).strftime("%Y-%m")})'
+               f'{iqm_project_plot["days_75"]:.0f} Tagen ({(today + timedelta(days=iqm_project_plot["days_75"])).strftime("%Y-%m")}) '
                , horizontalalignment='left', bbox=props, transform=ax[3].transAxes,
                verticalalignment='top', fontsize=14, color='black', ma='left')
     ax[3].text(0.07, 0.35,
@@ -538,11 +539,13 @@ def plot_covid(id_in, landkreis=False):
     fig.align_ylabels()
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
     if landkreis:
-        plt.savefig(os.path.join(parent_directory, 'Auswertung','Landkreise', f"covid_lk_{id_in}.png"), bbox_inches='tight', dpi=60)
+        plt.savefig(os.path.join(parent_directory, 'Auswertung', 'Landkreise', f"covid_lk_{id_in}.png"),
+                    bbox_inches='tight', dpi=60)
     else:
         plt.savefig(os.path.join(parent_directory, 'Auswertung', f"covid_bl_{id_in}.png"), bbox_inches='tight', dpi=60)
     plt.show()
     plt.close(fig)
+
 
 # %% Plot All BL
 for key in number_states:
