@@ -363,7 +363,8 @@ def find_population(id_in,lk_dict=None, landkreis=False):
         population_ = number_population[id_in]
     return population_
 
-# %% plot_in,covid,testzahl, ir,iqm,fallzahlen,nc=None,lk_dict=None,landkreis=False):
+# %% plot
+def plot_covid(id_in,covid,testzahl, ir,iqm,fallzahlen,nc=None,lk_dict=None,landkreis=False):
     mean_days_plot = 14
     if landkreis:
         id_lk = id_in
