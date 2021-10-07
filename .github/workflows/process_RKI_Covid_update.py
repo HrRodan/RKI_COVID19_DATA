@@ -57,6 +57,8 @@ covid_df.rename(columns={'Meldedatum':'meldedatum_max'}, inplace=True)
 covid_df['report_date'] = date_latest
 
 # %% concat and dedup
+fallzahlen_df=fallzahlen_df[fallzahlen_df['Datenstand']!=datenstand.date()]
+
 fallzahlen_new = pd.concat([fallzahlen_df, covid_df])
 fallzahlen_new.drop_duplicates(subset=key_list, keep='last', inplace=True)
 fallzahlen_new.sort_values(by=key_list, inplace=True)
