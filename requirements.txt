@@ -4,3 +4,4 @@ pytz
 pandas
 openpyxl
 holidays
+requests

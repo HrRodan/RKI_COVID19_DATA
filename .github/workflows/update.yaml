@@ -17,10 +17,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
-      - name: update apt
-        run: sudo apt-get update
-      - name: Install gnuplot
-        run: sudo apt-get install gnuplot
       - uses: conda-incubator/setup-miniconda@v2
         with:
           auto-activate-base: false
@@ -28,8 +24,6 @@ jobs:
           python-version: 3.9
           miniconda-version: "latest"
           channels: conda-forge,defaults
-      - name: Install pip
-        run: conda install -y pip
       - name: Install requirements from requirements.txt
         run: pip install -r ./requirements.txt
       - name: Run Download scheduler
