@@ -25,7 +25,7 @@ jobs:
         with:
           auto-activate-base: false
           activate-environment: covid
-          python-version: 3.8
+          python-version: 3.9
           miniconda-version: "latest"
           mamba-version: "*"
           channels: conda-forge,defaults
