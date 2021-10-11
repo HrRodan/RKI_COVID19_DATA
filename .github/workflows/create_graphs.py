@@ -76,26 +76,30 @@ number_population = {
     0: 83166711
 }
 
+
 # %% Covid Class
 class Covid():
     def __init__(self):
-        self.covid_df=self.read_covid()
-        self.meldedatum_min=self.covid_df["Meldedatum"].min()
-        self.t_range=np.arange(self.meldedatum_min, today, timedelta(days=1))
+        self.covid_df = self.read_covid()
+        self.meldedatum_min = self.covid_df["Meldedatum"].min()
+        self.t_range = np.arange(self.meldedatum_min, today, timedelta(days=1))
 
     def read_covid(self):
+        dtypes = {'IdBundesland': 'Int32', 'IdLandkreis': 'Int32', 'NeuerFall': 'Int8',
+                  'NeuerTodesfall': 'Int8', 'AnzahlFall': 'Int32', 'AnzahlTodesfall': 'Int32',
+                  'Meldedatum': 'object', 'Datenstand': 'object'}
         covid_path_latest = find_latest_file(os.path.join(parent_directory))
-        __covid_df = pd.read_csv(covid_path_latest[0])
+        __covid_df = pd.read_csv(covid_path_latest[0], dtype=dtypes, usecols=dtypes.keys())
         __covid_df["Meldedatum"] = pd.to_datetime(__covid_df["Meldedatum"]).dt.date
         return __covid_df
 
-    def covid_subset_lk_bl(self,id_in,lk_dict=None,landkreis=False):
+    def covid_subset_lk_bl(self, id_in, lk_dict=None, landkreis=False):
         if id_in == 0:
             bundesland_id = number_states.keys()
         else:
             bundesland_id = [id_in]
 
-        population = find_population(id_in,lk_dict, landkreis=landkreis)
+        population = find_population(id_in, lk_dict, landkreis=landkreis)
 
         if landkreis:
             covid_df_sum = self.covid_df[
@@ -104,7 +108,8 @@ class Covid():
                 {"AnzahlFall": "sum", "AnzahlTodesfall": "sum"}).sort_values("Meldedatum", ascending=True)
         else:
             covid_df_sum = self.covid_df[
-                ((self.covid_df["NeuerFall"].isin([0, 1])) | (self.covid_df["NeuerTodesfall"].isin([0, 1]))) & self.covid_df[
+                ((self.covid_df["NeuerFall"].isin([0, 1])) | (self.covid_df["NeuerTodesfall"].isin([0, 1]))) &
+                self.covid_df[
                     "IdBundesland"].isin(bundesland_id)].groupby("Meldedatum").agg(
                 {"AnzahlFall": "sum", "AnzahlTodesfall": "sum"}).sort_values("Meldedatum", ascending=True)
 
@@ -123,7 +128,7 @@ class Covid():
         covid_df_sum["Cum_sum_Todesfall"] = covid_df_sum["AnzahlTodesfall"].cumsum()
         return covid_df_sum
 
-    def covid_faelle_neu(self ,id_in, landkreis=False):
+    def covid_faelle_neu(self, id_in, landkreis=False):
         if id_in == 0:
             bundesland_id = number_states.keys()
         else:
@@ -142,11 +147,12 @@ class Covid():
         todesfaelle_neu = covid_df_neu['AnzahlTodesfall'].sum()
         return faelle_neu, todesfaelle_neu
 
+
 # %% Testzahl
 
 class Testzahl():
     def __init__(self):
-        self.testzahl_df=self.read_testzahl()
+        self.testzahl_df = self.read_testzahl()
 
     def read_testzahl(self):
         testzahl_path = find_latest_file(os.path.join(parent_directory, "Testzahlen", "raw_data"))[0]
@@ -166,11 +172,12 @@ class Testzahl():
         testzahl_df["Positiv_7d_mean"] = testzahl_df['Positiv getestet'] / 7
         return testzahl_df
 
+
 # %% Intensivregister
 
 class Intensivregister():
     def __init__(self):
-        self.ir_df=self.read_intensivregister()
+        self.ir_df = self.read_intensivregister()
         self.ir_lk_df = self.read_intensivregister_lk()
 
     def read_intensivregister(self):
@@ -189,7 +196,7 @@ class Intensivregister():
         ir_lk_df["report_date"] = pd.to_datetime(ir_lk_df["report_date"]).dt.date
         return ir_lk_df
 
-    def subset_intensivregister_lk_bl(self,id_in,landkreis=False):
+    def subset_intensivregister_lk_bl(self, id_in, landkreis=False):
         if landkreis:
             ir_lk_df_temp = self.ir_lk_df[self.ir_lk_df["IdLandkreis"] == id_in]
             return ir_lk_df_temp
@@ -199,25 +206,39 @@ class Intensivregister():
             ir_df_bl = ir_df_bl.resample("1D").backfill()
             return ir_df_bl
 
+
 # %% Impfquotenmonitoring
 class Iqm():
     def __init__(self):
-        self.iqm_bl_df=self.read_iqm_bl()
-        self.iqm_lk_df=self.read_iqm_lk()
+        self.iqm_bl_df = self.read_iqm_bl()
+        self.iqm_lk_df = self.read_iqm_lk()
 
     def read_iqm_bl(self):
+        dtypes = {'Impfdatum': 'object',
+                  'BundeslandId_Impfort': 'int64',
+                  'Impfstoff': 'object',
+                  'Impfserie': 'int64',
+                  'Anzahl': 'int64'}
         iqm_bl_git_path = os.path.join(parent_directory, "Impfquotenmonitoring", "raw_data",
                                        'Aktuell_Deutschland_Bundeslaender_COVID-19-Impfungen.csv')
         iqm_bl_git_df = pd.read_csv(iqm_bl_git_path)
         return iqm_bl_git_df
 
     def read_iqm_lk(self):
+        dtypes = {'Impfdatum': 'object',
+                  'LandkreisId_Impfort': 'object',
+                  'Altersgruppe': 'object',
+                  'Impfschutz': 'int64',
+                  'Anzahl': 'int64'}
         iqm_lk_git_path = os.path.join(parent_directory, "Impfquotenmonitoring", "raw_data",
                                        'Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv')
-        iqm_lk_git_df = pd.read_csv(iqm_lk_git_path)
-        return  iqm_lk_git_df
+        iqm_lk_git_df = pd.read_csv(iqm_lk_git_path, dtype=dtypes)
+        # drop u=unbekannt in Landkreis Name
+        iqm_lk_git_df = iqm_lk_git_df[iqm_lk_git_df['LandkreisId_Impfort'] != 'u']
+        iqm_lk_git_df['LandkreisId_Impfort'] = pd.to_numeric(iqm_lk_git_df['LandkreisId_Impfort'])
+        return iqm_lk_git_df
 
-    def subset_iqm(self,id_in,lk_dict=None,landkreis=False,mean_days=14):
+    def subset_iqm(self, id_in, lk_dict=None, landkreis=False, mean_days=14):
         if id_in == 0:
             id_iqm = number_states.keys()
         else:
@@ -238,11 +259,13 @@ class Iqm():
         iqm_df.index = pd.to_datetime(iqm_df.index)
         iqm_df = iqm_df.resample("1D").asfreq().fillna(0)
         iqm_df.sort_index(inplace=True)
+        if 3 not in iqm_df.columns:
+            iqm_df[3] = 0
         iqm_df['cumsum_1'] = iqm_df[1].cumsum()
         iqm_df['cumsum_2'] = iqm_df[2].cumsum()
-        #iqm_df['cumsum_3'] = iqm_df[3].cumsum()
+        iqm_df['cumsum_3'] = iqm_df[3].cumsum()
         # eval projected
-        population = find_population(id_in,lk_dict=lk_dict, landkreis=landkreis)
+        population = find_population(id_in, lk_dict=lk_dict, landkreis=landkreis)
         iqm_df_project = iqm_df.iloc[-mean_days - 1:]
         # to avoid division by 0: max
         mean_1st = max(iqm_df_project[1].mean(), 1)
@@ -263,11 +286,12 @@ class Iqm():
         }
         return iqm_df, project_vaccine
 
+
 # %% Read Lk
 class Landkreis():
     def __init__(self):
-        self.landkreis_df=self.read_landkreis()
-        self.landkreis_dict=self.convert_to_dict()
+        self.landkreis_df = self.read_landkreis()
+        self.landkreis_dict = self.convert_to_dict()
 
     def read_landkreis(self):
         landkreis_path = os.path.join(parent_directory, "Misc", 'Landkreise.csv')
@@ -276,14 +300,15 @@ class Landkreis():
         return landkreis_df
 
     def convert_to_dict(self):
-        lk_df=self.landkreis_df.set_index('IdLandkreis')
+        lk_df = self.landkreis_df.set_index('IdLandkreis')
         return lk_df.to_dict('index')
+
 
 # %% Read Nowcasting
 
 class Nowcasting():
     def __init__(self):
-        self.nc_df=self.read_nc()
+        self.nc_df = self.read_nc()
 
     def read_nc(self):
         nc_path = find_latest_file(os.path.join(parent_directory, "Nowcasting", "raw_data"))[0]
@@ -292,14 +317,14 @@ class Nowcasting():
         except UnicodeDecodeError:
             nc_df = pd.read_csv(nc_path, engine='python', encoding='cp1252')
         nc_df["Datum"] = pd.to_datetime(nc_df["Datum"]).dt.date
-        nc_df = nc_df[nc_df['Datum'] >= pd.to_datetime('2020-04-01')]
+        nc_df = nc_df[nc_df['Datum'] >= pd.to_datetime('2020-04-01').date()]
         nc_df.sort_values('Datum', inplace=True)
         return nc_df
 
+
 class Fallzahlen():
     def __init__(self):
-        self.fallzahlen_df= self.read_fallzahlen()
-
+        self.fallzahlen_df = self.read_fallzahlen()
 
     def read_fallzahlen(self):
         path_fallzahlen = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'Fallzahlen',
@@ -314,7 +339,7 @@ class Fallzahlen():
         fallzahlen_df['report_date'] = pd.to_datetime(fallzahlen_df['report_date']).dt.date
         return fallzahlen_df
 
-    def subset_fallzahlen_bl_lk(self,id_bl_lk, lk_dict=None, landkreis=False):
+    def subset_fallzahlen_bl_lk(self, id_bl_lk, lk_dict=None, landkreis=False):
         population = find_population(id_bl_lk, lk_dict, landkreis=landkreis)
         if id_bl_lk == 0:
             bundesland_id = number_states.keys()
@@ -322,7 +347,8 @@ class Fallzahlen():
             bundesland_id = [id_bl_lk]
 
         if landkreis:
-            fallzahlen_df_sum = self.fallzahlen_df[self.fallzahlen_df["IdLandkreis"] == id_bl_lk].groupby("Datenstand").sum()
+            fallzahlen_df_sum = self.fallzahlen_df[self.fallzahlen_df["IdLandkreis"] == id_bl_lk].groupby(
+                "Datenstand").sum()
         else:
             fallzahlen_df_sum = self.fallzahlen_df[self.fallzahlen_df["IdBundesland"].isin(bundesland_id)].groupby(
                 "Datenstand").sum()
@@ -355,34 +381,37 @@ class Fallzahlen():
         # fallzahlen_df_sum["Inzidenz"] = fallzahlen_df_sum["Inzidenz"].interpolate(method='pad')
         return fallzahlen_df_sum
 
+
 # %% calc pop
-def find_population(id_in,lk_dict=None, landkreis=False):
+def find_population(id_in, lk_dict=None, landkreis=False):
     if landkreis:
         population_ = lk_dict[id_in]['Bevoelkerung']
     else:
         population_ = number_population[id_in]
     return population_
 
+
 # %% plot
-def plot_covid(id_in,covid,testzahl, ir,iqm,fallzahlen,nc=None,lk_dict=None,landkreis=False):
+def plot_covid(id_in, covid, testzahl, ir, iqm, fallzahlen, nc=None, lk_dict=None, landkreis=False):
     mean_days_plot = 14
     if landkreis:
         id_lk = id_in
         name = lk_dict[id_in]['Landkreis']
     else:
         name = number_states[id_in]
-    if id_in==0:
-        nc_df=nc.nc_df
+    if id_in == 0:
+        nc_df = nc.nc_df
     else:
-        nc_df=None
-    ir_df_plot = ir.subset_intensivregister_lk_bl(id_in=id_in,landkreis=landkreis)
-    population = find_population(id_in,lk_dict, landkreis=landkreis)
-    covid_df_sum = covid.covid_subset_lk_bl(id_in=id_in,lk_dict=lk_dict,landkreis=landkreis)
+        nc_df = None
+    ir_df_plot = ir.subset_intensivregister_lk_bl(id_in=id_in, landkreis=landkreis)
+    population = find_population(id_in, lk_dict, landkreis=landkreis)
+    covid_df_sum = covid.covid_subset_lk_bl(id_in=id_in, lk_dict=lk_dict, landkreis=landkreis)
     inzidenz = covid_df_sum["Inzidenz_7d"].iloc[-1]
-    fallzahlen_plot = fallzahlen.subset_fallzahlen_bl_lk(id_in,lk_dict=lk_dict, landkreis=landkreis)
+    fallzahlen_plot = fallzahlen.subset_fallzahlen_bl_lk(id_in, lk_dict=lk_dict, landkreis=landkreis)
     faelle_neu_plot, todesfaelle_neu_plot = covid.covid_faelle_neu(id_in, landkreis=landkreis)
-    iqm_df_plot, iqm_project_plot = iqm.subset_iqm(id_in,lk_dict=lk_dict, mean_days=mean_days_plot, landkreis=landkreis)
-    testzahl_df=testzahl.testzahl_df
+    iqm_df_plot, iqm_project_plot = iqm.subset_iqm(id_in, lk_dict=lk_dict, mean_days=mean_days_plot,
+                                                   landkreis=landkreis)
+    testzahl_df = testzahl.testzahl_df
     # plot figure
     number_plots = 4
     fig_size = (11, 25)
@@ -554,20 +583,20 @@ def plot_covid(id_in,covid,testzahl, ir,iqm,fallzahlen,nc=None,lk_dict=None,land
 
 
 # %% Plot All BL
-if __name__=='__main__':
-    lk=Landkreis()
-    lk_dict=lk.landkreis_dict
-    covid=Covid()
-    testzahl=Testzahl()
-    ir=Intensivregister()
-    iqm=Iqm()
-    nc=Nowcasting()
-    fallzahlen=Fallzahlen()
+if __name__ == '__main__':
+    lk = Landkreis()
+    lk_dict = lk.landkreis_dict
+    covid = Covid()
+    testzahl = Testzahl()
+    ir = Intensivregister()
+    iqm = Iqm()
+    nc = Nowcasting()
+    fallzahlen = Fallzahlen()
 
     for id_lk_ in lk_to_plot:
-        plot_covid(id_lk_,covid=covid,testzahl=testzahl,fallzahlen=fallzahlen,lk_dict=lk_dict,iqm=iqm,ir=ir, landkreis=True)
+        plot_covid(id_lk_, covid=covid, testzahl=testzahl, fallzahlen=fallzahlen, lk_dict=lk_dict, iqm=iqm, ir=ir,
+                   landkreis=True)
 
     for key in number_states:
-        plot_covid(key,covid=covid,testzahl=testzahl,nc=nc,fallzahlen=fallzahlen,lk_dict=lk_dict,iqm=iqm,ir=ir, landkreis=False)
-
-
+        plot_covid(key, covid=covid, testzahl=testzahl, nc=nc, fallzahlen=fallzahlen, lk_dict=lk_dict, iqm=iqm, ir=ir,
+                   landkreis=False)
