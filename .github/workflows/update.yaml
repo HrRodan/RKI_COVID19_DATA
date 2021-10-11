@@ -1,12 +1,7 @@
 name: Download and Update all
 
 on:
-#  push:
-#    branches:
-#      - master
   workflow_dispatch:
-#  schedule:
-#    - cron: "0 19 * * *"
 
 jobs:
   update_page:
@@ -14,6 +9,7 @@ jobs:
     defaults:
       run:
         shell: bash -l {0}
+        working-directory: ./.github/workflows
 
     steps:
       - uses: actions/checkout@master
@@ -26,33 +22,24 @@ jobs:
           channels: conda-forge,defaults
       - name: Install requirements from requirements.txt
         run: pip install -r ./requirements.txt
+        working-directory: ./
       - name: Run Download scheduler
         run: python ./schedule.py
-        working-directory: ./.github/workflows
         continue-on-error: true
       - name: process RKI Impfquotenmonitoring
         run: python ./process_RKI_Impfquotenmonitoring.py
-        working-directory: ./.github/workflows
         continue-on-error: true
         timeout-minutes: 60
       - name: process Intensivregister
         run: python ./process_Intensivregister.py
-        working-directory: ./.github/workflows
         continue-on-error: true
         timeout-minutes: 60
       - name: process Fallzahlen
         run: python ./process_RKI_Covid_update.py
-        working-directory: ./.github/workflows
         continue-on-error: true
         timeout-minutes: 60
-#      - name: run gnuplot
-#        run: chmod +x ./generate_plots.sh && ./generate_plots.sh
-#        working-directory: ./Impfquotenmonitoring/gnuplot
-#        continue-on-error: true
-#        timeout-minutes: 20
       - name: generate PNG
         run: python ./create_graphs.py
-        working-directory: ./.github/workflows
         continue-on-error: true
       - name: Commit files
         run: |
