@@ -240,7 +240,7 @@ class Iqm():
         iqm_df.sort_index(inplace=True)
         iqm_df['cumsum_1'] = iqm_df[1].cumsum()
         iqm_df['cumsum_2'] = iqm_df[2].cumsum()
-        iqm_df['cumsum_3'] = iqm_df[3].cumsum()
+        #iqm_df['cumsum_3'] = iqm_df[3].cumsum()
         # eval projected
         population = find_population(id_in,lk_dict=lk_dict, landkreis=landkreis)
         iqm_df_project = iqm_df.iloc[-mean_days - 1:]
