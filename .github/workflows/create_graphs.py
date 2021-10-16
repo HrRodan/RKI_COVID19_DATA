@@ -14,6 +14,28 @@ from matplotlib.ticker import (AutoMinorLocator)
 
 from repo_tools_pkg.file_tools import find_latest_file
 
+
+# %%
+def main():
+    lk_to_plot = [9572, 9564, 9562, 14523]
+    lk = Landkreis()
+    lk_dict = lk.landkreis_dict
+    covid = Covid()
+    testzahl = Testzahl()
+    ir = Intensivregister()
+    iqm = Iqm()
+    nc = Nowcasting()
+    fallzahlen = Fallzahlen()
+
+    for id_lk_ in lk_to_plot:
+        plot_covid(id_lk_, covid=covid, testzahl=testzahl, fallzahlen=fallzahlen, lk_dict=lk_dict, iqm=iqm, ir=ir,
+                   landkreis=True)
+
+    for key in NUMBER_STATES:
+        plot_covid(key, covid=covid, testzahl=testzahl, nc=nc, fallzahlen=fallzahlen, lk_dict=lk_dict, iqm=iqm, ir=ir,
+                   landkreis=False)
+
+
 # %% Set Plot parameters
 mpl.rcParams['lines.linewidth'] = 3
 mpl.rcParams['axes.linewidth'] = 1.2
@@ -21,13 +43,13 @@ mpl.rcParams['font.family'] = 'serif'
 mpl.rcParams['font.size'] = 16
 
 # %% Set parameters
-today = datetime.now(pytz.timezone('Europe/Berlin')).date()
-yesterday = today - timedelta(days=1)
-today_str = today.strftime('%Y-%m-%d')
-file_path = os.path.dirname(__file__)
-parent_directory = os.path.normpath(os.path.join(file_path, '..', '..', ''))
-lk_to_plot = [9572, 9564, 9562, 14523]
-states_number = {
+TODAY = datetime.now(pytz.timezone('Europe/Berlin')).date()
+YESTERDAY = TODAY - timedelta(days=1)
+TODAY_STR = TODAY.strftime('%Y-%m-%d')
+FILE_PATH = os.path.dirname(__file__)
+PARENT_DIRECTORY = os.path.normpath(os.path.join(FILE_PATH, '..', '..', ''))
+
+STATES_NUMBER = {
     "Deutschland": 0,
     "Schleswig-Holstein": 1,
     "Hamburg": 2,
@@ -47,16 +69,16 @@ states_number = {
     "Thüringen": 16
 }
 
-number_states = {value: key for key, value in states_number.items()}
-states_number_ir = {}
-string_mapping = {"ü": "ue", "Ü": "UE", "ä": "ae", "Ä": "AE", "ö": "oe", "Ö": "OE", "ß": "ss", "-": "_"}
-for key, value in number_states.items():
+NUMBER_STATES = {value: key for key, value in STATES_NUMBER.items()}
+STATES_NUMBER_IR = {}
+STRING_MAPPING = {"ü": "ue", "Ü": "UE", "ä": "ae", "Ä": "AE", "ö": "oe", "Ö": "OE", "ß": "ss", "-": "_"}
+for key, value in NUMBER_STATES.items():
     state = value
-    for key2, value2 in string_mapping.items():
+    for key2, value2 in STRING_MAPPING.items():
         state = state.replace(key2, value2)
-    states_number_ir[key] = state.upper()
+    STATES_NUMBER_IR[key] = state.upper()
 
-number_population = {
+NUMBER_POPULATION = {
     8: 11100394,
     9: 13124737,
     11: 3669491,
@@ -82,20 +104,20 @@ class Covid():
     def __init__(self):
         self.covid_df = self.read_covid()
         self.meldedatum_min = self.covid_df["Meldedatum"].min()
-        self.t_range = np.arange(self.meldedatum_min, today, timedelta(days=1))
+        self.t_range = np.arange(self.meldedatum_min, TODAY, timedelta(days=1))
 
     def read_covid(self):
         dtypes = {'IdBundesland': 'Int32', 'IdLandkreis': 'Int32', 'NeuerFall': 'Int8',
                   'NeuerTodesfall': 'Int8', 'AnzahlFall': 'Int32', 'AnzahlTodesfall': 'Int32',
                   'Meldedatum': 'object', 'Datenstand': 'object'}
-        covid_path_latest = find_latest_file(os.path.join(parent_directory))
+        covid_path_latest = find_latest_file(os.path.join(PARENT_DIRECTORY))
         __covid_df = pd.read_csv(covid_path_latest[0], dtype=dtypes, usecols=dtypes.keys())
         __covid_df["Meldedatum"] = pd.to_datetime(__covid_df["Meldedatum"]).dt.date
         return __covid_df
 
     def covid_subset_lk_bl(self, id_in, lk_dict=None, landkreis=False):
         if id_in == 0:
-            bundesland_id = number_states.keys()
+            bundesland_id = NUMBER_STATES.keys()
         else:
             bundesland_id = [id_in]
 
@@ -130,7 +152,7 @@ class Covid():
 
     def covid_faelle_neu(self, id_in, landkreis=False):
         if id_in == 0:
-            bundesland_id = number_states.keys()
+            bundesland_id = NUMBER_STATES.keys()
         else:
             bundesland_id = [id_in]
 
@@ -155,7 +177,7 @@ class Testzahl():
         self.testzahl_df = self.read_testzahl()
 
     def read_testzahl(self):
-        testzahl_path = find_latest_file(os.path.join(parent_directory, "Testzahlen", "raw_data"))[0]
+        testzahl_path = find_latest_file(os.path.join(PARENT_DIRECTORY, "Testzahlen", "raw_data"))[0]
         testzahl_df = pd.read_excel(testzahl_path, sheet_name='1_Testzahlerfassung', skipfooter=1)
         testzahl_df = testzahl_df.drop(0)
         datum = []
@@ -181,13 +203,13 @@ class Intensivregister():
         self.ir_lk_df = self.read_intensivregister_lk()
 
     def read_intensivregister(self):
-        ir_path = os.path.join(parent_directory, "Intensivregister", "raw_data", 'bundesland-zeitreihe.csv')
+        ir_path = os.path.join(PARENT_DIRECTORY, "Intensivregister", "raw_data", 'bundesland-zeitreihe.csv')
         ir_df = pd.read_csv(ir_path)
         ir_df["Datum"] = pd.to_datetime(ir_df["Datum"], utc=True).dt.date
         return ir_df
 
     def read_intensivregister_lk(self):
-        ir_lk_path = os.path.join(parent_directory, "Intensivregister", "raw_data", "zeitreihe-tagesdaten.csv")
+        ir_lk_path = os.path.join(PARENT_DIRECTORY, "Intensivregister", "raw_data", "zeitreihe-tagesdaten.csv")
         ir_lk_df = pd.read_csv(ir_lk_path, encoding='utf-8', engine='python')
         ir_lk_df.rename(
             columns={'kreis': 'IdLandkreis', 'gemeindeschluessel': 'IdLandkreis', 'bundesland': 'IdBundesland',
@@ -201,7 +223,7 @@ class Intensivregister():
             ir_lk_df_temp = self.ir_lk_df[self.ir_lk_df["IdLandkreis"] == id_in]
             return ir_lk_df_temp
         else:
-            ir_df_bl = self.ir_df[self.ir_df["Bundesland"] == states_number_ir[id_in]].groupby("Datum").last()
+            ir_df_bl = self.ir_df[self.ir_df["Bundesland"] == STATES_NUMBER_IR[id_in]].groupby("Datum").last()
             ir_df_bl.index = pd.to_datetime(ir_df_bl.index)
             ir_df_bl = ir_df_bl.resample("1D").backfill()
             return ir_df_bl
@@ -219,7 +241,7 @@ class Iqm():
                   'Impfstoff': 'object',
                   'Impfserie': 'int64',
                   'Anzahl': 'int64'}
-        iqm_bl_git_path = os.path.join(parent_directory, "Impfquotenmonitoring", "raw_data",
+        iqm_bl_git_path = os.path.join(PARENT_DIRECTORY, "Impfquotenmonitoring", "raw_data",
                                        'Aktuell_Deutschland_Bundeslaender_COVID-19-Impfungen.csv')
         iqm_bl_git_df = pd.read_csv(iqm_bl_git_path)
         return iqm_bl_git_df
@@ -230,7 +252,7 @@ class Iqm():
                   'Altersgruppe': 'object',
                   'Impfschutz': 'int64',
                   'Anzahl': 'int64'}
-        iqm_lk_git_path = os.path.join(parent_directory, "Impfquotenmonitoring", "raw_data",
+        iqm_lk_git_path = os.path.join(PARENT_DIRECTORY, "Impfquotenmonitoring", "raw_data",
                                        'Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv')
         iqm_lk_git_df = pd.read_csv(iqm_lk_git_path, dtype=dtypes)
         # drop u=unbekannt in Landkreis Name
@@ -240,7 +262,7 @@ class Iqm():
 
     def subset_iqm(self, id_in, lk_dict=None, landkreis=False, mean_days=14):
         if id_in == 0:
-            id_iqm = number_states.keys()
+            id_iqm = NUMBER_STATES.keys()
         else:
             id_iqm = [id_in]
 
@@ -294,7 +316,7 @@ class Landkreis():
         self.landkreis_dict = self.convert_to_dict()
 
     def read_landkreis(self):
-        landkreis_path = os.path.join(parent_directory, "Misc", 'Landkreise.csv')
+        landkreis_path = os.path.join(PARENT_DIRECTORY, "Misc", 'Landkreise.csv')
         landkreis_df = pd.read_csv(landkreis_path, skiprows=6, skipfooter=4, engine='python', sep=';', encoding='utf_8',
                                    names=['IdLandkreis', 'Landkreis', 'Bevoelkerung'], na_values='-')
         return landkreis_df
@@ -311,7 +333,7 @@ class Nowcasting():
         self.nc_df = self.read_nc()
 
     def read_nc(self):
-        nc_path = find_latest_file(os.path.join(parent_directory, "Nowcasting", "raw_data"))[0]
+        nc_path = find_latest_file(os.path.join(PARENT_DIRECTORY, "Nowcasting", "raw_data"))[0]
         try:
             nc_df = pd.read_csv(nc_path, engine='python', sep=',')
         except UnicodeDecodeError:
@@ -342,7 +364,7 @@ class Fallzahlen():
     def subset_fallzahlen_bl_lk(self, id_bl_lk, lk_dict=None, landkreis=False):
         population = find_population(id_bl_lk, lk_dict, landkreis=landkreis)
         if id_bl_lk == 0:
-            bundesland_id = number_states.keys()
+            bundesland_id = NUMBER_STATES.keys()
         else:
             bundesland_id = [id_bl_lk]
 
@@ -387,7 +409,7 @@ def find_population(id_in, lk_dict=None, landkreis=False):
     if landkreis:
         population_ = lk_dict[id_in]['Bevoelkerung']
     else:
-        population_ = number_population[id_in]
+        population_ = NUMBER_POPULATION[id_in]
     return population_
 
 
@@ -398,7 +420,7 @@ def plot_covid(id_in, covid, testzahl, ir, iqm, fallzahlen, nc=None, lk_dict=Non
         id_lk = id_in
         name = lk_dict[id_in]['Landkreis']
     else:
-        name = number_states[id_in]
+        name = NUMBER_STATES[id_in]
     if id_in == 0:
         nc_df = nc.nc_df
     else:
@@ -420,7 +442,7 @@ def plot_covid(id_in, covid, testzahl, ir, iqm, fallzahlen, nc=None, lk_dict=Non
         fig_size = (11, 37)
     # start Plot
     fig, ax = plt.subplots(number_plots, figsize=fig_size)
-    fig.suptitle(f"Covid Situation in {name} \nStichtag: {today_str}", fontsize=20, weight='bold')
+    fig.suptitle(f"Covid Situation in {name} \nStichtag: {TODAY_STR}", fontsize=20, weight='bold')
     # Inzidenz
     ax[0].plot(covid_df_sum.index, covid_df_sum["Inzidenz_7d"], color='black')
     ax[0].plot(fallzahlen_plot.index, fallzahlen_plot['Inzidenz'], color='red', alpha=0.6, linewidth=1)
@@ -512,7 +534,7 @@ def plot_covid(id_in, covid, testzahl, ir, iqm, fallzahlen, nc=None, lk_dict=Non
     ax[3].text(0.2, 0.75,
                f'{iqm_project_plot["mean_1st"]:.0f} pro Tag\n'
                f'{iqm_project_plot["mean_1st_quote"]:.2f}% pro Tag\n'
-               f'{iqm_project_plot["days_75"]:.0f} Tagen ({(today + timedelta(days=iqm_project_plot["days_75"])).strftime("%Y-%m")}) '
+               f'{iqm_project_plot["days_75"]:.0f} Tagen ({(TODAY + timedelta(days=iqm_project_plot["days_75"])).strftime("%Y-%m")}) '
                , horizontalalignment='left', bbox=props, transform=ax[3].transAxes,
                verticalalignment='top', fontsize=14, color='black', ma='left')
     ax[3].text(0.07, 0.35,
@@ -528,7 +550,7 @@ def plot_covid(id_in, covid, testzahl, ir, iqm, fallzahlen, nc=None, lk_dict=Non
     ax[3].text(0.2, 0.3,
                f'{iqm_project_plot["mean_2nd"]:.0f} pro Tag\n'
                f'{iqm_project_plot["mean_2nd_quote"]:.2f}% pro Tag\n'
-               f'{iqm_project_plot["days_75_2nd"]:.0f} Tagen ({(today + timedelta(days=iqm_project_plot["days_75_2nd"])).strftime("%Y-%m")})'
+               f'{iqm_project_plot["days_75_2nd"]:.0f} Tagen ({(TODAY + timedelta(days=iqm_project_plot["days_75_2nd"])).strftime("%Y-%m")})'
                , horizontalalignment='left', bbox=props, transform=ax[3].transAxes,
                verticalalignment='top', fontsize=14, color='black', ma='left')
     ax[3].set_ylabel('Bevölkerungsanteil [%]', fontsize=16)
@@ -565,7 +587,7 @@ def plot_covid(id_in, covid, testzahl, ir, iqm, fallzahlen, nc=None, lk_dict=Non
         axs.yaxis.set_label_position("right")
         axs.xaxis.grid()
         axs.yaxis.grid()
-        axs.axvline(today, ls='-', color='gold', linewidth=1)
+        axs.axvline(TODAY, ls='-', color='gold', linewidth=1)
         for item in ([axs.title, axs.xaxis.label, axs.yaxis.label] + axs.get_xticklabels() + axs.get_yticklabels()):
             item.set_fontsize(16)
         for label in axs.get_xticklabels():
@@ -574,29 +596,15 @@ def plot_covid(id_in, covid, testzahl, ir, iqm, fallzahlen, nc=None, lk_dict=Non
     fig.align_ylabels()
     fig.tight_layout(rect=[0, 0, 1, 0.97], h_pad=2)
     if landkreis:
-        plt.savefig(os.path.join(parent_directory, 'Auswertung', 'Landkreise', f"covid_lk_{id_in}.png"),
+        plt.savefig(os.path.join(PARENT_DIRECTORY, 'Auswertung', 'Landkreise', f"covid_lk_{id_in}.png"),
                     bbox_inches='tight', dpi=60)
     else:
-        plt.savefig(os.path.join(parent_directory, 'Auswertung', f"covid_bl_{id_in}.png"), bbox_inches='tight', dpi=60)
+        plt.savefig(os.path.join(PARENT_DIRECTORY, 'Auswertung', f"covid_bl_{id_in}.png"), bbox_inches='tight', dpi=60)
     plt.show()
     plt.close(fig)
 
 
 # %% Plot All BL
+
 if __name__ == '__main__':
-    lk = Landkreis()
-    lk_dict = lk.landkreis_dict
-    covid = Covid()
-    testzahl = Testzahl()
-    ir = Intensivregister()
-    iqm = Iqm()
-    nc = Nowcasting()
-    fallzahlen = Fallzahlen()
-
-    for id_lk_ in lk_to_plot:
-        plot_covid(id_lk_, covid=covid, testzahl=testzahl, fallzahlen=fallzahlen, lk_dict=lk_dict, iqm=iqm, ir=ir,
-                   landkreis=True)
-
-    for key in number_states:
-        plot_covid(key, covid=covid, testzahl=testzahl, nc=nc, fallzahlen=fallzahlen, lk_dict=lk_dict, iqm=iqm, ir=ir,
-                   landkreis=False)
+    main()
