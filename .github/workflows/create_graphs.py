@@ -115,7 +115,7 @@ class Covid():
         __covid_df["Meldedatum"] = pd.to_datetime(__covid_df["Meldedatum"]).dt.date
         return __covid_df
 
-    def covid_subset_lk_bl(self, id_in, lk_dict=None, landkreis=False):
+    def covid_subset_lk_bl(self, id_in, lk_dict=None, landkreis=False) -> pd.DataFrame:
         if id_in == 0:
             bundesland_id = NUMBER_STATES.keys()
         else:
@@ -414,7 +414,7 @@ def find_population(id_in, lk_dict=None, landkreis=False):
 
 
 # %% plot
-def plot_covid(id_in, covid, testzahl, ir, iqm, fallzahlen, nc=None, lk_dict=None, landkreis=False):
+def plot_covid(id_in, covid: Covid, testzahl, ir, iqm, fallzahlen, nc=None, lk_dict=None, landkreis=False):
     mean_days_plot = 14
     if landkreis:
         id_lk = id_in
