@@ -27,13 +27,16 @@ def main():
     nc = Nowcasting()
     fallzahlen = Fallzahlen()
 
-    for id_lk_ in lk_to_plot:
-        plot_covid(id_lk_, covid=covid, testzahl=testzahl, fallzahlen=fallzahlen, lk_dict=lk_dict, iqm=iqm, ir=ir,
-                   landkreis=True)
+    kvargs = {
+        'covid': covid, 'testzahl': testzahl, 'fallzahlen': fallzahlen, 'lk_dict': lk_dict, 'iqm': iqm, 'ir': ir,
+        'nc': nc
+    }
+
+    for id_lk in lk_to_plot:
+        plot_covid(id_lk, landkreis=True, **kvargs)
 
     for key in NUMBER_STATES:
-        plot_covid(key, covid=covid, testzahl=testzahl, nc=nc, fallzahlen=fallzahlen, lk_dict=lk_dict, iqm=iqm, ir=ir,
-                   landkreis=False)
+        plot_covid(key, landkreis=False, **kvargs)
 
 
 # %% Set Plot parameters
@@ -42,7 +45,7 @@ mpl.rcParams['axes.linewidth'] = 1.2
 mpl.rcParams['font.family'] = 'serif'
 mpl.rcParams['font.size'] = 16
 
-# %% Set parameters
+# %% Set Constants
 TODAY = datetime.now(pytz.timezone('Europe/Berlin')).date()
 YESTERDAY = TODAY - timedelta(days=1)
 TODAY_STR = TODAY.strftime('%Y-%m-%d')
@@ -243,7 +246,7 @@ class Iqm():
                   'Anzahl': 'int64'}
         iqm_bl_git_path = os.path.join(PARENT_DIRECTORY, "Impfquotenmonitoring", "raw_data",
                                        'Aktuell_Deutschland_Bundeslaender_COVID-19-Impfungen.csv')
-        iqm_bl_git_df = pd.read_csv(iqm_bl_git_path)
+        iqm_bl_git_df = pd.read_csv(iqm_bl_git_path, dtype=dtypes)
         return iqm_bl_git_df
 
     def read_iqm_lk(self):
