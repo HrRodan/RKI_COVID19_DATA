@@ -385,6 +385,7 @@ class Fallzahlen():
                                                    fallzahlen_df_sum['AnzahlFall'].shift(-1) - fallzahlen_df_sum[
                                                        'AnzahlFall_neu'].shift(-1),
                                                    fallzahlen_df_sum['AnzahlFall'])
+        fallzahlen_df_sum['AnzahlFall_7d'] = fallzahlen_df_sum['AnzahlFall_7d'].fillna(method='ffill')
         fallzahlen_df_sum['AnzahlTodesfall'] = np.where(fallzahlen_df_sum['AnzahlTodesfall'].isna(),
                                                         fallzahlen_df_sum['AnzahlTodesfall'].shift(-1) -
                                                         fallzahlen_df_sum[
