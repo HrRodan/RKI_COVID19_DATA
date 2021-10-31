@@ -45,19 +45,18 @@ covid_df['AnzahlTodesfall'] = np.where(covid_df['NeuerTodesfall'].isin([0, 1]), 
 datenstand = pd.to_datetime(covid_df['Datenstand'].iloc[0], format='%d.%m.%Y, %H:%M Uhr')
 covid_df['Datenstand'] = datenstand.date()
 covid_df.drop(['NeuerFall', 'NeuerTodesfall'], inplace=True, axis=1)
-agg_key={}
-for c in covid_df.columns:
-    if c not in key_list:
-        if c in ['Meldedatum','Datenstand']:
-            agg_key[c]='max'
-        else:
-            agg_key[c]='sum'
+agg_key = {
+    c: 'max' if c in ['Meldedatum', 'Datenstand'] else 'sum'
+    for c in covid_df.columns
+    if c not in key_list
+}
+
 covid_df = covid_df.groupby(key_list, as_index=False).agg(agg_key)
-covid_df.rename(columns={'Meldedatum':'meldedatum_max'}, inplace=True)
+covid_df.rename(columns={'Meldedatum': 'meldedatum_max'}, inplace=True)
 covid_df['report_date'] = date_latest
 
 # %% concat and dedup
-fallzahlen_df=fallzahlen_df[fallzahlen_df['Datenstand']!=datenstand.date()]
+fallzahlen_df = fallzahlen_df[fallzahlen_df['Datenstand'] != datenstand.date()]
 
 fallzahlen_new = pd.concat([fallzahlen_df, covid_df])
 fallzahlen_new.drop_duplicates(subset=key_list, keep='last', inplace=True)

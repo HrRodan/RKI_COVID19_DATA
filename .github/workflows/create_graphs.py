@@ -119,11 +119,7 @@ class Covid():
         return __covid_df
 
     def covid_subset_lk_bl(self, id_in, lk_dict=None, landkreis=False) -> pd.DataFrame:
-        if id_in == 0:
-            bundesland_id = NUMBER_STATES.keys()
-        else:
-            bundesland_id = [id_in]
-
+        bundesland_id = NUMBER_STATES.keys() if id_in == 0 else [id_in]
         population = find_population(id_in, lk_dict, landkreis=landkreis)
 
         if landkreis:
@@ -154,11 +150,7 @@ class Covid():
         return covid_df_sum
 
     def covid_faelle_neu(self, id_in, landkreis=False):
-        if id_in == 0:
-            bundesland_id = NUMBER_STATES.keys()
-        else:
-            bundesland_id = [id_in]
-
+        bundesland_id = NUMBER_STATES.keys() if id_in == 0 else [id_in]
         if landkreis:
             covid_df_neu = self.covid_df[
                 ((self.covid_df["NeuerFall"].isin([-1, 1])) | (self.covid_df["NeuerTodesfall"].isin([-1, 1]))) & (
@@ -223,13 +215,11 @@ class Intensivregister():
 
     def subset_intensivregister_lk_bl(self, id_in, landkreis=False):
         if landkreis:
-            ir_lk_df_temp = self.ir_lk_df[self.ir_lk_df["IdLandkreis"] == id_in]
-            return ir_lk_df_temp
-        else:
-            ir_df_bl = self.ir_df[self.ir_df["Bundesland"] == STATES_NUMBER_IR[id_in]].groupby("Datum").last()
-            ir_df_bl.index = pd.to_datetime(ir_df_bl.index)
-            ir_df_bl = ir_df_bl.resample("1D").backfill()
-            return ir_df_bl
+            return self.ir_lk_df[self.ir_lk_df["IdLandkreis"] == id_in]
+        ir_df_bl = self.ir_df[self.ir_df["Bundesland"] == STATES_NUMBER_IR[id_in]].groupby("Datum").last()
+        ir_df_bl.index = pd.to_datetime(ir_df_bl.index)
+        ir_df_bl = ir_df_bl.resample("1D").backfill()
+        return ir_df_bl
 
 
 # %% Impfquotenmonitoring
@@ -246,8 +236,7 @@ class Iqm():
                   'Anzahl': 'int64'}
         iqm_bl_git_path = os.path.join(PARENT_DIRECTORY, "Impfquotenmonitoring", "raw_data",
                                        'Aktuell_Deutschland_Bundeslaender_COVID-19-Impfungen.csv')
-        iqm_bl_git_df = pd.read_csv(iqm_bl_git_path, dtype=dtypes)
-        return iqm_bl_git_df
+        return pd.read_csv(iqm_bl_git_path, dtype=dtypes)
 
     def read_iqm_lk(self):
         dtypes = {'Impfdatum': 'object',
@@ -264,15 +253,8 @@ class Iqm():
         return iqm_lk_git_df
 
     def subset_iqm(self, id_in, lk_dict=None, landkreis=False, mean_days=14):
-        if id_in == 0:
-            id_iqm = NUMBER_STATES.keys()
-        else:
-            id_iqm = [id_in]
-
-        if landkreis:
-            iqm_df = self.iqm_lk_df
-        else:
-            iqm_df = self.iqm_bl_df
+        id_iqm = NUMBER_STATES.keys() if id_in == 0 else [id_in]
+        iqm_df = self.iqm_lk_df if landkreis else self.iqm_bl_df
         iqm_df = iqm_df.rename(
             columns={'Impfschutz': 'Impfserie', 'LandkreisId_Impfort': 'Id', 'BundeslandId_Impfort': 'Id'})
 
@@ -366,11 +348,7 @@ class Fallzahlen():
 
     def subset_fallzahlen_bl_lk(self, id_bl_lk, lk_dict=None, landkreis=False):
         population = find_population(id_bl_lk, lk_dict, landkreis=landkreis)
-        if id_bl_lk == 0:
-            bundesland_id = NUMBER_STATES.keys()
-        else:
-            bundesland_id = [id_bl_lk]
-
+        bundesland_id = NUMBER_STATES.keys() if id_bl_lk == 0 else [id_bl_lk]
         if landkreis:
             fallzahlen_df_sum = self.fallzahlen_df[self.fallzahlen_df["IdLandkreis"] == id_bl_lk].groupby(
                 "Datenstand").sum()
@@ -425,10 +403,7 @@ def plot_covid(id_in, covid: Covid, testzahl, ir, iqm, fallzahlen, nc=None, lk_d
         name = lk_dict[id_in]['Landkreis']
     else:
         name = NUMBER_STATES[id_in]
-    if id_in == 0:
-        nc_df = nc.nc_df
-    else:
-        nc_df = None
+    nc_df = nc.nc_df if id_in == 0 else None
     ir_df_plot = ir.subset_intensivregister_lk_bl(id_in=id_in, landkreis=landkreis)
     population = find_population(id_in, lk_dict, landkreis=landkreis)
     covid_df_sum = covid.covid_subset_lk_bl(id_in=id_in, lk_dict=lk_dict, landkreis=landkreis)
@@ -468,30 +443,63 @@ def plot_covid(id_in, covid: Covid, testzahl, ir, iqm, fallzahlen, nc=None, lk_d
                alpha=0.7)
     ax[1].legend(prop={'size': 16})
     props = dict(facecolor='lightgrey', alpha=1, edgecolor='none')
-    ax[0].text(0.05, 0.85,
-               f'Differenz zum Vortag\n'
-               f'(Differenz zum letzten Report)'
-               , horizontalalignment='left', transform=ax[0].transAxes,
-               verticalalignment='bottom', fontsize=14, color='black', ma='left', weight='bold')
-    ax[0].text(0.25, 0.8,
-               f'Erkrankungen:\n'
-               f'Todesfälle:'
-               , horizontalalignment='right', bbox=props, transform=ax[0].transAxes,
-               verticalalignment='top', fontsize=14, color='black', ma='left')
+    ax[0].text(
+        0.05,
+        0.85,
+        'Differenz zum Vortag\n(Differenz zum letzten Report)',
+        horizontalalignment='left',
+        transform=ax[0].transAxes,
+        verticalalignment='bottom',
+        fontsize=14,
+        color='black',
+        ma='left',
+        weight='bold',
+    )
+
+    ax[0].text(
+        0.25,
+        0.8,
+        'Erkrankungen:\nTodesfälle:',
+        horizontalalignment='right',
+        bbox=props,
+        transform=ax[0].transAxes,
+        verticalalignment='top',
+        fontsize=14,
+        color='black',
+        ma='left',
+    )
+
     ax[0].text(0.25, 0.8,
                f'{covid_df_sum["AnzahlFall"].iloc[-1]:.0f} ({faelle_neu_plot:.0f})\n'
                f'{covid_df_sum["AnzahlTodesfall"].iloc[-1]:.0f} ({todesfaelle_neu_plot:.0f})'
                , horizontalalignment='left', bbox=props, transform=ax[0].transAxes,
                verticalalignment='top', fontsize=14, color='black', ma='left')
-    ax[0].text(0.05, 0.55,
-               f'Gesamt'
-               , horizontalalignment='left', transform=ax[0].transAxes,
-               verticalalignment='bottom', fontsize=14, color='black', ma='left', weight='bold')
-    ax[0].text(0.25, 0.5,
-               f'Erkrankungen:\n'
-               f'Todesfälle:'
-               , horizontalalignment='right', bbox=props, transform=ax[0].transAxes,
-               verticalalignment='top', fontsize=14, color='black', ma='left')
+    ax[0].text(
+        0.05,
+        0.55,
+        'Gesamt',
+        horizontalalignment='left',
+        transform=ax[0].transAxes,
+        verticalalignment='bottom',
+        fontsize=14,
+        color='black',
+        ma='left',
+        weight='bold',
+    )
+
+    ax[0].text(
+        0.25,
+        0.5,
+        'Erkrankungen:\nTodesfälle:',
+        horizontalalignment='right',
+        bbox=props,
+        transform=ax[0].transAxes,
+        verticalalignment='top',
+        fontsize=14,
+        color='black',
+        ma='left',
+    )
+
     ax[0].text(0.25, 0.5,
                f'{covid_df_sum["Cum_sum"].iloc[-1]:.0f}\n'
                f'{covid_df_sum["Cum_sum_Todesfall"].iloc[-1]:.0f}'
@@ -529,28 +537,51 @@ def plot_covid(id_in, covid: Covid, testzahl, ir, iqm, fallzahlen, nc=None, lk_d
                f'Erstimpfung'
                , horizontalalignment='left', transform=ax[3].transAxes,
                verticalalignment='bottom', fontsize=15, color='black', ma='left', weight='bold')
-    ax[3].text(0.2, 0.75,
-               f'Impfungen: \n'
-               f'Impfquote: \n'
-               f'75% in:'
-               , horizontalalignment='right', bbox=props, transform=ax[3].transAxes,
-               verticalalignment='top', fontsize=14, color='black', ma='left')
+    ax[3].text(
+        0.2,
+        0.75,
+        'Impfungen: \nImpfquote: \n75% in:',
+        horizontalalignment='right',
+        bbox=props,
+        transform=ax[3].transAxes,
+        verticalalignment='top',
+        fontsize=14,
+        color='black',
+        ma='left',
+    )
+
     ax[3].text(0.2, 0.75,
                f'{iqm_project_plot["mean_1st"]:.0f} pro Tag\n'
                f'{iqm_project_plot["mean_1st_quote"]:.2f}% pro Tag\n'
                f'{iqm_project_plot["days_75"]:.0f} Tagen ({(TODAY + timedelta(days=iqm_project_plot["days_75"])).strftime("%Y-%m")}) '
                , horizontalalignment='left', bbox=props, transform=ax[3].transAxes,
                verticalalignment='top', fontsize=14, color='black', ma='left')
-    ax[3].text(0.07, 0.35,
-               f'Zweitimpfung'
-               , horizontalalignment='left', transform=ax[3].transAxes,
-               verticalalignment='bottom', fontsize=15, color='black', ma='left', weight='bold')
-    ax[3].text(0.2, 0.3,
-               f'Impfungen: \n'
-               f'Impfquote: \n'
-               f'75% in:'
-               , horizontalalignment='right', bbox=props, transform=ax[3].transAxes,
-               verticalalignment='top', fontsize=14, color='black', ma='left')
+    ax[3].text(
+        0.07,
+        0.35,
+        'Zweitimpfung',
+        horizontalalignment='left',
+        transform=ax[3].transAxes,
+        verticalalignment='bottom',
+        fontsize=15,
+        color='black',
+        ma='left',
+        weight='bold',
+    )
+
+    ax[3].text(
+        0.2,
+        0.3,
+        'Impfungen: \nImpfquote: \n75% in:',
+        horizontalalignment='right',
+        bbox=props,
+        transform=ax[3].transAxes,
+        verticalalignment='top',
+        fontsize=14,
+        color='black',
+        ma='left',
+    )
+
     ax[3].text(0.2, 0.3,
                f'{iqm_project_plot["mean_2nd"]:.0f} pro Tag\n'
                f'{iqm_project_plot["mean_2nd_quote"]:.2f}% pro Tag\n'
