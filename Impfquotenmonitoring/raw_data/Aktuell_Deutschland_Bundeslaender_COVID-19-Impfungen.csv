@@ -87470,3 +87470,296 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-09-30,16,Comirnaty,4,677
 2022-09-30,16,Spikevax,3,1
 2022-09-30,16,Spikevax,4,4
+2022-10-01,01,Comirnaty,1,1
+2022-10-01,01,Comirnaty,2,5
+2022-10-01,01,Comirnaty,3,14
+2022-10-01,01,Comirnaty,4,202
+2022-10-01,01,Comirnaty bivalent (Original/Omikron),3,16
+2022-10-01,01,Comirnaty bivalent (Original/Omikron),4,65
+2022-10-01,01,Spikevax,4,7
+2022-10-01,02,Comirnaty,1,5
+2022-10-01,02,Comirnaty,2,8
+2022-10-01,02,Comirnaty,3,55
+2022-10-01,02,Comirnaty,4,117
+2022-10-01,02,Comirnaty bivalent (Original/Omikron),4,22
+2022-10-01,02,Spikevax,1,1
+2022-10-01,02,Spikevax,3,3
+2022-10-01,02,Spikevax,4,30
+2022-10-01,02,Valneva,1,1
+2022-10-01,03,Comirnaty,1,21
+2022-10-01,03,Comirnaty,2,5
+2022-10-01,03,Comirnaty,3,62
+2022-10-01,03,Comirnaty,4,551
+2022-10-01,03,Comirnaty bivalent (Original/Omikron),2,1
+2022-10-01,03,Comirnaty bivalent (Original/Omikron),3,13
+2022-10-01,03,Comirnaty bivalent (Original/Omikron),4,41
+2022-10-01,03,Spikevax,4,23
+2022-10-01,04,Comirnaty,3,1
+2022-10-01,04,Comirnaty,4,4
+2022-10-01,05,Comirnaty,1,19
+2022-10-01,05,Comirnaty,2,38
+2022-10-01,05,Comirnaty,3,262
+2022-10-01,05,Comirnaty,4,2626
+2022-10-01,05,Comirnaty bivalent (Original/Omikron),3,4
+2022-10-01,05,Comirnaty bivalent (Original/Omikron),4,45
+2022-10-01,05,Nuvaxovid,1,3
+2022-10-01,05,Nuvaxovid,2,2
+2022-10-01,05,Nuvaxovid,3,1
+2022-10-01,05,Spikevax,3,1
+2022-10-01,05,Spikevax,4,136
+2022-10-01,05,Spikevax bivalent (Original/Omikron),3,5
+2022-10-01,05,Spikevax bivalent (Original/Omikron),4,2
+2022-10-01,05,Valneva,1,2
+2022-10-01,06,Comirnaty,1,11
+2022-10-01,06,Comirnaty,2,32
+2022-10-01,06,Comirnaty,3,32
+2022-10-01,06,Comirnaty,4,446
+2022-10-01,06,Comirnaty bivalent (Original/Omikron),3,1
+2022-10-01,06,Comirnaty bivalent (Original/Omikron),4,8
+2022-10-01,06,Spikevax,1,1
+2022-10-01,06,Spikevax,2,3
+2022-10-01,06,Spikevax,4,59
+2022-10-01,07,Comirnaty,1,3
+2022-10-01,07,Comirnaty,2,2
+2022-10-01,07,Comirnaty,3,121
+2022-10-01,07,Comirnaty,4,324
+2022-10-01,07,Comirnaty bivalent (Original/Omikron),3,5
+2022-10-01,07,Comirnaty bivalent (Original/Omikron),4,11
+2022-10-01,07,Nuvaxovid,2,4
+2022-10-01,07,Spikevax bivalent (Original/Omikron),4,2
+2022-10-01,08,Comirnaty,1,52
+2022-10-01,08,Comirnaty,2,104
+2022-10-01,08,Comirnaty,3,390
+2022-10-01,08,Comirnaty,4,1927
+2022-10-01,08,Comirnaty bivalent (Original/Omikron),3,154
+2022-10-01,08,Comirnaty bivalent (Original/Omikron),4,969
+2022-10-01,08,Nuvaxovid,1,1
+2022-10-01,08,Nuvaxovid,2,4
+2022-10-01,08,Nuvaxovid,3,2
+2022-10-01,08,Spikevax,1,3
+2022-10-01,08,Spikevax,2,2
+2022-10-01,08,Spikevax,3,18
+2022-10-01,08,Spikevax,4,80
+2022-10-01,08,Spikevax bivalent (Original/Omikron),1,2
+2022-10-01,08,Spikevax bivalent (Original/Omikron),2,1
+2022-10-01,08,Spikevax bivalent (Original/Omikron),3,40
+2022-10-01,08,Spikevax bivalent (Original/Omikron),4,37
+2022-10-01,08,Valneva,1,2
+2022-10-01,08,Valneva,2,2
+2022-10-01,08,Valneva,3,10
+2022-10-01,09,Comirnaty,1,14
+2022-10-01,09,Comirnaty,2,77
+2022-10-01,09,Comirnaty,3,81
+2022-10-01,09,Comirnaty,4,1108
+2022-10-01,09,Comirnaty bivalent (Original/Omikron),4,8
+2022-10-01,09,Spikevax,3,2
+2022-10-01,09,Spikevax,4,3
+2022-10-01,09,Spikevax bivalent (Original/Omikron),4,3
+2022-10-01,10,Comirnaty,4,72
+2022-10-01,10,Comirnaty bivalent (Original/Omikron),3,1
+2022-10-01,10,Comirnaty bivalent (Original/Omikron),4,7
+2022-10-01,11,Comirnaty,1,12
+2022-10-01,11,Comirnaty,2,42
+2022-10-01,11,Comirnaty,3,70
+2022-10-01,11,Comirnaty,4,385
+2022-10-01,11,Comirnaty bivalent (Original/Omikron),3,21
+2022-10-01,11,Comirnaty bivalent (Original/Omikron),4,42
+2022-10-01,11,Nuvaxovid,1,1
+2022-10-01,11,Nuvaxovid,3,2
+2022-10-01,11,Spikevax,1,1
+2022-10-01,11,Spikevax,3,4
+2022-10-01,11,Spikevax,4,3
+2022-10-01,12,Comirnaty,3,9
+2022-10-01,12,Comirnaty,4,113
+2022-10-01,12,Spikevax,3,1
+2022-10-01,12,Spikevax,4,19
+2022-10-01,13,Comirnaty,1,1
+2022-10-01,13,Comirnaty,2,4
+2022-10-01,13,Comirnaty,3,16
+2022-10-01,13,Comirnaty,4,87
+2022-10-01,14,Comirnaty,1,1
+2022-10-01,14,Comirnaty,2,1
+2022-10-01,14,Comirnaty,3,30
+2022-10-01,14,Comirnaty,4,91
+2022-10-01,14,Spikevax,3,2
+2022-10-01,14,Spikevax,4,7
+2022-10-01,15,Comirnaty,2,1
+2022-10-01,15,Comirnaty,3,3
+2022-10-01,15,Comirnaty,4,33
+2022-10-01,16,Comirnaty,3,7
+2022-10-01,16,Comirnaty,4,52
+2022-10-01,16,Nuvaxovid,1,1
+2022-10-01,16,Nuvaxovid,2,1
+2022-10-01,16,Nuvaxovid,3,1
+2022-10-01,16,Valneva,1,1
+2022-10-02,01,Comirnaty,2,3
+2022-10-02,01,Comirnaty,3,2
+2022-10-02,01,Comirnaty,4,148
+2022-10-02,01,Comirnaty bivalent (Original/Omikron),1,1
+2022-10-02,01,Comirnaty bivalent (Original/Omikron),3,7
+2022-10-02,01,Comirnaty bivalent (Original/Omikron),4,23
+2022-10-02,02,Comirnaty,1,4
+2022-10-02,02,Comirnaty,2,15
+2022-10-02,02,Comirnaty,3,38
+2022-10-02,02,Comirnaty,4,131
+2022-10-02,02,Comirnaty bivalent (Original/Omikron),4,4
+2022-10-02,02,Nuvaxovid,1,1
+2022-10-02,02,Spikevax,1,1
+2022-10-02,02,Spikevax,2,1
+2022-10-02,02,Spikevax,3,5
+2022-10-02,02,Spikevax,4,22
+2022-10-02,03,Comirnaty,1,1
+2022-10-02,03,Comirnaty,2,6
+2022-10-02,03,Comirnaty,3,11
+2022-10-02,03,Comirnaty,4,161
+2022-10-02,03,Comirnaty bivalent (Original/Omikron),3,1
+2022-10-02,03,Comirnaty bivalent (Original/Omikron),4,44
+2022-10-02,03,Spikevax,4,7
+2022-10-02,05,Comirnaty,1,27
+2022-10-02,05,Comirnaty,2,61
+2022-10-02,05,Comirnaty,3,184
+2022-10-02,05,Comirnaty,4,597
+2022-10-02,05,Comirnaty bivalent (Original/Omikron),4,19
+2022-10-02,05,Nuvaxovid,2,3
+2022-10-02,05,Nuvaxovid,3,6
+2022-10-02,05,Nuvaxovid,4,3
+2022-10-02,05,Spikevax,4,8
+2022-10-02,05,Valneva,1,2
+2022-10-02,06,Comirnaty,1,4
+2022-10-02,06,Comirnaty,2,6
+2022-10-02,06,Comirnaty,3,11
+2022-10-02,06,Comirnaty,4,443
+2022-10-02,06,Comirnaty bivalent (Original/Omikron),3,3
+2022-10-02,06,Comirnaty bivalent (Original/Omikron),4,68
+2022-10-02,06,Spikevax,3,1
+2022-10-02,06,Spikevax,4,9
+2022-10-02,07,Comirnaty,2,1
+2022-10-02,07,Comirnaty,3,4
+2022-10-02,07,Comirnaty,4,24
+2022-10-02,08,Comirnaty,1,38
+2022-10-02,08,Comirnaty,2,41
+2022-10-02,08,Comirnaty,3,83
+2022-10-02,08,Comirnaty,4,410
+2022-10-02,08,Comirnaty bivalent (Original/Omikron),1,25
+2022-10-02,08,Comirnaty bivalent (Original/Omikron),2,153
+2022-10-02,08,Comirnaty bivalent (Original/Omikron),3,53
+2022-10-02,08,Comirnaty bivalent (Original/Omikron),4,241
+2022-10-02,08,Jcovden,3,1
+2022-10-02,08,Nuvaxovid,1,14
+2022-10-02,08,Nuvaxovid,2,17
+2022-10-02,08,Nuvaxovid,3,5
+2022-10-02,08,Spikevax,1,18
+2022-10-02,08,Spikevax,2,28
+2022-10-02,08,Spikevax,3,40
+2022-10-02,08,Spikevax,4,21
+2022-10-02,08,Spikevax bivalent (Original/Omikron),2,3
+2022-10-02,08,Spikevax bivalent (Original/Omikron),3,27
+2022-10-02,08,Valneva,1,15
+2022-10-02,09,Comirnaty,1,3
+2022-10-02,09,Comirnaty,2,2
+2022-10-02,09,Comirnaty,3,21
+2022-10-02,09,Comirnaty,4,280
+2022-10-02,09,Comirnaty bivalent (Original/Omikron),4,10
+2022-10-02,09,Spikevax bivalent (Original/Omikron),4,3
+2022-10-02,10,Comirnaty,4,6
+2022-10-02,11,Comirnaty,1,1
+2022-10-02,11,Comirnaty,2,1
+2022-10-02,11,Comirnaty,3,53
+2022-10-02,11,Comirnaty,4,46
+2022-10-02,12,Comirnaty,3,5
+2022-10-02,12,Comirnaty,4,151
+2022-10-02,13,Comirnaty,3,4
+2022-10-02,13,Comirnaty,4,13
+2022-10-02,14,Comirnaty,3,1
+2022-10-02,14,Comirnaty,4,41
+2022-10-02,16,Comirnaty,4,11
+2022-10-03,01,Comirnaty,3,10
+2022-10-03,01,Comirnaty,4,268
+2022-10-03,01,Comirnaty bivalent (Original/Omikron),1,2
+2022-10-03,01,Comirnaty bivalent (Original/Omikron),3,15
+2022-10-03,01,Comirnaty bivalent (Original/Omikron),4,80
+2022-10-03,02,Comirnaty,1,12
+2022-10-03,02,Comirnaty,2,17
+2022-10-03,02,Comirnaty,3,61
+2022-10-03,02,Comirnaty,4,98
+2022-10-03,02,Comirnaty bivalent (Original/Omikron),2,2
+2022-10-03,02,Comirnaty bivalent (Original/Omikron),3,9
+2022-10-03,02,Comirnaty bivalent (Original/Omikron),4,95
+2022-10-03,02,Nuvaxovid,1,1
+2022-10-03,02,Nuvaxovid,2,1
+2022-10-03,02,Spikevax,2,3
+2022-10-03,02,Spikevax,3,12
+2022-10-03,02,Spikevax,4,59
+2022-10-03,03,Comirnaty,1,2
+2022-10-03,03,Comirnaty,2,2
+2022-10-03,03,Comirnaty,3,20
+2022-10-03,03,Comirnaty,4,411
+2022-10-03,03,Comirnaty bivalent (Original/Omikron),4,5
+2022-10-03,03,Spikevax,4,128
+2022-10-03,05,Comirnaty,1,1
+2022-10-03,05,Comirnaty,2,6
+2022-10-03,05,Comirnaty,3,60
+2022-10-03,05,Comirnaty,4,332
+2022-10-03,05,Comirnaty bivalent (Original/Omikron),3,1
+2022-10-03,05,Comirnaty bivalent (Original/Omikron),4,13
+2022-10-03,05,Spikevax,3,118
+2022-10-03,05,Spikevax,4,79
+2022-10-03,06,Comirnaty,1,58
+2022-10-03,06,Comirnaty,2,180
+2022-10-03,06,Comirnaty,3,301
+2022-10-03,06,Comirnaty,4,571
+2022-10-03,06,Comirnaty bivalent (Original/Omikron),4,2
+2022-10-03,06,Spikevax,1,1
+2022-10-03,06,Spikevax,2,1
+2022-10-03,06,Spikevax,3,40
+2022-10-03,06,Spikevax,4,83
+2022-10-03,07,Comirnaty,1,1
+2022-10-03,07,Comirnaty,2,2
+2022-10-03,07,Comirnaty,3,12
+2022-10-03,07,Comirnaty,4,496
+2022-10-03,07,Spikevax,4,1
+2022-10-03,08,Comirnaty,1,27
+2022-10-03,08,Comirnaty,2,53
+2022-10-03,08,Comirnaty,3,48
+2022-10-03,08,Comirnaty,4,638
+2022-10-03,08,Comirnaty bivalent (Original/Omikron),3,66
+2022-10-03,08,Comirnaty bivalent (Original/Omikron),4,348
+2022-10-03,08,Nuvaxovid,1,26
+2022-10-03,08,Nuvaxovid,2,28
+2022-10-03,08,Nuvaxovid,3,7
+2022-10-03,08,Spikevax,1,25
+2022-10-03,08,Spikevax,2,30
+2022-10-03,08,Spikevax,3,16
+2022-10-03,08,Spikevax,4,10
+2022-10-03,08,Spikevax bivalent (Original/Omikron),3,34
+2022-10-03,08,Spikevax bivalent (Original/Omikron),4,31
+2022-10-03,08,Valneva,1,24
+2022-10-03,09,Comirnaty,1,8
+2022-10-03,09,Comirnaty,2,8
+2022-10-03,09,Comirnaty,3,52
+2022-10-03,09,Comirnaty,4,485
+2022-10-03,09,Comirnaty bivalent (Original/Omikron),4,18
+2022-10-03,09,Spikevax,4,15
+2022-10-03,11,Comirnaty,1,79
+2022-10-03,11,Comirnaty,2,24
+2022-10-03,11,Comirnaty,3,39
+2022-10-03,11,Comirnaty,4,234
+2022-10-03,11,Comirnaty bivalent (Original/Omikron),3,22
+2022-10-03,11,Comirnaty bivalent (Original/Omikron),4,66
+2022-10-03,11,Spikevax,3,1
+2022-10-03,11,Spikevax,4,2
+2022-10-03,11,Spikevax bivalent (Original/Omikron),4,4
+2022-10-03,13,Comirnaty,1,3
+2022-10-03,13,Comirnaty,2,2
+2022-10-03,13,Comirnaty,3,5
+2022-10-03,13,Comirnaty,4,41
+2022-10-03,13,Spikevax,3,10
+2022-10-03,14,Comirnaty,2,4
+2022-10-03,14,Comirnaty,3,24
+2022-10-03,14,Comirnaty,4,107
+2022-10-03,14,Nuvaxovid,1,1
+2022-10-03,15,Comirnaty,2,1
+2022-10-03,15,Comirnaty,3,49
+2022-10-03,15,Comirnaty,4,308
+2022-10-03,16,Comirnaty,1,1
+2022-10-03,16,Comirnaty,4,14
