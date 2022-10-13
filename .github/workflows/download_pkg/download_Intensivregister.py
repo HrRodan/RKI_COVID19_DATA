@@ -9,7 +9,7 @@ def download_Intensivregister():
     filename_tagesdaten = 'DIVI_Intensivregister_Auszug_pro_Landkreis.csv'
     url_tagesdaten = "https://diviexchange.blob.core.windows.net/%24web/DIVI_Intensivregister_Auszug_pro_Landkreis.csv"
     filename_zeitreihe = 'bundesland-zeitreihe.csv'
-    url_zeitreihe = "https://diviexchange.blob.core.windows.net/%24web/bundesland-zeitreihe.csv"
+    url_zeitreihe = "https://diviexchange.blob.core.windows.net/%24web/zeitreihe-bundeslaender.csv"
     filename_zeitreihe_tagesdaten = 'zeitreihe-tagesdaten.csv'
     url_zeitreihe_tagesdaten="https://diviexchange.blob.core.windows.net/%24web/zeitreihe-tagesdaten.csv"
 
