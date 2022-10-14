@@ -512,7 +512,7 @@ def plot_covid(id_in, covid: Covid, testzahl, ir, iqm, fallzahlen, nc=None, lk_d
         ax[2].plot(ir_df_plot['report_date'], ir_df_plot["betten_frei"], color='lightblue',
                    label="Freie IV Kapazität Gesamt")
     else:
-        ax[2].plot(ir_df_plot.index, ir_df_plot["Aktuelle_COVID_Faelle_Erwachsene_ITS"], color='orange',
+        ax[2].plot(ir_df_plot.index, ir_df_plot["Aktuelle_COVID_Faelle_ITS"], color='orange',
                    label="Covid Patienten ITS")
         ax[2].plot(ir_df_plot.index, ir_df_plot["Freie_IV_Kapazitaeten_Davon_COVID"], color='blue',
                    label="Freie IV Kapazität für Covid")
