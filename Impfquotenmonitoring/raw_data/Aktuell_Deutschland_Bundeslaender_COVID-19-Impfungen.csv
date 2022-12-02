@@ -13501,8 +13501,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-06-10,04,Spikevax,2,90
 2021-06-10,04,Vaxzevria,1,230
 2021-06-10,04,Vaxzevria,2,473
-2021-06-10,05,Comirnaty,1,63996
-2021-06-10,05,Comirnaty,2,143715
+2021-06-10,05,Comirnaty,1,63997
+2021-06-10,05,Comirnaty,2,143714
 2021-06-10,05,Comirnaty,3,29
 2021-06-10,05,Jcovden,1,25422
 2021-06-10,05,Spikevax,1,754
@@ -32304,8 +32304,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-10-21,04,Spikevax,1,8
 2021-10-21,04,Spikevax,2,39
 2021-10-21,05,Comirnaty,1,9799
-2021-10-21,05,Comirnaty,2,19021
-2021-10-21,05,Comirnaty,3,17552
+2021-10-21,05,Comirnaty,2,19023
+2021-10-21,05,Comirnaty,3,17550
 2021-10-21,05,Jcovden,1,626
 2021-10-21,05,Jcovden,3,1
 2021-10-21,05,Spikevax,1,85
@@ -34929,7 +34929,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-11-09,05,Vaxzevria,1,1
 2021-11-09,05,Vaxzevria,2,10
 2021-11-09,05,Vaxzevria,3,7
-2021-11-09,06,Comirnaty,1,4517
+2021-11-09,06,Comirnaty,1,4518
 2021-11-09,06,Comirnaty,2,5594
 2021-11-09,06,Comirnaty,3,15992
 2021-11-09,06,Jcovden,1,351
@@ -35253,7 +35253,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-11-11,05,Vaxzevria,2,22
 2021-11-11,06,Comirnaty,1,4920
 2021-11-11,06,Comirnaty,2,5235
-2021-11-11,06,Comirnaty,3,18781
+2021-11-11,06,Comirnaty,3,18782
 2021-11-11,06,Jcovden,1,404
 2021-11-11,06,Jcovden,3,7
 2021-11-11,06,Spikevax,1,50
@@ -35287,8 +35287,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-11-11,09,Comirnaty,4,16
 2021-11-11,09,Jcovden,1,1455
 2021-11-11,09,Spikevax,1,304
-2021-11-11,09,Spikevax,2,365
-2021-11-11,09,Spikevax,3,2425
+2021-11-11,09,Spikevax,2,366
+2021-11-11,09,Spikevax,3,2424
 2021-11-11,09,Vaxzevria,1,4
 2021-11-11,09,Vaxzevria,2,14
 2021-11-11,09,Vaxzevria,3,6
@@ -35411,7 +35411,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-11-12,05,Vaxzevria,2,4
 2021-11-12,05,Vaxzevria,3,2
 2021-11-12,06,Comirnaty,1,4106
-2021-11-12,06,Comirnaty,2,3788
+2021-11-12,06,Comirnaty,2,3789
 2021-11-12,06,Comirnaty,3,15589
 2021-11-12,06,Jcovden,1,391
 2021-11-12,06,Jcovden,3,1
@@ -35648,8 +35648,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-11-14,01,Spikevax,1,1
 2021-11-14,01,Spikevax,3,1
 2021-11-14,02,Comirnaty,1,221
-2021-11-14,02,Comirnaty,2,233
-2021-11-14,02,Comirnaty,3,561
+2021-11-14,02,Comirnaty,2,234
+2021-11-14,02,Comirnaty,3,560
 2021-11-14,02,Jcovden,1,62
 2021-11-14,02,Spikevax,1,1
 2021-11-14,02,Spikevax,2,10
@@ -36256,7 +36256,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-11-18,05,Vaxzevria,3,5
 2021-11-18,06,Comirnaty,1,5684
 2021-11-18,06,Comirnaty,2,5542
-2021-11-18,06,Comirnaty,3,29518
+2021-11-18,06,Comirnaty,3,29520
 2021-11-18,06,Jcovden,1,523
 2021-11-18,06,Jcovden,3,3
 2021-11-18,06,Spikevax,1,105
@@ -36833,8 +36833,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-11-22,05,Vaxzevria,2,2
 2021-11-22,05,Vaxzevria,3,3
 2021-11-22,06,Comirnaty,1,4741
-2021-11-22,06,Comirnaty,2,2601
-2021-11-22,06,Comirnaty,3,17834
+2021-11-22,06,Comirnaty,2,2602
+2021-11-22,06,Comirnaty,3,17833
 2021-11-22,06,Jcovden,1,598
 2021-11-22,06,Jcovden,2,1
 2021-11-22,06,Spikevax,1,202
@@ -36969,8 +36969,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-11-23,02,Vaxzevria,1,1
 2021-11-23,02,Vaxzevria,3,2
 2021-11-23,03,Comirnaty,1,10785
-2021-11-23,03,Comirnaty,2,7255
-2021-11-23,03,Comirnaty,3,58311
+2021-11-23,03,Comirnaty,2,7256
+2021-11-23,03,Comirnaty,3,58310
 2021-11-23,03,Comirnaty,4,2
 2021-11-23,03,Jcovden,1,714
 2021-11-23,03,Jcovden,2,2
@@ -37687,7 +37687,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-11-27,05,Vaxzevria,3,6
 2021-11-27,06,Comirnaty,1,5383
 2021-11-27,06,Comirnaty,2,1771
-2021-11-27,06,Comirnaty,3,26442
+2021-11-27,06,Comirnaty,3,26443
 2021-11-27,06,Comirnaty,4,1
 2021-11-27,06,Jcovden,1,514
 2021-11-27,06,Spikevax,1,823
@@ -37822,7 +37822,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-11-28,05,Spikevax,2,314
 2021-11-28,05,Spikevax,3,7675
 2021-11-28,06,Comirnaty,1,2003
-2021-11-28,06,Comirnaty,2,561
+2021-11-28,06,Comirnaty,2,562
 2021-11-28,06,Comirnaty,3,7013
 2021-11-28,06,Jcovden,1,182
 2021-11-28,06,Spikevax,1,741
@@ -38123,7 +38123,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-11-30,05,Vaxzevria,3,19
 2021-11-30,06,Comirnaty,1,7302
 2021-11-30,06,Comirnaty,2,5373
-2021-11-30,06,Comirnaty,3,35648
+2021-11-30,06,Comirnaty,3,35649
 2021-11-30,06,Comirnaty,4,2
 2021-11-30,06,Jcovden,1,971
 2021-11-30,06,Jcovden,3,2
@@ -38300,7 +38300,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-01,05,Vaxzevria,3,21
 2021-12-01,06,Comirnaty,1,7877
 2021-12-01,06,Comirnaty,2,5676
-2021-12-01,06,Comirnaty,3,47846
+2021-12-01,06,Comirnaty,3,47847
 2021-12-01,06,Comirnaty,4,3
 2021-12-01,06,Jcovden,1,615
 2021-12-01,06,Jcovden,3,5
@@ -38336,16 +38336,16 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-01,08,Vaxzevria,1,9
 2021-12-01,08,Vaxzevria,2,1
 2021-12-01,08,Vaxzevria,3,78
-2021-12-01,09,Comirnaty,1,16113
+2021-12-01,09,Comirnaty,1,16114
 2021-12-01,09,Comirnaty,2,14036
-2021-12-01,09,Comirnaty,3,109246
+2021-12-01,09,Comirnaty,3,109245
 2021-12-01,09,Comirnaty,4,21
 2021-12-01,09,Jcovden,1,1406
 2021-12-01,09,Jcovden,2,7
 2021-12-01,09,Jcovden,3,2
 2021-12-01,09,Spikevax,1,3054
-2021-12-01,09,Spikevax,2,2003
-2021-12-01,09,Spikevax,3,60875
+2021-12-01,09,Spikevax,2,2004
+2021-12-01,09,Spikevax,3,60874
 2021-12-01,09,Spikevax,4,11
 2021-12-01,09,Vaxzevria,1,21
 2021-12-01,09,Vaxzevria,2,20
@@ -38446,8 +38446,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-02,03,Jcovden,2,1
 2021-12-02,03,Jcovden,3,27
 2021-12-02,03,Spikevax,1,1781
-2021-12-02,03,Spikevax,2,1433
-2021-12-02,03,Spikevax,3,36753
+2021-12-02,03,Spikevax,2,1434
+2021-12-02,03,Spikevax,3,36752
 2021-12-02,03,Spikevax,4,1
 2021-12-02,03,Vaxzevria,1,2
 2021-12-02,03,Vaxzevria,2,2
@@ -38461,8 +38461,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-02,04,Spikevax,3,1872
 2021-12-02,04,Vaxzevria,3,1
 2021-12-02,05,Comirnaty,1,15574
-2021-12-02,05,Comirnaty,2,14204
-2021-12-02,05,Comirnaty,3,138611
+2021-12-02,05,Comirnaty,2,14205
+2021-12-02,05,Comirnaty,3,138610
 2021-12-02,05,Comirnaty,4,2
 2021-12-02,05,Jcovden,1,1376
 2021-12-02,05,Jcovden,2,8
@@ -38480,7 +38480,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-02,06,Jcovden,3,1
 2021-12-02,06,Spikevax,1,2043
 2021-12-02,06,Spikevax,2,858
-2021-12-02,06,Spikevax,3,23311
+2021-12-02,06,Spikevax,3,23312
 2021-12-02,06,Vaxzevria,1,3
 2021-12-02,06,Vaxzevria,3,4
 2021-12-02,07,Comirnaty,1,4543
@@ -38638,16 +38638,16 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-03,04,Spikevax,1,321
 2021-12-03,04,Spikevax,2,128
 2021-12-03,04,Spikevax,3,2201
-2021-12-03,05,Comirnaty,1,13132
+2021-12-03,05,Comirnaty,1,13139
 2021-12-03,05,Comirnaty,2,9904
-2021-12-03,05,Comirnaty,3,136654
+2021-12-03,05,Comirnaty,3,136686
 2021-12-03,05,Comirnaty,4,2
 2021-12-03,05,Jcovden,1,1129
 2021-12-03,05,Jcovden,2,2
 2021-12-03,05,Jcovden,3,13
 2021-12-03,05,Spikevax,1,3971
-2021-12-03,05,Spikevax,2,2449
-2021-12-03,05,Spikevax,3,105592
+2021-12-03,05,Spikevax,2,2450
+2021-12-03,05,Spikevax,3,105659
 2021-12-03,05,Vaxzevria,1,2
 2021-12-03,05,Vaxzevria,2,7
 2021-12-03,05,Vaxzevria,3,4
@@ -38659,7 +38659,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-03,06,Jcovden,3,1
 2021-12-03,06,Spikevax,1,2126
 2021-12-03,06,Spikevax,2,868
-2021-12-03,06,Spikevax,3,23618
+2021-12-03,06,Spikevax,3,23619
 2021-12-03,06,Spikevax,4,1
 2021-12-03,06,Vaxzevria,1,2
 2021-12-03,06,Vaxzevria,2,1
@@ -38812,16 +38812,16 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-04,04,Spikevax,1,394
 2021-12-04,04,Spikevax,2,185
 2021-12-04,04,Spikevax,3,2938
-2021-12-04,05,Comirnaty,1,11292
-2021-12-04,05,Comirnaty,2,5887
-2021-12-04,05,Comirnaty,3,107789
+2021-12-04,05,Comirnaty,1,11299
+2021-12-04,05,Comirnaty,2,5892
+2021-12-04,05,Comirnaty,3,107852
 2021-12-04,05,Comirnaty,4,2
 2021-12-04,05,Jcovden,1,1133
 2021-12-04,05,Jcovden,2,1
 2021-12-04,05,Jcovden,3,11
-2021-12-04,05,Spikevax,1,5548
-2021-12-04,05,Spikevax,2,3260
-2021-12-04,05,Spikevax,3,157527
+2021-12-04,05,Spikevax,1,5553
+2021-12-04,05,Spikevax,2,3261
+2021-12-04,05,Spikevax,3,157609
 2021-12-04,05,Vaxzevria,1,4
 2021-12-04,05,Vaxzevria,2,1
 2021-12-04,05,Vaxzevria,3,2
@@ -39319,14 +39319,14 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-07,08,Vaxzevria,2,4
 2021-12-07,08,Vaxzevria,3,7
 2021-12-07,09,Comirnaty,1,11671
-2021-12-07,09,Comirnaty,2,14057
-2021-12-07,09,Comirnaty,3,86599
+2021-12-07,09,Comirnaty,2,14058
+2021-12-07,09,Comirnaty,3,86598
 2021-12-07,09,Comirnaty,4,20
 2021-12-07,09,Comirnaty,5,1
 2021-12-07,09,Jcovden,1,911
 2021-12-07,09,Spikevax,1,3218
-2021-12-07,09,Spikevax,2,2215
-2021-12-07,09,Spikevax,3,74261
+2021-12-07,09,Spikevax,2,2217
+2021-12-07,09,Spikevax,3,74259
 2021-12-07,09,Spikevax,4,13
 2021-12-07,09,Vaxzevria,1,11
 2021-12-07,09,Vaxzevria,2,8
@@ -39419,8 +39419,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-08,02,Jcovden,2,1
 2021-12-08,02,Jcovden,3,3
 2021-12-08,02,Spikevax,1,358
-2021-12-08,02,Spikevax,2,423
-2021-12-08,02,Spikevax,3,12442
+2021-12-08,02,Spikevax,2,424
+2021-12-08,02,Spikevax,3,12441
 2021-12-08,02,Spikevax,4,1
 2021-12-08,03,Comirnaty,1,6567
 2021-12-08,03,Comirnaty,2,6813
@@ -39428,8 +39428,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-08,03,Jcovden,1,671
 2021-12-08,03,Jcovden,3,10
 2021-12-08,03,Spikevax,1,2162
-2021-12-08,03,Spikevax,2,2698
-2021-12-08,03,Spikevax,3,81267
+2021-12-08,03,Spikevax,2,2699
+2021-12-08,03,Spikevax,3,81266
 2021-12-08,03,Vaxzevria,2,1
 2021-12-08,03,Vaxzevria,3,5
 2021-12-08,04,Comirnaty,1,682
@@ -39448,8 +39448,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-08,05,Jcovden,3,12
 2021-12-08,05,Jcovden,4,1
 2021-12-08,05,Spikevax,1,4732
-2021-12-08,05,Spikevax,2,4045
-2021-12-08,05,Spikevax,3,154771
+2021-12-08,05,Spikevax,2,4046
+2021-12-08,05,Spikevax,3,154770
 2021-12-08,05,Spikevax,4,3
 2021-12-08,05,Vaxzevria,1,1
 2021-12-08,05,Vaxzevria,2,4
@@ -39474,8 +39474,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-08,07,Jcovden,1,256
 2021-12-08,07,Jcovden,3,3
 2021-12-08,07,Spikevax,1,1326
-2021-12-08,07,Spikevax,2,663
-2021-12-08,07,Spikevax,3,33174
+2021-12-08,07,Spikevax,2,664
+2021-12-08,07,Spikevax,3,33173
 2021-12-08,07,Spikevax,4,2
 2021-12-08,07,Vaxzevria,3,7
 2021-12-08,08,Comirnaty,1,8813
@@ -39634,8 +39634,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-09,06,Jcovden,1,482
 2021-12-09,06,Jcovden,2,1
 2021-12-09,06,Spikevax,1,2300
-2021-12-09,06,Spikevax,2,1340
-2021-12-09,06,Spikevax,3,38260
+2021-12-09,06,Spikevax,2,1342
+2021-12-09,06,Spikevax,3,38258
 2021-12-09,06,Spikevax,4,2
 2021-12-09,06,Vaxzevria,1,1
 2021-12-09,06,Vaxzevria,2,3
@@ -39784,16 +39784,16 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-10,04,Spikevax,1,419
 2021-12-10,04,Spikevax,2,222
 2021-12-10,04,Spikevax,3,4571
-2021-12-10,05,Comirnaty,1,9540
-2021-12-10,05,Comirnaty,2,10460
-2021-12-10,05,Comirnaty,3,113267
+2021-12-10,05,Comirnaty,1,9548
+2021-12-10,05,Comirnaty,2,10467
+2021-12-10,05,Comirnaty,3,113293
 2021-12-10,05,Comirnaty,4,6
 2021-12-10,05,Jcovden,1,834
 2021-12-10,05,Jcovden,2,1
 2021-12-10,05,Jcovden,3,14
-2021-12-10,05,Spikevax,1,3865
-2021-12-10,05,Spikevax,2,3615
-2021-12-10,05,Spikevax,3,141579
+2021-12-10,05,Spikevax,1,3870
+2021-12-10,05,Spikevax,2,3618
+2021-12-10,05,Spikevax,3,141715
 2021-12-10,05,Spikevax,4,5
 2021-12-10,05,Vaxzevria,1,5
 2021-12-10,05,Vaxzevria,2,4
@@ -39949,15 +39949,15 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-11,04,Spikevax,1,278
 2021-12-11,04,Spikevax,2,175
 2021-12-11,04,Spikevax,3,4153
-2021-12-11,05,Comirnaty,1,9480
-2021-12-11,05,Comirnaty,2,7799
-2021-12-11,05,Comirnaty,3,105490
+2021-12-11,05,Comirnaty,1,9494
+2021-12-11,05,Comirnaty,2,7817
+2021-12-11,05,Comirnaty,3,105568
 2021-12-11,05,Comirnaty,4,1
 2021-12-11,05,Jcovden,1,631
 2021-12-11,05,Jcovden,3,4
-2021-12-11,05,Spikevax,1,4639
-2021-12-11,05,Spikevax,2,4420
-2021-12-11,05,Spikevax,3,189017
+2021-12-11,05,Spikevax,1,4654
+2021-12-11,05,Spikevax,2,4429
+2021-12-11,05,Spikevax,3,189186
 2021-12-11,05,Vaxzevria,1,2
 2021-12-11,05,Vaxzevria,3,5
 2021-12-11,06,Comirnaty,1,3791
@@ -40095,14 +40095,14 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-12,04,Spikevax,1,142
 2021-12-12,04,Spikevax,2,88
 2021-12-12,04,Spikevax,3,1988
-2021-12-12,05,Comirnaty,1,2310
-2021-12-12,05,Comirnaty,2,2435
-2021-12-12,05,Comirnaty,3,22828
+2021-12-12,05,Comirnaty,1,2312
+2021-12-12,05,Comirnaty,2,2439
+2021-12-12,05,Comirnaty,3,22857
 2021-12-12,05,Jcovden,1,189
 2021-12-12,05,Jcovden,3,3
-2021-12-12,05,Spikevax,1,1149
-2021-12-12,05,Spikevax,2,1414
-2021-12-12,05,Spikevax,3,50679
+2021-12-12,05,Spikevax,1,1152
+2021-12-12,05,Spikevax,2,1416
+2021-12-12,05,Spikevax,3,51045
 2021-12-12,06,Comirnaty,1,1139
 2021-12-12,06,Comirnaty,2,961
 2021-12-12,06,Comirnaty,3,8144
@@ -40378,8 +40378,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-14,03,Jcovden,1,304
 2021-12-14,03,Jcovden,3,21
 2021-12-14,03,Spikevax,1,1418
-2021-12-14,03,Spikevax,2,1954
-2021-12-14,03,Spikevax,3,76073
+2021-12-14,03,Spikevax,2,1955
+2021-12-14,03,Spikevax,3,76072
 2021-12-14,03,Spikevax,4,4
 2021-12-14,03,Vaxzevria,1,2
 2021-12-14,03,Vaxzevria,3,22
@@ -40413,8 +40413,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-14,06,Jcovden,1,313
 2021-12-14,06,Jcovden,3,3
 2021-12-14,06,Spikevax,1,1671
-2021-12-14,06,Spikevax,2,1160
-2021-12-14,06,Spikevax,3,41795
+2021-12-14,06,Spikevax,2,1161
+2021-12-14,06,Spikevax,3,41794
 2021-12-14,06,Spikevax,4,1
 2021-12-14,06,Vaxzevria,1,1
 2021-12-14,06,Vaxzevria,2,1
@@ -40621,8 +40621,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-15,08,Vaxzevria,2,4
 2021-12-15,08,Vaxzevria,3,8
 2021-12-15,09,Comirnaty,1,14684
-2021-12-15,09,Comirnaty,2,19432
-2021-12-15,09,Comirnaty,3,103697
+2021-12-15,09,Comirnaty,2,19433
+2021-12-15,09,Comirnaty,3,103696
 2021-12-15,09,Comirnaty,4,19
 2021-12-15,09,Jcovden,1,555
 2021-12-15,09,Jcovden,3,5
@@ -40731,8 +40731,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-16,03,Jcovden,1,255
 2021-12-16,03,Jcovden,3,15
 2021-12-16,03,Spikevax,1,1324
-2021-12-16,03,Spikevax,2,2569
-2021-12-16,03,Spikevax,3,77746
+2021-12-16,03,Spikevax,2,2570
+2021-12-16,03,Spikevax,3,77745
 2021-12-16,03,Spikevax,4,2
 2021-12-16,03,Vaxzevria,1,4
 2021-12-16,03,Vaxzevria,2,7
@@ -40928,15 +40928,15 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-17,04,Spikevax,3,6303
 2021-12-17,04,Spikevax,4,3
 2021-12-17,04,Vaxzevria,1,1
-2021-12-17,05,Comirnaty,1,20336
-2021-12-17,05,Comirnaty,2,17114
-2021-12-17,05,Comirnaty,3,118955
+2021-12-17,05,Comirnaty,1,20345
+2021-12-17,05,Comirnaty,2,17120
+2021-12-17,05,Comirnaty,3,118986
 2021-12-17,05,Comirnaty,4,6
 2021-12-17,05,Jcovden,1,485
 2021-12-17,05,Jcovden,3,8
-2021-12-17,05,Spikevax,1,2550
-2021-12-17,05,Spikevax,2,3600
-2021-12-17,05,Spikevax,3,120232
+2021-12-17,05,Spikevax,1,2551
+2021-12-17,05,Spikevax,2,3607
+2021-12-17,05,Spikevax,3,120374
 2021-12-17,05,Spikevax,4,4
 2021-12-17,05,Vaxzevria,1,2
 2021-12-17,05,Vaxzevria,2,9
@@ -41071,8 +41071,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-18,01,Spikevax,2,864
 2021-12-18,01,Spikevax,3,22328
 2021-12-18,02,Comirnaty,1,1989
-2021-12-18,02,Comirnaty,2,1220
-2021-12-18,02,Comirnaty,3,8684
+2021-12-18,02,Comirnaty,2,1221
+2021-12-18,02,Comirnaty,3,8683
 2021-12-18,02,Jcovden,1,98
 2021-12-18,02,Spikevax,1,150
 2021-12-18,02,Spikevax,2,196
@@ -41095,15 +41095,15 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-18,04,Spikevax,2,156
 2021-12-18,04,Spikevax,3,6233
 2021-12-18,04,Vaxzevria,3,1
-2021-12-18,05,Comirnaty,1,20641
-2021-12-18,05,Comirnaty,2,13227
-2021-12-18,05,Comirnaty,3,104810
+2021-12-18,05,Comirnaty,1,20645
+2021-12-18,05,Comirnaty,2,13252
+2021-12-18,05,Comirnaty,3,104860
 2021-12-18,05,Comirnaty,4,3
 2021-12-18,05,Jcovden,1,254
 2021-12-18,05,Jcovden,3,1
-2021-12-18,05,Spikevax,1,2515
-2021-12-18,05,Spikevax,2,3967
-2021-12-18,05,Spikevax,3,141700
+2021-12-18,05,Spikevax,1,2517
+2021-12-18,05,Spikevax,2,3968
+2021-12-18,05,Spikevax,3,141933
 2021-12-18,05,Spikevax,4,3
 2021-12-18,05,Vaxzevria,1,6
 2021-12-18,05,Vaxzevria,2,1
@@ -41520,8 +41520,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-20,17,Spikevax,3,562
 2021-12-20,17,Spikevax,4,1
 2021-12-21,01,Comirnaty,1,2271
-2021-12-21,01,Comirnaty,2,3249
-2021-12-21,01,Comirnaty,3,15366
+2021-12-21,01,Comirnaty,2,3250
+2021-12-21,01,Comirnaty,3,15365
 2021-12-21,01,Jcovden,1,15
 2021-12-21,01,Jcovden,3,2
 2021-12-21,01,Spikevax,1,457
@@ -42378,8 +42378,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-27,04,Spikevax,2,124
 2021-12-27,04,Spikevax,3,3057
 2021-12-27,04,Spikevax,4,1
-2021-12-27,05,Comirnaty,1,10760
-2021-12-27,05,Comirnaty,2,8761
+2021-12-27,05,Comirnaty,1,10866
+2021-12-27,05,Comirnaty,2,8763
 2021-12-27,05,Comirnaty,3,43430
 2021-12-27,05,Comirnaty,4,2
 2021-12-27,05,Jcovden,1,159
@@ -42541,8 +42541,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2021-12-28,04,Spikevax,2,179
 2021-12-28,04,Spikevax,3,3761
 2021-12-28,04,Spikevax,4,4
-2021-12-28,05,Comirnaty,1,12499
-2021-12-28,05,Comirnaty,2,11204
+2021-12-28,05,Comirnaty,1,12605
+2021-12-28,05,Comirnaty,2,11207
 2021-12-28,05,Comirnaty,3,54724
 2021-12-28,05,Comirnaty,4,3
 2021-12-28,05,Jcovden,1,172
@@ -43357,8 +43357,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-03,04,Spikevax,2,311
 2022-01-03,04,Spikevax,3,3347
 2022-01-03,04,Spikevax,4,1
-2022-01-03,05,Comirnaty,1,9127
-2022-01-03,05,Comirnaty,2,7790
+2022-01-03,05,Comirnaty,1,9208
+2022-01-03,05,Comirnaty,2,7794
 2022-01-03,05,Comirnaty,3,31976
 2022-01-03,05,Jcovden,1,112
 2022-01-03,05,Jcovden,3,5
@@ -43509,7 +43509,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-04,04,Spikevax,2,338
 2022-01-04,04,Spikevax,3,2993
 2022-01-04,04,Spikevax,4,1
-2022-01-04,05,Comirnaty,1,10674
+2022-01-04,05,Comirnaty,1,10718
 2022-01-04,05,Comirnaty,2,14249
 2022-01-04,05,Comirnaty,3,56504
 2022-01-04,05,Comirnaty,4,3
@@ -43582,8 +43582,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-04,11,Comirnaty,4,1
 2022-01-04,11,Jcovden,1,74
 2022-01-04,11,Spikevax,1,386
-2022-01-04,11,Spikevax,2,1299
-2022-01-04,11,Spikevax,3,12610
+2022-01-04,11,Spikevax,2,1300
+2022-01-04,11,Spikevax,3,12609
 2022-01-04,11,Spikevax,4,1
 2022-01-04,12,Comirnaty,1,1079
 2022-01-04,12,Comirnaty,2,2864
@@ -43641,8 +43641,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-05,01,Spikevax,3,19823
 2022-01-05,01,Spikevax,4,1
 2022-01-05,02,Comirnaty,1,1151
-2022-01-05,02,Comirnaty,2,1407
-2022-01-05,02,Comirnaty,3,8387
+2022-01-05,02,Comirnaty,2,1408
+2022-01-05,02,Comirnaty,3,8386
 2022-01-05,02,Jcovden,1,66
 2022-01-05,02,Jcovden,3,1
 2022-01-05,02,Spikevax,1,133
@@ -43718,8 +43718,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-05,08,Spikevax,4,16
 2022-01-05,08,Vaxzevria,2,70
 2022-01-05,09,Comirnaty,1,8632
-2022-01-05,09,Comirnaty,2,14956
-2022-01-05,09,Comirnaty,3,45938
+2022-01-05,09,Comirnaty,2,14957
+2022-01-05,09,Comirnaty,3,45937
 2022-01-05,09,Comirnaty,4,24
 2022-01-05,09,Jcovden,1,119
 2022-01-05,09,Jcovden,3,8
@@ -43802,8 +43802,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-06,01,Comirnaty,4,2
 2022-01-06,01,Jcovden,1,7
 2022-01-06,01,Spikevax,1,260
-2022-01-06,01,Spikevax,2,1237
-2022-01-06,01,Spikevax,3,16089
+2022-01-06,01,Spikevax,2,1238
+2022-01-06,01,Spikevax,3,16088
 2022-01-06,01,Spikevax,4,3
 2022-01-06,02,Comirnaty,1,1178
 2022-01-06,02,Comirnaty,2,1595
@@ -43999,16 +43999,16 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-07,04,Spikevax,2,472
 2022-01-07,04,Spikevax,3,4822
 2022-01-07,04,Spikevax,4,3
-2022-01-07,05,Comirnaty,1,10371
-2022-01-07,05,Comirnaty,2,21835
-2022-01-07,05,Comirnaty,3,71357
+2022-01-07,05,Comirnaty,1,10385
+2022-01-07,05,Comirnaty,2,21855
+2022-01-07,05,Comirnaty,3,71431
 2022-01-07,05,Comirnaty,4,18
 2022-01-07,05,Jcovden,1,231
 2022-01-07,05,Jcovden,2,1
 2022-01-07,05,Jcovden,3,495
-2022-01-07,05,Spikevax,1,1211
-2022-01-07,05,Spikevax,2,4595
-2022-01-07,05,Spikevax,3,54197
+2022-01-07,05,Spikevax,1,1220
+2022-01-07,05,Spikevax,2,4599
+2022-01-07,05,Spikevax,3,54286
 2022-01-07,05,Spikevax,4,28
 2022-01-07,05,Vaxzevria,3,1
 2022-01-07,06,Comirnaty,1,4223
@@ -44161,15 +44161,15 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-08,04,Spikevax,2,436
 2022-01-08,04,Spikevax,3,3820
 2022-01-08,04,Spikevax,4,1
-2022-01-08,05,Comirnaty,1,9880
-2022-01-08,05,Comirnaty,2,17241
-2022-01-08,05,Comirnaty,3,47874
+2022-01-08,05,Comirnaty,1,9884
+2022-01-08,05,Comirnaty,2,17245
+2022-01-08,05,Comirnaty,3,47932
 2022-01-08,05,Comirnaty,4,2
 2022-01-08,05,Jcovden,1,92
 2022-01-08,05,Jcovden,3,271
-2022-01-08,05,Spikevax,1,628
-2022-01-08,05,Spikevax,2,3197
-2022-01-08,05,Spikevax,3,34854
+2022-01-08,05,Spikevax,1,634
+2022-01-08,05,Spikevax,2,3214
+2022-01-08,05,Spikevax,3,34999
 2022-01-08,05,Spikevax,4,7
 2022-01-08,05,Vaxzevria,2,1
 2022-01-08,06,Comirnaty,1,3483
@@ -44470,8 +44470,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-10,06,Comirnaty,4,4
 2022-01-10,06,Jcovden,1,37
 2022-01-10,06,Spikevax,1,594
-2022-01-10,06,Spikevax,2,1589
-2022-01-10,06,Spikevax,3,17806
+2022-01-10,06,Spikevax,2,1590
+2022-01-10,06,Spikevax,3,17805
 2022-01-10,06,Spikevax,4,5
 2022-01-10,06,Spikevax,5,1
 2022-01-10,07,Comirnaty,1,2350
@@ -44594,8 +44594,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-11,02,Jcovden,2,2
 2022-01-11,02,Jcovden,3,3
 2022-01-11,02,Spikevax,1,139
-2022-01-11,02,Spikevax,2,521
-2022-01-11,02,Spikevax,3,10522
+2022-01-11,02,Spikevax,2,522
+2022-01-11,02,Spikevax,3,10521
 2022-01-11,02,Spikevax,4,3
 2022-01-11,03,Comirnaty,1,4039
 2022-01-11,03,Comirnaty,2,8564
@@ -44766,8 +44766,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-12,02,Jcovden,2,1
 2022-01-12,02,Jcovden,3,8
 2022-01-12,02,Spikevax,1,134
-2022-01-12,02,Spikevax,2,501
-2022-01-12,02,Spikevax,3,10409
+2022-01-12,02,Spikevax,2,502
+2022-01-12,02,Spikevax,3,10408
 2022-01-12,02,Spikevax,4,3
 2022-01-12,02,Vaxzevria,1,1
 2022-01-12,03,Comirnaty,1,5830
@@ -44804,7 +44804,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-12,05,Vaxzevria,3,4
 2022-01-12,06,Comirnaty,1,5526
 2022-01-12,06,Comirnaty,2,8621
-2022-01-12,06,Comirnaty,3,31634
+2022-01-12,06,Comirnaty,3,31635
 2022-01-12,06,Comirnaty,4,44
 2022-01-12,06,Jcovden,1,46
 2022-01-12,06,Jcovden,3,7
@@ -44839,8 +44839,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-12,08,Spikevax,3,37615
 2022-01-12,08,Spikevax,4,43
 2022-01-12,09,Comirnaty,1,7047
-2022-01-12,09,Comirnaty,2,19025
-2022-01-12,09,Comirnaty,3,54794
+2022-01-12,09,Comirnaty,2,19026
+2022-01-12,09,Comirnaty,3,54793
 2022-01-12,09,Comirnaty,4,26
 2022-01-12,09,Comirnaty,5,2
 2022-01-12,09,Jcovden,1,112
@@ -45143,17 +45143,17 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-14,04,Spikevax,2,605
 2022-01-14,04,Spikevax,3,3413
 2022-01-14,04,Spikevax,4,5
-2022-01-14,05,Comirnaty,1,12174
-2022-01-14,05,Comirnaty,2,17520
-2022-01-14,05,Comirnaty,3,64129
+2022-01-14,05,Comirnaty,1,12175
+2022-01-14,05,Comirnaty,2,17536
+2022-01-14,05,Comirnaty,3,64218
 2022-01-14,05,Comirnaty,4,8
 2022-01-14,05,Jcovden,1,247
 2022-01-14,05,Jcovden,2,1
 2022-01-14,05,Jcovden,3,837
-2022-01-14,05,Spikevax,1,1398
-2022-01-14,05,Spikevax,2,4384
-2022-01-14,05,Spikevax,3,58474
-2022-01-14,05,Spikevax,4,11
+2022-01-14,05,Spikevax,1,1402
+2022-01-14,05,Spikevax,2,4393
+2022-01-14,05,Spikevax,3,58553
+2022-01-14,05,Spikevax,4,12
 2022-01-14,05,Vaxzevria,1,310
 2022-01-14,05,Vaxzevria,2,95
 2022-01-14,06,Comirnaty,1,5167
@@ -45314,9 +45314,9 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-15,04,Spikevax,2,373
 2022-01-15,04,Spikevax,3,2484
 2022-01-15,04,Spikevax,4,4
-2022-01-15,05,Comirnaty,1,13557
-2022-01-15,05,Comirnaty,2,13336
-2022-01-15,05,Comirnaty,3,39934
+2022-01-15,05,Comirnaty,1,13560
+2022-01-15,05,Comirnaty,2,13476
+2022-01-15,05,Comirnaty,3,39966
 2022-01-15,05,Comirnaty,4,6
 2022-01-15,05,Comirnaty,5,2
 2022-01-15,05,Jcovden,1,63
@@ -45931,8 +45931,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-19,03,Vaxzevria,1,683
 2022-01-19,03,Vaxzevria,2,90
 2022-01-19,04,Comirnaty,1,364
-2022-01-19,04,Comirnaty,2,668
-2022-01-19,04,Comirnaty,3,2435
+2022-01-19,04,Comirnaty,2,669
+2022-01-19,04,Comirnaty,3,2434
 2022-01-19,04,Comirnaty,4,1
 2022-01-19,04,Jcovden,1,1
 2022-01-19,04,Jcovden,3,1
@@ -46295,8 +46295,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-21,04,Spikevax,2,415
 2022-01-21,04,Spikevax,3,2701
 2022-01-21,04,Spikevax,4,1
-2022-01-21,05,Comirnaty,1,9861
-2022-01-21,05,Comirnaty,2,13869
+2022-01-21,05,Comirnaty,1,9864
+2022-01-21,05,Comirnaty,2,13968
 2022-01-21,05,Comirnaty,3,52963
 2022-01-21,05,Comirnaty,4,7
 2022-01-21,05,Comirnaty,5,4
@@ -46473,8 +46473,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-22,04,Spikevax,2,331
 2022-01-22,04,Spikevax,3,1608
 2022-01-22,04,Spikevax,4,3
-2022-01-22,05,Comirnaty,1,6389
-2022-01-22,05,Comirnaty,2,9648
+2022-01-22,05,Comirnaty,1,6390
+2022-01-22,05,Comirnaty,2,9742
 2022-01-22,05,Comirnaty,3,27522
 2022-01-22,05,Comirnaty,4,3
 2022-01-22,05,Jcovden,1,75
@@ -46862,8 +46862,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-24,15,Jcovden,1,7
 2022-01-24,15,Jcovden,2,2
 2022-01-24,15,Spikevax,1,147
-2022-01-24,15,Spikevax,2,581
-2022-01-24,15,Spikevax,3,2865
+2022-01-24,15,Spikevax,2,582
+2022-01-24,15,Spikevax,3,2864
 2022-01-24,15,Spikevax,4,1
 2022-01-24,16,Comirnaty,1,554
 2022-01-24,16,Comirnaty,2,1500
@@ -47218,8 +47218,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-26,13,Spikevax,5,11
 2022-01-26,14,Comirnaty,1,1773
 2022-01-26,14,Comirnaty,2,2740
-2022-01-26,14,Comirnaty,3,13142
-2022-01-26,14,Comirnaty,4,7
+2022-01-26,14,Comirnaty,3,13143
+2022-01-26,14,Comirnaty,4,6
 2022-01-26,14,Comirnaty,5,1
 2022-01-26,14,Jcovden,1,3
 2022-01-26,14,Jcovden,3,8
@@ -47500,8 +47500,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-28,04,Spikevax,2,324
 2022-01-28,04,Spikevax,3,1688
 2022-01-28,04,Spikevax,4,13
-2022-01-28,05,Comirnaty,1,7663
-2022-01-28,05,Comirnaty,2,13092
+2022-01-28,05,Comirnaty,1,7665
+2022-01-28,05,Comirnaty,2,13176
 2022-01-28,05,Comirnaty,3,45037
 2022-01-28,05,Comirnaty,4,21
 2022-01-28,05,Comirnaty,5,8
@@ -47684,17 +47684,17 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-01-29,04,Spikevax,2,190
 2022-01-29,04,Spikevax,3,693
 2022-01-29,04,Spikevax,4,2
-2022-01-29,05,Comirnaty,1,5363
-2022-01-29,05,Comirnaty,2,8757
-2022-01-29,05,Comirnaty,3,18952
+2022-01-29,05,Comirnaty,1,5371
+2022-01-29,05,Comirnaty,2,8776
+2022-01-29,05,Comirnaty,3,19089
 2022-01-29,05,Comirnaty,4,28
 2022-01-29,05,Comirnaty,5,4
 2022-01-29,05,Jcovden,1,10
 2022-01-29,05,Jcovden,2,13
 2022-01-29,05,Jcovden,3,37
-2022-01-29,05,Spikevax,1,409
-2022-01-29,05,Spikevax,2,1870
-2022-01-29,05,Spikevax,3,10800
+2022-01-29,05,Spikevax,1,414
+2022-01-29,05,Spikevax,2,1885
+2022-01-29,05,Spikevax,3,10885
 2022-01-29,05,Spikevax,4,24
 2022-01-29,05,Spikevax,5,2
 2022-01-29,05,Vaxzevria,2,144
@@ -48166,8 +48166,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-02-01,05,Jcovden,2,8
 2022-02-01,05,Jcovden,3,4
 2022-02-01,05,Spikevax,1,401
-2022-02-01,05,Spikevax,2,1560
-2022-02-01,05,Spikevax,3,8922
+2022-02-01,05,Spikevax,2,1561
+2022-02-01,05,Spikevax,3,8921
 2022-02-01,05,Spikevax,4,51
 2022-02-01,05,Spikevax,5,26
 2022-02-01,06,Comirnaty,1,2172
@@ -48784,8 +48784,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-02-04,10,Jcovden,3,1
 2022-02-04,10,Spikevax,1,24
 2022-02-04,10,Spikevax,2,143
-2022-02-04,10,Spikevax,3,573
-2022-02-04,10,Spikevax,4,13
+2022-02-04,10,Spikevax,3,574
+2022-02-04,10,Spikevax,4,12
 2022-02-04,11,Comirnaty,1,782
 2022-02-04,11,Comirnaty,2,1798
 2022-02-04,11,Comirnaty,3,6099
@@ -49208,7 +49208,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-02-07,06,Comirnaty,1,1127
 2022-02-07,06,Comirnaty,2,2835
 2022-02-07,06,Comirnaty,3,7690
-2022-02-07,06,Comirnaty,4,147
+2022-02-07,06,Comirnaty,4,148
 2022-02-07,06,Jcovden,1,6
 2022-02-07,06,Jcovden,2,10
 2022-02-07,06,Spikevax,1,76
@@ -49718,8 +49718,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-02-09,17,Spikevax,3,21
 2022-02-09,17,Spikevax,4,2
 2022-02-10,01,Comirnaty,1,904
-2022-02-10,01,Comirnaty,2,2474
-2022-02-10,01,Comirnaty,3,5037
+2022-02-10,01,Comirnaty,2,2475
+2022-02-10,01,Comirnaty,3,5036
 2022-02-10,01,Comirnaty,4,1434
 2022-02-10,01,Comirnaty,5,2
 2022-02-10,01,Jcovden,1,2
@@ -49811,8 +49811,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-02-10,08,Spikevax,4,1222
 2022-02-10,08,Vaxzevria,2,2
 2022-02-10,09,Comirnaty,1,2526
-2022-02-10,09,Comirnaty,2,7812
-2022-02-10,09,Comirnaty,3,21708
+2022-02-10,09,Comirnaty,2,7813
+2022-02-10,09,Comirnaty,3,21707
 2022-02-10,09,Comirnaty,4,1909
 2022-02-10,09,Comirnaty,5,14
 2022-02-10,09,Jcovden,1,5
@@ -50476,7 +50476,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-02-14,06,Spikevax,1,54
 2022-02-14,06,Spikevax,2,280
 2022-02-14,06,Spikevax,3,793
-2022-02-14,06,Spikevax,4,224
+2022-02-14,06,Spikevax,4,225
 2022-02-14,06,Vaxzevria,2,3
 2022-02-14,07,Comirnaty,1,455
 2022-02-14,07,Comirnaty,2,1554
@@ -53086,8 +53086,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-03-01,03,Nuvaxovid,3,1
 2022-03-01,03,Spikevax,1,27
 2022-03-01,03,Spikevax,2,206
-2022-03-01,03,Spikevax,3,1616
-2022-03-01,03,Spikevax,4,2491
+2022-03-01,03,Spikevax,3,1617
+2022-03-01,03,Spikevax,4,2490
 2022-03-01,04,Comirnaty,1,69
 2022-03-01,04,Comirnaty,2,247
 2022-03-01,04,Comirnaty,3,613
@@ -53275,8 +53275,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-03-02,01,Nuvaxovid,4,1
 2022-03-02,01,Spikevax,1,6
 2022-03-02,01,Spikevax,2,114
-2022-03-02,01,Spikevax,3,1104
-2022-03-02,01,Spikevax,4,3317
+2022-03-02,01,Spikevax,3,1105
+2022-03-02,01,Spikevax,4,3316
 2022-03-02,01,Spikevax,5,1
 2022-03-02,02,Comirnaty,1,1370
 2022-03-02,02,Comirnaty,2,2223
@@ -53784,8 +53784,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-03-04,04,Spikevax,4,206
 2022-03-04,05,Comirnaty,1,1388
 2022-03-04,05,Comirnaty,2,4525
-2022-03-04,05,Comirnaty,3,13618
-2022-03-04,05,Comirnaty,4,13223
+2022-03-04,05,Comirnaty,3,13619
+2022-03-04,05,Comirnaty,4,13222
 2022-03-04,05,Comirnaty,5,7
 2022-03-04,05,Jcovden,1,1
 2022-03-04,05,Jcovden,2,7
@@ -56414,8 +56414,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-03-17,01,Nuvaxovid,3,1
 2022-03-17,01,Spikevax,1,16
 2022-03-17,01,Spikevax,2,112
-2022-03-17,01,Spikevax,3,781
-2022-03-17,01,Spikevax,4,3307
+2022-03-17,01,Spikevax,3,782
+2022-03-17,01,Spikevax,4,3306
 2022-03-17,01,Spikevax,5,1
 2022-03-17,02,Comirnaty,1,231
 2022-03-17,02,Comirnaty,2,277
@@ -56486,7 +56486,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-03-17,06,Spikevax,1,15
 2022-03-17,06,Spikevax,2,65
 2022-03-17,06,Spikevax,3,554
-2022-03-17,06,Spikevax,4,985
+2022-03-17,06,Spikevax,4,986
 2022-03-17,07,Comirnaty,1,272
 2022-03-17,07,Comirnaty,2,569
 2022-03-17,07,Comirnaty,3,2203
@@ -57407,9 +57407,9 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-03-22,01,Spikevax,3,258
 2022-03-22,01,Spikevax,4,1850
 2022-03-22,02,Comirnaty,1,397
-2022-03-22,02,Comirnaty,2,533
+2022-03-22,02,Comirnaty,2,534
 2022-03-22,02,Comirnaty,3,1398
-2022-03-22,02,Comirnaty,4,1618
+2022-03-22,02,Comirnaty,4,1617
 2022-03-22,02,Jcovden,1,3
 2022-03-22,02,Jcovden,2,1
 2022-03-22,02,Nuvaxovid,1,14
@@ -59757,7 +59757,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-04-02,05,Spikevax,5,2
 2022-04-02,05,Vaxzevria,3,10
 2022-04-02,05,Vaxzevria,4,21
-2022-04-02,06,Comirnaty,1,213
+2022-04-02,06,Comirnaty,1,214
 2022-04-02,06,Comirnaty,2,219
 2022-04-02,06,Comirnaty,3,721
 2022-04-02,06,Comirnaty,4,1006
@@ -60466,8 +60466,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-04-06,02,Spikevax,4,850
 2022-04-06,03,Comirnaty,1,261
 2022-04-06,03,Comirnaty,2,556
-2022-04-06,03,Comirnaty,3,2776
-2022-04-06,03,Comirnaty,4,11649
+2022-04-06,03,Comirnaty,3,2777
+2022-04-06,03,Comirnaty,4,11648
 2022-04-06,03,Comirnaty,5,2
 2022-04-06,03,Jcovden,3,4
 2022-04-06,03,Jcovden,4,1
@@ -60595,8 +60595,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-04-06,12,Spikevax,4,398
 2022-04-06,13,Comirnaty,1,51
 2022-04-06,13,Comirnaty,2,125
-2022-04-06,13,Comirnaty,3,716
-2022-04-06,13,Comirnaty,4,2165
+2022-04-06,13,Comirnaty,3,718
+2022-04-06,13,Comirnaty,4,2163
 2022-04-06,13,Comirnaty,5,5
 2022-04-06,13,Jcovden,2,3
 2022-04-06,13,Nuvaxovid,1,8
@@ -62010,8 +62010,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-04-13,17,Comirnaty,4,15
 2022-04-14,01,Comirnaty,1,83
 2022-04-14,01,Comirnaty,2,235
-2022-04-14,01,Comirnaty,3,787
-2022-04-14,01,Comirnaty,4,3026
+2022-04-14,01,Comirnaty,3,788
+2022-04-14,01,Comirnaty,4,3025
 2022-04-14,01,Jcovden,3,1
 2022-04-14,01,Nuvaxovid,1,4
 2022-04-14,01,Nuvaxovid,2,2
@@ -63063,8 +63063,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-04-21,02,Spikevax,4,322
 2022-04-21,03,Comirnaty,1,201
 2022-04-21,03,Comirnaty,2,619
-2022-04-21,03,Comirnaty,3,2511
-2022-04-21,03,Comirnaty,4,9822
+2022-04-21,03,Comirnaty,3,2512
+2022-04-21,03,Comirnaty,4,9821
 2022-04-21,03,Comirnaty,5,2
 2022-04-21,03,Jcovden,4,1
 2022-04-21,03,Nuvaxovid,1,23
@@ -63829,8 +63829,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-04-25,08,Spikevax,4,471
 2022-04-25,09,Comirnaty,1,151
 2022-04-25,09,Comirnaty,2,452
-2022-04-25,09,Comirnaty,3,1352
-2022-04-25,09,Comirnaty,4,3361
+2022-04-25,09,Comirnaty,3,1353
+2022-04-25,09,Comirnaty,4,3360
 2022-04-25,09,Comirnaty,5,1
 2022-04-25,09,Jcovden,1,1
 2022-04-25,09,Nuvaxovid,1,30
@@ -64167,8 +64167,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-04-27,02,Spikevax,5,1
 2022-04-27,03,Comirnaty,1,266
 2022-04-27,03,Comirnaty,2,491
-2022-04-27,03,Comirnaty,3,2196
-2022-04-27,03,Comirnaty,4,10618
+2022-04-27,03,Comirnaty,3,2197
+2022-04-27,03,Comirnaty,4,10617
 2022-04-27,03,Jcovden,1,1
 2022-04-27,03,Jcovden,3,4
 2022-04-27,03,Nuvaxovid,1,14
@@ -64190,8 +64190,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-04-27,04,Spikevax,4,86
 2022-04-27,05,Comirnaty,1,385
 2022-04-27,05,Comirnaty,2,1033
-2022-04-27,05,Comirnaty,3,3987
-2022-04-27,05,Comirnaty,4,23414
+2022-04-27,05,Comirnaty,3,3991
+2022-04-27,05,Comirnaty,4,23410
 2022-04-27,05,Comirnaty,5,18
 2022-04-27,05,Jcovden,1,2
 2022-04-27,05,Jcovden,2,2
@@ -65858,8 +65858,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-05-06,02,Nuvaxovid,2,3
 2022-05-06,02,Nuvaxovid,4,2
 2022-05-06,02,Spikevax,1,1
-2022-05-06,02,Spikevax,2,9
-2022-05-06,02,Spikevax,3,126
+2022-05-06,02,Spikevax,2,10
+2022-05-06,02,Spikevax,3,125
 2022-05-06,02,Spikevax,4,338
 2022-05-06,03,Comirnaty,1,184
 2022-05-06,03,Comirnaty,2,473
@@ -66886,8 +66886,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-05-12,02,Spikevax,4,233
 2022-05-12,03,Comirnaty,1,142
 2022-05-12,03,Comirnaty,2,298
-2022-05-12,03,Comirnaty,3,1569
-2022-05-12,03,Comirnaty,4,6413
+2022-05-12,03,Comirnaty,3,1571
+2022-05-12,03,Comirnaty,4,6411
 2022-05-12,03,Jcovden,3,1
 2022-05-12,03,Nuvaxovid,1,11
 2022-05-12,03,Nuvaxovid,2,37
@@ -67735,8 +67735,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-05-17,05,Vaxzevria,1,310
 2022-05-17,05,Vaxzevria,2,72
 2022-05-17,06,Comirnaty,1,122
-2022-05-17,06,Comirnaty,2,206
-2022-05-17,06,Comirnaty,3,859
+2022-05-17,06,Comirnaty,2,207
+2022-05-17,06,Comirnaty,3,858
 2022-05-17,06,Comirnaty,4,3507
 2022-05-17,06,Comirnaty,5,1
 2022-05-17,06,Nuvaxovid,1,9
@@ -69965,7 +69965,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-05-31,06,Comirnaty,1,92
 2022-05-31,06,Comirnaty,2,137
 2022-05-31,06,Comirnaty,3,640
-2022-05-31,06,Comirnaty,4,2198
+2022-05-31,06,Comirnaty,4,2199
 2022-05-31,06,Comirnaty,5,4
 2022-05-31,06,Nuvaxovid,1,4
 2022-05-31,06,Nuvaxovid,2,4
@@ -69974,7 +69974,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-05-31,06,Spikevax,1,1
 2022-05-31,06,Spikevax,2,6
 2022-05-31,06,Spikevax,3,45
-2022-05-31,06,Spikevax,4,262
+2022-05-31,06,Spikevax,4,261
 2022-05-31,07,Comirnaty,1,65
 2022-05-31,07,Comirnaty,2,97
 2022-05-31,07,Comirnaty,3,345
@@ -70581,8 +70581,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-06-03,08,Spikevax,2,14
 2022-06-03,08,Spikevax,3,94
 2022-06-03,08,Spikevax,4,328
-2022-06-03,09,Comirnaty,1,151
-2022-06-03,09,Comirnaty,2,318
+2022-06-03,09,Comirnaty,1,152
+2022-06-03,09,Comirnaty,2,317
 2022-06-03,09,Comirnaty,3,1382
 2022-06-03,09,Comirnaty,4,2693
 2022-06-03,09,Comirnaty,5,8
@@ -71236,8 +71236,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-06-08,08,Spikevax,3,123
 2022-06-08,08,Spikevax,4,363
 2022-06-08,09,Comirnaty,1,145
-2022-06-08,09,Comirnaty,2,268
-2022-06-08,09,Comirnaty,3,933
+2022-06-08,09,Comirnaty,2,269
+2022-06-08,09,Comirnaty,3,932
 2022-06-08,09,Comirnaty,4,1798
 2022-06-08,09,Comirnaty,5,7
 2022-06-08,09,Jcovden,3,1
@@ -72507,8 +72507,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-06-16,03,Nuvaxovid,3,1
 2022-06-16,03,Spikevax,1,5
 2022-06-16,03,Spikevax,2,11
-2022-06-16,03,Spikevax,3,104
-2022-06-16,03,Spikevax,4,1295
+2022-06-16,03,Spikevax,3,105
+2022-06-16,03,Spikevax,4,1294
 2022-06-16,03,Spikevax,5,1
 2022-06-16,04,Comirnaty,1,14
 2022-06-16,04,Comirnaty,2,24
@@ -73071,8 +73071,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-06-20,02,Spikevax,4,34
 2022-06-20,03,Comirnaty,1,69
 2022-06-20,03,Comirnaty,2,110
-2022-06-20,03,Comirnaty,3,640
-2022-06-20,03,Comirnaty,4,2923
+2022-06-20,03,Comirnaty,3,641
+2022-06-20,03,Comirnaty,4,2922
 2022-06-20,03,Comirnaty,5,1
 2022-06-20,03,Nuvaxovid,1,8
 2022-06-20,03,Nuvaxovid,2,9
@@ -73234,7 +73234,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-06-21,03,Comirnaty,1,94
 2022-06-21,03,Comirnaty,2,185
 2022-06-21,03,Comirnaty,3,756
-2022-06-21,03,Comirnaty,4,3955
+2022-06-21,03,Comirnaty,4,3956
 2022-06-21,03,Nuvaxovid,1,6
 2022-06-21,03,Nuvaxovid,2,9
 2022-06-21,03,Nuvaxovid,4,4
@@ -79628,8 +79628,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-07-30,01,Spikevax,1,1
 2022-07-30,01,Spikevax,2,3
 2022-07-30,01,Spikevax,3,27
-2022-07-30,01,Spikevax,4,251
-2022-07-30,01,Spikevax,5,24
+2022-07-30,01,Spikevax,4,252
+2022-07-30,01,Spikevax,5,23
 2022-07-30,02,Comirnaty,1,1
 2022-07-30,02,Comirnaty,2,9
 2022-07-30,02,Comirnaty,3,30
@@ -92368,12 +92368,12 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-10-06,04,Comirnaty,1,25
 2022-10-06,04,Comirnaty,2,22
 2022-10-06,04,Comirnaty,3,105
-2022-10-06,04,Comirnaty,4,728
+2022-10-06,04,Comirnaty,4,727
 2022-10-06,04,Comirnaty,5,121
 2022-10-06,04,Comirnaty,6,1
 2022-10-06,04,Comirnaty bivalent (Original/Omikron),2,2
 2022-10-06,04,Comirnaty bivalent (Original/Omikron),3,58
-2022-10-06,04,Comirnaty bivalent (Original/Omikron),4,382
+2022-10-06,04,Comirnaty bivalent (Original/Omikron),4,383
 2022-10-06,04,Comirnaty bivalent (Original/Omikron),5,201
 2022-10-06,04,Nuvaxovid,2,1
 2022-10-06,04,Nuvaxovid,4,4
@@ -92699,7 +92699,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-10-07,03,Comirnaty bivalent (Original/Omikron),1,121
 2022-10-07,03,Comirnaty bivalent (Original/Omikron),2,28
 2022-10-07,03,Comirnaty bivalent (Original/Omikron),3,593
-2022-10-07,03,Comirnaty bivalent (Original/Omikron),4,8420
+2022-10-07,03,Comirnaty bivalent (Original/Omikron),4,8421
 2022-10-07,03,Comirnaty bivalent (Original/Omikron),5,1364
 2022-10-07,03,Comirnaty bivalent (Original/Omikron),6,128
 2022-10-07,03,Jcovden,4,5
@@ -96214,7 +96214,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-10-19,09,Comirnaty bivalent (Original/Omikron),1,39
 2022-10-19,09,Comirnaty bivalent (Original/Omikron),2,161
 2022-10-19,09,Comirnaty bivalent (Original/Omikron),3,1065
-2022-10-19,09,Comirnaty bivalent (Original/Omikron),4,16737
+2022-10-19,09,Comirnaty bivalent (Original/Omikron),4,16738
 2022-10-19,09,Comirnaty bivalent (Original/Omikron),5,2255
 2022-10-19,09,Comirnaty bivalent (Original/Omikron),6,98
 2022-10-19,09,Jcovden,1,1
@@ -96639,7 +96639,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-10-20,13,Comirnaty bivalent (Original/Omikron),1,7
 2022-10-20,13,Comirnaty bivalent (Original/Omikron),2,15
 2022-10-20,13,Comirnaty bivalent (Original/Omikron),3,176
-2022-10-20,13,Comirnaty bivalent (Original/Omikron),4,1965
+2022-10-20,13,Comirnaty bivalent (Original/Omikron),4,1967
 2022-10-20,13,Comirnaty bivalent (Original/Omikron),5,167
 2022-10-20,13,Nuvaxovid,1,1
 2022-10-20,13,Nuvaxovid,2,1
@@ -96830,7 +96830,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-10-21,06,Comirnaty,6,16
 2022-10-21,06,Comirnaty bivalent (Original/Omikron),1,66
 2022-10-21,06,Comirnaty bivalent (Original/Omikron),2,30
-2022-10-21,06,Comirnaty bivalent (Original/Omikron),3,622
+2022-10-21,06,Comirnaty bivalent (Original/Omikron),3,623
 2022-10-21,06,Comirnaty bivalent (Original/Omikron),4,8270
 2022-10-21,06,Comirnaty bivalent (Original/Omikron),5,1942
 2022-10-21,06,Comirnaty bivalent (Original/Omikron),6,25
@@ -98185,7 +98185,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-10-26,09,Comirnaty bivalent (Original/Omikron),1,116
 2022-10-26,09,Comirnaty bivalent (Original/Omikron),2,91
 2022-10-26,09,Comirnaty bivalent (Original/Omikron),3,993
-2022-10-26,09,Comirnaty bivalent (Original/Omikron),4,15975
+2022-10-26,09,Comirnaty bivalent (Original/Omikron),4,15976
 2022-10-26,09,Comirnaty bivalent (Original/Omikron),5,2296
 2022-10-26,09,Comirnaty bivalent (Original/Omikron),6,32
 2022-10-26,09,Jcovden,1,1
@@ -100248,7 +100248,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-03,09,Comirnaty,1,61
 2022-11-03,09,Comirnaty,2,86
 2022-11-03,09,Comirnaty,3,126
-2022-11-03,09,Comirnaty,4,349
+2022-11-03,09,Comirnaty,4,358
 2022-11-03,09,Comirnaty,5,76
 2022-11-03,09,Comirnaty,6,12
 2022-11-03,09,Comirnaty bivalent (Original/Omikron),1,45
@@ -100726,7 +100726,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-05,01,Comirnaty,5,192
 2022-11-05,01,Comirnaty bivalent (Original/Omikron),2,8
 2022-11-05,01,Comirnaty bivalent (Original/Omikron),3,103
-2022-11-05,01,Comirnaty bivalent (Original/Omikron),4,1252
+2022-11-05,01,Comirnaty bivalent (Original/Omikron),4,1277
 2022-11-05,01,Comirnaty bivalent (Original/Omikron),5,293
 2022-11-05,01,Comirnaty bivalent (Original/Omikron),6,3
 2022-11-05,01,Nuvaxovid,1,1
@@ -101597,8 +101597,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-08,14,Comirnaty,5,5
 2022-11-08,14,Comirnaty bivalent (Original/Omikron),1,10
 2022-11-08,14,Comirnaty bivalent (Original/Omikron),2,29
-2022-11-08,14,Comirnaty bivalent (Original/Omikron),3,302
-2022-11-08,14,Comirnaty bivalent (Original/Omikron),4,4439
+2022-11-08,14,Comirnaty bivalent (Original/Omikron),3,304
+2022-11-08,14,Comirnaty bivalent (Original/Omikron),4,4471
 2022-11-08,14,Comirnaty bivalent (Original/Omikron),5,448
 2022-11-08,14,Comirnaty bivalent (Original/Omikron),6,1
 2022-11-08,14,Nuvaxovid,1,8
@@ -101845,13 +101845,13 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-09,11,Comirnaty,2,25
 2022-11-09,11,Comirnaty,3,81
 2022-11-09,11,Comirnaty,4,420
-2022-11-09,11,Comirnaty,5,39
+2022-11-09,11,Comirnaty,5,38
 2022-11-09,11,Comirnaty,6,9
 2022-11-09,11,Comirnaty bivalent (Original/Omikron),1,42
 2022-11-09,11,Comirnaty bivalent (Original/Omikron),2,26
 2022-11-09,11,Comirnaty bivalent (Original/Omikron),3,313
-2022-11-09,11,Comirnaty bivalent (Original/Omikron),4,4605
-2022-11-09,11,Comirnaty bivalent (Original/Omikron),5,1162
+2022-11-09,11,Comirnaty bivalent (Original/Omikron),4,4606
+2022-11-09,11,Comirnaty bivalent (Original/Omikron),5,1163
 2022-11-09,11,Comirnaty bivalent (Original/Omikron),6,28
 2022-11-09,11,Nuvaxovid,1,2
 2022-11-09,11,Nuvaxovid,2,1
@@ -101901,9 +101901,9 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-09,14,Comirnaty,6,2
 2022-11-09,14,Comirnaty bivalent (Original/Omikron),1,6
 2022-11-09,14,Comirnaty bivalent (Original/Omikron),2,15
-2022-11-09,14,Comirnaty bivalent (Original/Omikron),3,381
-2022-11-09,14,Comirnaty bivalent (Original/Omikron),4,5466
-2022-11-09,14,Comirnaty bivalent (Original/Omikron),5,608
+2022-11-09,14,Comirnaty bivalent (Original/Omikron),3,384
+2022-11-09,14,Comirnaty bivalent (Original/Omikron),4,5508
+2022-11-09,14,Comirnaty bivalent (Original/Omikron),5,610
 2022-11-09,14,Comirnaty bivalent (Original/Omikron),6,11
 2022-11-09,14,Spikevax bivalent (Original/Omikron),3,1
 2022-11-09,14,Spikevax bivalent (Original/Omikron),4,21
@@ -101964,13 +101964,13 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-10,01,Valneva,2,3
 2022-11-10,02,Comirnaty,1,2
 2022-11-10,02,Comirnaty,2,11
-2022-11-10,02,Comirnaty,3,77
-2022-11-10,02,Comirnaty,4,157
+2022-11-10,02,Comirnaty,3,79
+2022-11-10,02,Comirnaty,4,163
 2022-11-10,02,Comirnaty,5,47
 2022-11-10,02,Comirnaty bivalent (Original/Omikron),1,14
 2022-11-10,02,Comirnaty bivalent (Original/Omikron),2,9
-2022-11-10,02,Comirnaty bivalent (Original/Omikron),3,154
-2022-11-10,02,Comirnaty bivalent (Original/Omikron),4,1810
+2022-11-10,02,Comirnaty bivalent (Original/Omikron),3,152
+2022-11-10,02,Comirnaty bivalent (Original/Omikron),4,1804
 2022-11-10,02,Comirnaty bivalent (Original/Omikron),5,731
 2022-11-10,02,Comirnaty bivalent (Original/Omikron),6,26
 2022-11-10,02,Spikevax,3,1
@@ -102199,9 +102199,9 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-10,14,Comirnaty,5,10
 2022-11-10,14,Comirnaty bivalent (Original/Omikron),1,88
 2022-11-10,14,Comirnaty bivalent (Original/Omikron),2,25
-2022-11-10,14,Comirnaty bivalent (Original/Omikron),3,433
-2022-11-10,14,Comirnaty bivalent (Original/Omikron),4,6362
-2022-11-10,14,Comirnaty bivalent (Original/Omikron),5,615
+2022-11-10,14,Comirnaty bivalent (Original/Omikron),3,436
+2022-11-10,14,Comirnaty bivalent (Original/Omikron),4,6397
+2022-11-10,14,Comirnaty bivalent (Original/Omikron),5,617
 2022-11-10,14,Comirnaty bivalent (Original/Omikron),6,6
 2022-11-10,14,Nuvaxovid,1,2
 2022-11-10,14,Nuvaxovid,2,5
@@ -102278,12 +102278,12 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-11,02,Comirnaty,1,5
 2022-11-11,02,Comirnaty,2,6
 2022-11-11,02,Comirnaty,3,79
-2022-11-11,02,Comirnaty,4,37
+2022-11-11,02,Comirnaty,4,42
 2022-11-11,02,Comirnaty,5,4
 2022-11-11,02,Comirnaty bivalent (Original/Omikron),1,18
 2022-11-11,02,Comirnaty bivalent (Original/Omikron),2,11
 2022-11-11,02,Comirnaty bivalent (Original/Omikron),3,146
-2022-11-11,02,Comirnaty bivalent (Original/Omikron),4,1481
+2022-11-11,02,Comirnaty bivalent (Original/Omikron),4,1476
 2022-11-11,02,Comirnaty bivalent (Original/Omikron),5,720
 2022-11-11,02,Comirnaty bivalent (Original/Omikron),6,9
 2022-11-11,02,Nuvaxovid,2,1
@@ -102574,7 +102574,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-12,01,Comirnaty,5,136
 2022-11-12,01,Comirnaty bivalent (Original/Omikron),2,2
 2022-11-12,01,Comirnaty bivalent (Original/Omikron),3,52
-2022-11-12,01,Comirnaty bivalent (Original/Omikron),4,1151
+2022-11-12,01,Comirnaty bivalent (Original/Omikron),4,1183
 2022-11-12,01,Comirnaty bivalent (Original/Omikron),5,359
 2022-11-12,01,Nuvaxovid,2,1
 2022-11-12,01,Nuvaxovid,4,27
@@ -102832,7 +102832,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-13,05,Comirnaty bivalent (Original/Omikron),1,1
 2022-11-13,05,Comirnaty bivalent (Original/Omikron),2,2
 2022-11-13,05,Comirnaty bivalent (Original/Omikron),3,26
-2022-11-13,05,Comirnaty bivalent (Original/Omikron),4,736
+2022-11-13,05,Comirnaty bivalent (Original/Omikron),4,737
 2022-11-13,05,Comirnaty bivalent (Original/Omikron),5,314
 2022-11-13,05,Comirnaty bivalent (Original/Omikron),6,17
 2022-11-13,05,Nuvaxovid,1,2
@@ -103196,7 +103196,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-15,01,Comirnaty,1,25
 2022-11-15,01,Comirnaty,2,13
 2022-11-15,01,Comirnaty,3,94
-2022-11-15,01,Comirnaty,4,1688
+2022-11-15,01,Comirnaty,4,1695
 2022-11-15,01,Comirnaty,5,1127
 2022-11-15,01,Comirnaty,6,2
 2022-11-15,01,Comirnaty bivalent (Original/Omikron),1,6
@@ -103212,7 +103212,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-15,02,Comirnaty,1,6
 2022-11-15,02,Comirnaty,2,13
 2022-11-15,02,Comirnaty,3,63
-2022-11-15,02,Comirnaty,4,102
+2022-11-15,02,Comirnaty,4,105
 2022-11-15,02,Comirnaty,5,27
 2022-11-15,02,Comirnaty bivalent (Original/Omikron),1,1
 2022-11-15,02,Comirnaty bivalent (Original/Omikron),2,8
@@ -103444,8 +103444,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-15,14,Comirnaty bivalent (Original/Omikron),1,19
 2022-11-15,14,Comirnaty bivalent (Original/Omikron),2,36
 2022-11-15,14,Comirnaty bivalent (Original/Omikron),3,309
-2022-11-15,14,Comirnaty bivalent (Original/Omikron),4,4169
-2022-11-15,14,Comirnaty bivalent (Original/Omikron),5,468
+2022-11-15,14,Comirnaty bivalent (Original/Omikron),4,4210
+2022-11-15,14,Comirnaty bivalent (Original/Omikron),5,469
 2022-11-15,14,Comirnaty bivalent (Original/Omikron),6,2
 2022-11-15,14,Nuvaxovid,2,5
 2022-11-15,14,Nuvaxovid,3,2
@@ -103488,8 +103488,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-16,01,Comirnaty,1,26
 2022-11-16,01,Comirnaty,2,26
 2022-11-16,01,Comirnaty,3,107
-2022-11-16,01,Comirnaty,4,2421
-2022-11-16,01,Comirnaty,5,1850
+2022-11-16,01,Comirnaty,4,2430
+2022-11-16,01,Comirnaty,5,1855
 2022-11-16,01,Comirnaty,6,8
 2022-11-16,01,Comirnaty bivalent (Original/Omikron),1,1
 2022-11-16,01,Comirnaty bivalent (Original/Omikron),2,6
@@ -103662,13 +103662,13 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-16,09,Comirnaty,1,78
 2022-11-16,09,Comirnaty,2,62
 2022-11-16,09,Comirnaty,3,45
-2022-11-16,09,Comirnaty,4,213
+2022-11-16,09,Comirnaty,4,215
 2022-11-16,09,Comirnaty,5,23
 2022-11-16,09,Comirnaty,6,6
 2022-11-16,09,Comirnaty bivalent (Original/Omikron),1,29
 2022-11-16,09,Comirnaty bivalent (Original/Omikron),2,44
 2022-11-16,09,Comirnaty bivalent (Original/Omikron),3,592
-2022-11-16,09,Comirnaty bivalent (Original/Omikron),4,9774
+2022-11-16,09,Comirnaty bivalent (Original/Omikron),4,9775
 2022-11-16,09,Comirnaty bivalent (Original/Omikron),5,1560
 2022-11-16,09,Comirnaty bivalent (Original/Omikron),6,52
 2022-11-16,09,Jcovden,1,1
@@ -103792,8 +103792,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-17,01,Comirnaty,1,12
 2022-11-17,01,Comirnaty,2,29
 2022-11-17,01,Comirnaty,3,128
-2022-11-17,01,Comirnaty,4,2095
-2022-11-17,01,Comirnaty,5,1166
+2022-11-17,01,Comirnaty,4,2097
+2022-11-17,01,Comirnaty,5,1168
 2022-11-17,01,Comirnaty,6,9
 2022-11-17,01,Comirnaty bivalent (Original/Omikron),1,2
 2022-11-17,01,Comirnaty bivalent (Original/Omikron),2,3
@@ -103955,7 +103955,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-17,09,Comirnaty,1,28
 2022-11-17,09,Comirnaty,2,64
 2022-11-17,09,Comirnaty,3,34
-2022-11-17,09,Comirnaty,4,245
+2022-11-17,09,Comirnaty,4,255
 2022-11-17,09,Comirnaty,5,41
 2022-11-17,09,Comirnaty,6,15
 2022-11-17,09,Comirnaty bivalent (Original/Omikron),1,22
@@ -104023,7 +104023,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-17,12,Comirnaty bivalent (Original/Omikron),2,11
 2022-11-17,12,Comirnaty bivalent (Original/Omikron),3,169
 2022-11-17,12,Comirnaty bivalent (Original/Omikron),4,2753
-2022-11-17,12,Comirnaty bivalent (Original/Omikron),5,249
+2022-11-17,12,Comirnaty bivalent (Original/Omikron),5,250
 2022-11-17,12,Spikevax bivalent (Original/Omikron),2,1
 2022-11-17,12,Spikevax bivalent (Original/Omikron),3,2
 2022-11-17,12,Spikevax bivalent (Original/Omikron),4,59
@@ -104045,13 +104045,13 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-17,14,Comirnaty,1,13
 2022-11-17,14,Comirnaty,2,13
 2022-11-17,14,Comirnaty,3,28
-2022-11-17,14,Comirnaty,4,133
+2022-11-17,14,Comirnaty,4,134
 2022-11-17,14,Comirnaty,5,2
 2022-11-17,14,Comirnaty bivalent (Original/Omikron),1,2
 2022-11-17,14,Comirnaty bivalent (Original/Omikron),2,12
-2022-11-17,14,Comirnaty bivalent (Original/Omikron),3,326
-2022-11-17,14,Comirnaty bivalent (Original/Omikron),4,4394
-2022-11-17,14,Comirnaty bivalent (Original/Omikron),5,497
+2022-11-17,14,Comirnaty bivalent (Original/Omikron),3,328
+2022-11-17,14,Comirnaty bivalent (Original/Omikron),4,4430
+2022-11-17,14,Comirnaty bivalent (Original/Omikron),5,500
 2022-11-17,14,Comirnaty bivalent (Original/Omikron),6,2
 2022-11-17,14,Nuvaxovid,2,1
 2022-11-17,14,Nuvaxovid,3,1
@@ -104094,9 +104094,9 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-17,17,Comirnaty bivalent (Original/Omikron),4,30
 2022-11-18,01,Comirnaty,1,7
 2022-11-18,01,Comirnaty,2,19
-2022-11-18,01,Comirnaty,3,64
-2022-11-18,01,Comirnaty,4,1017
-2022-11-18,01,Comirnaty,5,613
+2022-11-18,01,Comirnaty,3,65
+2022-11-18,01,Comirnaty,4,1054
+2022-11-18,01,Comirnaty,5,615
 2022-11-18,01,Comirnaty,6,1
 2022-11-18,01,Comirnaty bivalent (Original/Omikron),2,5
 2022-11-18,01,Comirnaty bivalent (Original/Omikron),3,143
@@ -104111,7 +104111,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-18,02,Comirnaty,1,10
 2022-11-18,02,Comirnaty,2,4
 2022-11-18,02,Comirnaty,3,57
-2022-11-18,02,Comirnaty,4,20
+2022-11-18,02,Comirnaty,4,34
 2022-11-18,02,Comirnaty,5,3
 2022-11-18,02,Comirnaty,6,6
 2022-11-18,02,Comirnaty bivalent (Original/Omikron),1,40
@@ -104171,9 +104171,9 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-18,05,Comirnaty,5,652
 2022-11-18,05,Comirnaty,6,224
 2022-11-18,05,Comirnaty bivalent (Original/Omikron),1,62
-2022-11-18,05,Comirnaty bivalent (Original/Omikron),2,90
-2022-11-18,05,Comirnaty bivalent (Original/Omikron),3,970
-2022-11-18,05,Comirnaty bivalent (Original/Omikron),4,12443
+2022-11-18,05,Comirnaty bivalent (Original/Omikron),2,91
+2022-11-18,05,Comirnaty bivalent (Original/Omikron),3,971
+2022-11-18,05,Comirnaty bivalent (Original/Omikron),4,12459
 2022-11-18,05,Comirnaty bivalent (Original/Omikron),5,4468
 2022-11-18,05,Comirnaty bivalent (Original/Omikron),6,760
 2022-11-18,05,Jcovden,1,13
@@ -104205,7 +104205,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-18,06,Comirnaty bivalent (Original/Omikron),1,35
 2022-11-18,06,Comirnaty bivalent (Original/Omikron),2,25
 2022-11-18,06,Comirnaty bivalent (Original/Omikron),3,393
-2022-11-18,06,Comirnaty bivalent (Original/Omikron),4,4849
+2022-11-18,06,Comirnaty bivalent (Original/Omikron),4,4851
 2022-11-18,06,Comirnaty bivalent (Original/Omikron),5,1437
 2022-11-18,06,Comirnaty bivalent (Original/Omikron),6,20
 2022-11-18,06,Comirnaty-Kleinkinder,1,6
@@ -104347,7 +104347,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-18,13,Spikevax bivalent (Original/Omikron),4,8
 2022-11-18,14,Comirnaty,1,11
 2022-11-18,14,Comirnaty,2,24
-2022-11-18,14,Comirnaty,3,13
+2022-11-18,14,Comirnaty,3,14
 2022-11-18,14,Comirnaty,4,86
 2022-11-18,14,Comirnaty,5,3
 2022-11-18,14,Comirnaty bivalent (Original/Omikron),1,16
@@ -104404,7 +104404,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-19,01,Comirnaty,5,122
 2022-11-19,01,Comirnaty bivalent (Original/Omikron),2,2
 2022-11-19,01,Comirnaty bivalent (Original/Omikron),3,57
-2022-11-19,01,Comirnaty bivalent (Original/Omikron),4,912
+2022-11-19,01,Comirnaty bivalent (Original/Omikron),4,930
 2022-11-19,01,Comirnaty bivalent (Original/Omikron),5,305
 2022-11-19,01,Comirnaty bivalent (Original/Omikron),6,2
 2022-11-19,01,Nuvaxovid,2,2
@@ -104536,8 +104536,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-19,09,Comirnaty,1,30
 2022-11-19,09,Comirnaty,2,63
 2022-11-19,09,Comirnaty,3,10
-2022-11-19,09,Comirnaty,4,46
-2022-11-19,09,Comirnaty,5,1
+2022-11-19,09,Comirnaty,4,49
+2022-11-19,09,Comirnaty,5,2
 2022-11-19,09,Comirnaty bivalent (Original/Omikron),1,1
 2022-11-19,09,Comirnaty bivalent (Original/Omikron),2,7
 2022-11-19,09,Comirnaty bivalent (Original/Omikron),3,175
@@ -104733,8 +104733,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-21,01,Comirnaty,1,9
 2022-11-21,01,Comirnaty,2,5
 2022-11-21,01,Comirnaty,3,34
-2022-11-21,01,Comirnaty,4,472
-2022-11-21,01,Comirnaty,5,316
+2022-11-21,01,Comirnaty,4,473
+2022-11-21,01,Comirnaty,5,317
 2022-11-21,01,Comirnaty,6,3
 2022-11-21,01,Comirnaty bivalent (Original/Omikron),1,3
 2022-11-21,01,Comirnaty bivalent (Original/Omikron),2,1
@@ -104797,10 +104797,10 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-21,05,Comirnaty,5,333
 2022-11-21,05,Comirnaty,6,155
 2022-11-21,05,Comirnaty bivalent (Original/Omikron),1,14
-2022-11-21,05,Comirnaty bivalent (Original/Omikron),2,16
+2022-11-21,05,Comirnaty bivalent (Original/Omikron),2,17
 2022-11-21,05,Comirnaty bivalent (Original/Omikron),3,402
-2022-11-21,05,Comirnaty bivalent (Original/Omikron),4,5874
-2022-11-21,05,Comirnaty bivalent (Original/Omikron),5,2597
+2022-11-21,05,Comirnaty bivalent (Original/Omikron),4,5894
+2022-11-21,05,Comirnaty bivalent (Original/Omikron),5,2601
 2022-11-21,05,Comirnaty bivalent (Original/Omikron),6,286
 2022-11-21,05,Jcovden,1,6
 2022-11-21,05,Jcovden,3,2
@@ -104883,8 +104883,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-21,09,Comirnaty,5,15
 2022-11-21,09,Comirnaty bivalent (Original/Omikron),1,5
 2022-11-21,09,Comirnaty bivalent (Original/Omikron),2,13
-2022-11-21,09,Comirnaty bivalent (Original/Omikron),3,289
-2022-11-21,09,Comirnaty bivalent (Original/Omikron),4,4333
+2022-11-21,09,Comirnaty bivalent (Original/Omikron),3,290
+2022-11-21,09,Comirnaty bivalent (Original/Omikron),4,4349
 2022-11-21,09,Comirnaty bivalent (Original/Omikron),5,683
 2022-11-21,09,Comirnaty bivalent (Original/Omikron),6,13
 2022-11-21,09,Jcovden,1,4
@@ -105007,7 +105007,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-22,01,Comirnaty,1,7
 2022-11-22,01,Comirnaty,2,5
 2022-11-22,01,Comirnaty,3,91
-2022-11-22,01,Comirnaty,4,1382
+2022-11-22,01,Comirnaty,4,1383
 2022-11-22,01,Comirnaty,5,920
 2022-11-22,01,Comirnaty,6,4
 2022-11-22,01,Comirnaty bivalent (Original/Omikron),1,2
@@ -105100,7 +105100,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-22,06,Comirnaty bivalent (Original/Omikron),1,37
 2022-11-22,06,Comirnaty bivalent (Original/Omikron),2,16
 2022-11-22,06,Comirnaty bivalent (Original/Omikron),3,277
-2022-11-22,06,Comirnaty bivalent (Original/Omikron),4,4632
+2022-11-22,06,Comirnaty bivalent (Original/Omikron),4,4636
 2022-11-22,06,Comirnaty bivalent (Original/Omikron),5,1558
 2022-11-22,06,Comirnaty bivalent (Original/Omikron),6,15
 2022-11-22,06,Nuvaxovid,4,5
@@ -105245,8 +105245,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-22,14,Comirnaty bivalent (Original/Omikron),1,35
 2022-11-22,14,Comirnaty bivalent (Original/Omikron),2,16
 2022-11-22,14,Comirnaty bivalent (Original/Omikron),3,266
-2022-11-22,14,Comirnaty bivalent (Original/Omikron),4,3570
-2022-11-22,14,Comirnaty bivalent (Original/Omikron),5,393
+2022-11-22,14,Comirnaty bivalent (Original/Omikron),4,3610
+2022-11-22,14,Comirnaty bivalent (Original/Omikron),5,394
 2022-11-22,14,Comirnaty bivalent (Original/Omikron),6,8
 2022-11-22,14,Nuvaxovid,1,4
 2022-11-22,14,Nuvaxovid,2,2
@@ -105291,8 +105291,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-22,17,Comirnaty bivalent (Original/Omikron),5,3
 2022-11-23,01,Comirnaty,1,15
 2022-11-23,01,Comirnaty,2,16
-2022-11-23,01,Comirnaty,3,132
-2022-11-23,01,Comirnaty,4,1948
+2022-11-23,01,Comirnaty,3,134
+2022-11-23,01,Comirnaty,4,1950
 2022-11-23,01,Comirnaty,5,1501
 2022-11-23,01,Comirnaty,6,19
 2022-11-23,01,Comirnaty bivalent (Original/Omikron),1,1
@@ -105324,10 +105324,10 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-23,02,Spikevax bivalent (Original/Omikron),4,25
 2022-11-23,02,Spikevax bivalent (Original/Omikron),5,25
 2022-11-23,02,Spikevax bivalent (Original/Omikron),6,2
-2022-11-23,03,Comirnaty,1,21
+2022-11-23,03,Comirnaty,1,29
 2022-11-23,03,Comirnaty,2,18
 2022-11-23,03,Comirnaty,3,19
-2022-11-23,03,Comirnaty,4,132
+2022-11-23,03,Comirnaty,4,133
 2022-11-23,03,Comirnaty,5,12
 2022-11-23,03,Comirnaty,6,10
 2022-11-23,03,Comirnaty bivalent (Original/Omikron),1,64
@@ -105352,14 +105352,14 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-23,05,Comirnaty,1,130
 2022-11-23,05,Comirnaty,2,69
 2022-11-23,05,Comirnaty,3,135
-2022-11-23,05,Comirnaty,4,1363
-2022-11-23,05,Comirnaty,5,614
+2022-11-23,05,Comirnaty,4,1369
+2022-11-23,05,Comirnaty,5,615
 2022-11-23,05,Comirnaty,6,255
 2022-11-23,05,Comirnaty bivalent (Original/Omikron),1,45
 2022-11-23,05,Comirnaty bivalent (Original/Omikron),2,37
-2022-11-23,05,Comirnaty bivalent (Original/Omikron),3,648
-2022-11-23,05,Comirnaty bivalent (Original/Omikron),4,10510
-2022-11-23,05,Comirnaty bivalent (Original/Omikron),5,4391
+2022-11-23,05,Comirnaty bivalent (Original/Omikron),3,650
+2022-11-23,05,Comirnaty bivalent (Original/Omikron),4,10548
+2022-11-23,05,Comirnaty bivalent (Original/Omikron),5,4395
 2022-11-23,05,Comirnaty bivalent (Original/Omikron),6,625
 2022-11-23,05,Jcovden,1,6
 2022-11-23,05,Jcovden,2,2
@@ -105452,7 +105452,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-23,09,Comirnaty bivalent (Original/Omikron),1,12
 2022-11-23,09,Comirnaty bivalent (Original/Omikron),2,35
 2022-11-23,09,Comirnaty bivalent (Original/Omikron),3,524
-2022-11-23,09,Comirnaty bivalent (Original/Omikron),4,8172
+2022-11-23,09,Comirnaty bivalent (Original/Omikron),4,8177
 2022-11-23,09,Comirnaty bivalent (Original/Omikron),5,1401
 2022-11-23,09,Comirnaty bivalent (Original/Omikron),6,26
 2022-11-23,09,Nuvaxovid,1,1
@@ -105533,7 +105533,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-23,14,Comirnaty bivalent (Original/Omikron),1,7
 2022-11-23,14,Comirnaty bivalent (Original/Omikron),2,28
 2022-11-23,14,Comirnaty bivalent (Original/Omikron),3,283
-2022-11-23,14,Comirnaty bivalent (Original/Omikron),4,4867
+2022-11-23,14,Comirnaty bivalent (Original/Omikron),4,4901
 2022-11-23,14,Comirnaty bivalent (Original/Omikron),5,476
 2022-11-23,14,Comirnaty bivalent (Original/Omikron),6,3
 2022-11-23,14,Nuvaxovid,2,3
@@ -105576,8 +105576,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-24,01,Comirnaty,1,10
 2022-11-24,01,Comirnaty,2,16
 2022-11-24,01,Comirnaty,3,94
-2022-11-24,01,Comirnaty,4,1524
-2022-11-24,01,Comirnaty,5,1087
+2022-11-24,01,Comirnaty,4,1550
+2022-11-24,01,Comirnaty,5,1089
 2022-11-24,01,Comirnaty,6,8
 2022-11-24,01,Comirnaty bivalent (Original/Omikron),2,3
 2022-11-24,01,Comirnaty bivalent (Original/Omikron),3,154
@@ -105590,9 +105590,10 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-24,01,Spikevax bivalent (Original/Omikron),4,43
 2022-11-24,01,Spikevax bivalent (Original/Omikron),5,13
 2022-11-24,01,Valneva,4,1
+2022-11-24,02,Comirnaty,1,1
 2022-11-24,02,Comirnaty,2,3
 2022-11-24,02,Comirnaty,3,37
-2022-11-24,02,Comirnaty,4,35
+2022-11-24,02,Comirnaty,4,43
 2022-11-24,02,Comirnaty,5,17
 2022-11-24,02,Comirnaty,6,1
 2022-11-24,02,Comirnaty bivalent (Original/Omikron),1,12
@@ -105603,15 +105604,15 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-24,02,Comirnaty bivalent (Original/Omikron),6,6
 2022-11-24,02,Spikevax bivalent (Original/Omikron),4,8
 2022-11-24,02,Spikevax bivalent (Original/Omikron),5,1
-2022-11-24,03,Comirnaty,1,31
-2022-11-24,03,Comirnaty,2,49
-2022-11-24,03,Comirnaty,3,31
-2022-11-24,03,Comirnaty,4,176
+2022-11-24,03,Comirnaty,1,51
+2022-11-24,03,Comirnaty,2,50
+2022-11-24,03,Comirnaty,3,32
+2022-11-24,03,Comirnaty,4,187
 2022-11-24,03,Comirnaty,5,8
 2022-11-24,03,Comirnaty bivalent (Original/Omikron),1,11
 2022-11-24,03,Comirnaty bivalent (Original/Omikron),2,32
 2022-11-24,03,Comirnaty bivalent (Original/Omikron),3,461
-2022-11-24,03,Comirnaty bivalent (Original/Omikron),4,8473
+2022-11-24,03,Comirnaty bivalent (Original/Omikron),4,8474
 2022-11-24,03,Comirnaty bivalent (Original/Omikron),5,2988
 2022-11-24,03,Comirnaty bivalent (Original/Omikron),6,34
 2022-11-24,03,Nuvaxovid,1,1
@@ -105633,7 +105634,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-24,04,Comirnaty bivalent (Original/Omikron),5,259
 2022-11-24,04,Comirnaty bivalent (Original/Omikron),6,2
 2022-11-24,05,Comirnaty,1,76
-2022-11-24,05,Comirnaty,2,56
+2022-11-24,05,Comirnaty,2,57
 2022-11-24,05,Comirnaty,3,190
 2022-11-24,05,Comirnaty,4,1846
 2022-11-24,05,Comirnaty,5,699
@@ -105711,8 +105712,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-24,08,Comirnaty,5,21
 2022-11-24,08,Comirnaty,6,3
 2022-11-24,08,Comirnaty bivalent (Original/Omikron),1,84
-2022-11-24,08,Comirnaty bivalent (Original/Omikron),2,44
-2022-11-24,08,Comirnaty bivalent (Original/Omikron),3,490
+2022-11-24,08,Comirnaty bivalent (Original/Omikron),2,43
+2022-11-24,08,Comirnaty bivalent (Original/Omikron),3,491
 2022-11-24,08,Comirnaty bivalent (Original/Omikron),4,8688
 2022-11-24,08,Comirnaty bivalent (Original/Omikron),5,2183
 2022-11-24,08,Comirnaty bivalent (Original/Omikron),6,28
@@ -105786,7 +105787,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-24,12,Comirnaty bivalent (Original/Omikron),1,10
 2022-11-24,12,Comirnaty bivalent (Original/Omikron),2,10
 2022-11-24,12,Comirnaty bivalent (Original/Omikron),3,181
-2022-11-24,12,Comirnaty bivalent (Original/Omikron),4,2707
+2022-11-24,12,Comirnaty bivalent (Original/Omikron),4,2712
 2022-11-24,12,Comirnaty bivalent (Original/Omikron),5,283
 2022-11-24,12,Spikevax,2,3
 2022-11-24,12,Spikevax,3,1
@@ -105816,7 +105817,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-24,14,Comirnaty bivalent (Original/Omikron),1,40
 2022-11-24,14,Comirnaty bivalent (Original/Omikron),2,26
 2022-11-24,14,Comirnaty bivalent (Original/Omikron),3,347
-2022-11-24,14,Comirnaty bivalent (Original/Omikron),4,5102
+2022-11-24,14,Comirnaty bivalent (Original/Omikron),4,5138
 2022-11-24,14,Comirnaty bivalent (Original/Omikron),5,515
 2022-11-24,14,Comirnaty-Kleinkinder,1,5
 2022-11-24,14,Nuvaxovid,3,4
@@ -105864,7 +105865,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-25,01,Comirnaty,1,22
 2022-11-25,01,Comirnaty,2,27
 2022-11-25,01,Comirnaty,3,64
-2022-11-25,01,Comirnaty,4,785
+2022-11-25,01,Comirnaty,4,790
 2022-11-25,01,Comirnaty,5,499
 2022-11-25,01,Comirnaty,6,1
 2022-11-25,01,Comirnaty bivalent (Original/Omikron),1,2
@@ -105882,12 +105883,12 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-25,02,Comirnaty,1,2
 2022-11-25,02,Comirnaty,2,92
 2022-11-25,02,Comirnaty,3,126
-2022-11-25,02,Comirnaty,4,24
+2022-11-25,02,Comirnaty,4,28
 2022-11-25,02,Comirnaty,5,2
 2022-11-25,02,Comirnaty bivalent (Original/Omikron),1,7
 2022-11-25,02,Comirnaty bivalent (Original/Omikron),2,3
 2022-11-25,02,Comirnaty bivalent (Original/Omikron),3,121
-2022-11-25,02,Comirnaty bivalent (Original/Omikron),4,1477
+2022-11-25,02,Comirnaty bivalent (Original/Omikron),4,1473
 2022-11-25,02,Comirnaty bivalent (Original/Omikron),5,736
 2022-11-25,02,Comirnaty bivalent (Original/Omikron),6,3
 2022-11-25,02,Jcovden,2,1
@@ -105898,10 +105899,10 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-25,02,Spikevax bivalent (Original/Omikron),4,84
 2022-11-25,02,Spikevax bivalent (Original/Omikron),5,10
 2022-11-25,03,Comirnaty,1,21
-2022-11-25,03,Comirnaty,2,33
-2022-11-25,03,Comirnaty,3,17
-2022-11-25,03,Comirnaty,4,123
-2022-11-25,03,Comirnaty,5,95
+2022-11-25,03,Comirnaty,2,35
+2022-11-25,03,Comirnaty,3,20
+2022-11-25,03,Comirnaty,4,142
+2022-11-25,03,Comirnaty,5,100
 2022-11-25,03,Comirnaty,6,10
 2022-11-25,03,Comirnaty bivalent (Original/Omikron),1,19
 2022-11-25,03,Comirnaty bivalent (Original/Omikron),2,15
@@ -105932,15 +105933,15 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-25,04,Comirnaty bivalent (Original/Omikron),6,7
 2022-11-25,04,Nuvaxovid,2,1
 2022-11-25,05,Comirnaty,1,66
-2022-11-25,05,Comirnaty,2,91
-2022-11-25,05,Comirnaty,3,156
+2022-11-25,05,Comirnaty,2,93
+2022-11-25,05,Comirnaty,3,157
 2022-11-25,05,Comirnaty,4,1147
 2022-11-25,05,Comirnaty,5,547
 2022-11-25,05,Comirnaty,6,283
 2022-11-25,05,Comirnaty bivalent (Original/Omikron),1,26
 2022-11-25,05,Comirnaty bivalent (Original/Omikron),2,50
-2022-11-25,05,Comirnaty bivalent (Original/Omikron),3,641
-2022-11-25,05,Comirnaty bivalent (Original/Omikron),4,9767
+2022-11-25,05,Comirnaty bivalent (Original/Omikron),3,645
+2022-11-25,05,Comirnaty bivalent (Original/Omikron),4,9777
 2022-11-25,05,Comirnaty bivalent (Original/Omikron),5,4179
 2022-11-25,05,Comirnaty bivalent (Original/Omikron),6,612
 2022-11-25,05,Jcovden,1,1
@@ -105957,8 +105958,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-25,05,Spikevax,6,2
 2022-11-25,05,Spikevax bivalent (Original/Omikron),1,1
 2022-11-25,05,Spikevax bivalent (Original/Omikron),3,4
-2022-11-25,05,Spikevax bivalent (Original/Omikron),4,252
-2022-11-25,05,Spikevax bivalent (Original/Omikron),5,4
+2022-11-25,05,Spikevax bivalent (Original/Omikron),4,255
+2022-11-25,05,Spikevax bivalent (Original/Omikron),5,5
 2022-11-25,05,Spikevax bivalent (Original/Omikron),6,8
 2022-11-25,05,Valneva,1,3
 2022-11-25,05,Valneva,2,4
@@ -105972,7 +105973,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-25,06,Comirnaty bivalent (Original/Omikron),1,29
 2022-11-25,06,Comirnaty bivalent (Original/Omikron),2,16
 2022-11-25,06,Comirnaty bivalent (Original/Omikron),3,352
-2022-11-25,06,Comirnaty bivalent (Original/Omikron),4,3634
+2022-11-25,06,Comirnaty bivalent (Original/Omikron),4,3635
 2022-11-25,06,Comirnaty bivalent (Original/Omikron),5,1176
 2022-11-25,06,Comirnaty bivalent (Original/Omikron),6,36
 2022-11-25,06,Nuvaxovid,2,5
@@ -106029,7 +106030,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-25,09,Comirnaty,1,42
 2022-11-25,09,Comirnaty,2,54
 2022-11-25,09,Comirnaty,3,31
-2022-11-25,09,Comirnaty,4,126
+2022-11-25,09,Comirnaty,4,131
 2022-11-25,09,Comirnaty,5,34
 2022-11-25,09,Comirnaty,6,11
 2022-11-25,09,Comirnaty bivalent (Original/Omikron),1,22
@@ -106159,7 +106160,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-26,01,Comirnaty bivalent (Original/Omikron),1,2
 2022-11-26,01,Comirnaty bivalent (Original/Omikron),2,3
 2022-11-26,01,Comirnaty bivalent (Original/Omikron),3,39
-2022-11-26,01,Comirnaty bivalent (Original/Omikron),4,676
+2022-11-26,01,Comirnaty bivalent (Original/Omikron),4,677
 2022-11-26,01,Comirnaty bivalent (Original/Omikron),5,208
 2022-11-26,01,Comirnaty bivalent (Original/Omikron),6,1
 2022-11-26,01,Nuvaxovid,3,1
@@ -106181,9 +106182,9 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-26,02,Spikevax bivalent (Original/Omikron),4,5
 2022-11-26,03,Comirnaty,1,9
 2022-11-26,03,Comirnaty,2,14
-2022-11-26,03,Comirnaty,3,8
-2022-11-26,03,Comirnaty,4,1
-2022-11-26,03,Comirnaty,5,1
+2022-11-26,03,Comirnaty,3,9
+2022-11-26,03,Comirnaty,4,33
+2022-11-26,03,Comirnaty,5,13
 2022-11-26,03,Comirnaty bivalent (Original/Omikron),2,1
 2022-11-26,03,Comirnaty bivalent (Original/Omikron),3,56
 2022-11-26,03,Comirnaty bivalent (Original/Omikron),4,728
@@ -106290,8 +106291,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-26,09,Comirnaty bivalent (Original/Omikron),1,3
 2022-11-26,09,Comirnaty bivalent (Original/Omikron),2,6
 2022-11-26,09,Comirnaty bivalent (Original/Omikron),3,153
-2022-11-26,09,Comirnaty bivalent (Original/Omikron),4,1258
-2022-11-26,09,Comirnaty bivalent (Original/Omikron),5,195
+2022-11-26,09,Comirnaty bivalent (Original/Omikron),4,1264
+2022-11-26,09,Comirnaty bivalent (Original/Omikron),5,200
 2022-11-26,09,Comirnaty bivalent (Original/Omikron),6,1
 2022-11-26,09,Nuvaxovid,2,4
 2022-11-26,09,Nuvaxovid,3,2
@@ -106374,7 +106375,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-27,05,Comirnaty,1,6
 2022-11-27,05,Comirnaty,2,19
 2022-11-27,05,Comirnaty,3,17
-2022-11-27,05,Comirnaty,4,203
+2022-11-27,05,Comirnaty,4,205
 2022-11-27,05,Comirnaty,5,15
 2022-11-27,05,Comirnaty,6,3
 2022-11-27,05,Comirnaty bivalent (Original/Omikron),2,1
@@ -106468,9 +106469,9 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-27,15,Comirnaty bivalent (Original/Omikron),3,8
 2022-11-27,15,Comirnaty bivalent (Original/Omikron),4,18
 2022-11-28,01,Comirnaty,1,8
-2022-11-28,01,Comirnaty,2,10
-2022-11-28,01,Comirnaty,3,34
-2022-11-28,01,Comirnaty,4,436
+2022-11-28,01,Comirnaty,2,11
+2022-11-28,01,Comirnaty,3,35
+2022-11-28,01,Comirnaty,4,449
 2022-11-28,01,Comirnaty,5,278
 2022-11-28,01,Comirnaty,6,7
 2022-11-28,01,Comirnaty bivalent (Original/Omikron),2,1
@@ -106501,8 +106502,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-28,03,Comirnaty bivalent (Original/Omikron),1,21
 2022-11-28,03,Comirnaty bivalent (Original/Omikron),2,2
 2022-11-28,03,Comirnaty bivalent (Original/Omikron),3,179
-2022-11-28,03,Comirnaty bivalent (Original/Omikron),4,2526
-2022-11-28,03,Comirnaty bivalent (Original/Omikron),5,1065
+2022-11-28,03,Comirnaty bivalent (Original/Omikron),4,2528
+2022-11-28,03,Comirnaty bivalent (Original/Omikron),5,1068
 2022-11-28,03,Comirnaty bivalent (Original/Omikron),6,18
 2022-11-28,03,Jcovden,1,2
 2022-11-28,03,Nuvaxovid,4,1
@@ -106510,7 +106511,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-28,03,Spikevax,4,2
 2022-11-28,03,Spikevax bivalent (Original/Omikron),3,4
 2022-11-28,03,Spikevax bivalent (Original/Omikron),4,50
-2022-11-28,03,Spikevax bivalent (Original/Omikron),5,76
+2022-11-28,03,Spikevax bivalent (Original/Omikron),5,77
 2022-11-28,03,Valneva,4,12
 2022-11-28,04,Comirnaty,2,2
 2022-11-28,04,Comirnaty bivalent (Original/Omikron),3,6
@@ -106525,7 +106526,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-28,05,Comirnaty bivalent (Original/Omikron),1,6
 2022-11-28,05,Comirnaty bivalent (Original/Omikron),2,16
 2022-11-28,05,Comirnaty bivalent (Original/Omikron),3,320
-2022-11-28,05,Comirnaty bivalent (Original/Omikron),4,5232
+2022-11-28,05,Comirnaty bivalent (Original/Omikron),4,5257
 2022-11-28,05,Comirnaty bivalent (Original/Omikron),5,2116
 2022-11-28,05,Comirnaty bivalent (Original/Omikron),6,334
 2022-11-28,05,Comirnaty-Kleinkinder,1,6
@@ -106554,8 +106555,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-28,06,Comirnaty bivalent (Original/Omikron),1,2
 2022-11-28,06,Comirnaty bivalent (Original/Omikron),2,4
 2022-11-28,06,Comirnaty bivalent (Original/Omikron),3,132
-2022-11-28,06,Comirnaty bivalent (Original/Omikron),4,1775
-2022-11-28,06,Comirnaty bivalent (Original/Omikron),5,530
+2022-11-28,06,Comirnaty bivalent (Original/Omikron),4,1779
+2022-11-28,06,Comirnaty bivalent (Original/Omikron),5,532
 2022-11-28,06,Comirnaty bivalent (Original/Omikron),6,7
 2022-11-28,06,Spikevax bivalent (Original/Omikron),3,1
 2022-11-28,06,Spikevax bivalent (Original/Omikron),4,21
@@ -106583,7 +106584,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-28,08,Comirnaty bivalent (Original/Omikron),1,12
 2022-11-28,08,Comirnaty bivalent (Original/Omikron),2,20
 2022-11-28,08,Comirnaty bivalent (Original/Omikron),3,197
-2022-11-28,08,Comirnaty bivalent (Original/Omikron),4,3117
+2022-11-28,08,Comirnaty bivalent (Original/Omikron),4,3118
 2022-11-28,08,Comirnaty bivalent (Original/Omikron),5,547
 2022-11-28,08,Comirnaty bivalent (Original/Omikron),6,2
 2022-11-28,08,Jcovden,2,1
@@ -106595,14 +106596,14 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-28,08,Valneva,2,2
 2022-11-28,09,Comirnaty,1,28
 2022-11-28,09,Comirnaty,2,30
-2022-11-28,09,Comirnaty,3,14
-2022-11-28,09,Comirnaty,4,56
+2022-11-28,09,Comirnaty,3,16
+2022-11-28,09,Comirnaty,4,62
 2022-11-28,09,Comirnaty,5,2
 2022-11-28,09,Comirnaty bivalent (Original/Omikron),1,9
 2022-11-28,09,Comirnaty bivalent (Original/Omikron),2,3
-2022-11-28,09,Comirnaty bivalent (Original/Omikron),3,248
-2022-11-28,09,Comirnaty bivalent (Original/Omikron),4,3330
-2022-11-28,09,Comirnaty bivalent (Original/Omikron),5,623
+2022-11-28,09,Comirnaty bivalent (Original/Omikron),3,251
+2022-11-28,09,Comirnaty bivalent (Original/Omikron),4,3397
+2022-11-28,09,Comirnaty bivalent (Original/Omikron),5,625
 2022-11-28,09,Comirnaty bivalent (Original/Omikron),6,4
 2022-11-28,09,Nuvaxovid,1,1
 2022-11-28,09,Nuvaxovid,2,2
@@ -106628,7 +106629,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-28,11,Comirnaty bivalent (Original/Omikron),1,2
 2022-11-28,11,Comirnaty bivalent (Original/Omikron),2,2
 2022-11-28,11,Comirnaty bivalent (Original/Omikron),3,162
-2022-11-28,11,Comirnaty bivalent (Original/Omikron),4,1270
+2022-11-28,11,Comirnaty bivalent (Original/Omikron),4,1271
 2022-11-28,11,Comirnaty bivalent (Original/Omikron),5,387
 2022-11-28,11,Comirnaty-Kleinkinder,2,5
 2022-11-28,11,Spikevax,1,1
@@ -106649,9 +106650,10 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-28,13,Comirnaty,4,1
 2022-11-28,13,Comirnaty bivalent (Original/Omikron),1,6
 2022-11-28,13,Comirnaty bivalent (Original/Omikron),2,2
-2022-11-28,13,Comirnaty bivalent (Original/Omikron),3,18
-2022-11-28,13,Comirnaty bivalent (Original/Omikron),4,392
-2022-11-28,13,Comirnaty bivalent (Original/Omikron),5,92
+2022-11-28,13,Comirnaty bivalent (Original/Omikron),3,23
+2022-11-28,13,Comirnaty bivalent (Original/Omikron),4,419
+2022-11-28,13,Comirnaty bivalent (Original/Omikron),5,93
+2022-11-28,13,Nuvaxovid,1,1
 2022-11-28,13,Spikevax bivalent (Original/Omikron),4,2
 2022-11-28,13,Spikevax bivalent (Original/Omikron),5,2
 2022-11-28,14,Comirnaty,1,1
@@ -106664,7 +106666,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-28,14,Comirnaty bivalent (Original/Omikron),3,98
 2022-11-28,14,Comirnaty bivalent (Original/Omikron),4,1342
 2022-11-28,14,Comirnaty bivalent (Original/Omikron),5,134
-2022-11-28,14,Nuvaxovid,3,2
+2022-11-28,14,Nuvaxovid,3,3
 2022-11-28,14,Nuvaxovid,4,5
 2022-11-28,14,Nuvaxovid,5,1
 2022-11-28,14,Spikevax,2,1
@@ -106704,13 +106706,13 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-29,01,Comirnaty,1,11
 2022-11-29,01,Comirnaty,2,4
 2022-11-29,01,Comirnaty,3,67
-2022-11-29,01,Comirnaty,4,1340
-2022-11-29,01,Comirnaty,5,736
+2022-11-29,01,Comirnaty,4,1346
+2022-11-29,01,Comirnaty,5,737
 2022-11-29,01,Comirnaty,6,16
 2022-11-29,01,Comirnaty bivalent (Original/Omikron),1,2
 2022-11-29,01,Comirnaty bivalent (Original/Omikron),2,3
 2022-11-29,01,Comirnaty bivalent (Original/Omikron),3,91
-2022-11-29,01,Comirnaty bivalent (Original/Omikron),4,1140
+2022-11-29,01,Comirnaty bivalent (Original/Omikron),4,1150
 2022-11-29,01,Comirnaty bivalent (Original/Omikron),5,924
 2022-11-29,01,Comirnaty bivalent (Original/Omikron),6,2
 2022-11-29,01,Spikevax,3,1
@@ -106730,15 +106732,15 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-29,02,Spikevax bivalent (Original/Omikron),4,2
 2022-11-29,02,Spikevax bivalent (Original/Omikron),5,3
 2022-11-29,03,Comirnaty,1,26
-2022-11-29,03,Comirnaty,2,26
+2022-11-29,03,Comirnaty,2,27
 2022-11-29,03,Comirnaty,3,17
-2022-11-29,03,Comirnaty,4,91
-2022-11-29,03,Comirnaty,5,2
+2022-11-29,03,Comirnaty,4,99
+2022-11-29,03,Comirnaty,5,5
 2022-11-29,03,Comirnaty bivalent (Original/Omikron),1,13
 2022-11-29,03,Comirnaty bivalent (Original/Omikron),2,18
-2022-11-29,03,Comirnaty bivalent (Original/Omikron),3,299
-2022-11-29,03,Comirnaty bivalent (Original/Omikron),4,5183
-2022-11-29,03,Comirnaty bivalent (Original/Omikron),5,2094
+2022-11-29,03,Comirnaty bivalent (Original/Omikron),3,301
+2022-11-29,03,Comirnaty bivalent (Original/Omikron),4,5216
+2022-11-29,03,Comirnaty bivalent (Original/Omikron),5,2108
 2022-11-29,03,Comirnaty bivalent (Original/Omikron),6,25
 2022-11-29,03,Nuvaxovid,1,1
 2022-11-29,03,Nuvaxovid,2,1
@@ -106747,8 +106749,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-29,03,Nuvaxovid,5,4
 2022-11-29,03,Spikevax bivalent (Original/Omikron),2,1
 2022-11-29,03,Spikevax bivalent (Original/Omikron),3,1
-2022-11-29,03,Spikevax bivalent (Original/Omikron),4,18
-2022-11-29,03,Spikevax bivalent (Original/Omikron),5,3
+2022-11-29,03,Spikevax bivalent (Original/Omikron),4,26
+2022-11-29,03,Spikevax bivalent (Original/Omikron),5,6
 2022-11-29,04,Comirnaty,1,1
 2022-11-29,04,Comirnaty,2,7
 2022-11-29,04,Comirnaty,4,1
@@ -106761,16 +106763,16 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-29,04,Spikevax bivalent (Original/Omikron),4,8
 2022-11-29,04,Spikevax bivalent (Original/Omikron),5,1
 2022-11-29,05,Comirnaty,1,46
-2022-11-29,05,Comirnaty,2,67
+2022-11-29,05,Comirnaty,2,68
 2022-11-29,05,Comirnaty,3,130
 2022-11-29,05,Comirnaty,4,864
 2022-11-29,05,Comirnaty,5,420
 2022-11-29,05,Comirnaty,6,247
 2022-11-29,05,Comirnaty bivalent (Original/Omikron),1,20
 2022-11-29,05,Comirnaty bivalent (Original/Omikron),2,53
-2022-11-29,05,Comirnaty bivalent (Original/Omikron),3,664
-2022-11-29,05,Comirnaty bivalent (Original/Omikron),4,10402
-2022-11-29,05,Comirnaty bivalent (Original/Omikron),5,4379
+2022-11-29,05,Comirnaty bivalent (Original/Omikron),3,665
+2022-11-29,05,Comirnaty bivalent (Original/Omikron),4,10421
+2022-11-29,05,Comirnaty bivalent (Original/Omikron),5,4386
 2022-11-29,05,Comirnaty bivalent (Original/Omikron),6,668
 2022-11-29,05,Comirnaty-Kleinkinder,1,5
 2022-11-29,05,Jcovden,3,3
@@ -106795,7 +106797,7 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-29,06,Comirnaty,3,9
 2022-11-29,06,Comirnaty,4,42
 2022-11-29,06,Comirnaty,5,17
-2022-11-29,06,Comirnaty,6,19
+2022-11-29,06,Comirnaty,6,25
 2022-11-29,06,Comirnaty bivalent (Original/Omikron),1,84
 2022-11-29,06,Comirnaty bivalent (Original/Omikron),2,19
 2022-11-29,06,Comirnaty bivalent (Original/Omikron),3,227
@@ -106857,8 +106859,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-29,09,Comirnaty,6,12
 2022-11-29,09,Comirnaty bivalent (Original/Omikron),1,36
 2022-11-29,09,Comirnaty bivalent (Original/Omikron),2,23
-2022-11-29,09,Comirnaty bivalent (Original/Omikron),3,403
-2022-11-29,09,Comirnaty bivalent (Original/Omikron),4,6731
+2022-11-29,09,Comirnaty bivalent (Original/Omikron),3,408
+2022-11-29,09,Comirnaty bivalent (Original/Omikron),4,6805
 2022-11-29,09,Comirnaty bivalent (Original/Omikron),5,1250
 2022-11-29,09,Comirnaty bivalent (Original/Omikron),6,16
 2022-11-29,09,Comirnaty-Kleinkinder,1,9
@@ -106890,8 +106892,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-29,11,Comirnaty,6,4
 2022-11-29,11,Comirnaty bivalent (Original/Omikron),1,18
 2022-11-29,11,Comirnaty bivalent (Original/Omikron),2,7
-2022-11-29,11,Comirnaty bivalent (Original/Omikron),3,217
-2022-11-29,11,Comirnaty bivalent (Original/Omikron),4,2756
+2022-11-29,11,Comirnaty bivalent (Original/Omikron),3,218
+2022-11-29,11,Comirnaty bivalent (Original/Omikron),4,2759
 2022-11-29,11,Comirnaty bivalent (Original/Omikron),5,872
 2022-11-29,11,Comirnaty bivalent (Original/Omikron),6,11
 2022-11-29,11,Nuvaxovid,1,1
@@ -106925,17 +106927,17 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-29,13,Comirnaty,5,4
 2022-11-29,13,Comirnaty bivalent (Original/Omikron),1,7
 2022-11-29,13,Comirnaty bivalent (Original/Omikron),2,4
-2022-11-29,13,Comirnaty bivalent (Original/Omikron),3,70
-2022-11-29,13,Comirnaty bivalent (Original/Omikron),4,1043
-2022-11-29,13,Comirnaty bivalent (Original/Omikron),5,122
+2022-11-29,13,Comirnaty bivalent (Original/Omikron),3,73
+2022-11-29,13,Comirnaty bivalent (Original/Omikron),4,1061
+2022-11-29,13,Comirnaty bivalent (Original/Omikron),5,124
 2022-11-29,13,Nuvaxovid,4,1
 2022-11-29,13,Spikevax bivalent (Original/Omikron),3,2
 2022-11-29,13,Spikevax bivalent (Original/Omikron),4,34
 2022-11-29,13,Spikevax bivalent (Original/Omikron),5,2
 2022-11-29,14,Comirnaty,1,4
 2022-11-29,14,Comirnaty,2,8
-2022-11-29,14,Comirnaty,3,20
-2022-11-29,14,Comirnaty,4,57
+2022-11-29,14,Comirnaty,3,21
+2022-11-29,14,Comirnaty,4,83
 2022-11-29,14,Comirnaty,5,4
 2022-11-29,14,Comirnaty,6,1
 2022-11-29,14,Comirnaty bivalent (Original/Omikron),1,1
@@ -106954,9 +106956,9 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-29,15,Comirnaty,4,15
 2022-11-29,15,Comirnaty bivalent (Original/Omikron),1,33
 2022-11-29,15,Comirnaty bivalent (Original/Omikron),2,2
-2022-11-29,15,Comirnaty bivalent (Original/Omikron),3,127
-2022-11-29,15,Comirnaty bivalent (Original/Omikron),4,1614
-2022-11-29,15,Comirnaty bivalent (Original/Omikron),5,121
+2022-11-29,15,Comirnaty bivalent (Original/Omikron),3,128
+2022-11-29,15,Comirnaty bivalent (Original/Omikron),4,1615
+2022-11-29,15,Comirnaty bivalent (Original/Omikron),5,122
 2022-11-29,15,Nuvaxovid,2,1
 2022-11-29,15,Spikevax,4,1
 2022-11-29,15,Spikevax bivalent (Original/Omikron),1,2
@@ -106981,25 +106983,27 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-29,17,Comirnaty bivalent (Original/Omikron),4,74
 2022-11-29,17,Comirnaty bivalent (Original/Omikron),5,12
 2022-11-29,17,Comirnaty bivalent (Original/Omikron),6,23
-2022-11-30,01,Comirnaty,1,6
-2022-11-30,01,Comirnaty,2,12
+2022-11-30,01,Comirnaty,1,14
+2022-11-30,01,Comirnaty,2,19
 2022-11-30,01,Comirnaty,3,77
-2022-11-30,01,Comirnaty,4,1426
-2022-11-30,01,Comirnaty,5,1170
+2022-11-30,01,Comirnaty,4,1431
+2022-11-30,01,Comirnaty,5,1173
 2022-11-30,01,Comirnaty,6,3
 2022-11-30,01,Comirnaty bivalent (Original/Omikron),1,1
-2022-11-30,01,Comirnaty bivalent (Original/Omikron),2,2
-2022-11-30,01,Comirnaty bivalent (Original/Omikron),3,79
-2022-11-30,01,Comirnaty bivalent (Original/Omikron),4,1338
-2022-11-30,01,Comirnaty bivalent (Original/Omikron),5,850
+2022-11-30,01,Comirnaty bivalent (Original/Omikron),2,4
+2022-11-30,01,Comirnaty bivalent (Original/Omikron),3,108
+2022-11-30,01,Comirnaty bivalent (Original/Omikron),4,1911
+2022-11-30,01,Comirnaty bivalent (Original/Omikron),5,996
 2022-11-30,01,Comirnaty bivalent (Original/Omikron),6,5
+2022-11-30,01,Nuvaxovid,2,4
+2022-11-30,01,Nuvaxovid,3,1
 2022-11-30,01,Spikevax,3,3
 2022-11-30,01,Spikevax,4,30
 2022-11-30,01,Spikevax,5,31
 2022-11-30,01,Spikevax,6,2
-2022-11-30,01,Spikevax bivalent (Original/Omikron),3,5
-2022-11-30,01,Spikevax bivalent (Original/Omikron),4,41
-2022-11-30,01,Spikevax bivalent (Original/Omikron),5,7
+2022-11-30,01,Spikevax bivalent (Original/Omikron),3,7
+2022-11-30,01,Spikevax bivalent (Original/Omikron),4,88
+2022-11-30,01,Spikevax bivalent (Original/Omikron),5,25
 2022-11-30,02,Comirnaty,1,4
 2022-11-30,02,Comirnaty,2,7
 2022-11-30,02,Comirnaty,3,21
@@ -107012,24 +107016,25 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-30,02,Spikevax bivalent (Original/Omikron),3,4
 2022-11-30,02,Spikevax bivalent (Original/Omikron),4,5
 2022-11-30,02,Spikevax bivalent (Original/Omikron),5,4
-2022-11-30,03,Comirnaty,1,8
-2022-11-30,03,Comirnaty,2,16
+2022-11-30,03,Comirnaty,1,15
+2022-11-30,03,Comirnaty,2,24
 2022-11-30,03,Comirnaty,3,14
-2022-11-30,03,Comirnaty,4,132
-2022-11-30,03,Comirnaty,5,28
+2022-11-30,03,Comirnaty,4,142
+2022-11-30,03,Comirnaty,5,30
 2022-11-30,03,Comirnaty,6,7
 2022-11-30,03,Comirnaty bivalent (Original/Omikron),1,17
-2022-11-30,03,Comirnaty bivalent (Original/Omikron),2,8
-2022-11-30,03,Comirnaty bivalent (Original/Omikron),3,297
-2022-11-30,03,Comirnaty bivalent (Original/Omikron),4,5109
-2022-11-30,03,Comirnaty bivalent (Original/Omikron),5,2228
+2022-11-30,03,Comirnaty bivalent (Original/Omikron),2,9
+2022-11-30,03,Comirnaty bivalent (Original/Omikron),3,327
+2022-11-30,03,Comirnaty bivalent (Original/Omikron),4,5471
+2022-11-30,03,Comirnaty bivalent (Original/Omikron),5,2352
 2022-11-30,03,Comirnaty bivalent (Original/Omikron),6,16
 2022-11-30,03,Nuvaxovid,2,2
 2022-11-30,03,Nuvaxovid,4,4
-2022-11-30,03,Spikevax,4,11
-2022-11-30,03,Spikevax bivalent (Original/Omikron),3,1
-2022-11-30,03,Spikevax bivalent (Original/Omikron),4,43
-2022-11-30,03,Spikevax bivalent (Original/Omikron),5,7
+2022-11-30,03,Nuvaxovid,5,1
+2022-11-30,03,Spikevax,4,17
+2022-11-30,03,Spikevax bivalent (Original/Omikron),3,3
+2022-11-30,03,Spikevax bivalent (Original/Omikron),4,72
+2022-11-30,03,Spikevax bivalent (Original/Omikron),5,18
 2022-11-30,04,Comirnaty,1,3
 2022-11-30,04,Comirnaty,2,4
 2022-11-30,04,Comirnaty bivalent (Original/Omikron),2,2
@@ -107039,18 +107044,18 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-30,04,Comirnaty bivalent (Original/Omikron),6,5
 2022-11-30,04,Spikevax bivalent (Original/Omikron),3,1
 2022-11-30,04,Spikevax bivalent (Original/Omikron),4,2
-2022-11-30,05,Comirnaty,1,54
-2022-11-30,05,Comirnaty,2,28
-2022-11-30,05,Comirnaty,3,83
-2022-11-30,05,Comirnaty,4,1011
-2022-11-30,05,Comirnaty,5,526
+2022-11-30,05,Comirnaty,1,57
+2022-11-30,05,Comirnaty,2,36
+2022-11-30,05,Comirnaty,3,84
+2022-11-30,05,Comirnaty,4,1022
+2022-11-30,05,Comirnaty,5,528
 2022-11-30,05,Comirnaty,6,229
 2022-11-30,05,Comirnaty bivalent (Original/Omikron),1,25
 2022-11-30,05,Comirnaty bivalent (Original/Omikron),2,49
-2022-11-30,05,Comirnaty bivalent (Original/Omikron),3,540
-2022-11-30,05,Comirnaty bivalent (Original/Omikron),4,8587
-2022-11-30,05,Comirnaty bivalent (Original/Omikron),5,3664
-2022-11-30,05,Comirnaty bivalent (Original/Omikron),6,531
+2022-11-30,05,Comirnaty bivalent (Original/Omikron),3,556
+2022-11-30,05,Comirnaty bivalent (Original/Omikron),4,8972
+2022-11-30,05,Comirnaty bivalent (Original/Omikron),5,3697
+2022-11-30,05,Comirnaty bivalent (Original/Omikron),6,532
 2022-11-30,05,Jcovden,4,61
 2022-11-30,05,Jcovden,5,21
 2022-11-30,05,Jcovden,6,3
@@ -107065,20 +107070,22 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-30,05,Spikevax,5,40
 2022-11-30,05,Spikevax,6,22
 2022-11-30,05,Spikevax bivalent (Original/Omikron),3,18
-2022-11-30,05,Spikevax bivalent (Original/Omikron),4,92
+2022-11-30,05,Spikevax bivalent (Original/Omikron),4,94
 2022-11-30,05,Spikevax bivalent (Original/Omikron),5,44
 2022-11-30,05,Spikevax bivalent (Original/Omikron),6,7
+2022-11-30,05,Valneva,2,1
 2022-11-30,05,Valneva,4,1
-2022-11-30,06,Comirnaty,1,20
-2022-11-30,06,Comirnaty,2,19
+2022-11-30,06,Comirnaty,1,21
+2022-11-30,06,Comirnaty,2,20
 2022-11-30,06,Comirnaty,3,20
 2022-11-30,06,Comirnaty,4,107
 2022-11-30,06,Comirnaty,5,98
+2022-11-30,06,Comirnaty,6,9
 2022-11-30,06,Comirnaty bivalent (Original/Omikron),1,11
 2022-11-30,06,Comirnaty bivalent (Original/Omikron),2,10
-2022-11-30,06,Comirnaty bivalent (Original/Omikron),3,212
-2022-11-30,06,Comirnaty bivalent (Original/Omikron),4,3104
-2022-11-30,06,Comirnaty bivalent (Original/Omikron),5,1202
+2022-11-30,06,Comirnaty bivalent (Original/Omikron),3,217
+2022-11-30,06,Comirnaty bivalent (Original/Omikron),4,3158
+2022-11-30,06,Comirnaty bivalent (Original/Omikron),5,1214
 2022-11-30,06,Comirnaty bivalent (Original/Omikron),6,15
 2022-11-30,06,Nuvaxovid,3,2
 2022-11-30,06,Nuvaxovid,4,3
@@ -107107,13 +107114,13 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-30,07,Spikevax bivalent (Original/Omikron),5,1
 2022-11-30,08,Comirnaty,1,16
 2022-11-30,08,Comirnaty,2,18
-2022-11-30,08,Comirnaty,3,16
+2022-11-30,08,Comirnaty,3,18
 2022-11-30,08,Comirnaty,4,42
 2022-11-30,08,Comirnaty,5,12
 2022-11-30,08,Comirnaty bivalent (Original/Omikron),1,47
 2022-11-30,08,Comirnaty bivalent (Original/Omikron),2,24
-2022-11-30,08,Comirnaty bivalent (Original/Omikron),3,554
-2022-11-30,08,Comirnaty bivalent (Original/Omikron),4,6281
+2022-11-30,08,Comirnaty bivalent (Original/Omikron),3,555
+2022-11-30,08,Comirnaty bivalent (Original/Omikron),4,6283
 2022-11-30,08,Comirnaty bivalent (Original/Omikron),5,1464
 2022-11-30,08,Comirnaty bivalent (Original/Omikron),6,19
 2022-11-30,08,Jcovden,3,2
@@ -107138,14 +107145,14 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-30,09,Comirnaty,1,63
 2022-11-30,09,Comirnaty,2,78
 2022-11-30,09,Comirnaty,3,32
-2022-11-30,09,Comirnaty,4,57
+2022-11-30,09,Comirnaty,4,61
 2022-11-30,09,Comirnaty,5,3
 2022-11-30,09,Comirnaty,6,14
 2022-11-30,09,Comirnaty bivalent (Original/Omikron),1,5
 2022-11-30,09,Comirnaty bivalent (Original/Omikron),2,20
-2022-11-30,09,Comirnaty bivalent (Original/Omikron),3,395
-2022-11-30,09,Comirnaty bivalent (Original/Omikron),4,6438
-2022-11-30,09,Comirnaty bivalent (Original/Omikron),5,1360
+2022-11-30,09,Comirnaty bivalent (Original/Omikron),3,401
+2022-11-30,09,Comirnaty bivalent (Original/Omikron),4,6457
+2022-11-30,09,Comirnaty bivalent (Original/Omikron),5,1361
 2022-11-30,09,Comirnaty bivalent (Original/Omikron),6,43
 2022-11-30,09,Nuvaxovid,3,3
 2022-11-30,09,Nuvaxovid,4,1
@@ -107174,12 +107181,12 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-30,11,Comirnaty,4,52
 2022-11-30,11,Comirnaty,5,3
 2022-11-30,11,Comirnaty,6,9
-2022-11-30,11,Comirnaty bivalent (Original/Omikron),1,19
+2022-11-30,11,Comirnaty bivalent (Original/Omikron),1,17
 2022-11-30,11,Comirnaty bivalent (Original/Omikron),2,27
 2022-11-30,11,Comirnaty bivalent (Original/Omikron),3,289
-2022-11-30,11,Comirnaty bivalent (Original/Omikron),4,2921
+2022-11-30,11,Comirnaty bivalent (Original/Omikron),4,2928
 2022-11-30,11,Comirnaty bivalent (Original/Omikron),5,924
-2022-11-30,11,Comirnaty bivalent (Original/Omikron),6,16
+2022-11-30,11,Comirnaty bivalent (Original/Omikron),6,17
 2022-11-30,11,Comirnaty-Kleinkinder,1,5
 2022-11-30,11,Spikevax bivalent (Original/Omikron),4,7
 2022-11-30,11,Spikevax bivalent (Original/Omikron),5,3
@@ -107201,14 +107208,14 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-30,12,Spikevax bivalent (Original/Omikron),4,31
 2022-11-30,12,Spikevax bivalent (Original/Omikron),5,1
 2022-11-30,12,Valneva,2,1
-2022-11-30,13,Comirnaty,1,1
-2022-11-30,13,Comirnaty,2,4
-2022-11-30,13,Comirnaty,3,1
+2022-11-30,13,Comirnaty,1,2
+2022-11-30,13,Comirnaty,2,6
+2022-11-30,13,Comirnaty,3,2
 2022-11-30,13,Comirnaty,5,3
 2022-11-30,13,Comirnaty bivalent (Original/Omikron),1,7
 2022-11-30,13,Comirnaty bivalent (Original/Omikron),2,3
-2022-11-30,13,Comirnaty bivalent (Original/Omikron),3,43
-2022-11-30,13,Comirnaty bivalent (Original/Omikron),4,1047
+2022-11-30,13,Comirnaty bivalent (Original/Omikron),3,50
+2022-11-30,13,Comirnaty bivalent (Original/Omikron),4,1078
 2022-11-30,13,Comirnaty bivalent (Original/Omikron),5,191
 2022-11-30,13,Comirnaty bivalent (Original/Omikron),6,7
 2022-11-30,13,Jcovden,2,1
@@ -107235,8 +107242,8 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-30,15,Comirnaty,5,1
 2022-11-30,15,Comirnaty bivalent (Original/Omikron),1,2
 2022-11-30,15,Comirnaty bivalent (Original/Omikron),2,7
-2022-11-30,15,Comirnaty bivalent (Original/Omikron),3,108
-2022-11-30,15,Comirnaty bivalent (Original/Omikron),4,1786
+2022-11-30,15,Comirnaty bivalent (Original/Omikron),3,111
+2022-11-30,15,Comirnaty bivalent (Original/Omikron),4,1816
 2022-11-30,15,Comirnaty bivalent (Original/Omikron),5,113
 2022-11-30,15,Nuvaxovid,3,1
 2022-11-30,15,Nuvaxovid,4,8
@@ -107244,13 +107251,13 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-30,15,Spikevax bivalent (Original/Omikron),4,23
 2022-11-30,15,Spikevax bivalent (Original/Omikron),5,2
 2022-11-30,16,Comirnaty,1,3
-2022-11-30,16,Comirnaty,2,13
+2022-11-30,16,Comirnaty,2,14
 2022-11-30,16,Comirnaty,3,2
 2022-11-30,16,Comirnaty,4,10
 2022-11-30,16,Comirnaty bivalent (Original/Omikron),1,1
 2022-11-30,16,Comirnaty bivalent (Original/Omikron),2,6
 2022-11-30,16,Comirnaty bivalent (Original/Omikron),3,110
-2022-11-30,16,Comirnaty bivalent (Original/Omikron),4,1249
+2022-11-30,16,Comirnaty bivalent (Original/Omikron),4,1253
 2022-11-30,16,Comirnaty bivalent (Original/Omikron),5,153
 2022-11-30,16,Comirnaty bivalent (Original/Omikron),6,11
 2022-11-30,16,Spikevax bivalent (Original/Omikron),4,21
@@ -107258,7 +107265,287 @@ Impfdatum,BundeslandId_Impfort,Impfstoff,Impfserie,Anzahl
 2022-11-30,17,Comirnaty,4,3
 2022-11-30,17,Comirnaty,5,2
 2022-11-30,17,Comirnaty bivalent (Original/Omikron),3,1
-2022-11-30,17,Comirnaty bivalent (Original/Omikron),4,60
+2022-11-30,17,Comirnaty bivalent (Original/Omikron),4,62
 2022-11-30,17,Comirnaty bivalent (Original/Omikron),5,3
-2022-11-30,17,Comirnaty bivalent (Original/Omikron),6,3
+2022-11-30,17,Comirnaty bivalent (Original/Omikron),6,1
 2022-11-30,17,Spikevax bivalent (Original/Omikron),4,16
+2022-12-01,01,Comirnaty,1,7
+2022-12-01,01,Comirnaty,2,21
+2022-12-01,01,Comirnaty,3,77
+2022-12-01,01,Comirnaty,4,1233
+2022-12-01,01,Comirnaty,5,961
+2022-12-01,01,Comirnaty,6,17
+2022-12-01,01,Comirnaty bivalent (Original/Omikron),2,3
+2022-12-01,01,Comirnaty bivalent (Original/Omikron),3,102
+2022-12-01,01,Comirnaty bivalent (Original/Omikron),4,1313
+2022-12-01,01,Comirnaty bivalent (Original/Omikron),5,915
+2022-12-01,01,Comirnaty bivalent (Original/Omikron),6,3
+2022-12-01,01,Jcovden,1,2
+2022-12-01,01,Spikevax,4,2
+2022-12-01,01,Spikevax bivalent (Original/Omikron),3,4
+2022-12-01,01,Spikevax bivalent (Original/Omikron),4,72
+2022-12-01,01,Spikevax bivalent (Original/Omikron),5,46
+2022-12-01,01,Spikevax bivalent (Original/Omikron),6,1
+2022-12-01,02,Comirnaty,1,8
+2022-12-01,02,Comirnaty,2,2
+2022-12-01,02,Comirnaty,3,30
+2022-12-01,02,Comirnaty,4,24
+2022-12-01,02,Comirnaty,5,8
+2022-12-01,02,Comirnaty,6,4
+2022-12-01,02,Comirnaty bivalent (Original/Omikron),1,4
+2022-12-01,02,Comirnaty bivalent (Original/Omikron),2,26
+2022-12-01,02,Comirnaty bivalent (Original/Omikron),3,64
+2022-12-01,02,Comirnaty bivalent (Original/Omikron),4,983
+2022-12-01,02,Comirnaty bivalent (Original/Omikron),5,403
+2022-12-01,02,Comirnaty bivalent (Original/Omikron),6,2
+2022-12-01,02,Nuvaxovid,2,1
+2022-12-01,02,Nuvaxovid,4,5
+2022-12-01,02,Spikevax bivalent (Original/Omikron),4,12
+2022-12-01,02,Spikevax bivalent (Original/Omikron),5,2
+2022-12-01,03,Comirnaty,1,12
+2022-12-01,03,Comirnaty,2,22
+2022-12-01,03,Comirnaty,3,12
+2022-12-01,03,Comirnaty,4,111
+2022-12-01,03,Comirnaty,5,42
+2022-12-01,03,Comirnaty,6,3
+2022-12-01,03,Comirnaty bivalent (Original/Omikron),1,5
+2022-12-01,03,Comirnaty bivalent (Original/Omikron),2,21
+2022-12-01,03,Comirnaty bivalent (Original/Omikron),3,331
+2022-12-01,03,Comirnaty bivalent (Original/Omikron),4,5664
+2022-12-01,03,Comirnaty bivalent (Original/Omikron),5,2368
+2022-12-01,03,Comirnaty bivalent (Original/Omikron),6,40
+2022-12-01,03,Nuvaxovid,2,2
+2022-12-01,03,Nuvaxovid,3,1
+2022-12-01,03,Spikevax,2,1
+2022-12-01,03,Spikevax,3,1
+2022-12-01,03,Spikevax,4,8
+2022-12-01,03,Spikevax,5,4
+2022-12-01,03,Spikevax bivalent (Original/Omikron),4,34
+2022-12-01,03,Spikevax bivalent (Original/Omikron),5,22
+2022-12-01,03,Valneva,2,1
+2022-12-01,04,Comirnaty,1,1
+2022-12-01,04,Comirnaty,2,3
+2022-12-01,04,Comirnaty,4,10
+2022-12-01,04,Comirnaty bivalent (Original/Omikron),2,2
+2022-12-01,04,Comirnaty bivalent (Original/Omikron),3,29
+2022-12-01,04,Comirnaty bivalent (Original/Omikron),4,384
+2022-12-01,04,Comirnaty bivalent (Original/Omikron),5,218
+2022-12-01,04,Spikevax bivalent (Original/Omikron),3,1
+2022-12-01,04,Spikevax bivalent (Original/Omikron),4,1
+2022-12-01,05,Comirnaty,1,35
+2022-12-01,05,Comirnaty,2,47
+2022-12-01,05,Comirnaty,3,81
+2022-12-01,05,Comirnaty,4,1056
+2022-12-01,05,Comirnaty,5,509
+2022-12-01,05,Comirnaty,6,362
+2022-12-01,05,Comirnaty bivalent (Original/Omikron),1,35
+2022-12-01,05,Comirnaty bivalent (Original/Omikron),2,29
+2022-12-01,05,Comirnaty bivalent (Original/Omikron),3,979
+2022-12-01,05,Comirnaty bivalent (Original/Omikron),4,10535
+2022-12-01,05,Comirnaty bivalent (Original/Omikron),5,4283
+2022-12-01,05,Comirnaty bivalent (Original/Omikron),6,802
+2022-12-01,05,Comirnaty-Kleinkinder,1,6
+2022-12-01,05,Comirnaty-Kleinkinder,2,5
+2022-12-01,05,Jcovden,3,6
+2022-12-01,05,Jcovden,4,64
+2022-12-01,05,Jcovden,5,31
+2022-12-01,05,Nuvaxovid,2,1
+2022-12-01,05,Nuvaxovid,4,2
+2022-12-01,05,Nuvaxovid,5,2
+2022-12-01,05,Spikevax,1,1
+2022-12-01,05,Spikevax,3,1
+2022-12-01,05,Spikevax,4,28
+2022-12-01,05,Spikevax,5,7
+2022-12-01,05,Spikevax bivalent (Original/Omikron),3,2
+2022-12-01,05,Spikevax bivalent (Original/Omikron),4,98
+2022-12-01,05,Spikevax bivalent (Original/Omikron),5,29
+2022-12-01,05,Valneva,2,1
+2022-12-01,06,Comirnaty,1,26
+2022-12-01,06,Comirnaty,2,10
+2022-12-01,06,Comirnaty,3,15
+2022-12-01,06,Comirnaty,4,67
+2022-12-01,06,Comirnaty,5,66
+2022-12-01,06,Comirnaty,6,11
+2022-12-01,06,Comirnaty bivalent (Original/Omikron),1,22
+2022-12-01,06,Comirnaty bivalent (Original/Omikron),2,22
+2022-12-01,06,Comirnaty bivalent (Original/Omikron),3,224
+2022-12-01,06,Comirnaty bivalent (Original/Omikron),4,4340
+2022-12-01,06,Comirnaty bivalent (Original/Omikron),5,1688
+2022-12-01,06,Comirnaty bivalent (Original/Omikron),6,8
+2022-12-01,06,Nuvaxovid,1,2
+2022-12-01,06,Nuvaxovid,2,2
+2022-12-01,06,Nuvaxovid,5,1
+2022-12-01,06,Spikevax,4,6
+2022-12-01,06,Spikevax,5,10
+2022-12-01,06,Spikevax bivalent (Original/Omikron),3,2
+2022-12-01,06,Spikevax bivalent (Original/Omikron),4,56
+2022-12-01,06,Spikevax bivalent (Original/Omikron),5,24
+2022-12-01,07,Comirnaty,1,8
+2022-12-01,07,Comirnaty,2,2
+2022-12-01,07,Comirnaty,3,6
+2022-12-01,07,Comirnaty,4,34
+2022-12-01,07,Comirnaty,5,3
+2022-12-01,07,Comirnaty,6,1
+2022-12-01,07,Comirnaty bivalent (Original/Omikron),1,35
+2022-12-01,07,Comirnaty bivalent (Original/Omikron),2,5
+2022-12-01,07,Comirnaty bivalent (Original/Omikron),3,104
+2022-12-01,07,Comirnaty bivalent (Original/Omikron),4,2503
+2022-12-01,07,Comirnaty bivalent (Original/Omikron),5,756
+2022-12-01,07,Comirnaty bivalent (Original/Omikron),6,29
+2022-12-01,07,Spikevax bivalent (Original/Omikron),1,2
+2022-12-01,07,Spikevax bivalent (Original/Omikron),4,8
+2022-12-01,07,Spikevax bivalent (Original/Omikron),5,11
+2022-12-01,07,Valneva,2,1
+2022-12-01,08,Comirnaty,1,31
+2022-12-01,08,Comirnaty,2,40
+2022-12-01,08,Comirnaty,3,13
+2022-12-01,08,Comirnaty,4,141
+2022-12-01,08,Comirnaty,5,26
+2022-12-01,08,Comirnaty bivalent (Original/Omikron),1,29
+2022-12-01,08,Comirnaty bivalent (Original/Omikron),2,9
+2022-12-01,08,Comirnaty bivalent (Original/Omikron),3,378
+2022-12-01,08,Comirnaty bivalent (Original/Omikron),4,6370
+2022-12-01,08,Comirnaty bivalent (Original/Omikron),5,1326
+2022-12-01,08,Comirnaty bivalent (Original/Omikron),6,14
+2022-12-01,08,Jcovden,1,2
+2022-12-01,08,Nuvaxovid,1,41
+2022-12-01,08,Nuvaxovid,2,47
+2022-12-01,08,Nuvaxovid,3,27
+2022-12-01,08,Nuvaxovid,4,15
+2022-12-01,08,Spikevax,1,2
+2022-12-01,08,Spikevax,3,8
+2022-12-01,08,Spikevax,4,14
+2022-12-01,08,Spikevax,5,2
+2022-12-01,08,Spikevax bivalent (Original/Omikron),3,36
+2022-12-01,08,Spikevax bivalent (Original/Omikron),4,80
+2022-12-01,08,Spikevax bivalent (Original/Omikron),5,31
+2022-12-01,08,Spikevax bivalent (Original/Omikron),6,4
+2022-12-01,08,Valneva,1,16
+2022-12-01,08,Valneva,2,18
+2022-12-01,08,Valneva,3,7
+2022-12-01,08,Valneva,4,1
+2022-12-01,08,Valneva,5,1
+2022-12-01,09,Comirnaty,1,23
+2022-12-01,09,Comirnaty,2,43
+2022-12-01,09,Comirnaty,3,19
+2022-12-01,09,Comirnaty,4,152
+2022-12-01,09,Comirnaty,5,45
+2022-12-01,09,Comirnaty,6,12
+2022-12-01,09,Comirnaty bivalent (Original/Omikron),1,15
+2022-12-01,09,Comirnaty bivalent (Original/Omikron),2,28
+2022-12-01,09,Comirnaty bivalent (Original/Omikron),3,485
+2022-12-01,09,Comirnaty bivalent (Original/Omikron),4,7351
+2022-12-01,09,Comirnaty bivalent (Original/Omikron),5,1538
+2022-12-01,09,Comirnaty bivalent (Original/Omikron),6,16
+2022-12-01,09,Jcovden,1,1
+2022-12-01,09,Nuvaxovid,1,1
+2022-12-01,09,Nuvaxovid,2,1
+2022-12-01,09,Nuvaxovid,3,2
+2022-12-01,09,Nuvaxovid,5,1
+2022-12-01,09,Spikevax,1,1
+2022-12-01,09,Spikevax,2,2
+2022-12-01,09,Spikevax,3,1
+2022-12-01,09,Spikevax bivalent (Original/Omikron),3,6
+2022-12-01,09,Spikevax bivalent (Original/Omikron),4,136
+2022-12-01,09,Spikevax bivalent (Original/Omikron),5,18
+2022-12-01,09,Spikevax bivalent (Original/Omikron),6,2
+2022-12-01,09,Valneva,4,2
+2022-12-01,10,Comirnaty,1,2
+2022-12-01,10,Comirnaty,2,2
+2022-12-01,10,Comirnaty,3,1
+2022-12-01,10,Comirnaty,4,5
+2022-12-01,10,Comirnaty,6,6
+2022-12-01,10,Comirnaty bivalent (Original/Omikron),3,32
+2022-12-01,10,Comirnaty bivalent (Original/Omikron),4,607
+2022-12-01,10,Comirnaty bivalent (Original/Omikron),5,124
+2022-12-01,10,Spikevax bivalent (Original/Omikron),4,1
+2022-12-01,11,Comirnaty,1,9
+2022-12-01,11,Comirnaty,2,12
+2022-12-01,11,Comirnaty,3,10
+2022-12-01,11,Comirnaty,4,102
+2022-12-01,11,Comirnaty,5,63
+2022-12-01,11,Comirnaty,6,12
+2022-12-01,11,Comirnaty bivalent (Original/Omikron),1,46
+2022-12-01,11,Comirnaty bivalent (Original/Omikron),2,11
+2022-12-01,11,Comirnaty bivalent (Original/Omikron),3,212
+2022-12-01,11,Comirnaty bivalent (Original/Omikron),4,3109
+2022-12-01,11,Comirnaty bivalent (Original/Omikron),5,849
+2022-12-01,11,Comirnaty bivalent (Original/Omikron),6,20
+2022-12-01,11,Jcovden,1,1
+2022-12-01,11,Spikevax,4,3
+2022-12-01,11,Spikevax,5,1
+2022-12-01,11,Spikevax bivalent (Original/Omikron),4,19
+2022-12-01,11,Spikevax bivalent (Original/Omikron),5,4
+2022-12-01,12,Comirnaty,1,3
+2022-12-01,12,Comirnaty,2,5
+2022-12-01,12,Comirnaty,3,3
+2022-12-01,12,Comirnaty,4,52
+2022-12-01,12,Comirnaty,5,6
+2022-12-01,12,Comirnaty bivalent (Original/Omikron),1,8
+2022-12-01,12,Comirnaty bivalent (Original/Omikron),2,10
+2022-12-01,12,Comirnaty bivalent (Original/Omikron),3,147
+2022-12-01,12,Comirnaty bivalent (Original/Omikron),4,2232
+2022-12-01,12,Comirnaty bivalent (Original/Omikron),5,216
+2022-12-01,12,Comirnaty bivalent (Original/Omikron),6,2
+2022-12-01,12,Nuvaxovid,4,4
+2022-12-01,12,Spikevax bivalent (Original/Omikron),3,5
+2022-12-01,12,Spikevax bivalent (Original/Omikron),4,68
+2022-12-01,12,Spikevax bivalent (Original/Omikron),5,4
+2022-12-01,13,Comirnaty,1,4
+2022-12-01,13,Comirnaty,2,4
+2022-12-01,13,Comirnaty,3,2
+2022-12-01,13,Comirnaty,4,22
+2022-12-01,13,Comirnaty,5,2
+2022-12-01,13,Comirnaty bivalent (Original/Omikron),1,2
+2022-12-01,13,Comirnaty bivalent (Original/Omikron),2,5
+2022-12-01,13,Comirnaty bivalent (Original/Omikron),3,65
+2022-12-01,13,Comirnaty bivalent (Original/Omikron),4,1242
+2022-12-01,13,Comirnaty bivalent (Original/Omikron),5,224
+2022-12-01,13,Nuvaxovid,2,1
+2022-12-01,13,Nuvaxovid,4,12
+2022-12-01,13,Spikevax,4,7
+2022-12-01,13,Spikevax bivalent (Original/Omikron),3,1
+2022-12-01,13,Spikevax bivalent (Original/Omikron),4,11
+2022-12-01,13,Spikevax bivalent (Original/Omikron),5,1
+2022-12-01,14,Comirnaty,1,7
+2022-12-01,14,Comirnaty,2,12
+2022-12-01,14,Comirnaty,3,2
+2022-12-01,14,Comirnaty,4,28
+2022-12-01,14,Comirnaty,5,4
+2022-12-01,14,Comirnaty bivalent (Original/Omikron),1,7
+2022-12-01,14,Comirnaty bivalent (Original/Omikron),2,8
+2022-12-01,14,Comirnaty bivalent (Original/Omikron),3,266
+2022-12-01,14,Comirnaty bivalent (Original/Omikron),4,3760
+2022-12-01,14,Comirnaty bivalent (Original/Omikron),5,520
+2022-12-01,14,Nuvaxovid,1,1
+2022-12-01,14,Spikevax,4,1
+2022-12-01,14,Spikevax,5,1
+2022-12-01,14,Spikevax bivalent (Original/Omikron),3,7
+2022-12-01,14,Spikevax bivalent (Original/Omikron),4,19
+2022-12-01,15,Comirnaty,1,7
+2022-12-01,15,Comirnaty,2,11
+2022-12-01,15,Comirnaty,3,8
+2022-12-01,15,Comirnaty,4,37
+2022-12-01,15,Comirnaty bivalent (Original/Omikron),1,48
+2022-12-01,15,Comirnaty bivalent (Original/Omikron),2,6
+2022-12-01,15,Comirnaty bivalent (Original/Omikron),3,149
+2022-12-01,15,Comirnaty bivalent (Original/Omikron),4,1708
+2022-12-01,15,Comirnaty bivalent (Original/Omikron),5,118
+2022-12-01,15,Comirnaty bivalent (Original/Omikron),6,6
+2022-12-01,15,Spikevax,4,13
+2022-12-01,15,Spikevax,5,1
+2022-12-01,15,Spikevax bivalent (Original/Omikron),3,3
+2022-12-01,15,Spikevax bivalent (Original/Omikron),4,26
+2022-12-01,15,Valneva,2,1
+2022-12-01,16,Comirnaty,1,2
+2022-12-01,16,Comirnaty,2,9
+2022-12-01,16,Comirnaty,3,9
+2022-12-01,16,Comirnaty,4,7
+2022-12-01,16,Comirnaty bivalent (Original/Omikron),1,8
+2022-12-01,16,Comirnaty bivalent (Original/Omikron),2,4
+2022-12-01,16,Comirnaty bivalent (Original/Omikron),3,96
+2022-12-01,16,Comirnaty bivalent (Original/Omikron),4,1524
+2022-12-01,16,Comirnaty bivalent (Original/Omikron),5,114
+2022-12-01,16,Spikevax bivalent (Original/Omikron),4,1
+2022-12-01,17,Comirnaty bivalent (Original/Omikron),3,4
+2022-12-01,17,Comirnaty bivalent (Original/Omikron),4,84
