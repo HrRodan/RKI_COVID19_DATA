@@ -2,6 +2,8 @@
 
 Zusammengesammeltes Archiv von RKI COVID19-Dashboard Datenbank Dumps ab `2020-03-21`.
 
+Letzer Dump heruntergeladen am `2023-02-03`.
+
 Repo wurde initial geforkt von https://github.com/micb25/RKI_COVID19_DATA und anschließend erweitert.
 
 Sekundäre Quellen in separaten Ordnern:
